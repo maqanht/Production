@@ -14,6 +14,7 @@ body {
 
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    overflow-x: hidden;
 }
 
 .text-vertical-center {    
@@ -254,12 +255,12 @@ hr.small {
 }
 
 .divTechnology img {
-    padding-right: 50px;
+    padding-right: 10px;
 }
 
 figcaption {
     margin-top: 20px;
-    margin-left: -50px;
+    margin-left: 0px;
 }
 
 .Technologies {
@@ -295,4 +296,8 @@ footer {
   position: fixed;
   bottom: 5px;
   right: 5px;
+}
+
+.MAQLogo {
+    margin: 50px 0px 0px 50px;
 }
