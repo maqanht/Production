@@ -1,2 +1,0 @@
-# ppe
-MAQ Software PPE
