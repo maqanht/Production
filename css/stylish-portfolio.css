@@ -13,30 +13,15 @@ body {
 }
 
 body {
-    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
     overflow-x: hidden;
-}
-
-.text-vertical-center {    
-    display: table-row;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.text-vertical-center h1 {    
-    margin: 0;
-    padding: 0;
-    font-size: 65px;
-    color: #58585A;
-    line-height: 75px;
-    font-family: "Segoe UI Semibold"
 }
 
 .divMAQDescriptionSubText {        
     font-size: 20px;
     color: #58585A;
-    font-family: "Segoe UI Regular";
-    line-height: 30px;
+    font-family: "Segoe UI";
+    line-height: 30px;    
 }
 .floatRight {
     float: right;
@@ -44,6 +29,10 @@ body {
 
 .marginTop10px {
     margin-top: 10px;
+}
+
+.marginTop30Px {
+    margin-top: 30px;
 }
 
 /* Custom Button Styles */
@@ -86,42 +75,45 @@ hr.small {
     z-index: 1000;
     position: fixed;
     right: 0;
-    width: 250px;
-    height: 100%;
-    transform: translateX(250px);
+    width: 100%;
+    height: 350px;
     overflow-y: auto;
-    background: #222;
+    background: #fff;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;
     -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
+    background: url(../img/NavBarBackground.png);
+    opacity: 1;
+    overflow: hidden;
 }
 
 .sidebar-nav {
-    position: absolute;
+    /*position: absolute;
     top: 0;
-    width: 250px;
+    width: 20%;
     margin: 0;
-    padding: 0;
+    padding: 0;*/
     list-style: none;
 }
 
 .sidebar-nav li {
-    text-indent: 20px;
+    /*text-indent: 20px;*/
     line-height: 40px;
 }
 
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999;
+    color: #000;
+    font-size: 15px;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.2);
+    color: #686868;
+    /*background: rgba(255,255,255,0.2);*/
 }
 
 .sidebar-nav li a:active,
@@ -135,30 +127,30 @@ hr.small {
     line-height: 55px;
 }
 
-.sidebar-nav > .sidebar-brand a {
-    color: #999;
-}
-
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
+.sidebar-nav > .sidebar-brand span {
+    color: #000;
+    font-weight: bold;
+    font-size: 17px;
 }
 
 #menu-toggle {
     z-index: 1;
-    position: fixed;
-    top: 0;
-    right: 0;
+    /*position: fixed;
+    top: 70px;
+    right: 11.45%;*/
+    float: right;
+    margin-right: 11.45%;
 }
 
 #sidebar-wrapper.active {
-    right: 250px;
-    width: 250px;
+    right: 0;
+    height: 0px;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;
     -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
+    transition-timing-function: ease;
 }
 
 .toggle {
@@ -246,34 +238,178 @@ hr.small {
 }
 
 /*Abinash Code */
-.MAQLogo {
-    margin: 70px 0px 0px 220px;
+.toggelMenuBar {
+    margin: 70px 0px 0px 0px;
+    width: 100%;
 }
 
+.MAQLogo {
+    margin-left: 11.45%;
+    height: 50px;
+    width: 15%;
+}
+
+.pageHeader {
+    width: 100%;    
+}
 .divTechnology {
     display: inline-block;
+    margin-right: 3%;
+    width: 17%;
+    height: 215px;
+}
+
+.divTechnology:last-child {
+    margin-right: 0%;
 }
 
 .divTechnology img {
     padding-right: 10px;
 }
 
-figcaption {
-    margin-top: 20px;
+figcaption {    
     margin-left: 0px;
+    color: #58585A;
+    line-height: 18px;
+    text-align: center;
 }
 
 .Technologies {
-    margin-top: 100px;
+    margin-top: 120px;
+    margin: 5% 4% 0 8%;
 }
 
 .divMAQDescription {
-    margin-top: 125px;
+    margin-top: 10%;
+    padding: 0 35px;
+    width: 100%;
+    text-align: center;    
+}
+
+.divMAQDescription h1 {
+    font-size: 65px;
+    margin: 0;
+    padding: 0;
+    font-size: 65px;
+    color: #58585A;    
+    font-family: "Segoe UI Semibold"
 }
 
 .spnTechnology {
     margin-top: -10px;
 } 
+
+.navBars {
+    width: 40px;
+    height: 3px;
+    margin-bottom: 6px;
+    background-color: #BA131A;
+}
+.navHeadings {
+    padding-bottom: 1px;
+    border-bottom: 1.5px solid #BA131A;
+}
+.menuToggle {
+    height: 22px;
+}
+
+.left75Percent {
+    left: 75%;
+}
+.left50Percent {
+    left: 55%;
+}
+
+.left25Percent {
+    left: 35%;
+}
+
+.divTechnologyFirstElement {
+    margin-left: 1.5%;
+}
+
+.marginLeftMinus40px {
+    margin-left: -40px;
+}
+
+.marginLeftMinus30px {
+    margin-left: -30px;
+}
+
+.divDescriptionText {
+    width: 100%;
+}
+.closeIcon {
+    width: 15px;
+    height: 15px;
+    margin-top: 15px;
+}
+.bottomScroll {
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.demo a:hover {
+	opacity: .5;
+}
+
+.bottomScroll a {
+	padding-top: 10px;
+    position: absolute;
+	bottom: 20px;
+	left: 50%;
+	z-index: 2;
+	display: inline-block;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	font : normal 400 20px/1 'Josefin Sans', sans-serif;
+	letter-spacing: .1em;
+	text-decoration: none;
+	transition: opacity .3s;
+}
+.bottomScroll a span {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	border-left: 1px solid grey;
+	border-bottom: 1px solid grey;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-animation: sdb05 1.5s infinite;
+	animation: sdb05 1.5s infinite;
+	box-sizing: border-box;    
+}
+
+@-webkit-keyframes sdb05 {
+	0% {
+		-webkit-transform: rotate(-45deg) translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: rotate(-45deg) translate(-20px, 20px);
+		opacity: 0;
+	}
+}
+@keyframes sdb05 {
+	0% {
+		transform: rotate(-45deg) translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(-45deg) translate(-20px, 20px);
+		opacity: 0;
+	}
+}
 
 @media(max-width:768px) {
     .map {
@@ -298,6 +434,73 @@ footer {
   right: 5px;
 }
 
-.MAQLogo {
-    margin: 50px 0px 0px 50px;
+@media(max-width:1600px) { 
+    /*.divTechnology {
+        margin-right: 3%;
+        width: 233px;
+        height: 215px;
+    }*/
+    .bottomScroll {
+        height: 100px;
+    }
+    .divMAQDescription h1 {
+        font-size: 64px;
+        line-height: 65px;
+    }
+    .Technologies {
+        margin-top: 120px;
+    }
+    .divMAQDescriptionSubText {        
+        font-size: 20px;
+        line-height: 37px;
+    }
+}
+
+@media(max-width:1450px) { 
+    /*.divTechnology {
+        margin-right: 2%;
+        width: 186px;
+        height: 172px;
+    }*/    
+    .bottomScroll {
+        height: 75px;
+    }
+
+    .divMAQDescription h1 {
+        font-size: 54px;
+        line-height: 55px;
+    }
+
+    .Technologies {
+        margin-top: 100px;
+    }
+
+    .divMAQDescriptionSubText {        
+        font-size: 17px;
+        line-height: 28px;
+    }
+}
+
+@media(max-width:1380px) { 
+    /*.divTechnology {
+        margin-right: 1%;
+        width: 60%;
+        height: 60%;
+    }*/
+    .bottomScroll {
+        height: 50px;
+    }
+
+    .divMAQDescription h1 {
+        font-size: 44px;
+        line-height: 45px;
+    }
+
+    .Technologies {
+        margin-top: 80px;
+    }
+    .divMAQDescriptionSubText {        
+        font-size: 13px;
+        line-height: 19px;
+    }
 }
