@@ -99,8 +99,14 @@ hr.small {
 }
 
 .sidebar-nav li {
-    /*text-indent: 20px;*/
+    text-indent: 10px;
     line-height: 40px;
+    background: none;
+}
+
+.sidebar-nav li:hover {
+    background: url(../img/Nav_HoverBox.svg);
+    background-repeat: repeat;
 }
 
 .sidebar-nav li a {
@@ -113,7 +119,7 @@ hr.small {
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #686868;
-    /*background: rgba(255,255,255,0.2);*/
+    /*background: red;*/        
 }
 
 .sidebar-nav li a:active,
@@ -124,13 +130,14 @@ hr.small {
 .sidebar-nav > .sidebar-brand {
     height: 55px;
     font-size: 18px;
-    line-height: 55px;
+    line-height: 55px;    
 }
 
 .sidebar-nav > .sidebar-brand span {
     color: #000;
     font-weight: bold;
     font-size: 17px;
+    margin-left: 10px;
 }
 
 #menu-toggle {
@@ -175,7 +182,8 @@ hr.small {
 
 .about {
     padding: 75px 0;
-    height: 492px
+    height: 660px;
+    background: url(../img/);
 }
 
 /* Services */
@@ -372,6 +380,7 @@ figcaption {
 .sidebar-nav > .footer-brand span {
     color: #000;    
     font-size: 17px;
+    margin-left: 10px;
 }
 .bottomScroll a {
 	padding-top: 10px;
@@ -444,6 +453,7 @@ figcaption {
 
 footer {
     padding: 10px 0;
+    border-top: 1px solid grey;
 }
 
 #to-top {
