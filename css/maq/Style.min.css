@@ -283,11 +283,11 @@ a .imgFollowUS {
 }
 
 #rightArrClick {
-    background: url(../Img/maq/Slider/Arrow-Right.png) no-repeat center center;
+    background: url(../../img/maq/Slider/Arrow-Right.png) no-repeat center center;
 }
 
 #leftArrClick {
-    background: url(../Img/maq/Slider/Arrow-Left.png) no-repeat center center;
+    background: url(../../img/maq/Slider/Arrow-Left.png) no-repeat center center;
 }
 
 .SliderArrow img {
@@ -319,48 +319,48 @@ a .imgFollowUS {
 }
 
 #div1 {
-    background: url(../Img/maq/Slider/Amazon-Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/Amazon-Logo.png) no-repeat center center;
     margin-top: 14px;
     height: calc(100% - 14px);
 }
 
 #div2 {
-    background: url(../Img/maq/Slider/MS-Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/MS-Logo.png) no-repeat center center;
 }
 
 #div3 {
-    background: url(../Img/maq/Slider/Aristos-Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/Aristos-Logo.png) no-repeat center center;
 }
 
 #div4 {
-    background: url(../Img/maq/Slider/BharatPetroleum_Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/BharatPetroleum_Logo.png) no-repeat center center;
 }
 
 #div5 {
-    background: url(../Img/maq/Slider/Resmed-Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/Resmed-Logo.png) no-repeat center center;
 }
 
 #div6 {
-    background: url(../Img/maq/Slider/Google-logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/Google-logo.png) no-repeat center center;
     margin-top: 7px;
     height: calc(100% - 7px);
 }
 
 #div7 {
-    background: url(../Img/maq/Slider/Tmobile-Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/Tmobile-Logo.png) no-repeat center center;
 }
 
 #div8 {
-    background: url(../Img/maq/Slider/HTC-Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/HTC-Logo.png) no-repeat center center;
 }
 
 #div9 {
-    background: url(../Img/maq/Slider/Wunderman-Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/Wunderman-Logo.png) no-repeat center center;
     background-size: 89%;
 }
 
 #div10 {
-    background: url(../Img/maq/Slider/WashingtonYouthLogo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/WashingtonYouthLogo.png) no-repeat center center;
 }
 
 .dvExpertiseSlider {
@@ -368,7 +368,7 @@ a .imgFollowUS {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: url(../Img/maq/Slider/Cloud.jpg) no-repeat 0 0;
+    background: url(../../img/maq/Slider/Cloud.jpg) no-repeat 0 0;
     background-size: 100% 100%;
 }
 
@@ -641,47 +641,47 @@ a .imgFollowUS {
 }
 
 #Client1 {
-    background: url(../Img/maq/Slider/MS-Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/MS-Logo.png) no-repeat center center;
 }
 
 #Client2 {
-    background: url(../Img/maq/Slider/Wunderman-Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/Wunderman-Logo.png) no-repeat center center;
 }
 
 #Client3 {
-    background: url(../Img/maq/Slider/Amazon-Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/Amazon-Logo.png) no-repeat center center;
 }
 
 #Client4 {
-    background: url(../Img/maq/Slider/HTC-Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/HTC-Logo.png) no-repeat center center;
 }
 
 #Client5 {
-    background: url(../Img/maq/Slider/Tmobile-Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/Tmobile-Logo.png) no-repeat center center;
 }
 
 #Client6 {
-    background: url(../Img/maq/Slider/Aristos-Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/Aristos-Logo.png) no-repeat center center;
 }
 
 #Client7 {
-    background: url(../Img/maq/Slider/Resmed-Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/Resmed-Logo.png) no-repeat center center;
 }
 
 #Client8 {
-    background: url(../Img/maq/Slider/WashingtonYouthLogo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/WashingtonYouthLogo.png) no-repeat center center;
 }
 
 #Client9 {
-    background: url(../Img/maq/Slider/SwedishLogo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/SwedishLogo.png) no-repeat center center;
 }
 
 #Client10 {
-    background: url(../Img/maq/Slider/BharatPetroleum_Logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/BharatPetroleum_Logo.png) no-repeat center center;
 }
 
 #Client11 {
-    background: url(../Img/maq/Slider/Google-logo.png) no-repeat center center;
+    background: url(../../img/maq/Slider/Google-logo.png) no-repeat center center;
 }
 
 .Testimonial {
@@ -821,11 +821,11 @@ a .imgFollowUS {
 }
 
 .AppDevNavRightArrow {
-    background: url(../Img/maq/Slider/Arrow-Right.png) no-repeat right center;
+    background: url(../../img/maq/Slider/Arrow-Right.png) no-repeat right center;
 }
 
 .AppDevNavLeftArrow {
-    background: url(../Img/maq/Slider/Arrow-Left.png) no-repeat left center;
+    background: url(../../img/maq/Slider/Arrow-Left.png) no-repeat left center;
 }
 
 .AppDevContent {
