@@ -1,6 +1,6 @@
 <h1 class="DataTitle SemiBold Color58585a">SharePoint</h1>
 <article class="LeftArticle">
-    <img class="BlockTag ExpertiseImage" src="../../Static/Images/Expertise/Expertise-Sharepoint.jpg" alt="SharePoint" title="SharePoint" />
+    <img class="BlockTag ExpertiseImage" src="../Img/maq/Expertise/Expertise-Sharepoint.jpg" alt="SharePoint" title="SharePoint" />
     <p class="DataSubContent">MAQ Software has delivered over 100 SharePoint projects. We have a large team with vast experience in delivering SharePoint projects for various teams at Microsoft Corporation. We have processes and tools for fast paced SharePoint content migration, development and test.</p>
     <p class="MarginTop35 SemiBold Color3f3f3f">SharePoint On-premise</p>
     <ul class="MarginTop5 CircleBullets">

@@ -1,6 +1,6 @@
 <h1 class="DataTitle SemiBold Color58585a">User Experience Design</h1>
 <article class="LeftArticle">
-    <img class="BlockTag ExpertiseImage" src="../../Static/Images/Expertise/Expertise-UXDesign.jpg" alt="UX Design" title="UX Design" />
+    <img class="BlockTag ExpertiseImage" src="../Img/maq/Expertise/Expertise-UXDesign.jpg" alt="UX Design" title="UX Design" />
     <p class="DataSubContent">At MAQ Software, a team of graphics and usability experts understands your requirements in person and interacts with multiple stakeholders to help you come up with a richer concept. We have been delivering high traffic websites at Microsoft for over thirteen years and are experts in Microsoft branding standards.</p>
     <p class="DataSubContent SemiBold Color3f3f3f">Brand experience assessment</p>
     <ul class="MarginTop5 CircleBullets">

@@ -1,6 +1,6 @@
 ﻿<h1 class="DataTitle SemiBold Color58585a">Our Story</h1>
 <article class="LeftArticle FullWidth">    
-    <img class="AboutImage" class="BlockTag" src="../Static/Images/Profile/Profile-About.jpg" alt="Profile" />	
+    <img class="AboutImage" class="BlockTag" src="img/maq/Profile-About.jpg" alt="Profile" />	
 	<h3 class="AboutTagLine Datatagline SemiBold">Success at MAQ Software can be credited to two simple ideas: 'focus' and 'execution'</h3>
     <p class="DataSubContent">MAQ Software is a digital marketing and technology solutions company. We offer cost effective Digital Marketing and Analytics solutions using cloud and mobile platforms. Our solutions use advanced features of web, mobile, and cloud computing on the industry leading platforms.</p>
     <p class="DataSubContent">Founded in 2000, our company employs over 500 people worldwide in three development centers. Headquartered in Redmond, Washington, the company maintains two development centers in India, one in Mumbai, and the other in Hyderabad.</p>
