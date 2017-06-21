@@ -140,6 +140,11 @@ hr.small {
     margin-left: 10px;
 }
 
+.sidebar-brand:hover {
+    background: none !important;
+    cursor: default;
+}
+
 #menu-toggle {
     z-index: 1;
     /*position: fixed;
@@ -382,6 +387,17 @@ figcaption {
     font-size: 17px;
     margin-left: 10px;
 }
+
+.footer-brand:hover{
+    background: none !important;
+    cursor: default;
+}
+
+.navImages:hover {
+    background: none !important;
+    cursor: default;
+}
+
 .bottomScroll a {
 	padding-top: 10px;
     position: absolute;

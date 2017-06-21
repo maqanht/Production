@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -116,7 +116,7 @@
     </nav>
 
     <!-- Header -->
-    <header id="top" class="NewsHeader">
+    <header id="top" class="profileHeader">
         <div class="pageHeader">
             <div class="toggelMenuBar">
                 <a id="menu-toggle" href="#" class="menuToggle toggle">
@@ -133,68 +133,19 @@
 
     <div id="MainContent">
         <div class="dvLimitedWith dvBackground PagePadding" style="width: 77%; margin: 0 11.45% 0 11.45%">
-            <h1 class="DataTitle SemiBold Color58585a">Join us. Explore your potential.</h1>
-            <section>
-                <aside class="CarrersDataSection FloatLeft" style="border-right: 1px solid #A7A9AC; padding-right: 40px;">
-                    <h3 class="AboutTagLine Datatagline SemiBold">Why do A-Players Choose to Work with Us?</h3>
-                    <p class="DataSubContent SemiBold Color3f3f3f">Professional growth</p>
-                    <ul class="MarginTop5 CircleBullets">
-                        <li>Substantial responsibilities at an early stage of the career </li>
-                        <li>Exposure to all aspects of delivery lifecycle and project management </li>
-                        <li>Continuous learning </li>
-                    </ul>
-                    <p class="DataSubContent SemiBold Color3f3f3f">Type of work</p>
-                    <ul class="MarginTop5 CircleBullets">
-                        <li>Exciting and challenging work </li>
-                        <li>Exposure to the latest and variety of technologies </li>
-                    </ul>
-                    <p class="DataSubContent SemiBold Color3f3f3f">Company culture</p>
-                    <ul class="MarginTop5 CircleBullets">
-                        <li>Transparency, lack of bureaucracy</li>
-                        <li>Ownership and accountability</li>
-                        <li>Autonomy (with seniority)</li>
-                        <li>Peers with strong technical background</li>
-                        <li>Supportive managers with technical know-how</li>
-                        <li>There is never a dull moment (fast paced work)</li>
-                    </ul>
-                    <p class="DataSubContent Color595959">
-                        All of us hold Computer Science and Engineering degrees from top universities in the US and India. Supervisors are PMI-ACP
-                        (Agile) certified and managers come from leading business schools in the US and India.
-                    </p>
-                    <div id="CareerLinks">
-                        <a data-link="Redmond" id="Carrerstab1" class="SemiBold CarrersTabs tabActive">REDMOND</a>
-                        <a data-link="Hyderabad" id="Carrerstab2" class="SemiBold CarrersTabs">HYDERABAD</a>
-                        <a data-link="Mumbai" id="Carrerstab3" class="SemiBold CarrersTabs">MUMBAI</a>
-                    </div>
-                    <div id="CareerLinkHolder" class="LoadingHeight Loading">
-                    </div>
-                </aside>
-                <aside class="CareersRight HdrContainer FloatLeft">
-                    <a href="https://youtu.be/mgyfCETF1lA" target="_blank">
-                    <img class="WhyMAQ" src="img/maq/WhyMAQ.png" alt="Why MAQ Software in 3 minutes" title="Why MAQ Software in 3 minutes" style="padding-top: 75px;"/>
-                </a>
-                    <p id="CareersRightTitle" class="pTagLine SemiBold">Contact Information</p>
-                    <div class="m30">
-                        <p>For positions in Redmond,</p>
-                        <p>e-mail your resume to</p>
-                        <p class="Colorred"><a id="RedMail" class="BackLink">RedmondJobs@MAQSoftware.com</a></p>
-                    </div>
-                    <div class="MarginTop5 DataSubContent">
-                        <p>For positions in Hyderabad,</p>
-                        <p>e-mail your resume to</p>
-                        <p class="Colorred"><a id="HydMail" class="BackLink">HydJobs@MAQSoftware.com</a></p>
-                    </div>
-                    <div class="MarginTop5 DataSubContent">
-                        <p>For positions in Mumbai,</p>
-                        <p>e-mail your resume to</p>
-                        <p class="Colorred"><a id="MumMail" class="BackLink">MumbaiJobs@MAQSoftware.com</a></p>
-                    </div>
-                </aside>
-            </section>
-
+            <aside class="FloatLeft NavSection">
+                <nav id="PageNavLink">
+                    <a data-link="pagelink0" class="aSiteLinks">About</a>
+                    <a data-link="pagelink1" class="aSiteLinks MgnL30">Delivery Approach</a>
+                    <a data-link="pagelink2" class="aSiteLinks MgnL30">Recognitions</a>
+                    <a data-link="pagelink3" class="aSiteLinks MgnL30">Management</a>
+                    <a data-link="pagelink4" class="aSiteLinks MgnL30">Clients</a>
+                </nav>
+            </aside>
+            <aside id="DataSection" class="FloatLeft">
+            </aside>
         </div>
     </div>
-    <!-- Footer -->
     <footer id="footer">
         <div class="container">
             <div class="row">
@@ -245,13 +196,13 @@
                         <span class="navHeadings">Careers</span>
                     </li>
                     <li>
-                        <a href="#">Redmond</a>
+                        <a href="Careers.html">Redmond</a>
                     </li>
                     <li>
-                        <a href="#">Hyderabad</a>
+                        <a href="Careers.html?q=Hyderabad">Hyderabad</a>
                     </li>
                     <li>
-                        <a href="#">Mumbai</a>
+                        <a href="Careers.html?q=Mumbai">Mumbai</a>
                     </li>
 
                 </ul>
@@ -261,7 +212,7 @@
                         <span class="navHeadings">News</span>
                     </li>
                     <li>
-                        <a href="news.html">Latest News</a>
+                        <a href="News.html">Latest News</a>
                     </li>
                     <li>
                         <a href="#">Press Coverage</a>
@@ -273,7 +224,7 @@
                     <li class="footer-brand">
                         <span class="navHeadings">Contact Us</span>
                     </li>
-                    <li>
+                    <li class="navImages">
                         <a href="#">
                             <img src="img\ContactUs_Address.svg" alt="ContactUs" class="ContactUs">
                         </a>
@@ -287,7 +238,7 @@
                     <li class="footer-brand">
                         <span class="navHeadings">Follow Us</span>
                     </li>
-                    <li>
+                    <li class="navImages">
                         <a href="#">
                             <img src="img\FollowUs_Facebook.svg" alt="Facebook" class="FollowUs">
                         </a>
@@ -313,9 +264,6 @@
                 </i>
                 </a>
     </footer>
-
-    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js?v=20160405"></script>
-    <!-- Custom Theme JavaScript -->
     <script>
         // Closes the sidebar menu
         $("#menu-close").click(function (e) {
@@ -352,7 +300,7 @@
         //#to-top button appears after scrolling
         var fixed = false;
         $(document).scroll(function () {
-            // debugger;
+            //debugger;
             if ($(this).scrollTop() > 60) {
                 if (!fixed) {
                     fixed = true;
@@ -384,9 +332,9 @@
                 $(".divMAQDescription").css({ "margin-top": "10%" });
             }
         });
-    </script>
-    <!--<script src="js/maq/jquery.dotdotdot.min.js"></script>-->
+    </script>    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/maq/ProfileExpertise.js?v=20160405"></script>
     <script src="js/maq/layout.js?v=20160405"></script>
     <script type="text/javascript" src="js/maq/Common.js?v=20160405"></script>
-    <script src="js/maq/Careers.js?v=20160405"></script>
-    </div>
