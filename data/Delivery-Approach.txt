@@ -2,9 +2,9 @@
 <article class="LeftArticle FullWidth">
     <p class="Datatagline SemiBold Margin5Less Color58585a">Releasing high quality software fast through build, test, and deployment automation</p>
     <div class="DeliveryApproach OverflowHide m30">
-        <p data-index="0" class="SemiBold DeliveryApproachSwitch tabActive FloatLeft">END TO END DELIVERY APPROACH</p>
-        <p data-index="1" class="SemiBold DeliveryApproachSwitch FloatRight">CONTINUOUS DELIVERY CYCLE</p>
-        <img id="DeliveryApproachImage" class="FloatLeft Clear TopMargin" src='../img/maq/DailyEtoE.png' alt='End to End Delivery' title='End to End Delivery' />
+        <p data-index="0" class="SemiBold DeliveryApproachSwitch tabActive FloatLeft">AGILE EXECUTION MODEL</p>
+        <p data-index="1" class="SemiBold DeliveryApproachSwitch FloatRight">DevOps OPERATING MODEL</p>
+        <img id="DeliveryApproachImage" class="FloatLeft Clear TopMargin" src='../img/Expertise/Agile.png' alt='End to End Delivery' title='End to End Delivery' />
     </div>
 </article>
 <script type="text/javascript">
@@ -15,9 +15,9 @@
         $(this).addClass("tabActive");
         var sCurrentIndex = $(this).attr("data-index");
         if ("0" === sCurrentIndex) {
-            oDeliverApproachImage.attr("src", "../img/maq/DailyEtoE.png").attr("title","End to End Delivery");
+            oDeliverApproachImage.attr("src", "../img/Expertise/Agile.png").attr("title","End to End Delivery");
         } else {
-            oDeliverApproachImage.attr("src", "../img/maq/ContinuousIntegration.png").attr("title","Continuous Delivery Cycle");
+            oDeliverApproachImage.attr("src", "../img/Expertise/DevOpsModel.png").attr("title","Continuous Delivery Cycle");
         }
     });
 </script>
