@@ -4,7 +4,7 @@
     <div class="DeliveryApproach OverflowHide m30">
         <p data-index="0" class="SemiBold DeliveryApproachSwitch tabActive FloatLeft">AGILE EXECUTION MODEL</p>
         <p data-index="1" class="SemiBold DeliveryApproachSwitch FloatRight">DevOps OPERATING MODEL</p>
-        <img id="DeliveryApproachImage" class="FloatLeft Clear TopMargin" src='../img/Expertise/Agile.png' alt='End to End Delivery' title='End to End Delivery' />
+        <img id="DeliveryApproachImage" class="FloatLeft Clear TopMargin" src='../img/Expertise/Agile.png' alt='End to End Delivery' title='End to End Delivery' style="width:100%"/>
     </div>
 </article>
 <script type="text/javascript">
