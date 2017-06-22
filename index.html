@@ -15,7 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -39,69 +39,69 @@
                 <img src="img/closeIcon.svg" alt="" class="closeIcon pull-right">
                 </a>
             <div class="row marginTop30Px">
-                <ul class="sidebar-nav col-xs-4">
+                <ul id="nav1" class="sidebar-nav col-sm-4 col-xs-12">
                     <!--left25Percent-->
-                    <li class="sidebar-brand">
+                    <li class="sidebar-brand" onClick="openMenu('nav1')">
                         <span class="navHeadings">EXPERTISE</span>
                     </li>
-                    <li>
+                    <li class="listItem">
                         <a href="Expertise.html" onclick=$( "#menu-close").click();>Data Management</a>
                     </li>
-                    <li>
+                    <li class="listItem">
                         <a href="Expertise.html?q=1" onclick=$( "#menu-close").click();>Machine Learning</a>
                     </li>
-                    <li>
+                    <li class="listItem">
                         <a href="Expertise.html?q=2" onclick=$( "#menu-close").click();>Microsoft Big Data Solutions</a>
                     </li>
-                    <li>
+                    <li class="listItem">
                         <a href="Expertise.html?q=3" onclick=$( "#menu-close").click();>Power BI & Visualizations</a>
                     </li>
-                    <li>
+                    <li class="listItem">
                         <a href="Expertise.html?q=4" onclick=$( "#menu-close").click();>Web Development & Cloud Services</a>
                     </li>
                 </ul>
-                <ul class="sidebar-nav col-xs-3">
-                    <li class="sidebar-brand">
+                <ul id="nav2" class="sidebar-nav col-sm-3 col-xs-12">
+                    <li class="sidebar-brand" onClick="openMenu('nav2')">
                         <span class="navHeadings">PROFILE</span>
                     </li>
-                    <li>
+                    <li class="listItem">
                         <a href="Profile.html" onclick=$( "#menu-close").click();>About</a>
                     </li>
-                    <li>
+                    <li class="listItem">
                         <a href="Profile.html?q=1" onclick=$( "#menu-close").click();>Delivery Approach</a>
                     </li>
-                    <li>
+                    <li class="listItem">
                         <a href="Profile.html?q=2" onclick=$( "#menu-close").click();>Recognitions</a>
                     </li>
-                    <li>
+                    <li class="listItem">
                         <a href="Profile.html?q=3" onclick=$( "#menu-close").click();>Management</a>
                     </li>
-                    <li>
+                    <li class="listItem">
                         <a href="Profile.html?q=4" onclick=$( "#menu-close").click();>Clients</a>
                     </li>
                 </ul>
-                <ul class="sidebar-nav col-xs-2">
+                <ul id="nav3" class="sidebar-nav col-sm-2 col-xs-12">
                     <!--left50Percent-->
-                    <li class="sidebar-brand">
+                    <li class="sidebar-brand" onClick="openMenu('nav3')">
                         <span class="navHeadings" .click();>NEWS</span>
                     </li>
-                    <li>
+                    <li class="listItem">
                         <a href="News.html" onclick=$( "#menu-close").click();>Latest Events</a>
                     </li>
-                    <li>
+                    <li class="listItem">
                         <a href="News.html" onclick=$( "#menu-close").click();>Press Coverage</a>
                     </li>
 
                 </ul>
-                <ul class="sidebar-nav col-xs-3">
+                <ul id="nav4" class="sidebar-nav col-sm-3 col-xs-12">
                     <!--left75Percent-->
-                    <li class="sidebar-brand">
+                    <li class="sidebar-brand" onClick="openMenu('nav4')">
                         <span class="navHeadings">CONTACT US</span>
                     </li>
-                    <li>
+                    <li class="listItem">
                         <a href="Careers.html" onclick=$( "#menu-close").click();>Careers</a>
                     </li>
-                    <li>
+                    <li class="listItem">
                         <a href="Contactus.html" onclick=$( "#menu-close").click();>Offices</a>
                     </li>
 
@@ -142,28 +142,38 @@
             <div class="divTechnology">
                 <a href="Expertise.html" class="TechnologyLink"><img src="img/Technology1.svg" alt="Technology1" /></a>
                 <!--<span class="spnTechnology">BUSINESS INTELLIGENCE</span>-->
-                <a href="Expertise.html" class="TechnologyLink"><figcaption>DATA <br> MANAGEMENT
-                </figcaption></a>
+                <a href="Expertise.html" class="TechnologyLink">
+                    <figcaption>DATA <br> MANAGEMENT
+                    </figcaption>
+                </a>
             </div>
             <div class="divTechnology">
                 <a href="Expertise.html?q=1" class="TechnologyLink"><img src="img/Technology2.svg" alt="Technology2" /></a>
                 <!--<span class="spnTechnology">ARTIFICIAL INTELLIGENCE</span>-->
-                <a href="Expertise.html?q=1" class="TechnologyLink"><figcaption>MACHINE <br> LEARNING</figcaption></a>
+                <a href="Expertise.html?q=1" class="TechnologyLink">
+                    <figcaption>MACHINE <br> LEARNING</figcaption>
+                </a>
             </div>
             <div class="divTechnology">
                 <a href="Expertise.html?q=2" class="TechnologyLink"><img src="img/Technology3.svg" alt="Technology3" /></a>
                 <!--<span class="spnTechnology">BIG DATA</span>-->
-                <a href="Expertise.html?q=2" class="TechnologyLink"><figcaption>MICROSOFT <br> BIG DATA SOLUTIONS</figcaption></a>
+                <a href="Expertise.html?q=2" class="TechnologyLink">
+                    <figcaption>MICROSOFT <br> BIG DATA SOLUTIONS</figcaption>
+                </a>
             </div>
             <div class="divTechnology">
                 <a href="Expertise.html?q=3" class="TechnologyLink"><img src="img/Technology4.svg" alt="Technology4" /></a>
                 <!--<span class="spnTechnology">VISUALIZATION APPLICATION</span>-->
-                <a href="Expertise.html?q=3" class="TechnologyLink"><figcaption>POWER BI &<br> VISUALIZATIONS</figcaption></a>
+                <a href="Expertise.html?q=3" class="TechnologyLink">
+                    <figcaption>POWER BI &<br> VISUALIZATIONS</figcaption>
+                </a>
             </div>
             <div class="divTechnology">
                 <a href="Expertise.html?q=4" class="TechnologyLink"><img src="img/Technology5.svg" alt="Technology5" /></a>
                 <!--<span class="spnTechnology">CLOUD MIGRATION</span>-->
-                <a href="Expertise.html?q=4" class="TechnologyLink"><figcaption>WEB DEVELOPMENT <br> & CLOUD SERVICES</figcaption></a>
+                <a href="Expertise.html?q=4" class="TechnologyLink">
+                    <figcaption>WEB DEVELOPMENT <br> & CLOUD SERVICES</figcaption>
+                </a>
             </div>
         </div>
         <div class="bottomScroll">
@@ -411,14 +421,31 @@
     <script>
         // Closes the sidebar menu
         $("#menu-close").click(function (e) {
-            e.preventDefault();
+            e.stopPropagation();
             $("#sidebar-wrapper").toggleClass("active");
         });
         // Opens the sidebar menu
         $("#menu-toggle").click(function (e) {
-            e.preventDefault();
+            e.stopPropagation();
             $("#sidebar-wrapper").toggleClass("active");
         });
+
+        $(document).click(function (e) {                                    
+            $("#sidebar-wrapper").removeClass("active").addClass("active")
+        });
+        function openMenu(nav) {
+            // Enable this to have toggle option in lower resolutions
+            // event.stopPropagation();            
+            // if ($("#" + nav).find("li.listItem:visible").length > 1) {
+            //     $("#" + nav).find("li.listItem").hide();
+            // } else {
+            //     $("#nav1").find("li.listItem").hide();
+            //     $("#nav2").find("li.listItem").hide();
+            //     $("#nav3").find("li.listItem").hide();
+            //     $("#nav4").find("li.listItem").hide();
+            //     $("#" + nav).find("li.listItem").show();
+            // }          
+        }
         // Scrolls to the selected menu item on the page
         $(function () {
             $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function () {
@@ -474,7 +501,7 @@
                 $(".toggelMenuBar").css({ "margin": "70px 0px 0px 0px" });
                 $(".divMAQDescription").css({ "margin-top": "10%" });
             }
-        });
+        });        
     </script>
 
 </body>

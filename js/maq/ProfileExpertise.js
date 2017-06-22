@@ -28,8 +28,7 @@
     $(document).ready(function () {
         var sID = getParameterByName("q"),
             sLink = oPageNavLinks["pagelink" + sID],
-            oPageLink = $("#PageNavLink .aSiteLinks");
-            debugger;
+            oPageLink = $("#PageNavLink .aSiteLinks");            
         oPageLink.click(function () {
             var sStopNavLink = oPageNavLinks[$(this).attr("data-link")];
             if (sStopNavLink) {

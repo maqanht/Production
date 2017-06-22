@@ -102,6 +102,7 @@ hr.small {
     text-indent: 10px;
     line-height: 40px;
     background: none;    
+    display: block;
 }
 
 .sidebar-nav li:hover {
@@ -599,5 +600,23 @@ footer {
     .divMAQDescriptionSubText {        
         font-size: 13px;
         line-height: 19px;
+    }
+}
+
+@media(max-width:768px) { 
+    .navHeadings {
+        border: none;        
+    }
+    /*.sidebar-nav > .sidebar-brand span {
+        font-weight: normal;
+    }*/
+    /*.sidebar-nav li:not(:first-child) {
+        display: none;
+    }*/
+    .sidebar-nav > .sidebar-brand {
+        height: 50px;
+    }
+    #sidebar-wrapper {
+        height: auto;
     }
 }
