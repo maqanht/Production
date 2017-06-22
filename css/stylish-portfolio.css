@@ -372,7 +372,7 @@ figcaption {
 .bottomScroll {
     position: relative;
     width: 100%;
-    height: 100px;
+    height: 80px;
 }
 .FollowUs, .ContactUs {
     display: inline-block;
@@ -391,6 +391,10 @@ figcaption {
 .VisualizationsURL {
     margin-top: 20px;    
     float: left;
+}
+
+.TechnologyLink:hover {
+    text-decoration: none;
 }
 
 .VisualizationsURL a{
@@ -534,7 +538,7 @@ footer {
         height: 215px;
     }*/
     .bottomScroll {
-        height: 100px;
+        height: 80px;
     }
     .divMAQDescription h1 {
         font-size: 64px;
