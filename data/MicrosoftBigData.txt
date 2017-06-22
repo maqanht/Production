@@ -1,0 +1,12 @@
+<article class="LeftArticle FullWidth">                   
+                    <p class="DataSubContent SemiBold Color3f3f3f">Highlights</p>
+                    <ul class="MarginTop5 CircleBullets">
+                        <li>Expertise in using COSMOS (Microsoft Big Data) platform across Microsoft Groups</li>
+                        <li>Multiple architecture patterns defined for data ingress and egress for COSMOS</li>
+                        <li>In-house COSMOS development framework and tools developed</li>
+                        <li>Dynamic Scope script generation and scheduling</li>
+                        <li>Expertise in Sangam, SSExport, Reducer, and Processor</li>
+                        <li>.NET based Rijndael encryption utility for PII data</li>
+                        <li>Visualization of COSMOS data using Power BI</li>
+                    </ul>
+                </article>

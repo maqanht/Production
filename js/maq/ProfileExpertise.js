@@ -8,14 +8,13 @@
         pagelink4: "Client.txt"
     },
         oExpertise = {
-            pagelink0: "Business-Intelligence.txt",
-            pagelink1: "Power BI.txt",
-            pagelink2: "App-Development.txt",
-            pagelink3: "UX-Design.txt",
-            pagelink4: "Cloud.txt",
-            pagelink5: "SharePoint.txt"
+            pagelink0: "Data-Management.txt",
+            pagelink1: "Machine-Learning.txt",
+            pagelink2: "MicrosoftBigData.txt",
+            pagelink3: "Visualizations.txt",
+            pagelink4: "WebDevelopment.txt"
         };
-    if (-1 !== window.location.hash.toLowerCase().indexOf("#expertise")) {
+    if (-1 !== window.location.href.toLowerCase().indexOf("expertise.html")) {
         oPageNavLinks = oExpertise;
     }
     function loadPageChunk(sPageName) {
@@ -30,6 +29,7 @@
         var sID = getParameterByName("q"),
             sLink = oPageNavLinks["pagelink" + sID],
             oPageLink = $("#PageNavLink .aSiteLinks");
+            debugger;
         oPageLink.click(function () {
             var sStopNavLink = oPageNavLinks[$(this).attr("data-link")];
             if (sStopNavLink) {

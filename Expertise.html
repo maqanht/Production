@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -128,30 +128,20 @@
             </div>
         </div>
     </header>
-
     <div id="MainContent">
-        <div class="dvLimitedWith dvBackground PagePadding" style="width: 77%; margin: 5% 11.45% 0 11.45%">
-            <h1 class="DataTitle SemiBold Color58585a">Join us. Explore your potential.</h1>
-            <aside class="LeftArticle CarrersDataSection FloatLeft">
-                <article>
-                    <div id="BreadCrumb" class="SecondNav" style="display: none;">
-                        <a href="Careers.html?q=Mumbai" class="BackLink MarginBoT25">Back to Openings</a><span> &raquo; </span>
-                        <span class="JobTitle">@title</span>
-                    </div>
-                    <p id="JobTitle" class="Datatagline SemiBold Clear" style="display: none;">@title</p>
-                    <div id="ProfileData" class="Loading m30">
-                    </div>
-                </article>
+        <div class="dvLimitedWith dvBackground PagePadding" style="width: 77%; margin: 5% 11.45% 0 11.45%; position: absolute">
+            <aside class="FloatLeft NavSection">
+                <nav id="PageNavLink">
+                    <a data-link="pagelink0" class="aSiteLinks">Data Management</a>
+                    <a data-link="pagelink1" class="aSiteLinks MgnL30">Machine Learning</a>
+                    <a data-link="pagelink2" class="aSiteLinks MgnL30">Microsoft Big Data Solutions</a>
+                    <a data-link="pagelink3" class="aSiteLinks MgnL30">Power BI & Visualizations</a>
+                    <a data-link="pagelink4" class="aSiteLinks MgnL30">Web Development & Cloud Services</a>
+                </nav>
             </aside>
-            <aside class="CareersRight FloatLeft">
-                <p class="pTagLine SemiBold m30">Contact Information</p>
-                <div class="m30">
-                    <p>For positions in Mumbai,</p>
-                    <p>e-mail your resume to</p>
-                    <p class="Colorred"><a id="MumMail" class="BackLink">MumbaiJobs@MAQSoftware.com</a></p>
-                </div>
+            <aside id="DataSection" class="FloatLeft" style="width: 80%; margin-left: 0px;">               
             </aside>
-            <section class="Clear"></section>
+            <section class="Clear"> </section>
             <footer id="footer" style="margin: 5% 0 0 0">
                 <div class="container">
                     <div class="row">
@@ -274,12 +264,6 @@
     </div>
 
     <script src="js/jquery.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            careersInMumbai();
-        });
-    </script>
-    <!-- Custom Theme JavaScript -->
     <script>
         // Closes the sidebar menu
         $("#menu-close").click(function (e) {
@@ -340,8 +324,9 @@
             }
         });
     </script>
-    <!--<script src="js/maq/jquery.dotdotdot.min.js"></script>-->
+    <script src="js/maq/ProfileExpertise.js?v=30160405"></script>
     <script src="js/maq/layout.js?v=30160405"></script>
     <script type="text/javascript" src="js/maq/Common.js?v=30160405"></script>
-    <script src="js/maq/Careers.js?v=30160405"></script>
-    </div>
+</body>
+
+</html>

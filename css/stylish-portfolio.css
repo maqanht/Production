@@ -328,6 +328,16 @@ figcaption {
     height: 22px;
 }
 
+.DataManagement {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.MachineLearning {
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 10%;    
+}
 .left75Percent {
     left: 75%;
 }
@@ -374,6 +384,18 @@ figcaption {
     display: inline-block;
 }
 
+.Visualizations {
+    line-height: 25px;
+}
+
+.VisualizationsURL {
+    margin-top: 20px;    
+    float: left;
+}
+
+.VisualizationsURL a{
+    color: #337ab7;
+}
 .demo a:hover {
 	opacity: .5;
 }
