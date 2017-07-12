@@ -15,8 +15,16 @@
     width: 100%;
     padding-bottom: 10px;
 }
+.TechnologyLink {
+    display: flex;
+    justify-content: center;
+}
+.TechnologyLink > figcaption{
+    padding-top: 1.5em;
+}
 .DeliveryApproach {
-    background: #ffc6b3;
+    /*background: #ffc6b3;*/
+    background: url(../img/Section_Division.png) no-repeat center center scroll;
     padding: 0 35px;
     width: 100%;
     text-align: center;
@@ -28,7 +36,8 @@
 }
 .TechnicalSolution {
     text-align: center;
-    background: #ffc6b3;
+    /*background: #ffc6b3;*/
+    background: url(../img/Section_Division.png) no-repeat center center scroll;
 }
 .WhatWeAre {
     padding-bottom: 3%;
@@ -36,9 +45,8 @@
 }
 .DigitalMarketing {
     padding-bottom: 5%;
-    background: url("../img/PowerBI-Hero.jpg") no-repeat center center scroll;
+    background: url("../img/Header.png") no-repeat center center scroll;
     background-size: 100% 100%;
-    z-index: 1;
 }
 
 .BoldContent h1{
@@ -63,12 +71,63 @@ h1 {
 .TextAlignLeft {
     text-align: left;
 }
-.WhiteBg {
+/*.WhiteBg {
     background-color: white;
 }
 .GreyBg {
     background-color: #E0E0E0;
+}*/
+.DMbackground {
+    background: url(../img/DMBackground.png) no-repeat;
+    /* background-size: cover; */
+}
+.WebBackground {
+    background: url(../img/WebBackground.png) no-repeat; /*center center scroll */
+    /* background-size: contain; */
+}
+.BigDataBackground {
+    background: url(../img/BigDatabackground.png) no-repeat;
+    /* background-size: contain; */
 }
 .PaddingTopBottom {
-    padding-top: 3%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 3%;
+}
+/*.ContainerMinHeight {
+    min-height: 50em;
+}*/
+.IconSize {
+    height: 23em;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+}
+.flex-start{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1em;
+}
+.horLine{
+    width: 16em;
+    margin: 0;
+    border-top: 1px solid black;
+}
+.smallCircle{
+    border-radius: 50%;
+ width: 0.5em;
+ height: 0.5em; 
+    border: 1px solid black;
+}
+.flex{
+    display: flex;
+}
+.circleText{
+    margin-left: -1em;
+    color: red;
 }
