@@ -18,6 +18,8 @@
 .TechnologyLink {
     display: flex;
     justify-content: center;
+    transition: all 0.75s;
+    cursor: pointer;
 }
 .TechnologyLink > figcaption{
     padding-top: 1.5em;
@@ -31,7 +33,7 @@
     padding-top: 5%;
     padding-bottom: 5%;
 }
-.TextAlignCenter {
+.textAlignCenter  {
     text-align: center;
 }
 .TechnicalSolution {
@@ -63,10 +65,12 @@
     font-size: 18px;
     font-weight: normal;
     text-align: left;
+    max-width: 30em;
+    display: inline-block;
 }
 h1 {
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
 }
 .TextAlignLeft {
     text-align: left;
@@ -89,12 +93,11 @@ h1 {
     background: url(../img/BigDatabackground.png) no-repeat;
     /* background-size: contain; */
 }
-.PaddingTopBottom {
-    display: flex;
+/*.PaddingTopBottom {    
     align-items: center;
     height: 100%;
     padding-bottom: 3%;
-}
+}*/
 /*.ContainerMinHeight {
     min-height: 50em;
 }*/
@@ -127,7 +130,20 @@ h1 {
 .flex{
     display: flex;
 }
+
 .circleText{
     margin-left: -1em;
     color: red;
+}
+
+.Caption figcaption {		
+    color: white;		
+}
+.redLine{		
+    border-top: 1px solid red;		
+    min-width: 8em;		
+}
+.flex-VerticalCenter{		
+    display: flex;		
+    align-items: center;		
 }

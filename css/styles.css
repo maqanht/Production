@@ -17,11 +17,11 @@ body {
     overflow-x: hidden;
 }
 
-.divMAQDescriptionSubText {        
+.divMAQDescriptionSubText {
     font-size: 20px;
     color: #58585A;
     font-family: "Segoe UI";
-    line-height: 30px;    
+    line-height: 30px;
 }
 .floatRight {
     float: right;
@@ -105,7 +105,7 @@ hr.small {
 .sidebar-nav li {
     text-indent: 10px;
     line-height: 40px;
-    background: none;    
+    background: none;
     display: block;
 }
 
@@ -125,7 +125,7 @@ hr.small {
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #686868;
-    /*background: red;*/        
+    /*background: red;*/
 }
 
 .sidebar-nav li a:active,
@@ -136,7 +136,7 @@ hr.small {
 .sidebar-nav > .sidebar-brand {
     height: 55px;
     font-size: 18px;
-    line-height: 55px;    
+    line-height: 55px;
 }
 
 .sidebar-nav > .sidebar-brand span {
@@ -270,7 +270,7 @@ hr.small {
 }
 
 .pageHeader {
-    width: 100%;    
+    width: 100%;
 }
 .divTechnology {
     display: inline-block;
@@ -286,26 +286,19 @@ hr.small {
     padding-right: 10px;
 }
 
-figcaption {    
+figcaption {
     margin-left: 0px;
-    color: #58585A;
+    color: White;
     line-height: 18px;
     text-align: center;
 }
 
-.Technologies {
-    margin-top: 120px;
-   /* margin: 5% 4% 0 8%;*/
-    margin-left: 3%;
-    margin-top: 5%;
-    margin-right: 4%
-}
 
 .divMAQDescription {
     margin-top: 5%;
     padding: 0 35px;
     width: 100%;
-    text-align: center;  
+    text-align: center;
     margin-bottom: 2%;
 }
 
@@ -313,13 +306,13 @@ figcaption {
     font-size: 50px;
     margin: 0;
     padding: 0;
-    color: #BA131A;    
+    color: #BA131A;
     font-family: "Segoe UI Semibold"
 }
 
 .spnTechnology {
     margin-top: -10px;
-} 
+}
 .DataManagement{
     width: 100%;
     /*height:  500px;*/
@@ -446,7 +439,7 @@ figcaption {
 .MachineLearning {
     width: 80%;
     margin-top: 30px;
-    margin-left: 10%;    
+    margin-left: 10%;
 }
 .left75Percent {
     left: 75%;
@@ -499,7 +492,7 @@ figcaption {
 }
 
 .VisualizationsURL {
-    margin-top: 20px;    
+    margin-top: 20px;
     float: left;
 }
 
@@ -521,7 +514,7 @@ figcaption {
 }
 
 .sidebar-nav > .footer-brand span {
-    color: #000;    
+    color: #000;
     font-size: 17px;
     margin-left: 10px;
 }
@@ -573,7 +566,7 @@ figcaption {
 	letter-spacing: .1em;
 	text-decoration: none;
     transition: opacity .3s;
-    bottom: 10%;  
+    bottom: 10%;
 }
 .relative a span {
 	position: absolute;
@@ -582,44 +575,16 @@ figcaption {
 	width: 24px;
 	height: 24px;
 	margin-left: -12px;
-	border-left: 1px solid grey;
-	border-bottom: 1px solid grey;
+	border-left: 1px solid White;
+	border-bottom: 1px solid White;
 	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 	-webkit-animation: sdb05 1.5s infinite;
 	animation: sdb05 1.5s infinite;
-    box-sizing: border-box;      
+    box-sizing: border-box;
 }
 .relative{
     position: relative;
-}
-
-
-@-webkit-keyframes sdb05 {
-	0% {
-		-webkit-transform: rotate(-45deg) translate(0, 0);
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		-webkit-transform: rotate(-45deg) translate(-20px, 20px);
-		opacity: 0;
-	}
-}
-@keyframes sdb05 {
-	0% {
-		transform: rotate(-45deg) translate(0, 0);
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		transform: rotate(-45deg) translate(-20px, 20px);
-		opacity: 0;
-	}
 }
 
 @media(max-width:768px) {
@@ -646,7 +611,7 @@ footer {
   right: 5px;
 }
 
-@media(max-width:1600px) { 
+@media(max-width:1600px) {
     /*.divTechnology {
         margin-right: 3%;
         width: 233px;
@@ -662,18 +627,18 @@ footer {
     .Technologies {
         margin-top: 120px;
     }
-    .divMAQDescriptionSubText {        
+    .divMAQDescriptionSubText {
         font-size: 20px;
         line-height: 37px;
     }
 }
 
-@media(max-width:1450px) { 
+@media(max-width:1450px) {
     /*.divTechnology {
         margin-right: 2%;
         width: 186px;
         height: 172px;
-    }*/    
+    }*/
     .bottomScroll {
         height: 75px;
     }
@@ -686,17 +651,22 @@ footer {
         margin-top: 100px;
     }
 
-    .divMAQDescriptionSubText {        
+    .divMAQDescriptionSubText {
         font-size: 17px;
         line-height: 28px;
     }
 }
 
-@media(max-width:1380px) { 
+@media(max-width:1380px) {
     /*.divTechnology {
         margin-right: 1%;
         width: 60%;
         height: 60%;
+    }
+    .Header {
+        background: url("../img/Hero1366.png") no-repeat center center scroll;
+        background-size: 100% 100%;
+        color: white;
     }*/
     .bottomScroll {
         height: 50px;
@@ -710,15 +680,15 @@ footer {
     .Technologies {
         margin-top: 80px;
     }
-    .divMAQDescriptionSubText {        
+    .divMAQDescriptionSubText {
         font-size: 13px;
         line-height: 19px;
     }
 }
 
-@media(max-width:768px) { 
+@media(max-width:768px) {
     .navHeadings {
-        border: none;        
+        border: none;
     }
     /*.sidebar-nav > .sidebar-brand span {
         font-weight: normal;
@@ -733,3 +703,4 @@ footer {
         height: auto;
     }
 }
+
