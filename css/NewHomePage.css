@@ -68,7 +68,8 @@ body {
 }
 .circleOptionText{
     margin-left: -1em;
-    color: red
+    color: red;
+    text-align: left;
 }
 .flex{
     display: flex;
@@ -456,4 +457,5 @@ enhance {
     background: none;
     border: 1px solid white;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
