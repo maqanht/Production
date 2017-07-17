@@ -30,19 +30,19 @@
                     </div>
                         <div class="container">
                             <div class="">
-                                    <h1>Digital Marketing</h1>
-                                    <h1>& Analytics Solutions</h1>
+                                    <h1>How can we increase your</h1><h1>Sales using our expertise in</h1><h1>Power BI?</h1>
+                                    <h1></h1>
                                     <div class="marginTop15px">
                                         <div>
                                             <span>
-                                            We craft digital solutions with the latest technologies of web, mobile and cloud
-                                            computing, for industry leading platforms.
-                                        </span>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                                            </span>
                                         </div>
                                     </div>
                             </div>
+                            <div class="flex-start"><div class="text-arrow"><div class="readMore">Learn More</div><div class="traingle"></div></div></div>   
                         </div>
-                        <div class="row links">
+                        <!--<div class="row links">
                                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                 </div>
                                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
@@ -75,6 +75,7 @@
                                 </div>
                                 <div class="col-xs-4 col-sm-4 col-lg-4">
                                 </div>
+                                -->
                     </div>
                 <!--<a class="scrollIndicator" href="#WhatWeDo"><span></span></a>    -->
                 </div>
@@ -100,7 +101,8 @@
                                     <hr class="horLine" data-ng-if="option.line">
                                 </div>
                             </div>                           
-                        </div>                     
+                        </div>
+                        <div class="flex-center"><div class="text-arrow"><div class="readMore">Read More</div><div class="traingle"></div></div></div>                     
                     </div>
             <div class="row PaddingTopBottom displayFlex space-between technologyExtraTopPadding clickable">
                 <div class="col-xs-12 col-sm-4 col-lg-2 col-md-4" data-ng-repeat="technology in app.technologyList" data-ng-click="app.changeTechnology(technology)">
@@ -192,11 +194,26 @@
                     </div>                    
                 </div>
                 <div id="OurClients" class="PaddingTopBottom relative"> 
-                    <div class="row centerAlign "><h1>Our Clients</h1></div>
+                    <div class="row centerAlign"><h1>Our Clients</h1></div>
                     <div class="OurClients">
                             <img class="clientLogo" data-ng-repeat="client in app.clients" src="{{client.logo}}" alt="{{client.name}}"/>
                     </div>
-                </div>  
+                </div> 
+                <div id="NewsCoverage" class="PaddingTopBottom">
+                    <div class="row centerAlign"><h1>News & Press Coverage</h1></div>
+                    <div class="row PaddingTopBottom newsBox">
+                        <div data-ng-repeat="news in app.newsList" class="col-xs-12 col-sm-6 col-md-3 col-lg-2 newsCoverage">
+                            <div class="publishedDate newsContentPadding">{{news.publishedDate}}
+                                <br>
+                                {{news.publishedBy}}
+                            </div>
+                            <!--<div class="publishedBy">{{news.publishedBy}}</div>-->
+                            <div class="newsHeadline newsContentPadding">{{news.newsHeadline}}</div>
+                            <div class="newsContent newsContentPadding">{{news.newsContent}}</div>
+                        </div>
+                    </div>
+                    <div class="flex-center"><div class="text-arrow"><div class="readMore">Read More</div><div class="traingle"></div></div></div>   
+                </div> 
                 <footer id="footer">
                     <div class="container">
                         <div class="row">

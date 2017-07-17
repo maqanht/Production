@@ -173,17 +173,33 @@ div.vertical-line{
     background: url("../img/Hero1920.png") no-repeat center center scroll;
     background-size: 100% 100%;
     color: white;
+    width: 100%;
+    height: 90%;   
 }
-.container {
+
+/* .header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 90%;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+} */
+/*.container {
     text-align: center;
     vertical-align: middle;
-}
+}*/
 .Header .container {
     color: white !important;
-    padding-top: 15%;
+    margin: 0;
+    padding-left: 10%;
+    padding-right: 5%;
+    width: 50%;
 }
 .Header .container h1 {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     opacity: 1;
 }
@@ -202,7 +218,7 @@ div.vertical-line{
 }
 .Header span {
     color: white;
-    font-size: 22px;
+    font-size: 1.2em;
 }
 .Header .links {
     padding-top: 5%;
@@ -288,6 +304,7 @@ div.vertical-line{
     font-size: 20px;
     color: white;
     line-height: 0px;
+    font-weight: 600;
 }
 .nav>li>a:hover{
     background-color: transparent;
@@ -296,14 +313,16 @@ div.vertical-line{
 }
 
 .OurClients{
-    width: 70%;
-    margin: 25px auto;
-    justify-content: space-around;
-    /*display: flex;*/
+    width: 80%;
+    margin: 25px auto;    
+    text-align: center;
+}
+.OurClients > img {
+   width: 18%;
 }
 
 .clientLogo{
-    padding: 40px;
+    padding: 20px;
 }
 
 #appreciation {
@@ -383,4 +402,58 @@ enhance {
 }
 .marginBottom1em{
     margin-bottom: 1em;
+}
+.newsBox {
+    justify-content: space-around; 
+    display: flex;   
+}
+.newsCoverage {
+    background: #F5F5F5;
+    border-top: 5px solid #ca0c0c;
+    font-size: 12px;
+}
+.newsContent {
+    /*height: 15%;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.newsContentPadding {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.newsHeadline {
+    color: #80bfff;
+    font-size: 14px;
+}
+.readMore { 
+    width: 100px;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2em;
+}
+
+.traingle {
+    margin: 5px;
+    border: solid white;
+    border-width: 0 2px 2px 0; 
+    padding: 5px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    height: 10px;
+}
+.text-arrow{
+    background: #bc2431;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10.5em;
+    height: 2.5em;
+}
+.flex-start .text-arrow{
+    background: none;
+    border: 1px solid white;
+    margin-top: 30px;
 }

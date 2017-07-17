@@ -9,11 +9,16 @@
             {Name:"News",isSelected:false, url: "http://maqsoftware.in/News.html"},
             {Name:"Contact Us",isSelected:false, url:"http://maqsoftware.in/Contactus.html"}];
         app.clients=[
-            {logo: "../img/MS-Logo.png", name: "Microsoft"},
-            {logo: "../img/Amazon-Logo.png", name: "Amazon"},
-            {logo: "../img/Google-logo.png", name: "Google"},
-            {logo: "../img/Tmobile-Logo.png", name: "TMobile"},
-            {logo: "../img/MS-Logo.png", name: "Microsoft"}
+            {logo: "img/MS-Logo.png", name: "Microsoft"},
+            {logo: "img/techsoup.png", name: "techsoup"},
+            {logo: "img/T-Mobile.png", name: "TMobile"},
+            {logo: "img/Envision.png", name: "envision"},
+            {logo: "img/Antech.png", name: "VCAAntech"},
+            {logo: "img/Starbucks.png", name: "Starbucks"},
+            {logo: "img/Amazon.png", name: "Amazon"},
+            {logo: "img/Amazon_services.png", name: "Amazon Web Services"},
+            {logo: "img/Devon.png", name: "devon"},
+            {logo: "img/Google.png", name: "Google"}           
         ];
         app.technologyList=[
             {
@@ -72,6 +77,36 @@
             {Name:"DISCOVER",Class:"flex-center",line:true,isSelected:false},
             {Name:"ENABLE",Class:"flex-start",line:false,isSelected:true}];
 
+        app.newsList = [
+            {
+            id:1,
+            publishedDate:"August 22, 2016",
+            publishedBy:"MAQ Software",
+            newsHeadline:"MAQ Software Honored for the 8th time as one of America’s Fastest-Growing Private Companies by Inc. Magazine",
+            newsContent:"MAQ Software has accomplished the rare achievement of ranking on the Inc. 5000 list for the 8th time. Less than 2% of Inc. 5000 companies demonstrate sustained growth by appearing 8 or more times. The highly prestigious list has tracked the nation's fastest-growing private companies"
+            },
+            {
+            id:2,
+            publishedDate:"August 22, 2016",
+            publishedBy:"MAQ Software",
+            newsHeadline:"MAQ Software Honored for the 8th time as one of America’s Fastest-Growing Private Companies by Inc. Magazine",
+            newsContent:"MAQ Software has accomplished the rare achievement of ranking on the Inc. 5000 list for the 8th time. Less than 2% of Inc. 5000 companies demonstrate sustained growth by appearing 8 or more times. The highly prestigious list has tracked the nation's fastest-growing private companies"
+            },
+            {
+            id:3,
+            publishedDate:"August 22, 2016",
+            publishedBy:"MAQ Software",
+            newsHeadline:"MAQ Software Honored for the 8th time as one of America’s Fastest-Growing Private Companies by Inc. Magazine",
+            newsContent:"MAQ Software has accomplished the rare achievement of ranking on the Inc. 5000 list for the 8th time. Less than 2% of Inc. 5000 companies demonstrate sustained growth by appearing 8 or more times. The highly prestigious list has tracked the nation's fastest-growing private companies"
+            },
+            {
+            id:4,
+            publishedDate:"August 22, 2016",
+            publishedBy:"MAQ Software",
+            newsHeadline:"MAQ Software Honored for the 8th time as one of America’s Fastest-Growing Private Companies by Inc. Magazine",
+            newsContent:"MAQ Software has accomplished the rare achievement of ranking on the Inc. 5000 list for the 8th time. Less than 2% of Inc. 5000 companies demonstrate sustained growth by appearing 8 or more times. The highly prestigious list has tracked the nation's fastest-growing private companies"
+            }
+        ];
         app.technologyName=app.technologyList[4].Name;
         app.technologyTagLine=app.technologyList[4].Tagline;
         app.technologyCotent=app.technologyList[4].Content;
