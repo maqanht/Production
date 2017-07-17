@@ -12,109 +12,89 @@
     </head>
     <body data-ng-controller="AppController as app">        
         <div class="flex">
-                <div class="Header">
-                    <div class="navigation">
-                        <nav class="navbar">
-                            <div class="container-fluid">
-                                <div class="Logo marginLeft10">
-                                    <a class="navbar-brand" href="#"><img src="img/MAQLogo.svg" alt="MAQ Software Logo" /></a>
-                                </div>
-                                <div class="navbar-collapse collapse">
-                                    <ul class="marginRight10 nav navbar-nav navbar-right">
-                                        <li data-ng-repeat="nav in app.navList" data-ng-click="app.changeNav(nav)"><a  class="navLinks" data-ng-class={{"nav.isSelected?'borderBottomRed':''"}} href="{{nav.url}}">{{nav.Name}}</a></li>
-                                        
-                                    </ul>
-                                </div>
+            <div class="Header">
+                <div class="navigation">
+                    <nav class="navbar">
+                        <div class="container-fluid">
+                            <div class="Logo marginLeft10">
+                                <a class="navbar-brand" href="#"><img src="img/MAQLogo.svg" alt="MAQ Software Logo" /></a>
                             </div>
-                        </nav>
-                    </div>
-                        <div class="container">
-                            <div class="">
-                                    <h1>How can we increase your</h1><h1>Sales using our expertise in</h1><h1>Power BI?</h1>
-                                    <h1></h1>
-                                    <div class="marginTop15px">
-                                        <div>
-                                            <span>
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                                            </span>
-                                        </div>
-                                    </div>
+                            <div class="navbar-collapse collapse">
+                                <ul class="marginRight10 nav navbar-nav navbar-right">
+                                    <li data-ng-repeat="nav in app.navList" data-ng-click="app.changeNav(nav)">
+                                        <a  class="navLinks" data-ng-class={{"nav.isSelected?'borderBottomRed':''"}} href="{{nav.url}}">{{nav.Name}}
+                                        </a>
+                                    </li>                                      
+                                </ul>
                             </div>
-                            <div class="flex-start"><div class="text-arrow"><div class="readMore">Learn More</div><div class="traingle"></div></div></div>   
                         </div>
-                        <!--<div class="row links">
-                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                </div>
-                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                            <a href="https://www.youtube.com/watch?v=mgyfCETF1lA&feature=youtu.be" class="image"  target="_blank">
-                                            <img src="img\PlayIcon.png" alt="Play Video">
-                                            </a>
-                                            <a href="https://www.youtube.com/watch?v=mgyfCETF1lA&feature=youtu.be" class="Caption" target="_blank">
-                                                <figcaption>Play Video</figcaption>                           
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                            <a href="#WhatWeDo" class="image">
-                                            <img src="img/WhatWeDoIcon.png" alt="What We Do">
-                                            </a>
-                                            <a href="#WhatWeDo" class="Caption">
-                                                <figcaption>What We Do</figcaption>
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                            <a href="#WhoWeAre" class="image">
-                                            <img src="img/WhoWeAreIcon.png" alt="Who We Are">
-                                            </a>
-                                            <a href="#WhoWeAre" class="Caption">
-                                                <figcaption>Who We Are</figcaption>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4 col-sm-4 col-lg-4">
-                                </div>
-                                -->
-                    </div>
-                <!--<a class="scrollIndicator" href="#WhatWeDo"><span></span></a>    -->
+                    </nav>
                 </div>
-                
-                <div class="technologies" id="WhatWeDo">
-            <div class="textAlignCenter">
+                <div class="container">
+                    <div class="">
+                        <h1>How can we increase your</h1>
+                        <h1>Sales using our expertise in</h1>
+                        <h1>Power BI?</h1>
+                    </div>
+                    <div class="marginTop15px">
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                        </span>
+                    </div>
+                    <div class="flex-start">
+                        <div class="text-arrow">
+                            <div class="readMore">
+                                Learn More
+                            </div>
+                            <div class="traingle">
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>                                           
+            <div class="technologies" id="WhatWeDo">
+                <div class="textAlignCenter">
                     <h2>EXPLORE WHAT WE DO</h2>                    
-            </div>
-            <div >
-                        <div class="textAlignCenter">
+                </div>
+                <div>
+                    <div class="textAlignCenter">
                         <h1 class="TextColorRed">{{app.technologyName}}</h1>
                         <h1>{{app.technologyTagLine}}</h1>
-                        </div>
-                        <div class="centered">
-                            <span class="Content"> {{app.technologyCotent}} </span> 
-                        </div>
-                         <div class="textAlignCenter"><h2>DATA TO INSIGHTS</h2><div>  
+                    </div>
+                    <div class="centered">
+                        <span class="Content"> {{app.technologyCotent}} </span> 
+                    </div>
+                    <div class="textAlignCenter"><h2>DATA TO INSIGHTS</h2><div>  
                         <div class="flex-center">   
                             <div data-ng-repeat="option in app.sectionOption">
                                 <div class="circleOptionText">{{option.Name}}</div>
-                                <div class={{option.Class}}>              
-                                    <div data-ng-class={{"option.isSelected?'selectedCirecle':'smallCircle'"}}></div>
-                                    <hr class="horLine" data-ng-if="option.line">
+                                    <div class={{option.Class}}>              
+                                            <div data-ng-class={{"option.isSelected?'selectedCirecle':'smallCircle'"}}>                                                
+                                            </div>
+                                                <hr class="horLine" data-ng-if="option.line">
+                                    </div>
+                                </div>                           
+                            </div>
+                            <div class="flex-center">
+                                <div class="text-arrow">
+                                    <div class="readMore">Read More</div>
+                                    <div class="traingle"></div>
                                 </div>
-                            </div>                           
+                            </div>                     
                         </div>
-                        <div class="flex-center"><div class="text-arrow"><div class="readMore">Read More</div><div class="traingle"></div></div></div>                     
                     </div>
-            <div class="row PaddingTopBottom displayFlex space-between technologyExtraTopPadding clickable">
-                <div class="col-xs-12 col-sm-4 col-lg-2 col-md-4" data-ng-repeat="technology in app.technologyList" data-ng-click="app.changeTechnology(technology)">
-                    <a class="TechnologyLink" data-ng-class={{"technology.isSelected?'liftUp':''"}}><img src={{technology.img}} alt={{technology.alt}} /></a>                   
-                    <a class="TechnologyLink">
-                        <figcaption>{{technology.figCaption[0]}} <br> {{technology.figCaption[1]}}
-                        </figcaption>
-                    </a>
-                </div>                         
-            </div>                      
-        </div>
-                 <div id="WhoWeAre"  class="relative">
+                    <div class="row PaddingTopBottom displayFlex space-between technologyExtraTopPadding clickable">
+                        <div class="col-xs-12 col-sm-4 col-lg-2 col-md-4" data-ng-repeat="technology in app.technologyList" data-ng-click="app.changeTechnology(technology)">
+                            <a class="TechnologyLink" data-ng-class={{"technology.isSelected?'liftUp':''"}}><img src={{technology.img}} alt={{technology.alt}} /></a>                   
+                            <a class="TechnologyLink">
+                                <figcaption>{{technology.figCaption[0]}} <br> {{technology.figCaption[1]}}
+                                </figcaption>
+                            </a>
+                        </div>                         
+                    </div>                      
+                </div>
+            </div>
+                <div id="WhoWeAre"  class="relative">
                     <div class="row centerAlign "><h1>Who we are</h1></div>
                     <div class="row centerAlign ">
                         <h2 class="textColorGrey">We are a technical solutions company specializing in</h2>
@@ -128,17 +108,17 @@
                                 <div class="lineContainer marginBottom1em"><div class="dashedLineBottom"></div><div><h2 class="h2Modified">500+</h2>Worldwide Employees</div></div>
                             </div>
                             <div class="textAlignCenter">
-                                 <div class="lineContainer marginTop1em"><div><h2 class="h2Modified">500+</h2>Worldwide Employees</div><div class="dashedLineTop"></div></div>
+                                <div class="lineContainer marginTop1em"><div><h2 class="h2Modified">500+</h2>Worldwide Employees</div><div class="dashedLineTop"></div></div>
                                 <div class="flex-VerticalCenter"><span class="redLine"></span><span class="smallCircle"></span><span class="redLine"></span></div>
                                  <div class="featureImage marginTop1em"><img src="img/Asset 115.png" alt="Worldwide Employees"></div>
                             </div>
                            <div class="textAlignCenter">
-                                  <div class="featureImage marginTop1em"><img src="img/Asset 113.png" alt="Worldwide Employees"></div>
+                                <div class="featureImage marginTop1em"><img src="img/Asset 113.png" alt="Worldwide Employees"></div>
                                 <div class="flex-VerticalCenter"><span class="redLine"></span><span class="smallCircle"></span><span class="redLine"></span></div>
                                 <div class="lineContainer marginBottom1em"><div class="dashedLineBottom"></div><div><h2 class="h2Modified">500+</h2>Worldwide Employees</div></div>
                             </div>
                             <div class="textAlignCenter">
-                                 <div class="lineContainer marginTop1em"><div><h2 class="h2Modified">500+</h2>Worldwide Employees</div><div class="dashedLineTop"></div></div>
+                                <div class="lineContainer marginTop1em"><div><h2 class="h2Modified">500+</h2>Worldwide Employees</div><div class="dashedLineTop"></div></div>
                                 <div class="flex-VerticalCenter"><span class="redLine"></span><span class="smallCircle"></span><span class="redLine"></span></div>
                                 <div class="featureImage marginTop1em"><img src="img/Asset 114.png" alt="Worldwide Employees"></div>
                             </div>                                                
@@ -196,7 +176,7 @@
                 <div id="OurClients" class="PaddingTopBottom relative"> 
                     <div class="row centerAlign"><h1>Our Clients</h1></div>
                     <div class="OurClients">
-                            <img class="clientLogo" data-ng-repeat="client in app.clients" src="{{client.logo}}" alt="{{client.name}}"/>
+                        <img class="clientLogo" data-ng-repeat="client in app.clients" src="{{client.logo}}" alt="{{client.name}}"/>
                     </div>
                 </div> 
                 <div id="NewsCoverage" class="PaddingTopBottom">
@@ -327,7 +307,7 @@
                         </div>
                     </div>
                
-            </footer>
+                </footer>
         </div>        
      
     </body>
