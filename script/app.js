@@ -7,7 +7,7 @@
             {Name:"Expertise",isSelected:false, url: "http://maqsoftware.in/Expertise.html"},
             {Name:"Profile",isSelected:false, url:"http://maqsoftware.in/Profile.html?q=1"},
             {Name:"News",isSelected:false, url: "http://maqsoftware.in/News.html"},
-            {Name:"Careers",isSelected:false, url: "http://192.168.3.50:1096/Careers.html"},
+            {Name:"Careers",isSelected:false, url: "http://maqsoftware.in/Careers.html"},
             {Name:"Contact Us",isSelected:false, url:"http://maqsoftware.in/Contactus.html"}];
         app.clients=[
             {logo: "img/MS-Logo.png", name: "Microsoft"},
