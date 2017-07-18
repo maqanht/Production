@@ -11,6 +11,7 @@
     .newsContent:before {
         right: 1rem;
     }
+}
 @media screen and (max-width: 1280px) and (min-width: 50px) {
     html{
         font-size: 40%;
