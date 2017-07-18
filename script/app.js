@@ -7,6 +7,7 @@
             {Name:"Expertise",isSelected:false, url: "http://maqsoftware.in/Expertise.html"},
             {Name:"Profile",isSelected:false, url:"http://maqsoftware.in/Profile.html?q=1"},
             {Name:"News",isSelected:false, url: "http://maqsoftware.in/News.html"},
+            {Name:"Careers",isSelected:false, url: "http://192.168.3.50:1096/Careers.html"},
             {Name:"Contact Us",isSelected:false, url:"http://maqsoftware.in/Contactus.html"}];
         app.clients=[
             {logo: "img/MS-Logo.png", name: "Microsoft"},
@@ -105,6 +106,28 @@
             publishedBy:"MAQ Software",
             newsHeadline:"MAQ Software Honored for the 8th time as one of America’s Fastest-Growing Private Companies by Inc. Magazine",
             newsContent:"MAQ Software has accomplished the rare achievement of ranking on the Inc. 5000 list for the 8th time. Less than 2% of Inc. 5000 companies demonstrate sustained growth by appearing 8 or more times. The highly prestigious list has tracked the nation's fastest-growing private companies"
+            }
+        ];
+         app.slideList = [
+            {
+                id:0,
+                isSelected:true,
+                content:"You are all super talented with admirable work ethics - we greatly appreciate all the work you've done up-to-date."
+            },
+            {
+                id:1,
+                isSelected:false,
+                content:"I really want to appreciate the foresight shown by the team yesterday by stretching in the middle of the sprint to bring almost all the sprint stories back on track! This has probably saved all of us a lot of headaches at the tail end of the sprint."
+            },
+            {
+                id:2,
+                isSelected:false,
+                content:"Keep up the good work !!"
+            },
+            {
+                id:3,
+                isSelected:false,
+                content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt"
             }
         ];
         app.technologyName=app.technologyList[4].Name;

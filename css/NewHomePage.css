@@ -1,9 +1,58 @@
+@media screen and (max-width: 8000px) and (min-width: 1280px) {
+    html{
+        font-size: 62.5%;
+    }
+    .newsCoverage{
+        min-height: 25rem;
+    }
+    .newsContent {    
+        max-height: 9.5rem    
+    }
+    .newsContent:before {
+        right: 1rem;
+    }
+@media screen and (max-width: 1280px) and (min-width: 50px) {
+    html{
+        font-size: 40%;
+    }
+    .newsCoverage{
+        min-height: 35rem;
+    }
+    .newsContent {    
+        max-height: 9rem    
+    }
+    .newsContent:before {
+        right: 4rem;
+    }
+}
+
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2rem;
+}
+h5{
+    font-size: 1.5rem;
+}
+h6{
+    font-size: 1rem;
+}
 html,
 body {
     width: 100%;
     height: 100%;    
 }
-
+body {
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    overflow-x: hidden;
+}
 .flex {
     display: flex;
     flex-direction: column;
@@ -36,6 +85,10 @@ body {
 }
 .textColorRed {
     color: #BA131A;
+}
+.textColorBlack{
+    color: black;
+    padding-left: 2rem;
 }
 .paddingTopBottom {
     padding-top: 3em;
@@ -170,9 +223,8 @@ div.vertical-line{
     align-content: center;
     vertical-align: middle;
 }
-.Header {
-    background: url("../img/Hero1920.png") no-repeat center center scroll;
-    background-size: 100% 100%;
+.Header {  
+    
     color: white;
     width: 100%;
     height: 90%;   
@@ -199,8 +251,7 @@ div.vertical-line{
     padding-right: 5%;
     width: 50%;
 }
-.Header .container h1 {
-    font-size: 50px;
+.Header .container h1 {    
     font-weight: bold;
     opacity: 1;
 }
@@ -294,10 +345,10 @@ div.vertical-line{
     margin-top: 8em;
 }
 .marginLeft10{
-    margin-left: 10em;
+    margin-left: 10rem;
 }
 .marginRight10{
-    margin-right: 10em;
+    margin-right: 10rem;
 }
 
 .navLinks{
@@ -360,50 +411,11 @@ enhance {
     padding: 8em;		
 }
 
-.selectedCirecle{
-    border-radius: 50%;
-    width: 1em;
-    height: 1em; 
-    border: 1px solid black;
-    background: #cf5a5f;
-}
-.clickable{
-    cursor: pointer;
-}
-.dashedLineBottom{
-    height: 2em;
-    border-right: 1px dashed #888181;
-    width: 50%;
-    left: 1px;
-    top: 0;
-}
-.dashedLineTop{
-    height: 2em;
-    border-right: 1px dashed #888181;
-    width: 50%;
-    left: 1px;
-    bottom: 0;
-}
-.lineContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;    
-    align-content: stretch;
-    position: relative;
-}
 .h2Modified{
    margin:0;
    color: #a91230;
 }
-.featureImage{    
-    height: 81px;
-}
-.marginTop1em{
-    margin-Top: 1em;     
-}
-.marginBottom1em{
-    margin-bottom: 1em;
-}
+
 .newsBox {
     justify-content: space-around; 
     display: flex;   
@@ -411,12 +423,30 @@ enhance {
 .newsCoverage {
     background: #F5F5F5;
     border-top: 5px solid #ca0c0c;
-    font-size: 12px;
+    font-size: 12px;    
 }
-.newsContent {
-    /*height: 15%;*/
+.newsContent {         
+    text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-right: -1em;
+    padding-right: 1em;
+    position: relative;
+}
+.newsContent:before {
+    position: absolute;    
+    bottom: 0;
+    content: "...";
+}
+
+.newsContent:after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.5em;
+    background: whitesmoke;
 }
 .newsContentPadding {
     padding-top: 3%;
@@ -452,10 +482,294 @@ enhance {
     align-items: center;
     width: 10.5em;
     height: 2.5em;
+    border-radius: 5px;
 }
 .flex-start .text-arrow{
     background: none;
     border: 1px solid white;
     margin-top: 30px;
     margin-bottom: 30px;
+    border-radius: 0;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+}
+.flex-start{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1em;
+}
+.horLine{
+    width: 16em;
+    margin: 0;
+    border-top: 1px solid black;
+}
+.smallCircle{
+    border-radius: 50%;
+    width: 0.5em;
+    height: 0.5em; 
+    border: 1px solid black;
+}
+.flex{
+    display: flex;
+}
+
+.circleText{
+    margin-left: -1em;
+    color: red;
+}
+
+.Caption figcaption {		
+    color: white;		
+}
+.redLine{		
+    border-top: 1px solid red;		
+    min-width: 8em;		
+}
+.flex-VerticalCenter{		
+    display: flex;		
+    align-items: center;		
+}
+.featureImage{    
+    height: 81px;
+}
+.marginTop1em{
+    margin-Top: 14px;     
+}
+.marginBottom1em{
+    margin-bottom: 14px;
+}
+.lineContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-content: stretch;
+    position: relative;
+    height: 81px;
+}
+.centerAlignHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-content: stretch;  
+    align-items: center;    
+}
+.underline{
+    width: 10rem;
+    border-bottom: 2px solid grey;
+}
+.clickable{
+    cursor: pointer;
+}
+.dashedLineBottom{
+    height: 2em;
+    border-right: 1px dashed #888181;
+    width: 50%;
+    left: 1px;
+    top: 0;
+}
+.dashedLineTop{
+    height: 2em;
+    border-right: 1px dashed #888181;
+    width: 50%;
+    left: 1px;
+    bottom: 0;
+}
+.selectedCircle{
+    border-radius: 50%;
+    width: 1em;
+    height: 1em; 
+    border: 1px solid black;
+    background: #cf5a5f;
+}
+.width40prcnt{
+    width: 40%;
+}
+.semibold{
+    font-weight: 400;
+}
+.technologyLink {
+    display: flex;
+    justify-content: center;
+    transition: all 0.75s;
+    cursor: pointer;
+}
+.technologyLink > figcaption{
+    padding-top: 1.5em;
+}
+.technologyLink:hover {
+    text-decoration: none;
+}
+.technologyLink > img{
+    height: 21.2rem;
+    width: 21.2rem;
+}
+.topHeaderSliderBtn{
+    background: #bc2431;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12em;
+    height: 2.5em;
+    border-radius: 10px;
+    font-size: 17px;
+}
+.marginTop10vh{
+    margin-top: 10vh;
+}
+.marginTop25vh{
+    margin-top: 25vh;
+}
+
+.heroHome{
+    background: url("../img/Hero1920.png") no-repeat center center scroll;
+    background-size: 100% 100%;
+}
+
+.heroCareer{
+    background: url("../img/HeroCareer.png") no-repeat center center scroll;
+    background-size: 100% 100%;
+}
+.marginTop10px{
+    margin-top: 10px;
+}
+.pageDiv{
+    width: 100%;
+    /*height: 90%;*/
+}
+.careerCaptureDiv{
+    width: 23%;
+    background-color: rgba(244, 244, 244, 1);
+    margin: 0 10px;
+}
+.careerCircle{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(221, 220, 215, 1);    
+    border-radius: 50%;    
+    margin: -18% auto 0 auto;
+    border: 1px black solid;
+}
+.paddingTop7pt{
+    padding-top: 7%;
+}
+.careerChooseHeader{
+    color: rgba(174, 40, 45, 1);
+    font-size: 30px;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 15%;
+}
+.textAlignLeft{
+    text-align: left;
+}
+
+.listItems{
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.fontSize20{
+    font-size: 20px;
+}
+.iframeSection{
+    width: 100%;
+    height: 70rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+iframe{
+    border: none;
+}
+.embedVideo {    
+    -moz-box-shadow: 15px 15px 4px 12px rgba(241, 234, 234, 0.5);
+    -webkit-box-shadow: 15px 15px 4px 12px rgba(241, 234, 234, 0.5); 
+    box-shadow: 15px 15px 4px 12px rgba(241, 234, 234, 0.5);
+}
+.contactInfo {
+    height: 345px;
+    width: 55rem;  
+    margin-top: 5rem;
+    margin-left: -5rem;
+    background: #f2f9ff;
+    z-index: -1;
+}
+.alignContactInfo{
+    width: 60%;
+}
+.alignContactInfo{
+    width: 80%;
+    padding-left: 10rem;
+    text-align: left;
+}
+.font-16{
+    font-size: 16px;
+}
+.carousel {
+    min-height: 20em;
+    height: 20em;
+}
+.carousel-inner {
+    padding: 3%;
+    background-color: #F5F5F5; 
+    height: 90%;
+    font-size: 3rem;
+}
+.carousel-indicators{
+    bottom: 0;
+}
+.carousel-indicators > li {
+    background-color: #F5F5F5; 
+    border: 1px solid #F5F5F5;
+    border-radius: 15px; 
+    margin-left: 3px;
+    margin-right: 3px;
+    height: 7px;
+    width: 7px;   
+}
+
+.carousel-indicators .active{
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 15px; 
+    height: 9px;
+    width: 9px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.marginTop30px{
+    margin-top: 30px;
+}
+.locationRolesDiv{
+    width: 70%;
+    justify-content: space-between;
+    margin: 40px auto 10px auto;
+    border-bottom: 1px rgba(174, 40, 45, 1) solid;
+}
+.displayInlineFlex{
+    display: inline-flex;
+    align-items: baseline;
+}
+.location{
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.paddingBottom10px{
+    padding-bottom: 10px;
+}
+.thickBorderBottomRed{
+    border-bottom: 5px solid #ca0c0c;
+}
+.jobs{
+    width: 70%;
+    justify-content: space-between;
+    margin: 40px auto 10px auto;
 }

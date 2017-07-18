@@ -1,18 +1,20 @@
 <html data-ng-app="myApp">
     <head>
+         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>MAQ Software</title>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
         <script src="script/jquery-1.11.1.min.js"></script> 
         <script src="script/bootstrap.min.js"></script>     
          <script src="script/app.js"></script>     
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/styles.css" rel="stylesheet">
-        <link href="css/NewHomePage.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">       
         <link href="css/HomePageStyles.css" rel="stylesheet">
+         <link href="css/NewHomePage.css" rel="stylesheet">
     </head>
     <body data-ng-controller="AppController as app">        
         <div class="flex">
-            <div class="Header">
+            <div class="Header heroHome">
                 <div class="navigation">
                     <nav class="navbar">
                         <div class="container-fluid">
@@ -30,31 +32,37 @@
                         </div>
                     </nav>
                 </div>
-                <div class="container">
-                    <div class="">
-                        <h1>How can we increase your</h1>
-                        <h1>Sales using our expertise in</h1>
-                        <h1>Power BI?</h1>
-                    </div>
-                    <div class="marginTop15px">
-                        <span>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                        </span>
-                    </div>
-                    <div class="flex-start">
-                        <div class="text-arrow">
-                            <div class="readMore">
-                                Learn More
-                            </div>
-                            <div class="traingle">
-                            </div>
+                <div class="navigation">
+                    <div class="navbar">
+                        <div class="container-fluid">
+                            <div class="marginLeft10">
+                                <div class="">
+                                    <h1>Accelerate your Analytics<br>
+                                    using our expertise in<br>
+                                    Power BI?</h1>
+                                </div>
+                                <div class="marginTop15px width40prcnt">
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                                    </span>
+                                </div>
+                                <div class="flex-start">
+                                    <div class="text-arrow">
+                                        <div class="readMore">
+                                            Learn More
+                                        </div>
+                                        <div class="traingle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
                         </div>
                     </div>
-                </div>   
+                </div>
             </div>                                           
             <div class="technologies" id="WhatWeDo">
-                <div class="textAlignCenter">
-                    <h2>EXPLORE WHAT WE DO</h2>                    
+                <div class="centerAlignHeader">
+                    <h2 class="semibold">WHAT WE DO</h2><div class="underLine"></div>                  
                 </div>
                 <div>
                     <div class="textAlignCenter">
@@ -62,14 +70,14 @@
                         <h1>{{app.technologyTagLine}}</h1>
                     </div>
                     <div class="centered">
-                        <span class="Content"> {{app.technologyCotent}} </span> 
+                        <span class="content"> {{app.technologyCotent}} </span> 
                     </div>
                     <div class="textAlignCenter"><h2>DATA TO INSIGHTS</h2><div>  
                         <div class="flex-center">   
                             <div data-ng-repeat="option in app.sectionOption">
                                 <div class="circleOptionText">{{option.Name}}</div>
                                     <div class={{option.Class}}>              
-                                            <div data-ng-class={{"option.isSelected?'selectedCirecle':'smallCircle'"}}>                                                
+                                            <div data-ng-class={{"option.isSelected?'selectedCircle':'smallCircle'"}}>                                                
                                             </div>
                                                 <hr class="horLine" data-ng-if="option.line">
                                     </div>
@@ -85,8 +93,8 @@
                     </div>
                     <div class="row PaddingTopBottom displayFlex space-between technologyExtraTopPadding clickable">
                         <div class="col-xs-12 col-sm-4 col-lg-2 col-md-4" data-ng-repeat="technology in app.technologyList" data-ng-click="app.changeTechnology(technology)">
-                            <a class="TechnologyLink" data-ng-class={{"technology.isSelected?'liftUp':''"}}><img src={{technology.img}} alt={{technology.alt}} /></a>                   
-                            <a class="TechnologyLink">
+                            <a class="technologyLink" data-ng-class={{"technology.isSelected?'liftUp':''"}}><img src={{technology.img}} alt={{technology.alt}} /></a>                   
+                            <a class="technologyLink">
                                 <figcaption>{{technology.figCaption[0]}} <br> {{technology.figCaption[1]}}
                                 </figcaption>
                             </a>
@@ -95,10 +103,10 @@
                 </div>
             </div>
                 <div id="WhoWeAre"  class="relative">
-                    <div class="row centerAlign "><h1>Who we are</h1></div>
+                    <div class="centerAlignHeader"><h1 class="semibold">Who we are</h1><div class="underLine"></div></div>
                     <div class="row centerAlign ">
-                        <h2 class="textColorGrey">We are a technical solutions company specializing in</h2>
-                        <h2 class="textColorRed">Data Management & Data Analytics solutions.</h2>
+                        <h2 class="textColorGrey semibold">We are a technical solutions company specializing in</h2>
+                        <h2 class="textColorRed semibold">Data Management & Data Analytics solutions.</h2>
                     </div>
                     <div class="paddingTopBottom flex-center">    
                         <div class="col-lg-8 flex-center">
@@ -108,17 +116,17 @@
                                 <div class="lineContainer marginBottom1em"><div class="dashedLineBottom"></div><div><h2 class="h2Modified">500+</h2>Worldwide Employees</div></div>
                             </div>
                             <div class="textAlignCenter">
-                                <div class="lineContainer marginTop1em"><div><h2 class="h2Modified">500+</h2>Worldwide Employees</div><div class="dashedLineTop"></div></div>
+                                <div class="lineContainer marginTop1em"><div><h2 class="h2Modified">15%</h2>Worldwide Employees</div><div class="dashedLineTop"></div></div>
                                 <div class="flex-VerticalCenter"><span class="redLine"></span><span class="smallCircle"></span><span class="redLine"></span></div>
                                  <div class="featureImage marginTop1em"><img src="img/Asset 115.png" alt="Worldwide Employees"></div>
                             </div>
                            <div class="textAlignCenter">
                                 <div class="featureImage marginTop1em"><img src="img/Asset 113.png" alt="Worldwide Employees"></div>
                                 <div class="flex-VerticalCenter"><span class="redLine"></span><span class="smallCircle"></span><span class="redLine"></span></div>
-                                <div class="lineContainer marginBottom1em"><div class="dashedLineBottom"></div><div><h2 class="h2Modified">500+</h2>Worldwide Employees</div></div>
+                                <div class="lineContainer marginBottom1em"><div class="dashedLineBottom"></div><div><h2 class="h2Modified">90%</h2>Worldwide Employees</div></div>
                             </div>
-                            <div class="textAlignCenter">
-                                <div class="lineContainer marginTop1em"><div><h2 class="h2Modified">500+</h2>Worldwide Employees</div><div class="dashedLineTop"></div></div>
+                            <div class="textAlignCenter marginTop1em">
+                                <div class="lineContainer"><div><h2 class="h2Modified">100%</h2>Worldwide Employees</div><div class="dashedLineTop"></div></div>
                                 <div class="flex-VerticalCenter"><span class="redLine"></span><span class="smallCircle"></span><span class="redLine"></span></div>
                                 <div class="featureImage marginTop1em"><img src="img/Asset 114.png" alt="Worldwide Employees"></div>
                             </div>                                                
@@ -126,9 +134,9 @@
                     </div>                 
                 </div>
                 <div id="WhyUs" class="PaddingTopBottom relative">
-                    <div class="row centerAlign "><h1>Why Us?</h1></div>
+                    <div class="centerAlignHeader "><h1 class="semibold">Why Us?</h1><div class="underLine"></div></div>
                     <div class="row centerAlign ">
-                        <h2 class="textColorGrey">Reducing cycle time using <enhance>Agile</enhance> and <enhance>Devops model</enhance></h2>
+                        <h2 class="textColorGrey semibold">Reducing cycle time using <enhance>Agile</enhance> and <enhance>Devops model</enhance></h2>
                     </div>
                     <div class="row PaddingTopBottom">
                         <div class="row">
@@ -174,13 +182,30 @@
                     </div>                    
                 </div>
                 <div id="OurClients" class="PaddingTopBottom relative"> 
-                    <div class="row centerAlign"><h1>Our Clients</h1></div>
+                    <div class="centerAlignHeader"><h1 class="semibold">Our Clients</h1><div class="underLine"></div></div>
                     <div class="OurClients">
                         <img class="clientLogo" data-ng-repeat="client in app.clients" src="{{client.logo}}" alt="{{client.name}}"/>
                     </div>
                 </div> 
+                <div id="Appreciations" class="relative">
+                    <div id="myCarousel" class="carousel" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-ng-repeat="slides in app.slideList" data-slide-to="{{slides.id}}" data-ng-class={{"slides.isSelected?'active':''"}}></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item" data-ng-repeat="slide in app.slideList" data-ng-class={{"slide.isSelected?'active':''"}}>
+                                <div class="greyBackground centerAlign">
+                                    {{slide.content}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div id="NewsCoverage" class="PaddingTopBottom">
-                    <div class="row centerAlign"><h1>News & Press Coverage</h1></div>
+                    <div class="centerAlignHeader"><h1 class="semibold">News & Press Coverage</h1><div class="underLine"></div></div>
                     <div class="row PaddingTopBottom newsBox">
                         <div data-ng-repeat="news in app.newsList" class="col-xs-12 col-sm-6 col-md-3 col-lg-2 newsCoverage">
                             <div class="publishedDate newsContentPadding">{{news.publishedDate}}
