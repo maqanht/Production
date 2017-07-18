@@ -41,12 +41,12 @@
                     </div>
                 </div>   
             </div> 
-            <div class="pageDiv textAlignCenter marginTop10px"> 
-                <h2> Why do A-Players Choose to Work with Us? </h2>
+            <div class="pageDiv marginTop10px"> 
+                <h2 class="textAlignCenter"> Why do A-Players Choose to Work with Us? </h2>
                 <div class="row paddingTop7pt centered">
                     <div class="careerCaptureDiv col-xs-12 col-sm-4 col-lg-2 col-md-4"> 
                         <div class="careerCircle">
-                            Illustration
+                            <img src="img/ProfessionalGrowth.svg"/>
                         </div>
                         <div class="careerChooseHeader">Professional growth</div>
                         <ul class="textAlignLeft listItems row">
@@ -57,7 +57,7 @@
                     </div>
                     <div class="careerCaptureDiv col-xs-12 col-sm-4 col-lg-2 col-md-4"> 
                         <div class="careerCircle">
-                            Illustration
+                           <img src="img/TypeOfWork.svg"/>
                         </div>
                         <div class="careerChooseHeader">Type of work</div>
                         <ul class="textAlignLeft listItems row">
@@ -67,7 +67,7 @@
                     </div>
                     <div class="careerCaptureDiv col-xs-12 col-sm-4 col-lg-2 col-md-4"> 
                         <div class="careerCircle">
-                            Illustration
+                           <img src="img/CompanyCulture.svg"/>
                         </div>
                         <div class="careerChooseHeader">Company culture</div>
                         <ul class="textAlignLeft listItems row">
@@ -80,7 +80,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="marginTop1em">
+                <div class="marginTop1em textAlignCenter">
                     <p class="fontSize20">All of us hold Computer Science and Engineering degrees from top universities in the US and India.</p>
                     <p class="fontSize20">Supervisors are PMI-ACP (Agile) certified and managers come from leading business schools in the US and India.</p>
                 </div>
@@ -92,13 +92,13 @@
                         <div class="location">{{location.Name}}</div>
                     </div>
                 </div>
-                <div class="jobs">
-                    <h3> Work with us</h3>
-                    <div class="marginTop30px">
-                         <!--<div data-ng-repeat="job in app.availableJobs">
+               <div class="jobs">
+                    <h3 class="textColorRed">Join us to explore your potential</h3>
+                    <div class="marginTop30px width70 floatLeft">
+                         <div data-ng-repeat="job in app.availableJobs" class="jobItem" data-ng-class={{"job.isSelected?'selectedJobItem':'borderLeft'"}} data-ng-click="app.selectJob($index)">
                             {{job.Title}}
-                        </div>-->
-                        <img src="img/JobList.png"/>
+                            <div class="viewDesc textColorRed clickable" ng-href="http://maqsoftware.in/Careers.html" ng-click="app.scrollTop()"> View Description</div>
+                        </div>
                     </div>
                 </div>
             </div>
