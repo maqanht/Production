@@ -11,10 +11,16 @@
     .newsContent:before {
         right: 1rem;
     }
+    .collapseNav{
+        display: flex;
+    }
+    .navButton{
+        display: none;
+    }
 }
-@media screen and (max-width: 1280px) and (min-width: 600px) {
+@media screen and (max-width: 1280px) and (min-width: 1000px) {
     html{
-        font-size: 40%;
+        font-size: 50%;
     }
     .newsCoverage{
         min-height: 35rem;
@@ -25,20 +31,138 @@
     .newsContent:before {
         right: 4rem;
     }
+    .collapseNav{
+        display: flex;
+    }
+    .navButton{
+        display: none;
+    }
+    .technologyStack{
+        min-height: 400px !important;
+    }
+}
+@media screen and (max-width: 1000px) and (min-width: 968px) {
+     html{
+        font-size: 40%;
+    }
+    .collapseNav{
+        display: flex;
+    }
+    .navButton{
+        display: none;
+    }
+    h4{
+        font-size: 3rem !important;
+    }
+    .technologyStack{
+        min-height: 400px !important;
+    }
+}
+
+@media screen and (max-width: 968px) and (min-width: 50px) {
+     html{
+        font-size: 40%;
+    }
+    .collapseNav{
+        display: none;
+    }
+    .navButton{
+        display: block;
+    }
+     h4{
+        font-size: 3rem !important;
+    }    
+    
+}
+@media screen and (max-width: 1500px) and (min-width: 50px) {
+  .paddingrightflex{
+        padding-right: 8% !important;
+    } 
+    .paddingleftflex{
+        padding-left: 8% !important;
+    }
+    .technologyStack{
+        min-height: 400px !important;
+    }
+    .technologyStack{
+        min-height: 400px !important;
+    }
+}
+@media screen and (max-width: 400px) and (min-width: 50px) {
+  .paddingrightflex{
+        padding-right: 2% !important;
+    } 
+    .landingImageBottomHeader{
+        height: auto !important;
+    }
+     h4{
+        font-size: 3rem !important;
+    }    
 }
 @media screen and (max-width: 600px) and (min-width: 50px) {
      html{
         font-size: 20%;
     }
+    .jobItem{
+        font-size: 3rem !important;
+        display: grid !important;
+    }
+    .viewDesc{
+        float: right;
+        padding-right: 0px !important;
+    }
+    .font-16{
+        font-size: 3.0rem !important;
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 50px) {
+    .careerCaptureWhole{
+        display: flex;  
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin-top: 0% !important;
+    }
+    .paddingTopCareer{
+        margin-top: 20% !important;
+    }
+    .careerCircle{
+        width: 35% !important;
+    }
+    .careerChooseHeader{
+        color: rgba(174, 40, 45, 1);
+        font-size: 3.5rem;
+        font-weight: 500;
+        text-align: left;
+        margin-top: 5% !important;
+    }
+    .listItems{
+        font-size: 2.8rem !important;
+        margin-top: 10px;
+        line-height: 1.5;
+    }
+    .fontSize20{
+        font-size: 3rem !important;
+    }
+    .location{
+        font-weight: bold;
+        font-size: 3rem !important;
+        padding-left: 10px;
+    }
+    iframe, object, embed {
+        max-width: 80%;
+        height: 300;
+    }
+    
 }
 h1{
-    font-size: 5rem;
-}
-h2{
     font-size: 4rem;
 }
-h3{
+h2{
     font-size: 3rem;
+}
+h3{
+    font-size: 2.5rem;
 }
 h4{
     font-size: 2rem;
@@ -58,6 +182,182 @@ body {
     font-family: "Segoe UI",Helvetica,Arial,sans-serif;
     overflow-x: hidden;
 }
+.jumbotronAlignment{
+    display: flex;
+    align-items: center;
+    height: 10%;
+    margin: 0;
+    background: white;
+}
+.paddingleftflex{
+    padding-left: 12%;
+}
+.paddingrightflex{
+    padding-right: 12%;
+}
+.maqLogoImage{
+    width: 32.8rem;
+    height: 5.3rem;
+}
+.navOptionList{    
+    list-style: none;
+    font-size: 16px;   
+    font-weight: 700;    
+    float: right;
+    padding: 0;
+}
+    .navOptionList > li{
+        padding: 2.5rem;
+    }
+        .navOptionList > li > a{
+            color: black;
+        }
+.landingImage{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+.heroHome{
+    background: url("../img/Herov2-03.jpg") no-repeat center center scroll;
+    background-size: 100% 100%;    
+}
+.landingImageBottomHeader{
+    text-align: center;
+    height: 8%;
+    width: 100%;
+    background: #ba131a;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+}
+.centerAlignHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-content: stretch;  
+    align-items: center;    
+    width: 100%;
+}
+.underline{
+    width: 10rem;
+    border-bottom: 2px solid grey;
+}
+.clickable{
+    cursor: pointer;
+}
+.landingImageHeaderText{
+    max-width: 90%;
+    font-weight: 700;
+    font-size: 7rem;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 8rem;
+}
+.landingImageCaptionText{
+    max-width: 40%;
+    font-weight: 500;
+    font-size: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    color: grey;
+}
+.whatWeDo{
+    width: 100%;   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.alignTechnology{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+.technologyStack{
+    background: #eeeeee;
+    min-width: 30rem;
+    height: 45rem;
+    margin: 1rem;
+    min-height: 350px;
+}
+.technologyStackMargin{
+    margin: 12.5rem 0;
+}
+.technologyLink {
+    display: flex;
+    justify-content: center;
+    transition: all 0.75s;
+    cursor: pointer;
+}
+.technologyLink > img{
+    height: 25rem;
+    width: 25rem;
+    margin-top: -12.5rem;
+}
+.textColorRed {
+    color: #BA131A;
+}
+.centerAlign {
+    text-align: center;
+    vertical-align: middle;
+}
+.textColorGrey {
+    color: #58585A;
+}
+.content{
+  word-break: break-all;
+  font-weight: 400;
+  position: relative;  
+  overflow: hidden;  
+  line-height: 1.2em; 
+  max-height: 3.6em;   
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+}
+.content::before{     
+  content: '...';  
+  position: absolute;  
+  right: 0.5rem;
+  bottom: 0;
+}
+.content::after{
+  content: '';  
+  position: absolute;  
+  right: 0; 
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em; 
+  background: #eeeeee;
+}
+.contentPadding{
+    padding: 3rem;
+}
+
+.OurClients{
+    width: 80%;
+    margin: 25px auto;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.OurClients > img {
+   width: 18%;
+   min-width: 200px;
+   height: 100px;
+}
+
+.clientLogo{
+    padding: 20px;
+}
+.starbucksImage{
+    height: 130px !important;
+}
+/*Lavkush*/
 .flex {
     display: flex;
     flex-direction: column;
@@ -81,16 +381,6 @@ body {
     text-decoration: underline;
     text-decoration-line:#BA131A;
     -moz-text-decoration-color:#BA131A;
-}
-.centerAlign {
-    text-align: center;
-     vertical-align: middle;
-}
-.textColorGrey {
-    color: #58585A;
-}
-.textColorRed {
-    color: #BA131A;
 }
 .textColorBlack{
     color: black;
@@ -370,18 +660,6 @@ div.vertical-line{
     color: White;
 }
 
-.OurClients{
-    width: 80%;
-    margin: 25px auto;    
-    text-align: center;
-}
-.OurClients > img {
-   width: 18%;
-}
-
-.clientLogo{
-    padding: 20px;
-}
 
 #appreciation {
     width: 100%;
@@ -462,33 +740,34 @@ enhance {
     color: #80bfff;
     font-size: 14px;
 }
-.readMore { 
+.readMore {
     width: 100px;
     height: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #555555;
     font-size: 1.2em;
 }
 
 .traingle {
     margin: 5px;
-    border: solid white;
-    border-width: 0 2px 2px 0; 
+    border: solid #555555;
+    border-width: 0 2px 2px 0;
     padding: 5px;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     height: 10px;
 }
 .text-arrow{
-    background: #bc2431;
+    /* background: #bc2431; */
     display: flex;
     justify-content: center;
     align-items: center;
     width: 10.5em;
     height: 2.5em;
     border-radius: 5px;
+    border: 1px solid #bc2431;
 }
 .flex-start .text-arrow{
     background: none;
@@ -557,20 +836,7 @@ enhance {
     position: relative;
     height: 81px;
 }
-.centerAlignHeader{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;    
-    align-content: stretch;  
-    align-items: center;    
-}
-.underline{
-    width: 10rem;
-    border-bottom: 2px solid grey;
-}
-.clickable{
-    cursor: pointer;
-}
+
 .dashedLineBottom{
     height: 2em;
     border-right: 1px dashed #888181;
@@ -598,22 +864,7 @@ enhance {
 .semibold{
     font-weight: 400;
 }
-.technologyLink {
-    display: flex;
-    justify-content: center;
-    transition: all 0.75s;
-    cursor: pointer;
-}
-.technologyLink > figcaption{
-    padding-top: 1.5em;
-}
-.technologyLink:hover {
-    text-decoration: none;
-}
-.technologyLink > img{
-    height: 21.2rem;
-    width: 21.2rem;
-}
+
 .topHeaderSliderBtn{
     background: #bc2431;
     display: flex;
@@ -631,10 +882,6 @@ enhance {
     margin-top: 25vh;
 }
 
-.heroHome{
-    background: url("../img/Hero1920.png") no-repeat center center scroll;
-    background-size: 100% 100%;
-}
 
 .heroCareer{
     background: url("../img/HeroCareer.png") no-repeat center center scroll;
@@ -648,24 +895,24 @@ enhance {
     /*height: 90%;*/
 }
 .careerCaptureDiv{
-    width: 23%;
+    /*width: 23%;*/
     background-color: rgba(244, 244, 244, 1);
     margin: 0 10px;
+    /*background-clip: content-box;*/
 }
 .careerCircle{
-    width: 250px;
-    height: 250px;
+    width: 60%;
     background-color: rgba(221, 220, 215, 1);    
     border-radius: 50%;    
     margin: -18% auto 0 auto;
     border: 1px black solid;
 }
-.paddingTop7pt{
-    padding-top: 7%;
+.paddingTopCareer{
+    margin-top: 0%;
 }
 .careerChooseHeader{
     color: rgba(174, 40, 45, 1);
-    font-size: 30px;
+    font-size: 3.5rem;
     font-weight: 500;
     text-align: left;
     margin-top: 15%;
@@ -675,20 +922,21 @@ enhance {
 }
 
 .listItems{
-    font-size: 16px;
+    font-size: 1.8rem;
     margin-top: 10px;
     line-height: 1.5;
 }
 .fontSize20{
-    font-size: 20px;
+    font-size: 2.5rem;
 }
 .iframeSection{
     width: 100%;
-    height: 70rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     align-items: center;
+    margin-bottom: 7%;
 }
 iframe{
     border: none;
@@ -697,9 +945,9 @@ iframe{
     -moz-box-shadow: 15px 15px 4px 12px rgba(241, 234, 234, 0.5);
     -webkit-box-shadow: 15px 15px 4px 12px rgba(241, 234, 234, 0.5); 
     box-shadow: 15px 15px 4px 12px rgba(241, 234, 234, 0.5);
+    padding: 0px;
 }
 .contactInfo {
-    height: 345px;
     width: 55rem;  
     margin-top: 5rem;
     margin-left: -5rem;
@@ -715,49 +963,51 @@ iframe{
     text-align: left;
 }
 .font-16{
-    font-size: 16px;
+    font-size: 1.6rem;
 }
-.carousel {
-    min-height: 20em;
-    height: 20em;
+.carousel {    
+    height: 450px;
+    overflow: hidden;
 }
 .carousel-inner {
     padding: 3%;
-    background-color: #F5F5F5; 
+    /* background-color: #F5F5F5; */
+    border: 1px solid #58585a;
     height: 90%;
+    width: 80%;
+    margin: auto;
     font-size: 3rem;
 }
 .carousel-indicators{
     bottom: 0;
 }
 .carousel-indicators > li {
-    background-color: #F5F5F5; 
+    background-color: #F5F5F5;
     border: 1px solid #F5F5F5;
-    border-radius: 15px; 
+    border-radius: 15px;
     margin-left: 3px;
     margin-right: 3px;
     height: 7px;
-    width: 7px;   
+    width: 7px;
 }
 
 .carousel-indicators .active{
     background-color: black;
     border: 1px solid black;
-    border-radius: 15px; 
+    border-radius: 15px;
     height: 9px;
     width: 9px;
     margin-left: 3px;
     margin-right: 3px;
 }
-
 .marginTop30px{
     margin-top: 30px;
 }
 .locationRolesDiv{
-    width: 70%;
-    justify-content: space-between;
-    margin: 40px auto 10px auto;
-    border-bottom: 1px rgba(174, 40, 45, 1) solid;
+    /*justify-content: space-between;*/
+    margin: 40px auto 40px auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 .displayInlineFlex{
     display: inline-flex;
@@ -765,14 +1015,14 @@ iframe{
 }
 .location{
     font-weight: bold;
-    font-size: 18px;
+    font-size: 2rem;
     padding-left: 10px;
 }
 .paddingBottom10px{
     padding-bottom: 10px;
 }
 .thickBorderBottomRed{
-    border-bottom: 5px solid #ca0c0c;
+    border-bottom: 5px solid #ca0c0c !important;
 }
 .jobs{
     width: 70%;
@@ -785,12 +1035,11 @@ iframe{
 .jobItem{
     padding-left: 20px;
     width: 100%;
-    height: 50px;
+    /*height: 50px;*/
     padding-top: 10px;
-    font-size: 17px;
+    font-size: 1.8rem;
     padding-bottom: 10px;
     font-family: "Segoe UI",Helvetica,Arial,sans-serif;
-    font-family: 500;
 }
 .selectedJobItem{
     border-left: 5px solid rgba(174, 40, 45, 1);
@@ -808,4 +1057,113 @@ iframe{
 .viewDesc{
     float: right;
     padding-right: 40px;
+}
+/*Footer*/
+.navImages > a > img {
+    height: 3rem;
+    width: 3rem;
+}
+.navHeadings {
+    padding-bottom: 0.1rem;
+    border-bottom: 2px solid #BA131A;
+}
+#clientDetails {
+    border-right: 1px solid #58585a;
+    display: flex;
+    flex-direction: column;
+}
+#ourClients {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.clientName, .clientPosition {
+    font-size: 2rem;
+}
+.clientImage {
+    padding: 2rem;
+}
+
+.sidebar-nav {
+    /*position: absolute;
+    top: 0;
+    width: 20%;
+    margin: 0;
+    padding: 0;*/
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 10px;
+    line-height: 40px;
+    background: none;
+    display: block;
+}
+
+.sidebar-nav li:hover {
+    background: url(../img/Nav_HoverBox.svg);
+    background-repeat: repeat;
+}
+
+.sidebar-nav li a {
+    /*display: block;*/
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #686868;
+    /*background: red;*/
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+.sidebar-nav > .footer-brand {
+    height: 55px;
+    font-size: 18px;
+    line-height: 55px;
+}
+
+.sidebar-nav > .footer-brand span {
+    font-size: 20px;
+}
+
+.footer-brand:hover{
+    background: none !important;
+    cursor: default;
+}
+
+.navImages:hover {
+    background: none !important;
+    cursor: default;
+}
+#footer {
+    background-color: #F5F5F5;
+}
+.footer {
+    width: 80%;
+    margin: auto;
+}
+.flexWrap{
+    flex-wrap: wrap;
+}
+.careerCaptureWhole{
+    display: flex;  
+    justify-content: center;
+    margin-top: 5%;
+}
+.justifyContentCenter{
+    justify-content: center;
+}
+.borderBottomRed1{
+    border-bottom: 1px rgba(174, 40, 45, 1) solid;
+}
+iframe, object, embed {
+    max-width: 80%;
 }
