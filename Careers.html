@@ -4,7 +4,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
         <script src="script/jquery-1.11.1.min.js"></script> 
         <script src="script/bootstrap.min.js"></script>     
-         <script src="script/Careers.js"></script>
+        <script src="script/Careers.js"></script>
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
         <link href="css/NewHomePage.css" rel="stylesheet">
@@ -17,7 +18,7 @@
                     <nav class="navbar">
                         <div class="container-fluid">
                             <div class="Logo marginLeft10">
-                                <a class="navbar-brand" href="#"><img src="img/MAQLogo.svg" alt="MAQ Software Logo" /></a>
+                                <a class="navbar-brand" href="http://maqsoftware.in/"><img src="img/MAQLogo.svg" alt="MAQ Software Logo" /></a>
                             </div>
                             <div class="navbar-collapse collapse">
                                 <ul class="marginRight10 nav navbar-nav navbar-right">
@@ -35,7 +36,7 @@
                         <h1>Join us. Explore your potential.</h1>
                     </div>
                     <div class="centered marginTop10vh">
-                        <div class="topHeaderSliderBtn">
+                        <div class="topHeaderSliderBtn clickable">
                                 View all job openings
                         </div>
                     </div>
@@ -43,8 +44,8 @@
             </div> 
             <div class="pageDiv marginTop10px"> 
                 <h2 class="textAlignCenter"> Why do A-Players Choose to Work with Us? </h2>
-                <div class="row paddingTop7pt centered">
-                    <div class="careerCaptureDiv col-xs-12 col-sm-4 col-lg-2 col-md-4"> 
+                <div class="row col-lg-12 col-md-12 col-sm-12 careerCaptureWhole">
+                    <div class="careerCaptureDiv col-lg-3 col-md-3 col-sm-3 paddingTopCareer"> 
                         <div class="careerCircle">
                             <img src="img/ProfessionalGrowth.svg"/>
                         </div>
@@ -55,7 +56,7 @@
                             <li>Continuous learning </li>
                         </ul>
                     </div>
-                    <div class="careerCaptureDiv col-xs-12 col-sm-4 col-lg-2 col-md-4"> 
+                    <div class="careerCaptureDiv col-lg-3 col-md-3 col-sm-3 paddingTopCareer"> 
                         <div class="careerCircle">
                            <img src="img/TypeOfWork.svg"/>
                         </div>
@@ -65,7 +66,7 @@
                             <li>Exposure to the latest and variety of technologies </li>
                         </ul>
                     </div>
-                    <div class="careerCaptureDiv col-xs-12 col-sm-4 col-lg-2 col-md-4"> 
+                    <div class="careerCaptureDiv col-lg-3 col-md-3 col-sm-3 paddingTopCareer"> 
                         <div class="careerCircle">
                            <img src="img/CompanyCulture.svg"/>
                         </div>
@@ -80,59 +81,59 @@
                         </ul>
                     </div>
                 </div>
-                <div class="marginTop1em textAlignCenter">
-                    <p class="fontSize20">All of us hold Computer Science and Engineering degrees from top universities in the US and India.</p>
-                    <p class="fontSize20">Supervisors are PMI-ACP (Agile) certified and managers come from leading business schools in the US and India.</p>
-                </div>
-                  <div class="pageDiv marginTop30px">
+            </div>
+            <div class="marginTop1em textAlignCenter">
+                <p class="fontSize20">All of us hold Computer Science and Engineering degrees from top universities in the US and India.</p>
+                <p class="fontSize20">Supervisors are PMI-ACP (Agile) certified and managers come from leading business schools in the US and India.</p>
+            </div>
+            <div class="pageDiv marginTop30px">
                 <h2 class="textAlignCenter">Open Roles</h2>
-                <div class="locationRolesDiv centered marginTop30px">
-                    <div class="paddingBottom10px displayInlineFlex clickable" data-ng-class={{"location.isSelected?'thickBorderBottomRed':''"}} ng-repeat="location in app.locations" data-ng-click="app.selectLocation($index)">
-                        <img src="{{location.img}}"/>
+                <div class="locationRolesDiv centered  col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="paddingBottom10px borderBottomRed1 marginTop30px displayInlineFlex justifyContentCenter clickable col-lg-3 col-md-4 col-sm-4 col-xs-8" data-ng-class={{"location.isSelected?'thickBorderBottomRed':''"}} ng-repeat="location in app.locations" data-ng-click="app.selectLocation($index)">
+                        <img ng-src="{{location.img}}"/>
                         <div class="location">{{location.Name}}</div>
                     </div>
                 </div>
                <div class="jobs">
                     <h3 class="textColorRed">Join us to explore your potential</h3>
-                    <div class="marginTop30px width70 floatLeft">
-                         <div data-ng-repeat="job in app.availableJobs" class="jobItem" data-ng-class={{"job.isSelected?'selectedJobItem':'borderLeft'"}} data-ng-click="app.selectJob($index)">
-                            {{job.Title}}
+                    <div data-ng-hide="app.showLoader" class="marginTop30px floatLeft col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                         <div data-ng-repeat="job in app.availableJobs" class="jobItem col-lg-4 col-md-4 <col-sm-5></col-sm-5>" data-ng-class={{"job.isSelected?'selectedJobItem':'borderLeft'"}} data-ng-click="app.selectJob($index)">
+                            <span>{{job.Title}}</span>
                             <div class="viewDesc textColorRed clickable" ng-href="http://maqsoftware.in/Careers.html" ng-click="app.scrollTop()"> View Description</div>
                         </div>
                     </div>
+                    <i data-ng-show="app.showLoader" class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
                 </div>
             </div>
-                <div class="iframeSection">
-                     <div class="embedVideo">
-                         <iframe width="700" height="345" src="https://www.youtube.com/embed/mgyfCETF1lA">
-                        </iframe>
-                     </div>
-                      <div class="contactInfo">
-                         <div class="alignContactInfo">
-                              <h3>Contact Information</h3>
-                                <div class="textColorRed font-16">For positions in Redmond,<br>
-                                        <span class="textColorBlack">e-mail your resume to<span><br>
-                                        <span class="textColorBlack">RedmondJobs@MAQSoftware.com<span>
-                                </div>
-                                <div class="textColorRed font-16">For positions in Hyderabad,<br>
-                                        <span class="textColorBlack">e-mail your resume to<span><br>
-                                        <span class="textColorBlack">HydJobs@MAQSoftware.com<span>
-                                </div>
-                                <div class="textColorRed font-16">For positions in Mumbai,<br>
-                                        <span class="textColorBlack">e-mail your resume to<span><br>
-                                        <span class="textColorBlack">MumbaiJobs@MAQSoftware.com<span>
-                                </div>
-                         </div>
+            <div class="iframeSection col-lg-12 col-md-12 col-sm-12 col-xs-12 marginTop30px">
+                    <iframe class="embedVideo col-lg-6 col-md-6 col-sm-12 col-xs-12" width="700" height="400" src="https://www.youtube.com/embed/mgyfCETF1lA">
+                    </iframe>
+                    <div class="contactInfo col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="alignContactInfo">
+                            <h3>Contact Information</h3>
+                            <div class="textColorRed font-16">For positions in Redmond,<br>
+                                    <span class="textColorBlack">e-mail your resume to<span><br>
+                                    <span class="textColorBlack">RedmondJobs@MAQSoftware.com<span>
+                            </div>
+                            <div class="textColorRed font-16">For positions in Hyderabad,<br>
+                                    <span class="textColorBlack">e-mail your resume to<span><br>
+                                    <span class="textColorBlack">HydJobs@MAQSoftware.com<span>
+                            </div>
+                            <div class="textColorRed font-16">For positions in Mumbai,<br>
+                                    <span class="textColorBlack">e-mail your resume to<span><br>
+                                    <span class="textColorBlack">MumbaiJobs@MAQSoftware.com<span>
+                            </div>
+                        </div>
 
-                      </div>
-                </div>
+                    </div>
+            </div>
             </div>
                 
         </div>     
-        <footer id="footer">
-                    <div class="container">
+        <div id="footer">
+                    <div class="footer">
                         <div class="row">
-                            <ul class="sidebar-nav col-xs-3">
+                            <ul class="sidebar-nav col-xs-12 col-sm-6 col-md-4 col-lg-3">
                                 <!--left25Percent-->
                                 <li class="footer-brand">
                                     <span class="navHeadings">Expertise</span>
@@ -153,7 +154,7 @@
                                     <a href="Expertise.html?q=4">Web Development & Cloud Services</a>
                                 </li>
                             </ul>
-                            <ul class="sidebar-nav col-xs-2">
+                            <ul class="sidebar-nav col-xs-12 col-sm-6 col-md-4 col-lg-2">
                                 <li class="footer-brand">
                                     <span class="navHeadings">Profile</span>
                                 </li>
@@ -173,7 +174,7 @@
                                     <a href="Profile.html?q=4">Clients</a>
                                 </li>
                             </ul>
-                            <ul class="sidebar-nav col-xs-2">
+                            <ul class="sidebar-nav col-xs-12 col-sm-6 col-md-4 col-lg-2">
                                 <!--left50Percent-->
                                 <li class="footer-brand">
                                     <span class="navHeadings">Careers</span>
@@ -189,7 +190,7 @@
                                 </li>
 
                             </ul>
-                            <ul class="sidebar-nav col-xs-2">
+                            <ul class="sidebar-nav col-xs-12 col-sm-6 col-md-4 col-lg-2">
                                 <!--left75Percent-->
                                 <li class="footer-brand">
                                     <span class="navHeadings">News</span>
@@ -202,7 +203,7 @@
                                 </li>
 
                             </ul>
-                            <ul class="sidebar-nav col-xs-3">
+                            <ul class="sidebar-nav col-xs-12 col-sm-6 col-md-4 col-lg-3">
                                 <!--left75Percent-->
                                 <li class="footer-brand">
                                     <span class="navHeadings">Contact Us</span>
@@ -240,9 +241,9 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
-               
-                </footer>   
+                    </div>              
+                </div>            
+        </div>
      
     </body>
 </html>
