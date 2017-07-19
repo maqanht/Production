@@ -1167,3 +1167,15 @@ iframe{
 iframe, object, embed {
     max-width: 80%;
 }
+.jumbotronAlignment{
+    display: flex;
+    align-items: center;
+    height: 10%;
+    margin: 0;
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
