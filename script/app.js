@@ -112,21 +112,37 @@
             {
                 id:0,
                 isSelected:true,
+                companyImage:"img/MS-Logo.png",
+                clientImage: "img/clientImage.png",
+                clientName: "John Smith",
+                clientPosition: "Director",
                 content:"You are all super talented with admirable work ethics - we greatly appreciate all the work you've done up-to-date."
             },
             {
                 id:1,
                 isSelected:false,
-                content:"I really want to appreciate the foresight shown by the team yesterday by stretching in the middle of the sprint to bring almost all the sprint stories back on track! This has probably saved all of us a lot of headaches at the tail end of the sprint."
+                companyImage:"img/MS-Logo.png",
+                clientImage: "img/clientImage.png",
+                clientName: "John Smith",
+                clientPosition: "Director",
+                content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt"
             },
             {
                 id:2,
                 isSelected:false,
+                companyImage:"img/MS-Logo.png",
+                clientImage: "img/clientImage.png",
+                clientName: "John Smith",
+                clientPosition: "Director",
                 content:"Keep up the good work !!"
             },
             {
                 id:3,
                 isSelected:false,
+                companyImage:"img/MS-Logo.png",
+                clientImage: "img/clientImage.png",
+                clientName: "John Smith",
+                clientPosition: "Director",
                 content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt"
             }
         ];
