@@ -151,6 +151,25 @@
     }
     .technologyWrapper{
         min-height: 90px !important;
+    }
+        #ourClients{
+        margin: 0px !important;
+        width: 100% !important;
+    }
+    .carousel-inner{
+        margin: 0px !important;
+        width: 100% !important;
+        font-size: 5rem !important;
+        border: none !important;
+    }
+    .appreciation{
+        padding-top: 10% !important;
+    }
+    .clientName{
+        font-size: 5rem !important;
+    }
+    .clientPosition{
+        font-size: 4rem !important;
     }   
 }
 @media screen and (max-width: 600px) and (min-width: 50px) {
@@ -364,6 +383,7 @@ body {
     align-content: stretch;  
     align-items: center;    
     width: 100%;
+    text-align: center;
 }
 .underline{
     width: 17rem;
@@ -1346,4 +1366,7 @@ iframe, object, embed {
 }
 .onlyMarginTop2{
     margin: 2% 0 0 0;
+}
+.colorWhite{
+    color: white;
 }
