@@ -36,18 +36,18 @@
      </div>
      <div class="whatWeDo">
          <div class="centerAlignHeader "><h1 >Lorem Ipsum (What we do)</h1><div class="underLine"></div></div>      
-         <div class="alignTechnology col-lg-9 col-md-12 col-sm-12 col-xs-12">
-             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-9 technologyStackMargin"  data-ng-repeat="tech in app.technologyList">
+         <div class="alignTechnology col-lg-7 col-md-12 col-sm-12 col-xs-12">
+             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-9 technologyStackMargin noPaddingLeftRight"  data-ng-repeat="tech in app.technologyList">
                  <div class="technologyStack">                     
                     <div class="" data-ng-click="app.changeTechnology(tech)">
                             <a class="technologyLink" data-ng-class={{"technology.isSelected?'liftUp':''"}}><img src={{tech.img}} alt={{tech.alt}} /></a>
                     </div> 
                     <div class="technologyWrapper">
                         <h3 class="centerAlign textColorRed">{{tech.Name}}</h3>
-                        <h4 class="centerAlign textColorgrey">{{tech.Tagline}}</h4>  
+                        <h5 class="centerAlign textColorgrey">{{tech.Tagline}}</h5>  
                     </div>
-                    <div class="contentPadding"><h4 class="centerAlign content">{{tech.Content}}</h4></div>   
-                    <div class="flex-center">
+                    <div class="contentPadding content"><span class="centerAlign">{{tech.Content}}</span></div>   
+                    <div class="flex-center clickable">
                             <div class="text-arrow">
                                 <div class="readMore">Read More</div>
                                 <div class="traingle"></div>
@@ -58,7 +58,7 @@
          </div> 
      </div>
      <div id="OurClients" class="PaddingTopBottom relative"> 
-         <div class="centerAlignHeader"><h1 class="semibold">Our Clients</h1>
+        <div class="centerAlignHeader" id="clientHeader"><h1 class="semibold">Our Clients</h1>
             <div class="underLine"></div>
         </div>
         <div id="myCarousel" class="carousel paddingTopBottom" data-ride="carousel">
@@ -67,7 +67,7 @@
                                 <div id="clientDetails" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                                     <div class="companyName"><img src="{{slide.companyImage}}" /></div>
                                     <div class="clientImage centerAlign"><img src="{{slide.clientImage}}" /></div>
-                                    <div class="clientName centerAlign">{{slide.clientName}}</div>
+                                    <div class="clientName centerAlign">{{slide.clientName}},</div>
                                     <div class="clientPosition centerAlign">{{slide.clientPosition}}</div>
                                 </div>
                                 <div class="appreciation col-xs-12 col-sm-6 col-md-8 col-lg-9">
@@ -78,8 +78,8 @@
                     <ol class="carousel-indicators">
                         <li data-target="#myCarousel" data-ng-repeat="slides in app.slideList" data-slide-to="{{slides.id}}" data-ng-class={{"slides.isSelected?'active':''"}}></li>
                     </ol>
-                </div>
-        <div class="OurClients">
+        </div>
+        <div class="OurClients" id="clientLogos">
             <img class="clientLogo" data-ng-repeat="client in app.clients" data-ng-class={{"client.name==='Starbucks'?'starbucksImage':''"}} src="{{client.logo}}" alt="{{client.name}}"/>
         </div>        
      </div> 

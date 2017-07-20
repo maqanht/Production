@@ -10,16 +10,16 @@
             {Name:"Careers",isSelected:false, url: "http://maqsoftware.in/Careers.html"},
             {Name:"Contact Us",isSelected:false, url:"http://maqsoftware.in/Contactus.html"}];
         app.clients=[
-            {logo: "img/MS-Logo.png", name: "Microsoft"},
-            {logo: "img/techsoup.png", name: "techsoup"},
-            {logo: "img/T-Mobile.png", name: "TMobile"},
+            {logo: "img/microsoft.svg", name: "Microsoft"},
+            {logo: "img/TechSoup.png", name: "techsoup"},
+            {logo: "img/t-mobile.svg", name: "TMobile"},
             {logo: "img/Envision.png", name: "envision"},
             {logo: "img/Antech.png", name: "VCAAntech"},
-            {logo: "img/Starbucks.png", name: "Starbucks"},
+            {logo: "img/starbucks.svg", name: "Starbucks"},
             {logo: "img/Amazon.png", name: "Amazon"},
-            {logo: "img/Amazon_services.png", name: "Amazon Web Services"},
+            {logo: "img/amazon-web-services.svg", name: "Amazon Web Services"},
             {logo: "img/Devon.png", name: "devon"},
-            {logo: "img/Google.png", name: "Google"}           
+            {logo: "img/google.svg", name: "Google"}           
         ];
         app.technologyList=[
             {
@@ -121,7 +121,7 @@
             {
                 id:1,
                 isSelected:false,
-                companyImage:"img/MS-Logo.png",
+                companyImage:"img/google.svg",
                 clientImage: "img/clientImage.png",
                 clientName: "John Smith",
                 clientPosition: "Director",
@@ -130,7 +130,7 @@
             {
                 id:2,
                 isSelected:false,
-                companyImage:"img/MS-Logo.png",
+                companyImage:"img/Amazon.png",
                 clientImage: "img/clientImage.png",
                 clientName: "John Smith",
                 clientPosition: "Director",
@@ -139,7 +139,16 @@
             {
                 id:3,
                 isSelected:false,
-                companyImage:"img/MS-Logo.png",
+                companyImage:"img/Antech.png",
+                clientImage: "img/clientImage.png",
+                clientName: "John Smith",
+                clientPosition: "Director",
+                content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt"
+            },
+            {
+                id:4,
+                isSelected:false,
+                companyImage:"img/starbucks.svg",
                 clientImage: "img/clientImage.png",
                 clientName: "John Smith",
                 clientPosition: "Director",
@@ -204,8 +213,19 @@
                 e.preventDefault();
                 $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500, 'linear');
             });
-       
 
+            $(window).on('load resize', function() { //Fires when window is loaded or resized
+            var div1 = $('#clientHeader');
+            var div2 = $('#myCarousel');
+            var div3 = $('#clientLogos');
+            var wrapper = $('#OurClients');
+
+            if ($(window).width() < 800) {
+                $('#OurClients').append($('#myCarousel')).append($('#clientHeader')).append($('#clientLogos'));
+            } else {
+                $('#OurClients').append($('#clientHeader')).append($('#myCarousel')).append($('#clientLogos')); 
+            }
+            });      
     }
     var main_module = angular.module('myApp',[]);
     main_module.controller('AppController',[AppController]);
