@@ -320,6 +320,7 @@ body {
     }
         .navOptionList > li > a{
             color: black;
+            text-decoration: none;
         }
 .tranparentBlackBackGround{
     display: none;    
@@ -809,7 +810,8 @@ div.vertical-line{
 }
 
 .borderBottomRed{
-    border-bottom: 3px solid #ca0c0c;
+    /* border-bottom: 3px solid #ca0c0c; */
+    font-weight: normal;
 }
 .technologies{
     margin: 2%;
