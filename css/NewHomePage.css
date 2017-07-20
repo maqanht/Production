@@ -366,7 +366,7 @@ body {
     text-align: center;
     height: 8%;
     width: 100%;
-    background: #ba131a;
+    background: #2678bd;
     color: white;
     font-size: 18px;
     font-weight: 500;
@@ -464,7 +464,7 @@ body {
     margin-top: -9rem;
 }
 .textColorRed {
-    color: #BA131A;
+    color: #2678bd;
 }
 .centerAlign {
     text-align: center;
@@ -946,7 +946,7 @@ enhance {
     width: 10.5em;
     height: 2.5em;
     border-radius: 5px;
-    border: 1px solid #bc2431;
+    border: 1px solid #2678bd;
 }
 .flex-start .text-arrow{
     background: none;
@@ -1039,7 +1039,7 @@ enhance {
 }
 
 .topHeaderSliderBtn{
-    background: #bc2431;
+    background: #2678bd;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1238,7 +1238,7 @@ iframe{
 }
 .navHeadings {
     padding-bottom: 0.1rem;
-    border-bottom: 2px solid #BA131A;
+    border-bottom: 2px solid #2678bd;
 }
 .clientDetailsBorder {
     border-right: 1px solid #58585a;

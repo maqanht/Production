@@ -30,7 +30,7 @@
             Content:"Translate your data into insights. We expertise both in traditional Business Intelligence and Machine Learning. Get a peek into tomorrow by transforming data into predictions. We have expertise across the spectrum with Predictive Analytics, Text and Media Analytics. Enable businesses with intelligent Applications and  Smart Bots",
             alt:"Technology2",
             figCaption:["MACHINE","LEARNING"],
-            img:"img/Machine-Learning.png",
+            img:"img/Artificial.png",
             isSelected:false
             },
              {
@@ -40,7 +40,7 @@
              Content:"Visualize insights with real time dashboards, high performing reports, stunning visuals and more. We are the Microsoft Preferred Supplier for Power BI with the largest corporate deployment of Power BI. Largest external publisher of custom visuals Microsoft Store. Bring analytics to life with Integration of R visualizations. We are pioneers in the industry with proprietary Power BI Automation Framework for deployment, validations, and monitoring systems",
              alt:"Technology4",
              figCaption:["POWER BI","VISUALIZATIONS"],
-             img:"img/PowerBI-Visualizations.png",
+             img:"img/Power BI.png",
              isSelected:true
             },
             {
@@ -50,7 +50,7 @@
             Content:"We expertise in using Big Data platform to handle your data management needs. Multiple architecture patterns defined for data ingress and egress for COSMOS. Handled huge amounts of data with our COSMOS development framework and tools",
             alt:"Technology3",
             figCaption:["","BIG DATA SOLUTIONS"],
-            img:"img/Microsoft-BigData.png",
+            img:"img/Big.png",
             isSelected:false
              },            {
              Id:4,
@@ -59,7 +59,7 @@
              Content:"Consolidate huge data spread across ecosystem through Automated Data Pipelines using our proprietary tools and processes. Translate the data into key business insights",
              alt:"Technology1",
              figCaption:["DATA","MANAGEMENT"],
-             img:"img/Data-Management.png",
+             img:"img/Data Manage.png",
              isSelected:false
             },
             {
@@ -69,7 +69,7 @@
             Content:"Magic happens in the cloud. We expertise in compute, host, and data services in Microsoft Azure and Amazon Web Services. Migrate your systems to Cloud with our standard process flow. We have migrated one of the largest corporate in business intelligence reporting systems to cloud",
             alt:"Technology5",
             figCaption:["WEB DEVELOPMENT","CLOUD SERVICES"],
-            img:"img/Web-Development-&-Cloud-Services.png",
+            img:"img/Cloud.png",
             isSelected:false
             }
         ];
