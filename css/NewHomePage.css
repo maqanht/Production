@@ -108,12 +108,6 @@
     .paddingleftflex{
         padding-left: 8% !important;
     }
-    .technologyStack{
-        min-height: 400px !important;
-    }
-    .technologyStack{
-        min-height: 400px !important;
-    }
 }
 @media screen and (max-width: 500px) and (min-width: 50px) {
   .paddingrightflex{

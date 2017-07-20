@@ -12,7 +12,7 @@
             {Name:"Contact Us",isSelected:false, url:"http://maqsoftware.in/Contactus.html"}];
         app.clients=[
             {logo: "img/microsoft.svg", name: "Microsoft"},
-            {logo: "img/techSoup.png", name: "techsoup"},
+            {logo: "img/techsoup.png", name: "techsoup"},
             {logo: "img/t-mobile.svg", name: "TMobile"},
             {logo: "img/Envision.png", name: "envision"},
             {logo: "img/Antech.png", name: "VCAAntech"},
