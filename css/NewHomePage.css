@@ -41,6 +41,21 @@
         width: 70% !important;
         /*min-height: 400px !important;*/
     }
+    .technologyStackMargin{
+        margin: 6.5rem 0 0 0 !important;
+        height: 30% !important;
+    }
+    .technologyLink > img{
+        height: 16rem !important;
+        width: 16rem !important;
+        margin-top: -7.5rem !important;
+    }
+    h1{
+        font-size: 3.5rem !important;
+    }
+    .technologyWrapper{
+        min-height: 60px !important;
+    }
 }
 @media screen and (max-width: 1000px) and (min-width: 968px) {
      html{
@@ -55,9 +70,10 @@
     h4{
         font-size: 3rem !important;
     }
-    .technologyStack{
-        /*min-height: 400px !important;*/
-    }
+    .text-arrow{
+        width: 17.5rem !important;
+        height: 4rem !important;
+    } 
 }
 
 @media screen and (max-width: 968px) and (min-width: 50px) {
@@ -73,6 +89,16 @@
      h4{
         font-size: 3rem !important;
     }    
+    .navOptionListExpand{
+        display: block !important;
+    }
+    .tranparentBlackBackGround{
+         display: block !important;
+    }
+    .text-arrow{
+        width: 17.5rem !important;
+        height: 4rem !important;
+    }
     
 }
 @media screen and (max-width: 1500px) and (min-width: 50px) {
@@ -82,15 +108,14 @@
     .paddingleftflex{
         padding-left: 8% !important;
     }
-    .alignTechnology{
-        width: 70% !important;
-        /*min-height: 400px !important;*/
+    .technologyStack{
+        min-height: 400px !important;
     }
     .technologyStack{
-        /*min-height: 400px !important;*/
+        min-height: 400px !important;
     }
 }
-@media screen and (max-width: 400px) and (min-width: 50px) {
+@media screen and (max-width: 500px) and (min-width: 50px) {
   .paddingrightflex{
         padding-right: 2% !important;
     } 
@@ -99,7 +124,40 @@
     }
      h4{
         font-size: 3rem !important;
-    }    
+    } 
+     .alignTechnology{
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100% !important;
+    }
+    .technologyStackMargin{
+        margin: 12.5rem 0 0 0 !important;
+        height: 80% !important;
+    }
+    .technologyLink > img{
+        height: 32rem !important;
+        width: 32rem !important;
+        margin-top: -9rem !important;
+    }
+    h3{
+        font-size: 9.5rem !important;
+    }
+    h5{
+        font-size: 6rem !important;
+    }
+    .flex-center{
+        padding-bottom: 3.5rem !important;
+    }
+    .text-arrow{
+        width: 24.5rem !important;
+        height: 5.5rem !important;
+    }
+    .technologyStack:hover .content{
+        font-size: 4.5rem !important;
+    }
+    .technologyWrapper{
+        min-height: 90px !important;
+    }   
 }
 @media screen and (max-width: 600px) and (min-width: 50px) {
      html{
@@ -157,6 +215,37 @@
     }
     
 }
+@media screen and (max-width: 8000px) and (min-width: 1280px){
+    .jumbotron {
+         padding-top: 42.5px !important;
+         padding-bottom: 42.5px !important;
+    }
+}
+@media screen and (max-width: 1280px) and (min-width: 50px){
+    .jumbotron {
+         padding-top: 30px !important;
+         padding-bottom: 30px !important;
+    }
+}
+@media screen and (max-width: 400px) and (min-width: 50px){
+    .landingImageHeaderText {
+         font-size: 12rem !important;
+    }
+    .landingImageCaptionText{
+        max-width: 90% !important;
+        font-size: 5rem !important;
+    }
+    .navOptionListExpand{
+        display: block !important;
+    }
+    .tranparentBlackBackGround{
+         display: block !important;
+    }
+    .heroHome{
+        background: url("../img/Front_1.png") 50% 90% no-repeat, url("../img/Home_Page_BG_PNG.png") 100% 100% no-repeat !important;
+        background-size: 80% 50%,100% 100% !important;
+    }
+}
 h1{
     font-size: 4rem;
 }
@@ -170,7 +259,7 @@ h4{
     font-size: 2rem;
 }
 h5{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 h6{
     font-size: 1rem;
@@ -187,7 +276,7 @@ body {
 .jumbotronAlignment{
     display: flex;
     align-items: center;
-    height: 10%;
+    height: 9vh;
     margin: 0;
     background: white;
     position: fixed;
@@ -219,14 +308,45 @@ body {
         .navOptionList > li > a{
             color: black;
         }
+.tranparentBlackBackGround{
+    display: none;    
+    width: 100%;
+    height: 91vh;
+    opacity: 0.7;
+    background: black;    
+    z-index: 2;
+    position: fixed;
+}
+.navOptionListExpand{
+    display: none;    
+    width: 100%;
+    background: whitesmoke;    
+    z-index: 3;
+    position: fixed;
+}
+.navOptionListExpand > ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+}
+.navOptionListExpand > ul > li{
+    height: 8vh;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .landingImage{
     width: 100%;
-    height: 90vh;
+    height: 91vh;
     position: relative;
+    margin-top: 9vh;
 }
 .heroHome{
-    background: url("../img/Herov2-03.jpg") no-repeat center center scroll;
-    background-size: 100% 100%;    
+    background: url("../img/Front_1.png") 50% 95% no-repeat, url("../img/Home_Page_BG_PNG.png") 100% 100% no-repeat;
+    background-size: 50% 60%,100% 100%;
 }
 .landingImageBottomHeader{
     text-align: center;
@@ -238,8 +358,10 @@ body {
     font-weight: 500;
     margin: 0;
     position: absolute;
-    bottom: 0;
-    padding: 2rem;
+    bottom: 0;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .centerAlignHeader{
     display: flex;
@@ -250,7 +372,7 @@ body {
     width: 100%;
 }
 .underline{
-    width: 10rem;
+    width: 17rem;
     border-bottom: 2px solid grey;
 }
 .clickable{
@@ -259,7 +381,7 @@ body {
 .landingImageHeaderText{
     max-width: 90%;
     font-weight: 700;
-    font-size: 7rem;
+    font-size: 6rem;
     margin: 0 auto;
     text-align: center;
     padding-top: 8rem;
@@ -267,13 +389,14 @@ body {
 .landingImageCaptionText{
     max-width: 40%;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0 auto;
     text-align: center;
     color: grey;
 }
 .whatWeDo{
     width: 100%;
+    /*height: 90vh;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -336,7 +459,7 @@ body {
     color: #58585A;
 }
 .technologyWrapper{
-    min-height: 85px;
+    min-height: 80px;
 }
 /*.content{
   word-break: break-all;
@@ -438,7 +561,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 1em;
+    padding-bottom: 1.5rem;
 }
 .flex-start{
     display: flex;
@@ -816,12 +939,6 @@ enhance {
     margin-bottom: 30px;
     border-radius: 0;
 }
-.flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 1em;
-}
 .flex-start{
     display: flex;
     justify-content: flex-start;
@@ -1107,8 +1224,13 @@ iframe{
     padding-bottom: 0.1rem;
     border-bottom: 2px solid #BA131A;
 }
-#clientDetails {
+.clientDetailsBorder {
     border-right: 1px solid #58585a;
+    display: flex;
+    flex-direction: column;
+}
+.hideBorder {
+    border: none;
     display: flex;
     flex-direction: column;
 }
@@ -1211,11 +1333,23 @@ iframe, object, embed {
     padding-left: 0px;
     padding-right: 0px;
 }
-.companyName > img {
+.companyName > img, .companyNameSmall > img {
     height: 40px;
     width: 140px;
 }
 .clientImage > img {
     height: 100px;
     width: 100px;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.onlyMarginTop5{
+    margin: 5% 0 0 0;
+}
+.onlyMarginTop2{
+    margin: 2% 0 0 0;
 }

@@ -1,7 +1,8 @@
 (function(){
     'use strict';
     function AppController(){
-        var app = this;        
+        var app = this;
+        app.expandNavOption = false;        
          app.navList=[
             {Name:"Home",isSelected:true, url: "http://maqsoftware.in/"},
             {Name:"Expertise",isSelected:false, url: "http://maqsoftware.in/Expertise.html"},
@@ -11,7 +12,7 @@
             {Name:"Contact Us",isSelected:false, url:"http://maqsoftware.in/Contactus.html"}];
         app.clients=[
             {logo: "img/microsoft.svg", name: "Microsoft"},
-            {logo: "img/TechSoup.png", name: "techsoup"},
+            {logo: "img/techSoup.png", name: "techsoup"},
             {logo: "img/t-mobile.svg", name: "TMobile"},
             {logo: "img/Envision.png", name: "envision"},
             {logo: "img/Antech.png", name: "VCAAntech"},
@@ -23,53 +24,53 @@
         ];
         app.technologyList=[
             {
-             Id:1,
-             Name:"DATA MANAGEMENT",
-             Tagline:"FROM SOURCE TO ANALYTICS",
-             Content:"Consolidate huge data spread across ecosystem through Automated Data Pipelines using our proprietary tools and processes. Translate the data into key business insights",
-             alt:"Technology1",
-             figCaption:["DATA","MANAGEMENT"],
-             img:"img/Data-Management.png",
-             isSelected:false
-            },
-             {
-            Id:2,
-            Name:"BIG DATA SOLUTIONS",
-            Tagline:"COSMOS EXPERTISE",
-            Content:"We expertise in using Big Data platform to handle your data management needs. Multiple architecture patterns defined for data ingress and egress for COSMOS. Handled huge amounts of data with our COSMOS development framework and tools",
-            alt:"Technology3",
-            figCaption:["","BIG DATA SOLUTIONS"],
-            img:"img/Microsoft-BigData.png",
-            isSelected:false
-             },
-            {
-            Id:3,
-            Name:"WEB DEVELOPMENT & CLOUD COMPUTING",
-            Tagline:"AZURE EXPERTISE",
-            Content:"Magic happens in the cloud. We expertise in compute, host, and data services in Microsoft Azure and Amazon Web Services. Migrate your systems to Cloud with our standard process flow. We have migrated one of the largest corporate in business intelligence reporting systems to cloud",
-            alt:"Technology5",
-            figCaption:["WEB DEVELOPMENT","CLOUD SERVICES"],
-            img:"img/Web-Development-&-Cloud-Services.png",
-            isSelected:false},           
-            {
-            Id:4,
-            Name:"MACHINE LEARNING",
-            Tagline:"CUTTING EDGE AI ANALYSIS",
+            Id:1,
+            Name:"Artificial Intelligence",
+            Tagline:"AI will put your data to work",
             Content:"Translate your data into insights. We expertise both in traditional Business Intelligence and Machine Learning. Get a peek into tomorrow by transforming data into predictions. We have expertise across the spectrum with Predictive Analytics, Text and Media Analytics. Enable businesses with intelligent Applications and  Smart Bots",
             alt:"Technology2",
             figCaption:["MACHINE","LEARNING"],
             img:"img/Machine-Learning.png",
             isSelected:false
             },
-            {
-             Id:5,
-             Name:"POWER BI & VISUALIZATIONS",
-             Tagline:"COMPREHENSIVE REPORTS",
+             {
+             Id:2,
+             Name:"Power BI & Visualizations",
+             Tagline:"Visualize and interact with data instantly",
              Content:"Visualize insights with real time dashboards, high performing reports, stunning visuals and more. We are the Microsoft Preferred Supplier for Power BI with the largest corporate deployment of Power BI. Largest external publisher of custom visuals Microsoft Store. Bring analytics to life with Integration of R visualizations. We are pioneers in the industry with proprietary Power BI Automation Framework for deployment, validations, and monitoring systems",
              alt:"Technology4",
              figCaption:["POWER BI","VISUALIZATIONS"],
              img:"img/PowerBI-Visualizations.png",
              isSelected:true
+            },
+            {
+            Id:3,
+            Name:"Big Data Solutions",
+            Tagline:"Personalize your customer experience",
+            Content:"We expertise in using Big Data platform to handle your data management needs. Multiple architecture patterns defined for data ingress and egress for COSMOS. Handled huge amounts of data with our COSMOS development framework and tools",
+            alt:"Technology3",
+            figCaption:["","BIG DATA SOLUTIONS"],
+            img:"img/Microsoft-BigData.png",
+            isSelected:false
+             },            {
+             Id:4,
+             Name:"Data Management",
+             Tagline:"Consolidate crucial data and minimize errors",
+             Content:"Consolidate huge data spread across ecosystem through Automated Data Pipelines using our proprietary tools and processes. Translate the data into key business insights",
+             alt:"Technology1",
+             figCaption:["DATA","MANAGEMENT"],
+             img:"img/Data-Management.png",
+             isSelected:false
+            },
+            {
+            Id:5,
+            Name:"Cloud Solutions",
+            Tagline:"Simplify access to information while cutting storage costs",
+            Content:"Magic happens in the cloud. We expertise in compute, host, and data services in Microsoft Azure and Amazon Web Services. Migrate your systems to Cloud with our standard process flow. We have migrated one of the largest corporate in business intelligence reporting systems to cloud",
+            alt:"Technology5",
+            figCaption:["WEB DEVELOPMENT","CLOUD SERVICES"],
+            img:"img/Web-Development-&-Cloud-Services.png",
+            isSelected:false
             }
         ];
         app.sectionOption=[
@@ -116,7 +117,7 @@
                 clientImage: "img/clientImage.png",
                 clientName: "John Smith",
                 clientPosition: "Director",
-                content:"You are all super talented with admirable work ethics - we greatly appreciate all the work you've done up-to-date."
+                content:"'You are all super talented with admirable work ethics - we greatly appreciate all the work you've done up-to-date.'"
             },
             {
                 id:1,
@@ -125,7 +126,7 @@
                 clientImage: "img/clientImage.png",
                 clientName: "John Smith",
                 clientPosition: "Director",
-                content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt"
+                content:"'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt'"
             },
             {
                 id:2,
@@ -134,7 +135,7 @@
                 clientImage: "img/clientImage.png",
                 clientName: "John Smith",
                 clientPosition: "Director",
-                content:"Keep up the good work !!"
+                content:"'You are all super talented with admirable work ethics - we greatly appreciate all the work you've done up-to-date.'"
             },
             {
                 id:3,
@@ -143,7 +144,7 @@
                 clientImage: "img/clientImage.png",
                 clientName: "John Smith",
                 clientPosition: "Director",
-                content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt"
+                content:"'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt'"
             },
             {
                 id:4,
@@ -152,7 +153,7 @@
                 clientImage: "img/clientImage.png",
                 clientName: "John Smith",
                 clientPosition: "Director",
-                content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt"
+                content:"'You are all super talented with admirable work ethics - we greatly appreciate all the work you've done up-to-date.'"
             }
         ];
         app.technologyName=app.technologyList[4].Name;
@@ -215,16 +216,19 @@
             });
 
             $(window).on('load resize', function() { //Fires when window is loaded or resized
-            var div1 = $('#clientHeader');
-            var div2 = $('#myCarousel');
-            var div3 = $('#clientLogos');
-            var wrapper = $('#OurClients');
-
-            if ($(window).width() < 800) {
-                $('#OurClients').append($('#myCarousel')).append($('#clientHeader')).append($('#clientLogos'));
-            } else {
-                $('#OurClients').append($('#clientHeader')).append($('#myCarousel')).append($('#clientLogos')); 
-            }
+                if ($(window).width() < 755) {
+                    $('#OurClients').append($('#myCarousel')).append($('#clientHeader')).append($('#clientLogos'));
+                    $('.appreciation').addClass("centerAlign");
+                    $('#clientDetails').removeClass("clientDetailsBorder").addClass("hideBorder");
+                    $('.companyName').removeClass('show').addClass('hide');
+                    $('.companyNameSmall').removeClass('hide').addClass('show');
+                } else {
+                    $('#OurClients').append($('#clientHeader')).append($('#myCarousel')).append($('#clientLogos'));
+                    $('#clientDetails').removeClass("hideBorder").addClass("clientDetailsBorder");
+                    $('.appreciation').removeClass("centerAlign");
+                    $('.companyName').removeClass('hide').addClass('show');
+                    $('.companyNameSmall').removeClass('show').addClass('hide');
+                }
             });      
     }
     var main_module = angular.module('myApp',[]);
