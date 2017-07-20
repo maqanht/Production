@@ -188,6 +188,11 @@ body {
     height: 10%;
     margin: 0;
     background: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
 }
 .paddingleftflex{
     padding-left: 12%;
@@ -278,11 +283,19 @@ body {
 }
 .technologyStack{
     background: #eeeeee;
-    min-width: 30rem;
-    height: 45rem;
+    min-width: 30rem;    
     margin: 1rem;
     min-height: 350px;
+    border: 1px solid #d8d1d1;
 }
+.technologyStack:hover{
+    border: 2px solid #6d6969;
+}
+.technologyStack:hover .content{
+    white-space: normal;
+    transition: all 12s ease-in;
+}
+
 .technologyStackMargin{
     margin: 12.5rem 0;
 }
@@ -307,7 +320,10 @@ body {
 .textColorGrey {
     color: #58585A;
 }
-.content{
+.technologyWrapper{
+    min-height: 100px;
+}
+/*.content{
   word-break: break-all;
   font-weight: 400;
   position: relative;  
@@ -317,8 +333,8 @@ body {
   text-align: justify;
   margin-right: -1em;
   padding-right: 1em;
-}
-.content::before{     
+}*/
+/*.content::before{     
   content: '...';  
   position: absolute;  
   right: 0.5rem;
@@ -332,9 +348,18 @@ body {
   height: 1em;
   margin-top: 0.2em; 
   background: #eeeeee;
+}*/
+.content{ 
+  font-weight: 400;  
+  overflow: hidden;
+  line-height: 1.2em;  
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
 }
+
 .contentPadding{
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .OurClients{
@@ -398,7 +423,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 1em;
+    padding-bottom: 1em;
 }
 .flex-start{
     display: flex;
@@ -1166,16 +1191,4 @@ iframe{
 }
 iframe, object, embed {
     max-width: 80%;
-}
-.jumbotronAlignment{
-    display: flex;
-    align-items: center;
-    height: 10%;
-    margin: 0;
-    background: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 3;
 }

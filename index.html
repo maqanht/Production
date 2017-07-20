@@ -41,16 +41,18 @@
                  <div class="technologyStack">                     
                     <div class="" data-ng-click="app.changeTechnology(tech)">
                             <a class="technologyLink" data-ng-class={{"technology.isSelected?'liftUp':''"}}><img src={{tech.img}} alt={{tech.alt}} /></a>
-                    </div>  
-                    <h3 class="centerAlign textColorRed">{{tech.Name}}</h3>
-                    <h4 class="centerAlign textColorgrey">{{tech.Tagline}}</h4>  
-                    <div class="contentPadding"><h4 class="centerAlign content">{{tech.Content}}</h4></div>
-                    <div class="flex-center">
-                        <div class="text-arrow">
-                            <div class="readMore">Read More</div>
-                            <div class="traingle"></div>
-                        </div>
                     </div> 
+                    <div class="technologyWrapper">
+                        <h3 class="centerAlign textColorRed">{{tech.Name}}</h3>
+                        <h4 class="centerAlign textColorgrey">{{tech.Tagline}}</h4>  
+                    </div>
+                    <div class="contentPadding"><h4 class="centerAlign content">{{tech.Content}}</h4></div>   
+                    <div class="flex-center">
+                            <div class="text-arrow">
+                                <div class="readMore">Read More</div>
+                                <div class="traingle"></div>
+                            </div>
+                    </div>                  
                  </div>
              </div>
          </div> 
