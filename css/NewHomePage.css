@@ -246,7 +246,6 @@
          padding-top: 4rem !important;
     }
     .dashboardImage > img{
-        height: auto !important;
         width: 80% !important;
     }
      .heroContentWrapper{
@@ -290,7 +289,6 @@
         font-weight: 500;
     }
     .dashboardImage > img{
-        height: auto !important;
         width: 80% !important;
     }
     .navOptionListExpand{
@@ -331,9 +329,6 @@
     }
     h5{
         font-size: 6rem !important;
-    }
-    .flex-center{
-        padding-bottom: 3.5rem !important;
     }
     .text-arrow{
         width: 25.5rem !important;
@@ -510,13 +505,6 @@ body {
     justify-content: center;
     height: 50%;
     position: relative;
-}
-.dashboardImage > img{
-    width: 60%;
-    margin-bottom: -1px;
-    position: absolute;
-    bottom: 0;
-    height: 100%;
 }
 .landingImageBottomHeader{
     text-align: center;
@@ -1553,4 +1541,11 @@ iframe, object, embed {
     font-weight: 200;
     margin-top: 10px;
     line-height: 1.5;
+}
+.dashboardImage > img{
+    width: 50%;
+    margin-bottom: -1px;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
 }
