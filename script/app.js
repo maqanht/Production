@@ -27,7 +27,7 @@
             {
             Id:1,
             Name:"Artificial Intelligence",
-            Tagline:"AI will put your data to work",
+            Tagline:"Your data will help you predict outcomes",
             Content:"Translate your data into insights. We expertise both in traditional Business Intelligence and Machine Learning. Get a peek into tomorrow by transforming data into predictions. We have expertise across the spectrum with Predictive Analytics, Text and Media Analytics. Enable businesses with intelligent Applications and  Smart Bots",
             alt:"Technology2",
             figCaption:["MACHINE","LEARNING"],
@@ -56,7 +56,7 @@
              },            {
              Id:4,
              Name:"Data Management",
-             Tagline:"Consolidate crucial data and minimize errors",
+             Tagline:"Consolidate data and minimize inconsistencies",
              Content:"Consolidate huge data spread across ecosystem through Automated Data Pipelines using our proprietary tools and processes. Translate the data into key business insights",
              alt:"Technology1",
              figCaption:["DATA","MANAGEMENT"],
