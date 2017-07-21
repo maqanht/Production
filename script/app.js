@@ -2,7 +2,8 @@
     'use strict';
     function AppController(){
         var app = this;
-        app.expandNavOption = false;        
+        app.expandNavOption = false;   
+        app.showNavShadow = false; 
          app.navList=[
             {Name:"Home",isSelected:true, url: "http://maqsoftware.in/"},
             {Name:"Expertise",isSelected:false, url: "http://maqsoftware.in/Expertise.html"},
@@ -233,4 +234,16 @@
     }
     var main_module = angular.module('myApp',[]);
     main_module.controller('AppController',[AppController]);
+    main_module.directive("scroll", function ($window) {
+    return function(scope, element, attrs) {      
+        angular.element($window).bind("scroll", function() {
+            if(this.pageYOffset>0){
+                scope.app.showNavShadow = true;
+            } else{
+                 scope.app.showNavShadow = false;
+            }              
+            scope.$apply();           
+        });
+    };
+    });
 })();

@@ -13,14 +13,14 @@
     </head>
     <body data-ng-controller="AppController as app">        
 <body data-ng-controller="AppController as app">        
-     <div class="jumbotron jumbotronAlignment">
-        <div class="col-lg-5 col-md-3 col-sm-3 col-xs-9 paddingleftflex">
+     <div class="jumbotron jumbotronAlignment" data-ng-class={{"app.showNavShadow?'jumbotronShadow':''"}} scroll>
+        <div class="col-lg-4 col-md-3 col-sm-3 col-xs-9 paddingleftflex">
             <a href="http://maqsoftware.in/"><img class="maqLogoImage" src="img/MAQLogo.svg" alt="MAQ Software Logo" /></a>
         </div>
-        <div class="col-lg-7 col-md-9 col-sm-9 col-xs-3 paddingrightflex ">
+        <div class="col-lg-8 col-md-9 col-sm-9 col-xs-3 paddingrightflex ">
             <ul class="navOptionList collapseNav">
                 <li data-ng-repeat="nav in app.navList" data-ng-click="app.changeNav(nav)">
-                    <a  class="" data-ng-class={{"nav.isSelected?'borderBottomRed':''"}} href="{{nav.url}}">{{nav.Name}}
+                    <a  class="" data-ng-class={{"nav.isSelected?'selectedNavOption':'nonSelectedNavOption'"}} href="{{nav.url}}">{{nav.Name}}
                     </a>
                 </li>                                      
             </ul>
@@ -37,30 +37,35 @@
             </ul>
      </div>   
      <div class="landingImage heroHome">    
-         <div class="landingImageHeaderText">Empower data. Drive results.</div>  
-         <div class="landingImageCaptionText">Use cutting edge data solutions to gain insights
-into your customers’ needs. Make your data work for you </div>   
+         <div class="heroContentWrapper">
+             <div class="landingImageHeaderText">Empower data.<br class="breakImageHeaderText"> Drive results.</div>  
+            <div class="landingImageCaptionText">Use cutting edge data solutions to gain insights
+            into your customers’ needs. Make your data work for you </div>   
+         </div>            
+         <div class="dashboardImage">
+             <img src="img/Dashboard.png">
+         </div>
          <div class="jumbotron landingImageBottomHeader">
-             <div>MAQ Software CEO Rajeev Agarwal has written a book about succeeding as a manager.&nbsp;
+             <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
              <a><u class="colorWhite">Learn more</u></a></div>
          </div>
      </div>
      <div class="whatWeDo">
          <div class="centerAlignHeader ">
-             <h1 >From Source to Analytics</h1><div class="underLine"></div>
-              <h5>MAQ Software offers full data management and analytics solutions,
-                helping business gain insights into sales and production needs.</h5>
+              <span class="expertiseHeading">From Source to Analytics</span><div class="underLine"></div>
+              <span class="expertiseSubHeading">MAQ Software offers full data management and analytics solutions,
+                helping business gain insights into sales and production needs.</span>
          </div>   
            
                   <div class="alignTechnology col-lg-7 col-md-12 col-sm-12 col-xs-12">
-             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 technologyStackMargin noPaddingLeftRight"  data-ng-repeat="tech in app.technologyList">
+             <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 technologyStackMargin noPaddingLeftRight"  data-ng-repeat="tech in app.technologyList">
                  <div class="technologyStack">                     
                     <div class="" data-ng-click="app.changeTechnology(tech)">
                             <a class="technologyLink" data-ng-class={{"technology.isSelected?'liftUp':''"}}><img src={{tech.img}} alt={{tech.alt}} /></a>
                     </div> 
                     <div class="technologyWrapper">
-                        <h3 class="centerAlign textColorRed onlyMarginTop5">{{tech.Name}}</h3>
-                        <h5 class="centerAlign textColorgrey onlyMarginTop2">{{tech.Tagline}}</h5>  
+                        <h3 class="centerAlign onlyMarginTop10">{{tech.Name}}</h3>
+                        <div class="centerAlign textColorgrey techDescription">{{tech.Tagline}}</div>  
                     </div>
                     <div class="contentPadding content"><span class="centerAlign">{{tech.Content}}</span></div>   
                     <div class="flex-center clickable">
