@@ -46,11 +46,11 @@
             },
             {
             Id:3,
-            Name:"Big Data Solutions",
+            Name:"Big Data",
             Tagline:"Personalize your customer experience",
             Content:"We expertise in using Big Data platform to handle your data management needs. Multiple architecture patterns defined for data ingress and egress for COSMOS. Handled huge amounts of data with our COSMOS development framework and tools",
             alt:"Technology3",
-            figCaption:["","BIG DATA SOLUTIONS"],
+            figCaption:["","BIG DATA"],
             img:"img/Big.png",
             isSelected:false
              },            {
