@@ -13,14 +13,14 @@
             {Name:"Contact Us",isSelected:false, url:"http://maqsoftware.in/Contactus.html"}];
         app.clients=[
             {logo: "img/microsoft.svg", name: "Microsoft"},
-            {logo: "img/techsoup.png", name: "techsoup"},
+            {logo: "img/techsoup.svg", name: "techsoup"},
             {logo: "img/t-mobile.svg", name: "TMobile"},
-            {logo: "img/Envision.png", name: "envision"},
-            {logo: "img/Antech.png", name: "VCAAntech"},
+            {logo: "img/Envision.svg", name: "envision"},
+            {logo: "img/Antech.svg", name: "VCAAntech"},
             {logo: "img/starbucks.svg", name: "Starbucks"},
-            {logo: "img/Amazon.png", name: "Amazon"},
+            {logo: "img/Amazon.svg", name: "Amazon"},
             {logo: "img/amazon-web-services.svg", name: "Amazon Web Services"},
-            {logo: "img/Devon.png", name: "devon"},
+            {logo: "img/Devon.svg", name: "devon"},
             {logo: "img/google.svg", name: "Google"}           
         ];
         app.technologyList=[
