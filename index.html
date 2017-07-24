@@ -20,10 +20,16 @@
         </div>
         <div class="col-lg-8 col-md-9 col-sm-9 col-xs-3 paddingrightflex ">
             <ul class="navOptionList collapseNav">
-                <li data-ng-repeat="nav in app.navList" data-ng-click="app.changeNav(nav)">
+                <li data-ng-repeat="nav in app.navList" data-ng-click="app.changeNav(nav)" data-ng-mouseleave="app.disableOnHoverMenu()" data-ng-mouseenter="app.showMouseOverOption(nav);">
                     <a  class="" data-ng-class={{"nav.isSelected?'selectedNavOption':'nonSelectedNavOption'"}} href="{{nav.url}}">{{nav.Name}}
                     </a>
-                </li>                                      
+
+                     <div class="menuOnHoverOptions" data-ng-if="app.toggleMenuItemOption && app.currentHoveredMenuItem==nav.Name">
+                    <ul>
+                        <li data-ng-repeat="option in app.onHoverOptionToBeShown"><a href="{{option.Url}}">{{option.Name}}</a></li>
+                    </ul>
+                </div>
+                </li>                                                     
             </ul>
             <i class="fa fa-2x fa-bars navButton pull-right clickable" data-ng-click="app.expandNavOption=!app.expandNavOption"></i>
         </div>
@@ -78,10 +84,10 @@
          </div> 
      </div>
      <div id="OurClients" class="PaddingTopBottom relative"> 
-        <div class="centerAlignHeader" id="clientHeader"><h1 class="semibold">Developing unique solutions to fit customer needs</h1>
+        <div class="centerAlignHeader" id="clientHeader"><h1>Developing unique solutions to fit customer needs</h1>
             <div class="underLine"></div>
         </div>
-        <div id="myCarousel" class="carousel paddingTopBottom" data-ride="carousel">
+        <div id="myCarousel" class="carousel" data-ride="carousel">
                     <div class="carousel-inner">
                             <div class="item row" data-ng-repeat="slide in app.slideList" data-ng-class={{"slide.isSelected?'active':''"}}>
                                 <div id="clientDetails" class="col-xs-12 col-sm-6 col-md-4 col-lg-3 clientDetailsBorder">
@@ -92,7 +98,7 @@
                                     <div class="companyNameSmall hide centerAlign"><img src="{{slide.companyImage}}" /></div>
                                 </div>
                                 <div class="appreciation col-xs-12 col-sm-6 col-md-8 col-lg-9">
-                                    {{slide.content}}
+                                    <span>{{slide.content}}</span>
                                 </div>
                             </div>
                     </div>

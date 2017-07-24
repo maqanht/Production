@@ -4,13 +4,60 @@
         var app = this;
         app.expandNavOption = false;   
         app.showNavShadow = false; 
-         app.navList=[
+        app.onHoverOptionToBeShown = [];
+        app.toggleMenuItemOption = false;
+        app.currentHoveredMenuItem="";
+        app.navList=[
             {Name:"Home",isSelected:true, url: "http://maqsoftware.in/"},
             {Name:"Expertise",isSelected:false, url: "http://maqsoftware.in/Expertise.html"},
             {Name:"Profile",isSelected:false, url:"http://maqsoftware.in/Profile.html?q=1"},
             {Name:"News",isSelected:false, url: "http://maqsoftware.in/News.html"},
             {Name:"Careers",isSelected:false, url: "http://maqsoftware.in/Careers.html"},
             {Name:"Contact Us",isSelected:false, url:"http://maqsoftware.in/Contactus.html"}];
+        app.menuOnHoverOption = [
+            {
+                Name:"Home",Options:[]
+            },{
+                Name:"Expertise",Options:[
+                    {Name:"Data Management",Url:"Expertise.html"},
+                    {Name:"Machine Learning",Url:"Expertise.html?q=1"},
+                    {Name:"Microsoft Big Data Solutions",Url:"Expertise.html?q=2"},
+                    {Name:"Power BI & Visualizations",Url:"Expertise.html?q=3"},
+                    {Name:"Web Development & Cloud Services",Url:"Expertise.html?q=4"}]
+            },{
+                Name:"Profile",Options:[
+                    {Name:"About",Url:"Profile.html"},
+                    {Name:"Delivery Approach",Url:"Profile.html?q=1"},
+                    {Name:"Recognitions",Url:"Profile.html?q=2"},
+                    {Name:"Management",Url:"Profile.html?q=3"},
+                    {Name:"Clients",Url:"Profile.html?q=4"}]
+            },{
+                Name:"News",Options:[
+                    {Name:"Latest News",Url:"News.html"},
+                    {Name:"Press Coverage",Url:"News.html"}]
+            },{
+                Name:"Careers",Options:[
+                    {Name:"Redmond",Url:"Careers.html"},
+                    {Name:"Hyderabad",Url:"Careers.html?q=Hyderabad"},
+                    {Name:"Mumbai",Url:"Careers.html?q=Mumbai"}]
+            },{
+                Name:"Contact Us",Options:[
+                    {Name:"Phone",Url:"Contactus.html"},
+                    {Name:"Maps",Url:"Contactus.html"}]
+            }
+        ];
+        app.showMouseOverOption =function(nav){
+            app.menuOnHoverOption.map(function(option,key){
+                if(option.Name==nav.Name){
+                    app.onHoverOptionToBeShown = option.Options;
+                }
+            });    
+            app.currentHoveredMenuItem = nav.Name; 
+            app.toggleMenuItemOption = true;       
+        }
+        app.disableOnHoverMenu = function(){
+            app.toggleMenuItemOption=false;
+        }
         app.clients=[
             {logo: "img/microsoft.svg", name: "Microsoft"},
             // {logo: "img/techsoup.png", name: "techsoup"},
@@ -217,18 +264,10 @@
             });
 
             $(window).on('load resize', function() { //Fires when window is loaded or resized
-                if ($(window).width() < 755) {
+                if ($(window).width() <= 991) {
                     $('#OurClients').append($('#myCarousel')).append($('#clientHeader')).append($('#clientLogos'));
-                    $('.appreciation').addClass("centerAlign");
-                    $('#clientDetails').removeClass("clientDetailsBorder").addClass("hideBorder");
-                    $('.companyName').removeClass('show').addClass('hide');
-                    $('.companyNameSmall').removeClass('hide').addClass('show');
                 } else {
                     $('#OurClients').append($('#clientHeader')).append($('#myCarousel')).append($('#clientLogos'));
-                    $('#clientDetails').removeClass("hideBorder").addClass("clientDetailsBorder");
-                    $('.appreciation').removeClass("centerAlign");
-                    $('.companyName').removeClass('hide').addClass('show');
-                    $('.companyNameSmall').removeClass('show').addClass('hide');
                 }
             });      
     }
