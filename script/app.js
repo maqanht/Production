@@ -23,7 +23,7 @@
                     {Name:"Machine Learning",Url:"Expertise.html?q=1"},
                     {Name:"Microsoft Big Data Solutions",Url:"Expertise.html?q=2"},
                     {Name:"Power BI & Visualizations",Url:"Expertise.html?q=3"},
-                    {Name:"Web Development & Cloud Services",Url:"Expertise.html?q=4"}]
+                    {Name:"Cloud Solutions",Url:"Expertise.html?q=4"}]
             },{
                 Name:"Profile",Options:[
                     {Name:"About",Url:"Profile.html"},

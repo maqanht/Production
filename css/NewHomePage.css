@@ -159,7 +159,6 @@
     }
     .landingImageHeaderText{
         font-size: 36px !important;
-        padding-top: 5.5rem !important;
     }  
     #OurClients{
         margin: 0px !important;
@@ -194,23 +193,23 @@
         vertical-align: middle !important;
     }
     #clientHeader > h1 {
-        font-size: 9rem !important;
+        font-size: 6rem !important;
     }
     .appreciation > span {
-        font-size: 5rem !important;
+        font-size: 4rem !important;
     }
     .clientName{
-        font-size: 6rem !important;
+        font-size: 4rem !important;
     }
     .clientPosition{
-        font-size: 6rem !important;
+        font-size: 4rem !important;
     }
     .companyName {
         display: none !important;
     }
     .companyNameSmall {
         display: block !important;
-        padding: 5% !important;
+        padding: 3% !important;
     }
     .carousel-indicators {
          bottom: -10px !important;
@@ -316,7 +315,6 @@
     }
     .landingImageHeaderText{
         font-size: 36px !important;
-        padding-top: 5.5rem !important;
     } 
     #OurClients{
         margin: 0px !important;
@@ -383,7 +381,6 @@
     }
     .landingImageHeaderText{
         font-size: 36px !important;
-        padding-top: 5.5rem !important;
     } 
 }
 @media screen and (max-width: 499px) and (min-width: 50px) {
@@ -544,7 +541,6 @@
     }
     .landingImageHeaderText{
         font-size: 36px !important;
-        padding-top: 5.5rem !important;
     }   
 }
 h1{
@@ -1711,7 +1707,7 @@ iframe, object, embed {
     margin-bottom: -1px;
     position: absolute;
     bottom: 0;
-    height: 100%;
+    height: auto;
 }
 .appreciation {
     display: flex;
@@ -1720,14 +1716,14 @@ iframe, object, embed {
     padding-left: 7rem;
 }
 #clientHeader > h1 {
-    font-size: 4.5rem;
+    font-size: 3.2rem;
     font-family: 'Segoe UI';
     color: #2a2a2a;
-    font-weight: normal;
+    font-weight: 600;
 }
 .appreciation > span {
     color: #515150;
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Segoe UI';
 }
 .menuOnHoverOptions{
