@@ -579,7 +579,8 @@ body {
 .technologyStack{
     background: #eeeeee;
     margin: 1rem;
-    padding: 20px;
+    padding: 16px;
+    border: 4px solid white;
 }
 .technologyStack .content{
     opacity: 0;
@@ -587,7 +588,6 @@ body {
     padding: 0;
 }
 .technologyStack:hover{
-    border: 4px solid white;
     position: absolute;
     z-index: 2;
     transition: height 0.5s;
@@ -959,16 +959,17 @@ div.vertical-line{
     transform: translateY(-5em); 
   }
 }
-
 .selectedNavOption{
-    font-family:  "Segoe UI, sans-serif";
-    font-size: 20px;
-    color: #969293 !important;
+    font-family:  "Segoe UI", sans-serif;
+    font-size: 16px;
+    color: #515150 !important;
+    font-weight: 500;
 }
 .nonSelectedNavOption{
-    font-family:  "Segoe UI,sans-serif";
-    font-size: 20px;
-    color: #515150;     
+    font-family:  "Segoe UI",sans-serif;
+    font-size: 16px;
+    color: #515150; 
+    font-weight: 500;    
 }
 .technologies{
     margin: 2%;
@@ -1551,5 +1552,10 @@ iframe, object, embed {
     margin-bottom: -1px;
     position: absolute;
     bottom: 0;
+    height: 100%;
+}
+.appreciation {
+    display: flex;
+    align-items: center;
     height: 100%;
 }
