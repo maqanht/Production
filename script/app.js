@@ -127,7 +127,7 @@
             },
             {
             Id:5,
-            Name:"Cloud Solutions",
+            Name:"Intelligent Cloud",
             Tagline:"Simplify access to information while cutting storage costs",
             Content:"Using Microsoft Azure and Amazon Web Services, our clients benefit from fast implementations and scalability. By delivering infrastructure as code, we avoid waiting for provisioning of servers and hardware upgrades. Over the last three years, we migrated hundreds of servers to cloud to improve application performance and reduce data latency. Our experience of migrating several enterprise systems to the cloud, we have the expertise to efficiently migrate your applications to the cloud Intelligently.",
             alt:"Technology5",
