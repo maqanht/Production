@@ -20,9 +20,19 @@
     .jumbotron {
          padding-top: 35px !important;
          padding-bottom: 35px !important;
-    }
-    .breakImageHeaderText{
-        display: none;
+
+
+
+    }    
+    .landingImage{
+        height: 92.82vh;
+    } 
+    .landingImageHeaderText{
+        font-size: 48px;
+        padding-top: 12.62vh;
+    }  
+     .landingImageCaptionText{
+        font-size: 21px;
     }
 }
 @media screen and (max-width: 1599px) and (min-width: 1281px) {
@@ -31,14 +41,25 @@
     } 
     .paddingleftflex{
         padding-left: 8% !important;
-    }
-     .breakImageHeaderText{
-        display: none;
-    }
+
+
+
+
+    }     
     .landingImageCaptionText{
         max-width: 70% !important;        
         padding-top: 2.15rem !important;
         padding-bottom: 3.75rem !important;
+    }
+    .landingImage{
+        height: 92.82vh;
+    } 
+    .landingImageHeaderText{
+        font-size: 48px;
+        padding-top: 12.62vh;
+    } 
+    .landingImageCaptionText{
+        font-size: 21px;
     }
 }
 @media screen and (max-width: 1280px) and (min-width: 992px) {
@@ -121,10 +142,20 @@
         max-width: 70% !important;        
         padding-top: 2.15rem !important;
         padding-bottom: 3.75rem !important;
+    }      
+    .landingImage{
+        height: 92.82vh;
+    } 
+    .landingImageHeaderText{
+        font-size: 48px;
+        padding-top: 12.62vh;
+    } 
+    .landingImageCaptionText{
+        font-size: 21px;
     }
-     .breakImageHeaderText{
-        display: none;
-    }  
+
+
+
 }
 @media screen and (max-width: 991px) and (min-width: 768px) {
     html{
@@ -148,18 +179,19 @@
     }
     .tranparentBlackBackGround{
          display: block !important;
-    }
-    .landingImageCaptionText{
-        max-width: 70% !important;        
-        padding-top: 2.15rem !important;
-        padding-bottom: 3.75rem !important;
-    }
-    .breakImageHeaderText{
-        display: none;
-    }
-    .landingImageHeaderText{
-        font-size: 36px !important;
-    }  
+
+
+
+
+
+
+
+
+
+
+
+
+    }     
     #OurClients{
         margin: 0px !important;
         width: 100% !important;
@@ -214,8 +246,21 @@
     .carousel-indicators {
          bottom: -10px !important;
     }
+    .landingImage{
+        height: 46.41vh;
+    }
+    .landingImageCaptionText{
+        font-size: 18px;
+        max-width: 70% !important;        
+        padding-top: 2.15rem !important;
+        padding-bottom: 3.75rem !important;
+    }   
+    .landingImageHeaderText{
+        font-size: 36px;
+        padding-top: 6.31vh;
+    } 
 }
-@media screen and (max-width: 767px) and (min-width: 500px) {
+@media screen and (max-width: 767px) and (min-width: 550px) {
     html{
         font-size: 40%;
     }
@@ -291,19 +336,24 @@
         max-width: 75% !important;        
         padding-top: 2.15rem !important;
         padding-bottom: 3.75rem !important;
-    }  
-    .breakImageHeaderText{
-        display: none;
-    } 
-     .dashboardImage > img{
-        width: 80% !important;
+
+
+
+
+
+
     }
-     .heroContentWrapper{
+    
+     /*.dashboardImage > img{
+        width: 80% !important;
+    }*/
+     /*.heroContentWrapper{
         height: 52.26% !important;
     }
     .dashboardImage{
         height: 40% !important;       
-    }
+
+    }*/
     .expertiseHeading{
         font-size: 4.2rem !important;
     }
@@ -312,10 +362,11 @@
     }
     .technologyStack:hover .content{
         font-size: 2rem !important;
-    }
-    .landingImageHeaderText{
-        font-size: 36px !important;
-    } 
+
+
+
+
+    }    
     #OurClients{
         margin: 0px !important;
         width: 100% !important;
@@ -374,16 +425,27 @@
         min-width: 128px !important;
         height: 110px !important;
     }
-}
-@media screen and (max-width: 639px) and (min-width: 50px) {
-    .breakImageHeaderText{
-        display: block;
+
+
+
+
+    .landingImage{
+        height: 46.41vh;
+    }
+    .landingImageCaptionText{
+        font-size: 18px;
     }
     .landingImageHeaderText{
-        font-size: 36px !important;
-    } 
+        font-size: 36px;
+
+        padding-top: 6.31vh;
+    }  
+    .landingImageCaptionText{
+        font-size: 18px;
+    }
 }
-@media screen and (max-width: 499px) and (min-width: 50px) {
+
+@media screen and (max-width: 550px) and (min-width: 50px) {
     .collapseNav{
         display: none;
     }
@@ -395,9 +457,10 @@
         font-weight: 500;
     }
     .landingImageCaptionText{
-        max-width: 90% !important;        
-        font-weight: 500;
-        font-size: 18px !important;
+
+
+        max-width: 90% !important;
+        font-size: 18px;
     }
     .dashboardImage > img{
         width: 80% !important;
@@ -540,8 +603,12 @@
         height: 40% !important;        
     }
     .landingImageHeaderText{
-        font-size: 36px !important;
+        font-size: 36px;
+        padding-top: 12.62vh;
     }   
+    .landingImage{
+        height: 92.82vh;
+    } 
 }
 h1{
     font-size: 4rem;
@@ -564,11 +631,12 @@ h6{
 html,
 body {
     width: 100%;
-    height: 100%;    
+    height: 100%;
 }
 body {
     font-family: "Segoe UI",Helvetica,Arial,sans-serif;
     overflow-x: hidden;
+    z-index: -3;
 }
 .jumbotronShadow{
     -webkit-box-shadow: 0 10px 6px -6px #777;
@@ -645,14 +713,17 @@ body {
     align-items: center;
 }
 .landingImage{
-    width: 100%;
-    height: 92.82vh;
+    width: 100%;   
+
     position: relative;
     margin-top: 7.18vh;
 }
 .heroHome{
-    background: url("../img/Home_Page_BG_PNG.png") no-repeat center center scroll;   
+    background: url("../img/Home_Page_BG_PNG.png") no-repeat center center scroll;
     background-size: 100% 100%;
+    z-index: -2;
+    min-height: 55.6rem;
+    overflow: hidden;
 }
 .heroContentWrapper{
     height: 42.26%;
@@ -671,11 +742,13 @@ body {
     color: white;
     font-size: 18px;
     font-weight: 500;
-    margin: 0;    
-    bottom: 0;    
+
+    margin: 0;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    /*position: absolute;*/
 }
 .landingImageBottomHeader>div{
     font-size: 18px;
@@ -697,21 +770,23 @@ body {
 .clickable{
     cursor: pointer;
 }
-.landingImageHeaderText{   
-    font-weight: 700;
-    font-size: 48px;  
-    text-align: center;    
-    line-height: 1;
-    padding-top: 10.5rem;
+.landingImageHeaderText{
+
+
+
+    font-weight: 700;    
+    text-align: center;
+    line-height: 1;    
+
 }
 .landingImageCaptionText{
     max-width: 40%;   
-    font-size: 21px;
+
     margin: 0 auto;
     text-align: center;
     color: #515150;
-    padding-top: 4.3rem;
-    padding-bottom: 7.5rem;    
+    padding-top: 2.15vh;
+    padding-bottom: 7.5rem;
     line-height: 1;
 }
 .whatWeDo{
@@ -1114,13 +1189,13 @@ div.vertical-line{
     font-family:  "Segoe UI", sans-serif;
     font-size: 16px;
     color: #515150 !important;
-    font-weight: 500;
+    font-weight: 600;
 }
 .nonSelectedNavOption{
     font-family:  "Segoe UI",sans-serif;
     font-size: 16px;
     color: #515150; 
-    font-weight: 500;    
+    font-weight: 600;    
 }
 .technologies{
     margin: 2%;
@@ -1703,11 +1778,13 @@ iframe, object, embed {
     line-height: 1.5;
 }
 .dashboardImage > img{
-    width: 50%;
+    max-width: 80%;
     margin-bottom: -1px;
     position: absolute;
     bottom: 0;
     height: auto;
+    max-height: 100%;
+    z-index: -1;
 }
 .appreciation {
     display: flex;
@@ -1753,4 +1830,5 @@ iframe, object, embed {
     25%  {height:15px;}
     50%  {height:30px;}
     100% {height:50px;}
+
 }
