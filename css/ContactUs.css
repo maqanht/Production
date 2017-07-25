@@ -42,11 +42,12 @@
     color: #ffffff;
     text-align: center;
     vertical-align: middle;
+    padding-top: 3%;
 }
 .locationInfo {
     background-color: #ededed;
     border: 1px solid #0072c6;
-    height: 41rem;
+    height: 46rem;
     width: 35rem;
     padding: 4.2rem;
     margin-right: 2rem;
@@ -91,7 +92,7 @@
     margin-bottom: -3rem;
 }
 .locationName {
-    padding: 3rem;
+    padding: 3rem 0 3rem 0;
     font-size: 25px;
     color: #2a2a2a;
     font-weight: normal;
@@ -104,4 +105,8 @@
 }
 .locationPhone {
     text-decoration: none;
+}
+.locationImage {
+    height: 164px;
+    width: 130px;
 }

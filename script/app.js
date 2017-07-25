@@ -71,7 +71,7 @@
             {logo: "img/Envision.svg", name: "envision"},
             {logo: "img/Antech.svg", name: "VCAAntech"},
             {logo: "img/starbucks.svg", name: "Starbucks"},
-            {logo: "img/Amazon.svg", name: "Amazon"},
+            {logo: "img/Amazon.svg", name: "Amazon"},            
             {logo: "img/amazon-web-services.svg", name: "Amazon Web Services"},
             {logo: "img/Devon.svg", name: "devon"},
             {logo: "img/google.svg", name: "Google"}  
@@ -223,21 +223,21 @@
             {
                 id:1,
                 locationName:"Redmond",
-                locationImage:"img/Redmondbuilding.png",
+                locationImage:"img/Redmond.png",
                 locationAddress:"15446 Bel-Red Road, Suite 201 Redmond, WA 98052",
                 locationPhone:"Tel: +1 425 526 5399"
             },
             {
                 id:2,
                 locationName:"Hyderabad",
-                locationImage:"img/Hyderabadbuilding.png",
+                locationImage:"img/Hyderabad.png",
                 locationAddress:"Level 7, Astro, aVance Business Hub Behind Dell Campus HITEC City 2, Madhapur Hyderabad 500 081 Telangana",
                 locationPhone:"Tel: +91 40 4010 0570"
             },
             {
                 id:3,
                 locationName:"Mumbai",
-                locationImage:"img/Mumbaibuilding.png",
+                locationImage:"img/Mumbai.png",
                 locationAddress:"201, Meadows Building Sahar Plaza on Andheri Kurla Road Andheri East Mumbai 400 059 Maharashtra",
                 locationPhone:"Tel: +91 22 3080 0201"
             }
