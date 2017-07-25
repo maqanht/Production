@@ -224,19 +224,22 @@
                 id:1,
                 locationName:"Redmond",
                 locationImage:"img/Redmondbuilding.png",
-                locationAddress:"15446 Bel-Red Road, Suite 201 Redmond, WA 98052 Tel: +1 425 526 5399"
+                locationAddress:"15446 Bel-Red Road, Suite 201 Redmond, WA 98052",
+                locationPhone:"Tel: +1 425 526 5399"
             },
             {
                 id:2,
                 locationName:"Hyderabad",
                 locationImage:"img/Hyderabadbuilding.png",
-                locationAddress:"Level 7, Astro, aVance Business Hub Behind Dell Campus HITEC City 2, Madhapur Hyderabad 500 081 Telangana Tel: +91 40 4010 0570"
+                locationAddress:"Level 7, Astro, aVance Business Hub Behind Dell Campus HITEC City 2, Madhapur Hyderabad 500 081 Telangana",
+                locationPhone:"Tel: +91 40 4010 0570"
             },
             {
                 id:3,
                 locationName:"Mumbai",
                 locationImage:"img/Mumbaibuilding.png",
-                locationAddress:"36, Udyog Bhavan Sonavala Road Goregaon East Mumbai 400 063 Maharashtra Tel: +91 22 6696 2713"
+                locationAddress:"201, Meadows Building Sahar Plaza on Andheri Kurla Road Andheri East Mumbai 400 059 Maharashtra",
+                locationPhone:"Tel: +91 22 3080 0201"
             }
         ];
         app.technologyName=app.technologyList[4].Name;
