@@ -1,0 +1,66 @@
+<div id="landingPageSection" class="landingImage heroHome scroll-next section" scroll>    
+         <div class="heroContentWrapper">
+            <div class="landingImageHeaderText">Empower data. Drive results.</div>  
+            <div class="landingImageCaptionText">Use cutting edge data solutions to gain insights
+            into your needs. Make your data work for you </div>   
+         </div>            
+         <div class="dashboardImage">
+             <img src="img/Dashboard.png">
+         </div>
+         <div class="jumbotron landingImageBottomHeader"></div>
+</div>
+<div id="whatWeDoSection" class="whatWeDo scroll-next section" scroll>
+         <div class="centerAlignHeader">
+              <span class="expertiseHeading">From Source to Analytics</span><div class="underLine"></div>
+              <span class="expertiseSubHeading">MAQ Software offers full data management and analytics solutions,
+                helping business gain insights into sales and operations.</span>
+         </div>   
+           
+        <div class="alignTechnology col-lg-7 col-md-12 col-sm-12 col-xs-12">
+             <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 technologyStackMargin noPaddingLeftRight"  data-ng-repeat="tech in app.technologyList">
+                 <div class="technologyStack">                     
+                    <div class="" data-ng-click="app.changeTechnology(tech)">
+                            <a class="technologyLink" data-ng-class={{"technology.isSelected?'liftUp':''"}}><img src={{tech.img}} alt={{tech.alt}} /></a>
+                    </div> 
+                    <div class="technologyWrapper">
+                        <h3 class="centerAlign onlyMarginTop10">{{tech.Name}}</h3>
+                        <div class="centerAlign textColorgrey techDescription">{{tech.Tagline}}</div>  
+                    </div>
+                    <div class="contentPadding content"><span class="centerAlign">{{tech.Content}}</span></div>   
+                    <div class="flex-center clickable">
+                            <div class="text-arrow">
+                                <div class="readMore">Read More</div>
+                                <div class="traingle"></div>
+                            </div>
+                    </div>                  
+                 </div>
+             </div>
+         </div> 
+</div>
+ <div id="OurClients" class="PaddingTopBottom relative" scroll> 
+        <div class="centerAlignHeader" id="clientHeader"><h1>Developing unique solutions to fit customer needs</h1>
+            <div class="underLine"></div>
+        </div>
+        <div id="myCarousel" class="carousel" data-ride="carousel">
+                    <div class="carousel-inner">
+                            <div class="item row" data-ng-repeat="slide in app.slideList" data-ng-class={{"slide.isSelected?'active':''"}}>
+                                <div id="clientDetails" class="col-xs-12 col-sm-6 col-md-4 col-lg-3 clientDetailsBorder">
+                                    <div class="companyName show"><img src="{{slide.companyImage}}" /></div>
+                                    <div class="clientImage centerAlign"><img src="{{slide.clientImage}}" /></div>
+                                    <div class="clientName centerAlign">{{slide.clientName}},</div>
+                                    <div class="clientPosition centerAlign">{{slide.clientPosition}}</div>
+                                    <div class="companyNameSmall hide centerAlign"><img src="{{slide.companyImage}}" /></div>
+                                </div>
+                                <div class="appreciation col-xs-12 col-sm-6 col-md-8 col-lg-9">
+                                    <span>{{slide.content}}</span>
+                                </div>
+                            </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-ng-repeat="slides in app.slideList" data-slide-to="{{slides.id}}" data-ng-class={{"slides.isSelected?'active':''"}}></li>
+                    </ol>
+        </div>
+        <div class="OurClients" id="clientLogos">
+            <img class="clientLogo" data-ng-repeat="client in app.clients" data-ng-class={{"client.name==='Starbucks'?'starbucksImage':''"}} src="{{client.logo}}" alt="{{client.name}}"/>
+        </div>        
+</div> 

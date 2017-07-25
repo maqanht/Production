@@ -7,13 +7,20 @@
         app.onHoverOptionToBeShown = [];
         app.toggleMenuItemOption = false;
         app.currentHoveredMenuItem="";
+        app.homeIsSelected = true;
+        app.expertiseIsSelected = false;
+        app.profileIsSelected = false;
+        app.newsIsSelected = false;
+        app.careerIsSelected = false;
+        app.contactUsIsSelected = false;   
+        app.currentYOffSet = 0;         
         app.navList=[
             {Name:"Home",isSelected:true, url: "http://maqsoftware.in/"},
             {Name:"Expertise",isSelected:false, url: "http://maqsoftware.in/Expertise.html"},
             {Name:"Profile",isSelected:false, url:"http://maqsoftware.in/Profile.html?q=1"},
             {Name:"News",isSelected:false, url: "http://maqsoftware.in/News.html"},
             {Name:"Careers",isSelected:false, url: "http://maqsoftware.in/Careers.html"},
-            {Name:"Contact Us",isSelected:false, url:"http://maqsoftware.in/Contactus.html"}];
+            {Name:"Contact Us",isSelected:false, url:""}];
         app.menuOnHoverOption = [
             {
                 Name:"Home",Options:[]
@@ -58,17 +65,25 @@
         app.disableOnHoverMenu = function(){
             app.toggleMenuItemOption=false;
         }
-        app.clients=[
-            {logo: "img/microsoft.svg", name: "Microsoft"},
-            // {logo: "img/techsoup.png", name: "techsoup"},
-            {logo: "img/t-mobile.svg", name: "TMobile"},
-            {logo: "img/Envision.svg", name: "envision"},
-            {logo: "img/Antech.svg", name: "VCAAntech"},
-            {logo: "img/starbucks.svg", name: "Starbucks"},
-            {logo: "img/Amazon.svg", name: "Amazon"},
-            {logo: "img/amazon-web-services.svg", name: "Amazon Web Services"},
-            {logo: "img/Devon.svg", name: "devon"},
-            {logo: "img/google.svg", name: "Google"}           
+       app.clients=[
+            // {logo: "img/microsoft.svg", name: "Microsoft"},
+            // {logo: "img/t-mobile.svg", name: "TMobile"},
+            // {logo: "img/Envision.svg", name: "envision"},
+            // {logo: "img/Antech.svg", name: "VCAAntech"},
+            // {logo: "img/starbucks.svg", name: "Starbucks"},
+            // {logo: "img/Amazon.svg", name: "Amazon"},
+            // {logo: "img/amazon-web-services.svg", name: "Amazon Web Services"},
+            // {logo: "img/Devon.svg", name: "devon"},
+            // {logo: "img/google.svg", name: "Google"}  
+            {logo: "img/Micro.png", name: "Microsoft"},
+            {logo: "img/T-mobile.png", name: "TMobile"},
+            {logo: "img/Envision.png", name: "envision"},
+            {logo: "img/VCA.png", name: "VCAAntech"},
+            {logo: "img/Starbucks.png", name: "Starbucks"},
+            {logo: "img/Amazon.png", name: "Amazon"},
+            {logo: "img/Web Services.png", name: "Amazon Web Services"},
+            {logo: "img/Devon.png", name: "devon"},
+            {logo: "img/Google.png", name: "Google"}         
         ];
         app.technologyList=[
             {
@@ -204,6 +219,26 @@
                 content:"'You are all super talented with admirable work ethics - we greatly appreciate all the work you've done up-to-date.'"
             }
         ];
+         app.locations = [
+            {
+                id:1,
+                locationName:"Redmond",
+                locationImage:"img/Redmondbuilding.png",
+                locationAddress:"15446 Bel-Red Road, Suite 201 Redmond, WA 98052 Tel: +1 425 526 5399"
+            },
+            {
+                id:2,
+                locationName:"Hyderabad",
+                locationImage:"img/Hyderabadbuilding.png",
+                locationAddress:"Level 7, Astro, aVance Business Hub Behind Dell Campus HITEC City 2, Madhapur Hyderabad 500 081 Telangana Tel: +91 40 4010 0570"
+            },
+            {
+                id:3,
+                locationName:"Mumbai",
+                locationImage:"img/Mumbaibuilding.png",
+                locationAddress:"36, Udyog Bhavan Sonavala Road Goregaon East Mumbai 400 063 Maharashtra Tel: +91 22 6696 2713"
+            }
+        ];
         app.technologyName=app.technologyList[4].Name;
         app.technologyTagLine=app.technologyList[4].Tagline;
         app.technologyCotent=app.technologyList[4].Content;
@@ -236,13 +271,40 @@
             technology.isSelected = true;           
         }
         app.changeNav =function(nav){
+            app.homeIsSelected = false;
+            app.expertiseIsSelected = false;
+            app.profileIsSelected = false;
+            app.newsIsSelected = false;
+            app.careerIsSelected = false;
+            app.contactUsIsSelected = false;
+            if(nav.Name=="Home"){
+                app.homeIsSelected = true;             
+            }else if(nav.Name=="Expertise"){                    
+                app.expertiseIsSelected = true;                   
+            }
+            else if(nav.Name=="Profile"){                
+                app.profileIsSelected = true;                
+            }
+            else if(nav.Name=="News"){                
+                app.newsIsSelected = true;                 
+            }
+            else if(nav.Name=="Career"){                
+                app.careerIsSelected = true;                   
+            }
+            else if(nav.Name=="Contact Us"){                  
+                app.contactUsIsSelected = true;
+            }  
             app.navList.map(function(n,k){
                 n.isSelected=false;
                 return n;
             });
             nav.isSelected=true;
         }
-
+    
+        // $(".scroll-next").click(function() {
+        //         var cls = $(this).closest(".section").next().offset().top;
+        //         $("html, body").animate({scrollTop: cls}, "slow");
+        //     });
 
         // Scrolls to the selected menu item on the page
             $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function () {
@@ -269,18 +331,37 @@
                 } else {
                     $('#OurClients').append($('#clientHeader')).append($('#myCarousel')).append($('#clientLogos'));
                 }
-            });      
+            }); 
+       
     }
     var main_module = angular.module('myApp',[]);
     main_module.controller('AppController',[AppController]);
-    main_module.directive("scroll", function ($window) {
+    main_module.directive("scroll", function ($window,$location,$anchorScroll) {
     return function(scope, element, attrs) {      
-        angular.element($window).bind("scroll", function() {
+        angular.element($window).bind("scroll", function() {           
             if(this.pageYOffset>0){
                 scope.app.showNavShadow = true;
             } else{
                  scope.app.showNavShadow = false;
-            }              
+            }    
+        //     if(element[0].id=="landingPageSection" && scope.app.currentYOffSet < this.pageYOffset){
+        //          $location.hash('whatWeDoSection');     
+        //          $anchorScroll();
+        //     } 
+        //     else if(element[0].id=="whatWeDoSection" && scope.app.currentYOffSet < this.pageYOffset){
+        //          $location.hash('OurClients');     
+        //          $anchorScroll();
+        //     } 
+        //     else if(element[0].id=="OurClients" && scope.app.currentYOffSet > this.pageYOffset){
+        //          $location.hash('whatWeDoSection');     
+        //          $anchorScroll();
+        //     }
+        //    else if(element[0].id=="whatWeDoSection" && scope.app.currentYOffSet > this.pageYOffset){
+        //          $location.hash('landingPageSection');     
+        //          $anchorScroll();
+        //     }
+        //     scope.app.currentYOffSet = this.pageYOffset;     
+               
             scope.$apply();           
         });
     };

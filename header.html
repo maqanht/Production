@@ -1,0 +1,29 @@
+  <div class="jumbotron jumbotronAlignment scroll-next section" data-ng-class={{"app.showNavShadow?'jumbotronShadow':''"}} >
+        <div class="col-lg-4 col-md-3 col-sm-3 col-xs-9 paddingleftflex">
+            <a href="http://maqsoftware.in/"><img class="maqLogoImage" src="img/MAQLogo.svg" alt="MAQ Software Logo" /></a>
+        </div>
+        <div class="col-lg-8 col-md-9 col-sm-9 col-xs-3 paddingrightflex ">
+            <ul class="navOptionList collapseNav">
+                <li data-ng-repeat="nav in app.navList" data-ng-click="app.changeNav(nav)" data-ng-mouseleave="app.disableOnHoverMenu()" data-ng-mouseenter="app.showMouseOverOption(nav);">
+                    <a  class="" data-ng-class={{"nav.isSelected?'selectedNavOption':'nonSelectedNavOption'"}} href="{{nav.url}}">{{nav.Name}}
+                    </a>
+
+                     <div class="menuOnHoverOptions" data-ng-if="app.toggleMenuItemOption && app.currentHoveredMenuItem==nav.Name">
+                    <ul>
+                        <li data-ng-repeat="option in app.onHoverOptionToBeShown"><a href="{{option.Url}}">{{option.Name}}</a></li>
+                    </ul>
+                </div>
+                </li>                                                     
+            </ul>
+            <i class="fa fa-2x fa-bars navButton pull-right clickable" data-ng-click="app.expandNavOption=!app.expandNavOption"></i>
+        </div>
+     </div> 
+     <div class="tranparentBlackBackGround" data-ng-if="app.expandNavOption"></div>
+     <div class="navOptionListExpand" data-ng-if="app.expandNavOption">
+         <ul class="">
+                <li data-ng-repeat="nav in app.navList" data-ng-click="app.changeNav(nav)">
+                    <a  href="{{nav.url}}">{{nav.Name}}
+                    </a>
+                </li>                                      
+            </ul>
+     </div> 

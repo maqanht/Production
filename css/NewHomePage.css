@@ -179,18 +179,6 @@
     }
     .tranparentBlackBackGround{
          display: block !important;
-
-
-
-
-
-
-
-
-
-
-
-
     }     
     #OurClients{
         margin: 0px !important;
@@ -336,12 +324,6 @@
         max-width: 75% !important;        
         padding-top: 2.15rem !important;
         padding-bottom: 3.75rem !important;
-
-
-
-
-
-
     }
     
      /*.dashboardImage > img{
@@ -425,10 +407,6 @@
         min-width: 128px !important;
         height: 110px !important;
     }
-
-
-
-
     .landingImage{
         height: 46.41vh;
     }
@@ -474,6 +452,7 @@
     .heroHome{
         background: url("../img/Home_Page_BG_PNG.png") no-repeat center center scroll;   
         background-size: 100% 100%;
+        pointer-events: none;
     }
     .paddingrightflex{
         padding-right: 2% !important;
@@ -637,6 +616,8 @@ body {
     font-family: "Segoe UI",Helvetica,Arial,sans-serif;
     overflow-x: hidden;
     z-index: -3;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 .jumbotronShadow{
     -webkit-box-shadow: 0 10px 6px -6px #777;
