@@ -66,24 +66,24 @@
             app.toggleMenuItemOption=false;
         }
        app.clients=[
-            // {logo: "img/microsoft.svg", name: "Microsoft"},
-            // {logo: "img/t-mobile.svg", name: "TMobile"},
-            // {logo: "img/Envision.svg", name: "envision"},
-            // {logo: "img/Antech.svg", name: "VCAAntech"},
-            // {logo: "img/starbucks.svg", name: "Starbucks"},
-            // {logo: "img/Amazon.svg", name: "Amazon"},
-            // {logo: "img/amazon-web-services.svg", name: "Amazon Web Services"},
-            // {logo: "img/Devon.svg", name: "devon"},
-            // {logo: "img/google.svg", name: "Google"}  
-            {logo: "img/Micro.png", name: "Microsoft"},
-            {logo: "img/T-mobile.png", name: "TMobile"},
-            {logo: "img/Envision.png", name: "envision"},
-            {logo: "img/VCA.png", name: "VCAAntech"},
-            {logo: "img/Starbucks.png", name: "Starbucks"},
-            {logo: "img/Amazon.png", name: "Amazon"},
-            {logo: "img/Web Services.png", name: "Amazon Web Services"},
-            {logo: "img/Devon.png", name: "devon"},
-            {logo: "img/Google.png", name: "Google"}         
+            {logo: "img/microsoft.svg", name: "Microsoft"},
+            {logo: "img/t-mobile.svg", name: "TMobile"},
+            {logo: "img/Envision.svg", name: "envision"},
+            {logo: "img/Antech.svg", name: "VCAAntech"},
+            {logo: "img/starbucks.svg", name: "Starbucks"},
+            {logo: "img/Amazon.svg", name: "Amazon"},
+            {logo: "img/amazon-web-services.svg", name: "Amazon Web Services"},
+            {logo: "img/Devon.svg", name: "devon"},
+            {logo: "img/google.svg", name: "Google"}  
+            // {logo: "img/Micro.png", name: "Microsoft"},
+            // {logo: "img/T-mobile.png", name: "TMobile"},
+            // {logo: "img/Envision.png", name: "envision"},
+            // {logo: "img/VCA.png", name: "VCAAntech"},
+            // {logo: "img/Starbucks.png", name: "Starbucks"},
+            // {logo: "img/Amazon.png", name: "Amazon"},
+            // {logo: "img/Web Services.png", name: "Amazon Web Services"},
+            // {logo: "img/Devon.png", name: "devon"},
+            // {logo: "img/Google.png", name: "Google"}         
         ];
         app.technologyList=[
             {
