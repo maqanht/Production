@@ -31,23 +31,25 @@
     </div>
     <div id="location">
         <div class="locationHeader">Location</div>
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 locationInfo" data-ng-repeat="location in app.locations">
-            <div class="officeLocation">
-                <img class="locationImage" src="{{location.locationImage}}" alt="{{location.locationName}}" />
-                <div class="officeBranch">
-                    <div class="locationName">{{location.locationName}}</div>                    
-                    <div class="locationState">{{location.locationState}}</div>
+        <div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 locationInfo" data-ng-repeat="location in app.locations">
+                <div class="officeLocation">
+                    <img class="locationImage" src="{{location.locationImage}}" alt="{{location.locationName}}" />
+                    <div class="officeBranch">
+                        <div class="locationName">{{location.locationName}}</div>                    
+                        <div class="locationState">{{location.locationState}}</div>
+                    </div>
                 </div>
-            </div>
-            <div class="locationAddress">
-                <div><img src="img/Location.png" alt="Address" /></div>
-                <div class="contentPadding"><pre>{{location.locationAddress}}</pre></div>
-            </div>
-            <div class="locationPhone">
-                <div><img src="img/Phone.png" alt="Phone" /></div>
-                <div class="contentPadding">{{location.locationPhone}}</div>
-            </div>
-            <div class="viewMap">View map</div>
-        </div>       
+                <div class="locationAddress">
+                    <div><img src="img/Location.png" alt="Address" /></div>
+                    <div class="contentPadding"><pre>{{location.locationAddress}}</pre></div>
+                </div>
+                <div class="locationPhone">
+                    <div><img src="img/Phone.png" alt="Phone" /></div>
+                    <div class="contentPadding">{{location.locationPhone}}</div>
+                </div>
+                <div class="viewMap">View map</div>
+            </div>     
+        </div>  
     </div>
 </div>

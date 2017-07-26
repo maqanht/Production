@@ -8,7 +8,7 @@
 }
 #contactInfo {
     background-color: #ededed;
-    height: 60vh;
+    min-height: 60vh;
     width: 100%;
 }
 .containerWidth {
@@ -17,10 +17,14 @@
     display: flex;
     position: relative;
     flex-direction: column;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }   
 #location {
     width: 65%;
-    height: 60vh;
+    min-height: 60vh;
     margin: 0 auto;
     position: relative;
 }
@@ -46,10 +50,11 @@
 .subTitle {
     font-size: 21px;
     color: #515150;
-    line-height: 1;
+    line-height: 1.2;
     max-width: 70%;
     padding-top: 2.15vh;
     padding-bottom: 2rem;
+    /* text-align: center; */
 }
 .locationInfo {
     background-color: #ededed;
@@ -162,4 +167,8 @@
 }
 .direction {
     display: flex;
+}
+.locationWrapper{
+    display: flex;
+    flex-wrap: wrap;
 }
