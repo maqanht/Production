@@ -223,23 +223,26 @@
             {
                 id:1,
                 locationName:"Redmond",
+                locationState: "WA, USA",
                 locationImage:"img/Redmond.png",
-                locationAddress:"15446 Bel-Red Road, Suite 201 Redmond, WA 98052",
-                locationPhone:"Tel: +1 425 526 5399"
+                locationAddress:"15446 Bel-Red Road\nSuite 201\nRedmond\nWA, 98052",
+                locationPhone:"+1 425 526 5399"
             },
             {
                 id:2,
                 locationName:"Hyderabad",
+                locationState: "Telangana, India",
                 locationImage:"img/Hyderabad.png",
-                locationAddress:"Level 7, Astro, aVance Business Hub Behind Dell Campus HITEC City 2, Madhapur Hyderabad 500 081 Telangana",
-                locationPhone:"Tel: +91 40 4010 0570"
+                locationAddress:"Level 7, Astro, aVance Business Hub\nBehind Dell Campus\nHITEC City 2, Madhapur\nHyderabad 500 081\nTelangana",
+                locationPhone:"+91 40 4010 0570"
             },
             {
                 id:3,
                 locationName:"Mumbai",
+                locationState: "Maharashtra, India",
                 locationImage:"img/Mumbai.png",
-                locationAddress:"201, Meadows Building Sahar Plaza on Andheri Kurla Road Andheri East Mumbai 400 059 Maharashtra",
-                locationPhone:"Tel: +91 22 3080 0201"
+                locationAddress:"201, Meadows Building\nSahar Plaza on Andheri Kurla Road\nAndheri East\nMumbai 400 059\nMaharashtra",
+                locationPhone:"+91 22 3080 0201"
             }
         ];
         app.technologyName=app.technologyList[4].Name;

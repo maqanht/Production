@@ -1,76 +1,50 @@
- <div id="pageContent">
-            <div id="contactInfo">
-                <div class="row containerWidth">
-                    <div class="row title">
-                        <h1>Get in touch with us</h1>
-                    </div>
-                    <div class="row subTitle">
-                        <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 sectionSize showRightBorder">
-                            <div class="row">
-                                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6 partnerUs">
-                                    <h2>Lorem ipsum dolor sit amet</h2>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                                    <div class="blueBox">Join Us</div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6 partnerUs">
-                                    <h2>Lorem ipsum dolor sit amet</h2>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                                    <div class="blueBox">Partner With Us</div>
-                                </div>
-                            </div>
+<div id="pageContent">
+    <div id="contactInfo">
+        <div class="containerWidth" >
+            <div class="title">
+                Contact us for your data analytics requests
+            </div>
+            <div class="subTitle">
+                Thank you for your interest. Please provide the following information about your business needs to help us serve you better.
+            </div>
+            <div class="form">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 bootstrapPadding">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bootstrapPadding">
+                            <div class="inputLabel">Name</div>
+                            <div class="inputBox"><input type="text" placeholder="Please type your Name here" class="form-control" name="name"></div>
                         </div>
-                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 sectionSize">
-                            <div class="row partnerUs"><h2>Follow US</h2></div>
-                            <div class="row">
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 followOptions">
-                                    <a href="https://www.facebook.com/maqsoftware">
-                                        <img src="img\FollowUs_Facebook.svg" alt="Facebook" class="FollowUs">
-                                    </a>                            
-                                </div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 followOptions">
-                                    <a href="http://www.linkedin.com/company/maq-software">
-                                        <img src="img\FollowUs_LinkedIn.svg" alt="LinkedIn" class="FollowUs">
-                                    </a>                            
-                                </div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 followOptions">
-                                    <a href="https://twitter.com/MAQSoftware">
-                                        <img src="img\FollowUs_Twitter.svg" alt="Twitter" class="FollowUs">
-                                    </a>                            
-                                </div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 followOptions">
-                                    <a href="https://youtube.com/maqsoftware">
-                                        <img src="img\FollowUs_YouTube.svg" alt="YouTube" class="FollowUs">
-                                    </a>                            
-                                </div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 followOptions">
-                                    <a href="https://github.com/maqsoftware">
-                                        <img src="img\FollowUs_GitHub.svg" alt="GitHub" class="FollowUs">
-                                    </a>
-                                </div>
-                            </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bootstrapPadding">
+                            <div class="inputLabel">Email</div>
+                            <div class="inputBox"><input type="text" placeholder="Please type your Email here" class="form-control" name="email"></div>
                         </div>
-                    </div>                   
                 </div>
-                <div class="row containerWidth location">
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 locationInfo" data-ng-repeat="location in app.locations">
-                        <div class="locationImage"><img src="{{location.locationImage}}" alt="{{location.locationName}}" /></div>
-                        <div class="locationName">{{location.locationName}}</div>
-                        <div class="locationAddress">{{location.locationAddress}}</div>
-                        <div class="locationPhone">{{location.locationPhone}}</div>
-                    </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 bootstrapPadding">
+                    <div class="inputLabel">Message</div>
+                    <div class="inputArea"><input type="text" placeholder="Please type your Message here" class="form-control" name="message"></div>
+                </div>               
+            </div> 
+            <div id="submit" class="blueBox">Submit</div>
+        </div>                          
+    </div>
+    <div id="location">
+        <div class="locationHeader">Location</div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 locationInfo" data-ng-repeat="location in app.locations">
+            <div class="officeLocation">
+                <img class="locationImage" src="{{location.locationImage}}" alt="{{location.locationName}}" />
+                <div class="officeBranch">
+                    <div class="locationName">{{location.locationName}}</div>                    
+                    <div class="locationState">{{location.locationState}}</div>
                 </div>
             </div>
-            <div id="officeLocations">
-                <div id="tagLine">
-                    <div class="tagLineColor"><h1>We’re spread on two Continents</h1></div>
-                    <div class="tagLineColor"><h1>Contact or Visit our offices</h1></div>
-                </div>
+            <div class="locationAddress">
+                <div><img src="img/Location.png" alt="Address" /></div>
+                <div class="contentPadding"><pre>{{location.locationAddress}}</pre></div>
             </div>
-        </div>
+            <div class="locationPhone">
+                <div><img src="img/Phone.png" alt="Phone" /></div>
+                <div class="contentPadding">{{location.locationPhone}}</div>
+            </div>
+            <div class="viewMap">View map</div>
+        </div>       
+    </div>
+</div>
