@@ -21,8 +21,7 @@
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 bootstrapPadding">
                     <div class="inputLabel">Message</div>
                     <div class="inputArea">
-                        <textarea rows="7" cols="65" type="text" placeholder="Please type your Message here" name="message">
-                        </textarea>
+                        <textarea name="message" placeholder="Please type your Message here"></textarea>
                     </div>
                 </div>               
             </div> 
@@ -31,7 +30,7 @@
     </div>
     <div id="location">
         <div class="locationHeader">Location</div>
-        <div>
+        <div class="locationWrapper">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 locationInfo" data-ng-repeat="location in app.locations">
                 <div class="officeLocation">
                     <img class="locationImage" src="{{location.locationImage}}" alt="{{location.locationName}}" />

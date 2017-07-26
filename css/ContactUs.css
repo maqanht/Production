@@ -17,9 +17,6 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    /* text-align: center; */
-    justify-content: center;
-    align-items: center;
 }   
 #location {
     width: 65%;
@@ -38,7 +35,7 @@
     vertical-align: middle;
     position: absolute;
     bottom: 5px;
-    right: 113px;
+    right: 10px;
 }
 .title {
     padding-top: 12.62vh;
@@ -59,9 +56,9 @@
     background-color: #ededed;
     border: 1px solid #0072c6;
     height: 426px;
-    width: 363px;
+    width: 392px;
     padding: 2rem;
-    margin-right: 2rem;
+    margin: 1rem;
     position: relative;
 }
 .officeLocation {
@@ -154,11 +151,11 @@
     height: 35px;
     background-color: #ffffff;
     border: 1px solid #afafaf;
+    padding: 10px;
 }
 .inputArea > textarea {
-    width: 507px;
+    width: 610px;
     height: 140px;
-    padding-top: 0;
 }
 .bootstrapPadding {
     padding-left: 0px;
