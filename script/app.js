@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    function AppController(){
+    function AppController(document,scope){
         var app = this;
         app.expandNavOption = false;   
         app.showNavShadow = false; 
@@ -13,7 +13,50 @@
         app.newsIsSelected = false;
         app.careerIsSelected = false;
         app.contactUsIsSelected = false;   
-        app.currentYOffSet = 0;         
+        app.currentYOffSet = 0;    
+        app.previousyOffset = 0;
+        $(window).bind('scroll', function(){ 
+            if(window.pageYOffset>0){
+                app.showNavShadow = true;
+            } else{
+                app.showNavShadow = false;
+            } 
+            if(app.previousyOffset - window.pageYOffset>=0){
+                // $('html, body').stop().animate({
+                //     scrollTop: window.pageYOffset
+                //  }, 50);
+                // if(window.pageYOffset <  $("#whatWeDoSection").offset().top){ //600
+                //      $('html, body').stop().animate({
+                //     scrollTop: $("#landingPageSection").offset().top - 70
+                //  }, 50);
+                // }else
+                //  if(window.pageYOffset-70 <= $("#OurClient").offset().top && window.pageYOffset >  $("#whatWeDoSection").offset().top){ //1200
+                //     $('html, body').stop().animate({
+                //     scrollTop: $("#whatWeDoSection").offset().top
+                //  }, 50);
+                // }else if(window.pageYOffset <  $("#footerSection").offset().top){ //2000
+                //     $('html, body').stop().animate({
+                //     scrollTop: $("#OurClient").offset().top - 70
+                //  }, 50);
+                // }              
+            }
+           else if(window.pageYOffset+70 <  $("#whatWeDoSection").offset().top){
+                   $('html, body').stop().animate({
+                    scrollTop: $("#whatWeDoSection").offset().top-70
+                 }, 50); 
+            } else if(window.pageYOffset > $("#whatWeDoSection").offset().top-70 && window.pageYOffset <  $("#OurClient").offset().top-70){
+                 $('html, body').stop().animate({
+                    scrollTop: $("#OurClient").offset().top-70
+                 }, 50);                                  
+            } 
+            else if(window.pageYOffset > $("#OurClient").offset().top-70  && window.pageYOffset < $("#footerSection").offset().top){
+                 $('html, body').stop().animate({
+                    scrollTop: $("#footerSection").offset().top-70
+                 }, 50);  
+            } 
+            app.previousyOffset = window.pageYOffset;             
+            scope.$apply();           
+         });     
         app.navList=[
             {Name:"Home",isSelected:true, url: "http://maqsoftware.in/"},
             {Name:"Expertise",isSelected:false, url: "http://maqsoftware.in/Expertise.html"},
@@ -53,6 +96,7 @@
                     {Name:"Maps",Url:"Contactus.html"}]
             }
         ];
+         
         app.showMouseOverOption =function(nav){
             app.menuOnHoverOption.map(function(option,key){
                 if(option.Name==nav.Name){
@@ -71,7 +115,7 @@
             {logo: "img/Envision.svg", name: "envision"},
             {logo: "img/Antech.svg", name: "VCAAntech"},
             {logo: "img/starbucks.svg", name: "Starbucks"},
-            {logo: "img/Amazon.svg", name: "Amazon"},            
+            {logo: "img/Amazon.svg", name: "Amazon"},
             {logo: "img/amazon-web-services.svg", name: "Amazon Web Services"},
             {logo: "img/Devon.svg", name: "devon"},
             {logo: "img/google.svg", name: "Google"}  
@@ -127,7 +171,7 @@
             },
             {
             Id:5,
-            Name:"Intelligent Cloud",
+            Name:"Cloud Solutions",
             Tagline:"Simplify access to information while cutting storage costs",
             Content:"Using Microsoft Azure and Amazon Web Services, our clients benefit from fast implementations and scalability. By delivering infrastructure as code, we avoid waiting for provisioning of servers and hardware upgrades. Over the last three years, we migrated hundreds of servers to cloud to improve application performance and reduce data latency. Our experience of migrating several enterprise systems to the cloud, we have the expertise to efficiently migrate your applications to the cloud Intelligently.",
             alt:"Technology5",
@@ -219,7 +263,7 @@
                 content:"'You are all super talented with admirable work ethics - we greatly appreciate all the work you've done up-to-date.'"
             }
         ];
-         app.locations = [
+        app.locations = [
             {
                 id:1,
                 locationName:"Redmond",
@@ -341,7 +385,7 @@
        
     }
     var main_module = angular.module('myApp',[]);
-    main_module.controller('AppController',[AppController]);
+    main_module.controller('AppController',['$document','$scope',AppController]);
     main_module.directive("scroll", function ($window,$location,$anchorScroll) {
     return function(scope, element, attrs) {      
         angular.element($window).bind("scroll", function() {           
