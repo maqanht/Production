@@ -18,6 +18,7 @@
     display: flex;
     position: relative;
     flex-direction: column;
+    padding-left: 10px;
 }   
 #location {
     width: 65%;
@@ -124,8 +125,7 @@
     bottom: 80px;
 }
 .locationHeader {
-    padding-top: 35px;
-    padding-bottom: 30px;
+    padding: 35px 0 30px 10px;
     font-weight: 600; 
     font-size: 24px;
     color:  #2a2a2a;
@@ -189,8 +189,62 @@
 }
 .direction {
     display: flex;
+    flex-direction: column;
+    position: relative;
 }
 .locationWrapper{
     display: flex;
     flex-wrap: wrap;
+}
+.directionHeader {
+    font-size: 21px;
+    color: #0072c6;
+    padding-top: 35px;
+    padding-left: 10px;
+}
+.directionContent {
+    display: flex;
+    position: relative;
+}
+.directionaddress {
+    font-size: 17px;
+    color: #515150;
+    padding: 23px 55px 55px 0;
+}
+.directionLabel {
+    font-size: 17px;
+    color: #2a2a2a;
+}
+.directionInput {
+    padding: 15px 55px 35px 0;   
+}
+.directionInput > input {
+    width: 383px;
+    height: 32px;
+    border: 1px solid #0072c6;
+}
+.controlButtons {
+    width: 355px;
+    display: flex;
+}
+.go, .clear {
+    height: 32px;
+    width: 120px;
+    font-size: 15px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.go {   
+    background-color: #0072c6;
+}
+.clear {
+    background-color:  #606060;
+    margin-left: 11px;
+}
+.directionMap {
+    height: 495px;
+    border: 1px solid #606060;
+    margin: 23px 10px;
 }
