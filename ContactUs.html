@@ -50,14 +50,14 @@
                         <div><img src="img/Phone.png" alt="Phone" /></div>
                         <div class="contentPadding">{{location.locationPhone}}</div>
                     </div>
-                    <div class="locationMaps">
+                    <div class="locationMaps" data-ng-click="app.changeAddress(location)">
                         <div><img src="img/Maps.png" alt="Maps" /></div>
                         <div class="viewMap contentPadding">View map</div>
                     </div>  
                 </div>              
             </div>     
         </div>
-        <div class="direction">
+        <div class="direction hide">
             <div class="directionHeader">Get directions</div>
             <div class="directionContent">
                 <div class="directionText col-lg-5 col-md-12 col-sm-12 col-xs-12">

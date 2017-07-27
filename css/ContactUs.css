@@ -255,3 +255,6 @@
     border: 1px solid #606060;
     margin: 23px 0px;
 }
+.hide {
+    display: none !important;
+}

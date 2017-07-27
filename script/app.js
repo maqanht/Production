@@ -371,6 +371,11 @@
             });
             technology.isSelected = true;           
         }
+        app.changeAddress = function(location){
+            var locationName = location.locationAddress;
+            $(".directionaddress").html(locationName);
+            $(".direction").removeClass("hide");
+        }
         app.changeNav =function(nav){
             app.homeIsSelected = false;
             app.expertiseIsSelected = false;
