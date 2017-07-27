@@ -42,14 +42,15 @@
 } */
 .blueBox {
     background-color: #0072c6;
-    height: 4rem;
-    width: 20rem;
+    height: 40px;
+    width: 200px;
     font-size: 18px;
     font-weight: 600;
     color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 #submit {
     padding-right: 14px;

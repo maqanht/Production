@@ -1652,8 +1652,8 @@ iframe, object, embed {
     margin-bottom: 15px;
 }
 .companyName > img {
-    height: 30px;
-    width: 130px;
+    max-height: 30px;
+    max-width: 130px;
 }
 .clientImage > img {
     height: 128px;
