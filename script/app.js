@@ -75,7 +75,7 @@
                     }    
                     $('html, body').stop().animate({
                         scrollTop: $(scrollto).offset().top - 70
-                    }, 75);                
+                    }, 40);                
                 }                  
                 if ($this.data('scrollTimeout')) {
                 clearTimeout($this.data('scrollTimeout'));
@@ -88,7 +88,7 @@
             // how to call it (with a 1000ms timeout):
         $(window).scrollEnd(function(){
                 app.handleScrollEvents();
-        }, 150);
+        }, 75);
         app.handleScrollEvents = function(){      
              if(app.previousyOffset - window.pageYOffset>0){
                         if(app.scrollSectionCounter > 0) app.scrollSectionCounter--;                     
@@ -126,7 +126,7 @@
                 i=0;
             }
              scope.$apply();
-            }, 1 * 300 ); 
+            }, 1 * 50 ); 
         }
 
         app.navList=[

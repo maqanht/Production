@@ -825,14 +825,15 @@ body {
 .OurClients > img {
    width: 18%;
    min-width: 200px;
-   height: 140px;
+   height: 125px;
 }
 
 .clientLogo{
-    padding: 20px;
+    padding: 0 20px;
 }
 .starbucksImage{
     height: 130px !important;
+    padding: 20px;
 }
 /*Lavkush*/
 .flex {
@@ -1226,8 +1227,8 @@ enhance {
 }
 .readMore {
     color: #71b9e4;
-    font-size: 24px;
-    font-weight: 300;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 .triangle {
