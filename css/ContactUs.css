@@ -9,7 +9,7 @@
 #contactInfo {
     /* background-color: #ededed; */
     background: url("../img/ContactUs-background.png") no-repeat center scroll;
-    min-height: 60vh;
+    min-height: 65vh;
     width: 100%;
 }
 .containerWidth {
@@ -25,7 +25,7 @@
     margin: 0 auto;
     position: relative;
 }
-.blueBox {
+/* .blueBox {
     background-color: #0072c6;
     height: 4rem;
     width: 20rem;
@@ -37,6 +37,20 @@
     position: absolute;
     bottom: 5px;
     right: 10px;
+} */
+.blueBox {
+    background-color: #0072c6;
+    height: 4rem;
+    width: 20rem;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#submit {
+    padding-right: 14px;
 }
 .title {
     padding-top: 12.62vh;
@@ -166,7 +180,7 @@
     padding: 10px;
 }
 .inputArea > textarea {
-    width: 610px;
+    width: 605px;
     height: 140px;
 }
 .bootstrapPadding {
