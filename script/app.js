@@ -13,9 +13,11 @@
         app.newsIsSelected = false;
         app.careerIsSelected = false;
         app.contactUsIsSelected = false;   
+        app.testNumber1="0+";
         app.currentYOffSet = 0;    
         app.previousyOffset = 0;
         app.enableScrollEffect = false;
+        app.scrolledToCompanyDetail = false;
         app.checkForScrollEffect = function(){
              if(window.document.body.clientWidth<550){
                 app.enableScrollEffect = true;
@@ -95,7 +97,13 @@
                     } 
             app.nextScrollSection =  app.homePageScrollObject[app.scrollSectionCounter].nextDiv;
             app.prevScrollSection =  app.homePageScrollObject[app.scrollSectionCounter].prevDiv; 
+            if(app.nextScrollSection=="#OurClient"){
+                app.scrolledToCompanyDetail = true;
+            }else{
+                app.scrolledToCompanyDetail = false;
+            }
             app.previousyOffset = window.pageYOffset;
+             scope.$apply();
         }
         angular.element(window).bind("scroll",function(){
 
@@ -106,6 +114,20 @@
             }
             scope.$apply();
         });
+        var i=0;
+        app.changeCompanyNumber =function(){            
+            
+            setInterval(function() {  
+             if(app.scrolledToCompanyDetail){
+               if(i<15) i++;     
+                app.testNumber1 = i+"+";
+            }
+            else{
+                i=0;
+            }
+             scope.$apply();
+            }, 1 * 300 ); 
+        }
 
         app.navList=[
             {Name:"Home",isSelected:true, url: "http://maqsoftware.in/"},
@@ -431,14 +453,16 @@
                 $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500, 'linear');
             });
 
-            $(window).on('load resize', function() { //Fires when window is loaded or resized
-                if ($(window).width() <= 991) {
-                    $('#OurClients').append($('#myCarousel')).append($('#clientHeader')).append($('#clientLogos'));
-                } else {
-                    $('#OurClients').append($('#clientHeader')).append($('#myCarousel')).append($('#clientLogos'));
-                }
-            }); 
-       
+            // $(window).on('load resize', function() { //Fires when window is loaded or resized
+            //     if ($(window).width() <= 991) {
+            //         $('#OurClients').append($('#myCarousel')).append($('#clientHeader')).append($('#clientLogos'));
+            //     } else {
+            //         $('#OurClients').append($('#clientHeader')).append($('#myCarousel')).append($('#clientLogos'));
+            //     }
+            // }); 
+            $(window).on('load resize', function() {
+                $(".direction").addClass("hide");
+            });
     }
     var main_module = angular.module('myApp',[]);
     main_module.controller('AppController',['$document','$scope',AppController]);
