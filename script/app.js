@@ -15,48 +15,98 @@
         app.contactUsIsSelected = false;   
         app.currentYOffSet = 0;    
         app.previousyOffset = 0;
-        $(window).bind('scroll', function(){ 
-            if(window.pageYOffset>0){
-                app.showNavShadow = true;
-            } else{
-                app.showNavShadow = false;
-            } 
-            if(app.previousyOffset - window.pageYOffset>=0){
-                // $('html, body').stop().animate({
-                //     scrollTop: window.pageYOffset
-                //  }, 50);
-                // if(window.pageYOffset <  $("#whatWeDoSection").offset().top){ //600
-                //      $('html, body').stop().animate({
-                //     scrollTop: $("#landingPageSection").offset().top - 70
-                //  }, 50);
-                // }else
-                //  if(window.pageYOffset-70 <= $("#OurClient").offset().top && window.pageYOffset >  $("#whatWeDoSection").offset().top){ //1200
-                //     $('html, body').stop().animate({
-                //     scrollTop: $("#whatWeDoSection").offset().top
-                //  }, 50);
-                // }else if(window.pageYOffset <  $("#footerSection").offset().top){ //2000
-                //     $('html, body').stop().animate({
-                //     scrollTop: $("#OurClient").offset().top - 70
-                //  }, 50);
-                // }              
+        app.enableScrollEffect = false;
+        app.checkForScrollEffect = function(){
+             if(window.document.body.clientWidth<550){
+                app.enableScrollEffect = true;
+            }else if(window.document.body.clientWidth > 992){
+                app.enableScrollEffect = true;               
+            }else{
+                app.enableScrollEffect = false;
             }
-           else if(window.pageYOffset+70 <  $("#whatWeDoSection").offset().top){
-                   $('html, body').stop().animate({
-                    scrollTop: $("#whatWeDoSection").offset().top-70
-                 }, 50); 
-            } else if(window.pageYOffset > $("#whatWeDoSection").offset().top-70 && window.pageYOffset <  $("#OurClient").offset().top-70){
-                 $('html, body').stop().animate({
-                    scrollTop: $("#OurClient").offset().top-70
-                 }, 50);                                  
-            } 
-            else if(window.pageYOffset > $("#OurClient").offset().top-70  && window.pageYOffset < $("#footerSection").offset().top){
-                 $('html, body').stop().animate({
-                    scrollTop: $("#footerSection").offset().top-70
-                 }, 50);  
-            } 
-            app.previousyOffset = window.pageYOffset;             
-            scope.$apply();           
-         });     
+        }
+       
+        app.homePageScrollObjectForDesktopView = [
+            {
+                currentDiv:'homepageScrollSection1',
+                nextDiv:'#whatWeDoSection',
+                prevDiv:"#landingPageSection",
+                enableScroll:true
+            },{
+                currentDiv:'homepageScrollSection2',
+                nextDiv:'#companyNumberDiv',
+                prevDiv:"#landingPageSection",
+                enableScroll:false
+            },{
+                currentDiv:'homepageScrollSection2',
+                nextDiv:'#OurClient',
+                prevDiv:"#whatWeDoSection",
+                enableScroll:false
+            },{
+                currentDiv:'homepageScrollSection3',
+                nextDiv:'#footerSection',
+                prevDiv:"#companyNumberDiv",
+                enableScroll:false
+            },{
+                currentDiv:'homepageScrollSection4',
+                nextDiv:'#OurClient',
+                prevDiv:"#OurClient",
+                enableScroll:false
+            }
+        ];        
+        app.homePageScrollObject = app.homePageScrollObjectForDesktopView;
+        app.scrollSectionCounter = 0; 
+        app.scrollArrayLength = app.homePageScrollObject.length -1 ;      
+        app.nextScrollSection =  app.homePageScrollObject[app.scrollSectionCounter].nextDiv;
+        app.prevScrollSection =  app.homePageScrollObject[app.scrollSectionCounter].prevDiv;
+        $.fn.scrollEnd = function(callback, timeout) {    
+            
+                $(this).scroll(function(){
+                var $this = $(this);
+                app.checkForScrollEffect();
+                if(app.enableScrollEffect && !!$(app.nextScrollSection).offset()){
+                    var scrollto;
+                    if(app.previousyOffset - window.pageYOffset > 0){
+                        scrollto = app.prevScrollSection;                        
+                    }else{
+                        scrollto = app.nextScrollSection;                        
+                    }    
+                    $('html, body').stop().animate({
+                        scrollTop: $(scrollto).offset().top - 70
+                    }, 75);                
+                }                  
+                if ($this.data('scrollTimeout')) {
+                clearTimeout($this.data('scrollTimeout'));
+                }
+                $this.data('scrollTimeout', setTimeout(callback,timeout));
+            });
+           
+            };
+
+            // how to call it (with a 1000ms timeout):
+        $(window).scrollEnd(function(){
+                app.handleScrollEvents();
+        }, 150);
+        app.handleScrollEvents = function(){      
+             if(app.previousyOffset - window.pageYOffset>0){
+                        if(app.scrollSectionCounter > 0) app.scrollSectionCounter--;                     
+                    }else{
+                        if(app.scrollSectionCounter < app.scrollArrayLength) app.scrollSectionCounter++;                    
+                    } 
+            app.nextScrollSection =  app.homePageScrollObject[app.scrollSectionCounter].nextDiv;
+            app.prevScrollSection =  app.homePageScrollObject[app.scrollSectionCounter].prevDiv; 
+            app.previousyOffset = window.pageYOffset;
+        }
+        angular.element(window).bind("scroll",function(){
+
+            if(window.pageYOffset>0){
+                app.showNavShadow = true; 
+            }else{
+                app.showNavShadow = false; 
+            }
+            scope.$apply();
+        });
+
         app.navList=[
             {Name:"Home",isSelected:true, url: "http://maqsoftware.in/"},
             {Name:"Expertise",isSelected:false, url: "http://maqsoftware.in/Expertise.html"},
@@ -64,6 +114,7 @@
             {Name:"News",isSelected:false, url: "http://maqsoftware.in/News.html"},
             {Name:"Careers",isSelected:false, url: "http://maqsoftware.in/Careers.html"},
             {Name:"Contact Us",isSelected:false, url:""}];
+        
         app.menuOnHoverOption = [
             {
                 Name:"Home",Options:[]
@@ -137,7 +188,7 @@
             Content:"Using Microsoft AI and Amazon AI, we translate your data to provide insights to you. Our clients use our expertise to identify new customers, cross the next logical product, upsell to increase profitability and analyze customer sentiment. With our custom intelligent bots, our clients have improved speed and accuracy of customer service. Using advance text and media analysis, we have helped our customers identify sentiment and key phrases.",
             alt:"Technology2",
             figCaption:["MACHINE","LEARNING"],
-            img:"img/Artificial.png",
+            img:"img/Artificial.svg",
             isSelected:false
             },
              {
@@ -147,7 +198,7 @@
              Content:"Using Microsoft Power BI and Amazon QuickSight, analysts can quickly create near real time dashboards, great visuals without waiting for custom reports. As a Power BI Preferred Supplier, we implemented the largest enterprise Power BI solutions used by over 50,000 users today. Using our custom Power BI solutions to automate deployment, validation and monitoring, we accelerate transformations in large enterprises. As the largest publisher of custom visuals for Power BI on Microsoft Store, we have the expertise to design and implement your unique reporting needs quickly.",
              alt:"Technology4",
              figCaption:["POWER BI","VISUALIZATIONS"],
-             img:"img/Power BI.png",
+             img:"img/Power BI.svg",
              isSelected:true
             },
             {
@@ -157,7 +208,7 @@
             Content:"We expertise in using Big Data platform to handle your data management needs. Multiple architecture patterns defined for data ingress and egress for COSMOS. Handled huge amounts of data with our COSMOS development framework and tools",
             alt:"Technology3",
             figCaption:["","BIG DATA"],
-            img:"img/Big.png",
+            img:"img/Big.svg",
             isSelected:false
              },            {
              Id:4,
@@ -166,7 +217,7 @@
              Content:"Develop common data service from data located across enterprise and broader ecosystem using our advanced tools and processes. As a Preferred Supplier for Data Management category, we consolidate 400TB data every day from over 30 data sources in the Data Warehouses. Across our project portfolio, we process over 1,000TB of data everyday to help business derive insights.",
              alt:"Technology1",
              figCaption:["DATA","MANAGEMENT"],
-             img:"img/Data Manage.png",
+             img:"img/Data Management.svg",
              isSelected:false
             },
             {
@@ -176,7 +227,7 @@
             Content:"Using Microsoft Azure and Amazon Web Services, our clients benefit from fast implementations and scalability. By delivering infrastructure as code, we avoid waiting for provisioning of servers and hardware upgrades. Over the last three years, we migrated hundreds of servers to cloud to improve application performance and reduce data latency. Our experience of migrating several enterprise systems to the cloud, we have the expertise to efficiently migrate your applications to the cloud Intelligently.",
             alt:"Technology5",
             figCaption:["WEB DEVELOPMENT","CLOUD SERVICES"],
-            img:"img/Cloud.png",
+            img:"img/Cloud.svg",
             isSelected:false
             }
         ];
@@ -386,34 +437,4 @@
     }
     var main_module = angular.module('myApp',[]);
     main_module.controller('AppController',['$document','$scope',AppController]);
-    main_module.directive("scroll", function ($window,$location,$anchorScroll) {
-    return function(scope, element, attrs) {      
-        angular.element($window).bind("scroll", function() {           
-            if(this.pageYOffset>0){
-                scope.app.showNavShadow = true;
-            } else{
-                 scope.app.showNavShadow = false;
-            }    
-        //     if(element[0].id=="landingPageSection" && scope.app.currentYOffSet < this.pageYOffset){
-        //          $location.hash('whatWeDoSection');     
-        //          $anchorScroll();
-        //     } 
-        //     else if(element[0].id=="whatWeDoSection" && scope.app.currentYOffSet < this.pageYOffset){
-        //          $location.hash('OurClients');     
-        //          $anchorScroll();
-        //     } 
-        //     else if(element[0].id=="OurClients" && scope.app.currentYOffSet > this.pageYOffset){
-        //          $location.hash('whatWeDoSection');     
-        //          $anchorScroll();
-        //     }
-        //    else if(element[0].id=="whatWeDoSection" && scope.app.currentYOffSet > this.pageYOffset){
-        //          $location.hash('landingPageSection');     
-        //          $anchorScroll();
-        //     }
-        //     scope.app.currentYOffSet = this.pageYOffset;     
-               
-            scope.$apply();           
-        });
-    };
-    });
 })();
