@@ -29,7 +29,7 @@
         </div>                          
     </div>
     <div id="location">
-        <div class="locationHeader">Location</div>
+        <div class="locationHeader">Locations</div>
         <div class="locationWrapper">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 locationInfo" data-ng-repeat="location in app.locations">
                 <div class="officeLocation">
@@ -39,15 +39,20 @@
                         <div class="locationState">{{location.locationState}}</div>
                     </div>
                 </div>
-                <div class="locationAddress">
-                    <div><img src="img/Location.png" alt="Address" /></div>
-                    <div class="contentPadding"><pre>{{location.locationAddress}}</pre></div>
-                </div>
-                <div class="locationPhone">
-                    <div><img src="img/Phone.png" alt="Phone" /></div>
-                    <div class="contentPadding">{{location.locationPhone}}</div>
-                </div>
-                <div class="viewMap">View map</div>
+                <div class="locationBox">
+                    <div class="locationAddress">
+                        <div><img src="img/Location.png" alt="Address" /></div>
+                        <div class="contentPadding"><pre>{{location.locationAddress}}</pre></div>
+                    </div>
+                    <div class="locationPhone">
+                        <div><img src="img/Phone.png" alt="Phone" /></div>
+                        <div class="contentPadding">{{location.locationPhone}}</div>
+                    </div>
+                    <div class="locationMaps">
+                        <div><img src="img/Maps.png" alt="Maps" /></div>
+                        <div class="viewMap contentPadding">View map</div>
+                    </div>  
+                </div>              
             </div>     
         </div>  
     </div>

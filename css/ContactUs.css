@@ -7,7 +7,8 @@
     flex-direction: column;
 }
 #contactInfo {
-    background-color: #ededed;
+    /* background-color: #ededed; */
+    background: url("../img/ContactUs-background.png") no-repeat center scroll;
     min-height: 60vh;
     width: 100%;
 }
@@ -20,7 +21,7 @@
 }   
 #location {
     width: 65%;
-    min-height: 60vh;
+    min-height: 70vh;
     margin: 0 auto;
     position: relative;
 }
@@ -53,17 +54,22 @@
     /* text-align: center; */
 }
 .locationInfo {
-    background-color: #ededed;
+    /* background-color: #ededed; */
     border: 1px solid #0072c6;
     height: 426px;
     width: 392px;
-    padding: 2rem;
     margin: 1rem;
     position: relative;
+}
+.locationBox {
+    padding: 0 20px 20px;
 }
 .officeLocation {
     display: flex;
     position: relative;
+    background-color: #ededed;
+    padding: 20px 35px;
+    margin: 0 -15px;
 }
 .locationName {
     font-size: 24px;
@@ -92,7 +98,8 @@
     color: #515150;
     word-break: break-all;
     word-wrap: break-word;
-    background-color: #ededed;
+    /* background-color: #ededed; */
+    background-color: #ffffff;
     border: none;
 }
 .locationAddress {
@@ -100,7 +107,7 @@
 }
 .locationPhone {
     position: absolute;
-    bottom: 100px;
+    bottom: 80px;
 }
 .locationHeader {
     padding-top: 35px;
@@ -109,20 +116,25 @@
     font-size: 24px;
     color:  #2a2a2a;
 }
-.viewMap {
-    font-size: 15px;
-    height: 32px;
+.locationMaps {
+    /* height: 32px;
     width: 120px;
     border: 1px solid #0072c6;
     color: #515150;
-    text-align: center;
+    text-align: center; */
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
+    display: flex;
 }
-.viewMap:hover {
+.viewMap {
+    color: #0072c6;
+    font-size: 15px;
+    font-weight: 600;
+}
+/* .viewMap:hover {
     background-color: #0072c6 ;
     color: #ffffff;
-}
+} */
 .officeBranch {
     padding-left: 26px;
     margin: auto 0;
