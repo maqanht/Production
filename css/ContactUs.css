@@ -9,6 +9,7 @@
 #contactInfo {
     /* background-color: #ededed; */
     background: url("../img/ContactUs-background.png") no-repeat center scroll;
+    background-size: 100% 100%;
     min-height: 65vh;
     width: 100%;
 }
@@ -158,9 +159,10 @@
     text-decoration: none !important;
 }
 .form {
-    height: 275px;
+    min-height: 275px;
     width: 100%;
     padding: 40px 0 25px;
+    flex-wrap: wrap;
 }
 .inputLabel {
     font-size: 17px;
@@ -205,6 +207,10 @@
 .directionContent {
     display: flex;
     position: relative;
+    flex-wrap: wrap;
+}
+.directionText {
+    margin: -5px;
 }
 .directionaddress {
     font-size: 17px;
@@ -246,5 +252,5 @@
 .directionMap {
     height: 495px;
     border: 1px solid #606060;
-    margin: 23px 10px;
+    margin: 23px 0px;
 }
