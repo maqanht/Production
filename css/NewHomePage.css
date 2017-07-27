@@ -87,21 +87,10 @@
     .expertiseHeading{
         font-size: 32px !important;
     }
-    .alignTechnology{
-        width: 115rem !important;
-        /*min-height: 400px !important;*/
-    }
-    .technologyStackMargin{
-        margin: 8rem 0 0 0 !important;
-        /*height: 200px !important;*/
-    }
-    .technologyStack:hover .content{
-        font-size: 1.75rem;
-    }
+   
     .technologyLink > img{
         height: 20rem !important;
-        width: 20rem !important;
-        margin-top: -10.5rem !important;
+        width: 20rem !important;        
     }
     h1{
         font-size: 3.5rem !important;
@@ -112,10 +101,10 @@
     h4{
         font-size: 3rem !important;
     }
-    .text-arrow{
+    /*.text-arrow{
         width: 17.5rem !important;
         height: 4rem !important;
-    }
+    }*/
     .paddingrightflex{
         padding-right: 4% !important;
     } 
@@ -135,9 +124,9 @@
     .flex-center{
         margin-top: 2rem !important;
     }
-    .technologyStack:hover .content{
+    /*.technologyStack:hover .content{
         font-size: 1.75rem !important;
-    }
+    }*/
     .landingImageCaptionText{
         max-width: 70% !important;        
         padding-top: 2.15rem !important;
@@ -164,13 +153,6 @@
     .collapseNav{
         display: none;
     }
-    .technologyStackMargin{
-        margin: 6.5rem 0 0 0 !important;
-        height: 300px !important;
-    }
-    .alignTechnology{
-        width: 90rem !important;
-    }
     .navButton{
         display: block;
     }
@@ -196,12 +178,9 @@
         padding: 5% !important;
         height: auto !important;
         width: 100% !important;
-        font-size: 5rem !important;
-        border: none !important;
+        font-size: 5rem !important;       
     }
     .clientDetailsBorder {
-        border-right: none !important;
-        height: auto !important;
         width: 100% !important;
     }
     .appreciation {
@@ -223,14 +202,8 @@
     }
     .clientPosition{
         font-size: 4rem !important;
-    }
-    .companyName {
-        display: none !important;
-    }
-    .companyNameSmall {
-        display: block !important;
-        padding: 3% !important;
-    }
+    }   
+   
     .carousel-indicators {
          bottom: -10px !important;
     }
@@ -291,26 +264,19 @@
     iframe, object, embed {
         max-width: 80%;
         height: 300;
-    }
-    .alignTechnology{
-        width: 60rem !important;
-    }
-    .technologyStackMargin{
-        margin: 9.5rem 0 0 0 !important;
-        height: 300px !important;
-    }
+    }   
+   
     .technologyLink > img{
         height: 26rem !important;
-        width: 26rem !important;
-        margin-top: -11.5rem !important;
+        width: 26rem !important;        
     }
     h4{
         font-size: 3rem !important;
     }
-    .text-arrow{
+    /*.text-arrow{
         width: 17.5rem !important;
         height: 4rem !important;
-    }
+    }*/
     .navButton{
         display: block;
     }
@@ -342,13 +308,9 @@
     h3{
         font-size: 3.5rem !important;
     }
-    .technologyStack:hover .content{
+    /*.technologyStack:hover .content{
         font-size: 2rem !important;
-
-
-
-
-    }    
+    }    */
     #OurClients{
         margin: 0px !important;
         width: 100% !important;
@@ -365,12 +327,9 @@
         padding: 5% !important;
         height: auto !important;
         width: 100% !important;
-        font-size: 5rem !important;
-        border: none !important;
+        font-size: 5rem !important;       
     }
-    .clientDetailsBorder {
-        border-right: none !important;
-        height: auto !important;
+    .clientDetailsBorder { 
         width: 100% !important;
     }
     .appreciation {
@@ -393,13 +352,7 @@
     .clientPosition{
         font-size: 6rem !important;
     }
-    .companyName {
-        display: none !important;
-    }
-    .companyNameSmall {
-        display: block !important;
-        padding: 5% !important;
-    }
+      
     .carousel-indicators {
          bottom: -10px !important;
     }
@@ -450,7 +403,7 @@
          display: block !important;
     }
     .heroHome{
-        background: url("../img/Home_Page_BG_PNG.png") no-repeat center center scroll;   
+        background: url("../img/background1.png") no-repeat center center scroll;   
         background-size: 100% 100%;
         pointer-events: none;
     }
@@ -463,19 +416,10 @@
      h4{
         font-size: 3rem !important;
     } 
-     .alignTechnology{
-        padding-left: 0px;
-        padding-right: 0px;
-        width: 100% !important;
-    }
-    .technologyStackMargin{
-        margin: 18.5rem 0 0 0 !important;
-        height: 55vh !important;
-    }
+   
     .technologyLink > img{
         height: 35rem !important;
-        width: 35rem !important;
-        margin-top: -18rem !important;
+        width: 35rem !important;        
     }
     h3{
         font-size: 9.5rem !important;
@@ -483,13 +427,16 @@
     h5{
         font-size: 6rem !important;
     }
-    .text-arrow{
+    .technologyStack{
+        min-height: 440px;
+    }
+    /*.text-arrow{
         width: 25.5rem !important;
         height: 6.5rem !important;
-    }
-    .technologyStack:hover .content{
+    }*/
+    /*.technologyStack:hover .content{
         font-size: 4.5rem !important;
-    }
+    }*/
     .technologyWrapper{
         min-height: 90px !important;
     }
@@ -509,12 +456,9 @@
         padding: 5% !important;
         height: auto !important;
         width: 100% !important;
-        font-size: 5rem !important;
-        border: none !important;
+        font-size: 5rem !important;        
     }
-    .clientDetailsBorder {
-        border-right: none !important;
-        height: auto !important;
+    .clientDetailsBorder { 
         width: 100% !important;
     }
     .appreciation {
@@ -536,14 +480,7 @@
     }
     .clientPosition{
         font-size: 6rem !important;
-    }
-    .companyName {
-        display: none !important;
-    }
-    .companyNameSmall {
-        display: block !important;
-        padding: 5% !important;
-    }
+    }    
     .carousel-indicators {
          bottom: -10px !important;
     }
@@ -700,7 +637,7 @@ body {
     margin-top: 7.18vh;
 }
 .heroHome{
-    background: url("../img/Home_Page_BG_PNG.png") no-repeat center center scroll;
+    background: url("../img/background1.png") no-repeat center center scroll;
     background-size: 100% 100%;
     z-index: -2;
     min-height: 55.6rem;
@@ -746,7 +683,7 @@ body {
 }
 .underline{
     width: 17rem;
-    border-bottom: 2px solid grey;
+    border-bottom: 1px solid black;
 }
 .clickable{
     cursor: pointer;
@@ -781,13 +718,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 107rem;
+    width: 80%;
+    margin: 0 auto;
 }
-.technologyStack{
-    background: #eeeeee;
-    margin: 1rem;
-    padding: 16px;
-    border: 4px solid white;
+.technologyStack{    
+    padding: 25px;
+    border: 1px solid #c1c1c1;
+    border-radius: 15px;
+    width: 37rem;
+    min-width: 220px;
+    height: 360px;
 }
 .technologyStack .content{
     opacity: 0;
@@ -795,11 +735,9 @@ body {
     padding: 0;
 }
 .technologyStack:hover{
-    position: absolute;
-    z-index: 2;
-    transition: height 0.5s;
+     border: 1px solid #71b9e4;
 }
-.technologyStack:hover .content{
+/*.technologyStack:hover .content{
     white-space: normal;
     display: flex;
     opacity: 1;
@@ -807,9 +745,9 @@ body {
     max-height: 400px;
     padding: 0rem 2rem 2rem 2rem;
     transition: max-height 0.75s ease;
-}
+}*/
 .technologyStackMargin{
-    margin: 10rem 0 0 0;
+    margin: 12.5px;
 }
 .technologyLink {
     display: flex;
@@ -819,8 +757,7 @@ body {
 }
 .technologyLink > img{
     height: 18rem;
-    width: 18rem;
-    margin-top: -10rem;
+    width: 18rem;    
 }
 .textColorRed {
     color: #2678bd;
@@ -875,12 +812,15 @@ body {
 }
 
 .OurClients{
-    width: 80%;
-    margin: 25px auto;
+    width: 100%;
+    margin: 32px auto 0 auto;
+    padding: 0 20%;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background: #dbdcdd;
+    min-height: 25.6rem;
 }
 .OurClients > img {
    width: 18%;
@@ -1285,33 +1225,24 @@ enhance {
     font-size: 14px;
 }
 .readMore {
-    width: 100px;
-    height: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #555555;
-    font-size: 1em;
+    color: #71b9e4;
+    font-size: 24px;
+    font-weight: 300;
 }
 
-.traingle {
-    margin: 5px;
-    border: solid #555555;
-    border-width: 0 2px 2px 0;
-    padding: 5px;
+.triangle {
+    margin: 5.5px;
+    border: solid #71b9e4;
+    border-width: 0 2px 2px 0;   
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     height: 10px;
 }
-.text-arrow{
-    /* background: #bc2431; */
+.text-arrow{ 
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 10.5em;
-    height: 2.5em;
-    border-radius: 5px;
-    border: 1px solid #2678bd;
+    align-items: center;   
+    color: #71b9e4;
 }
 .flex-start .text-arrow{
     background: none;
@@ -1509,8 +1440,7 @@ iframe{
     padding-top: 4rem;
 }
 .carousel-inner {
-    padding: 3%;
-    border: 1px solid #b2b2b2;
+    padding: 3%;    
     height: 90%;
     width: 70%;
     margin: auto;
@@ -1607,26 +1537,26 @@ iframe{
     padding-bottom: 0.1rem;
     border-bottom: 2px solid #2678bd;
 }
-.clientDetailsBorder {
-    border-right: 1px solid #58585a;
+.clientDetailsBorder {    
     display: flex;
-    flex-direction: column;
-    height: 100%;
+    flex-direction: column; 
+    margin-top: 7.1rem;  
 }
 .hideBorder {
     border: none;
     display: flex;
     flex-direction: column;
 }
-#ourClients {
-    width: 80%;
+#ourClient {
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
 }
 .clientName, .clientPosition {
-    font-size: 24px;
+    font-size: 18px;
     color: #515150;
+    line-height: 24px;
 }
 .clientImage {
     padding: 2.2rem;
@@ -1718,9 +1648,12 @@ iframe, object, embed {
     padding-left: 0px;
     padding-right: 0px;
 }
-.companyName > img, .companyNameSmall > img {
-    height: 40px;
-    width: 140px;
+.companyName{
+    margin-bottom: 15px;
+}
+.companyName > img {
+    height: 30px;
+    width: 130px;
 }
 .clientImage > img {
     height: 128px;
@@ -1769,20 +1702,20 @@ iframe, object, embed {
 }
 .appreciation {
     display: flex;
-    align-items: center;
-    height: 100%;
+    align-items: center;   
     padding-left: 7rem;
 }
 #clientHeader > h1 {
     font-size: 3.2rem;
-    font-family: 'Segoe UI';
-    color: #2a2a2a;
-    font-weight: 600;
+    font-family: 'Segoe UI';    
+    font-weight: 400;
 }
 .appreciation > span {
     color: #515150;
     font-size: 3rem;
     font-family: 'Segoe UI';
+    line-height: 48px;
+    font-weight: 400;
 }
 .menuOnHoverOptions{
     position: absolute;
@@ -1812,4 +1745,58 @@ iframe, object, embed {
     50%  {height:30px;}
     100% {height:50px;}
 
+}
+.noTopPadding{
+    padding-top: 0;
+}
+.companyNumberDetails{
+    width: 100%;
+    min-height: 56rem;
+    background: url("../img/Backgroundnumbers.png") no-repeat center center scroll;
+    background-size: 100% 100%;
+    z-index: -2;
+    overflow: hidden;
+    margin: 29.5px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.positionRelative{
+    position: relative;
+}
+.seeMoreWrapper{
+    position: absolute;
+    margin-bottom: 25px;
+    bottom: 0;
+    width: 100%;
+}
+.triangleWrapper{
+    height: 25px;
+    width: 25px;
+    border: 2px solid;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+.numberDetailWrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.numberDetail{
+    margin: 45px;
+}
+.numberValue{
+    font-size: 70px;
+    color: white;
+    font-weight: 700;
+}
+.numberDescription{
+    font-size: 32px;
+    color: white;
+    font-weight: 700;
+    margin-top: 23px;
 }
