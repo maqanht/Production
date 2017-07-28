@@ -41,7 +41,10 @@
 
 
 
-    }     
+    } 
+    .collapseNav{
+        display: flex;
+    }    
     .landingImageCaptionText{
         max-width: 70% !important;        
         padding-top: 2.15rem !important;
