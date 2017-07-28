@@ -16,120 +16,161 @@
         app.testNumber1="0+";
         app.currentYOffSet = 0;    
         app.previousyOffset = 0;
-        app.enableScrollEffect = false;
-        app.scrolledToCompanyDetail = false;
-        app.checkForScrollEffect = function(){
-             if(window.document.body.clientWidth<550){
-                app.enableScrollEffect = true;
-            }else if(window.document.body.clientWidth > 992){
-                app.enableScrollEffect = true;               
-            }else{
-                app.enableScrollEffect = false;
-            }
-        }
-       
-        app.homePageScrollObjectForDesktopView = [
-            {
-                currentDiv:'homepageScrollSection1',
-                nextDiv:'#whatWeDoSection',
-                prevDiv:"#landingPageSection",
-                enableScroll:true
-            },{
-                currentDiv:'homepageScrollSection2',
-                nextDiv:'#companyNumberDiv',
-                prevDiv:"#landingPageSection",
-                enableScroll:false
-            },{
-                currentDiv:'homepageScrollSection2',
-                nextDiv:'#OurClient',
-                prevDiv:"#whatWeDoSection",
-                enableScroll:false
-            },{
-                currentDiv:'homepageScrollSection3',
-                nextDiv:'#footerSection',
-                prevDiv:"#companyNumberDiv",
-                enableScroll:false
-            },{
-                currentDiv:'homepageScrollSection4',
-                nextDiv:'#OurClient',
-                prevDiv:"#OurClient",
-                enableScroll:false
-            }
-        ];        
-        app.homePageScrollObject = app.homePageScrollObjectForDesktopView;
-        app.scrollSectionCounter = 0; 
-        app.scrollArrayLength = app.homePageScrollObject.length -1 ;      
-        app.nextScrollSection =  app.homePageScrollObject[app.scrollSectionCounter].nextDiv;
-        app.prevScrollSection =  app.homePageScrollObject[app.scrollSectionCounter].prevDiv;
-        $.fn.scrollEnd = function(callback, timeout) {    
-            
-                $(this).scroll(function(){
-                var $this = $(this);
-                app.checkForScrollEffect();
-                if(app.enableScrollEffect && !!$(app.nextScrollSection).offset()){
-                    var scrollto;
-                    if(app.previousyOffset - window.pageYOffset > 0){
-                        scrollto = app.prevScrollSection;                        
-                    }else{
-                        scrollto = app.nextScrollSection;                        
-                    }    
-                    $('html, body').stop().animate({
-                        scrollTop: $(scrollto).offset().top - 70
-                    }, 40);                
-                }                  
-                if ($this.data('scrollTimeout')) {
-                clearTimeout($this.data('scrollTimeout'));
-                }
-                $this.data('scrollTimeout', setTimeout(callback,timeout));
-            });
-           
-            };
+        app.showTopHeader = true;
+        app.heroHomeList = [
+            {class:"heroHome1 animated fadeInLeft heroImageText",tagLine:"tought Leadership",tagDescription:"With over 10 years of experience helping \nbusinesses to find technology solutions"},
+            {class:"heroHome2 animated slideInDown heroImageText",tagLine:"talented consultants",tagDescription:"Beyond consulting - a partner for \ntransformation and growth"},
+            {class:"heroHome3 animated fadeInLeft heroImageText",tagLine:"Helping companies \nnavigate changes.",tagDescription:"Enjoy working with us"}
+            ];
+        app.heroHomeClass=app.heroHomeList[0].class;
+        app.heroTagLine = app.heroHomeList[0].tagLine;
+        app.heroTagDescription = app.heroHomeList[0].tagDescription;
+        var heroHomeImageIndex=0;
+        app.changeHeroHomeImage = function(){
+            app.heroHomeClass=app.heroHomeList[heroHomeImageIndex].class;
+            app.heroTagLine = app.heroHomeList[heroHomeImageIndex].tagLine;
+            app.heroTagDescription = app.heroHomeList[heroHomeImageIndex].tagDescription;
+            scope.$apply();
+        };
 
-            // how to call it (with a 1000ms timeout):
-        $(window).scrollEnd(function(){
-                app.handleScrollEvents();
-        }, 75);
-        app.handleScrollEvents = function(){      
-             if(app.previousyOffset - window.pageYOffset>0){
-                        if(app.scrollSectionCounter > 0) app.scrollSectionCounter--;                     
-                    }else{
-                        if(app.scrollSectionCounter < app.scrollArrayLength) app.scrollSectionCounter++;                    
-                    } 
-            app.nextScrollSection =  app.homePageScrollObject[app.scrollSectionCounter].nextDiv;
-            app.prevScrollSection =  app.homePageScrollObject[app.scrollSectionCounter].prevDiv; 
-            if(app.nextScrollSection=="#OurClient"){
-                app.scrolledToCompanyDetail = true;
+        setInterval(function() {    
+            if(app.showTopHeader){  
+            if(heroHomeImageIndex>=2){
+                heroHomeImageIndex=0;
             }else{
-                app.scrolledToCompanyDetail = false;
-            }
-            app.previousyOffset = window.pageYOffset;
-             scope.$apply();
-        }
-        angular.element(window).bind("scroll",function(){
+                heroHomeImageIndex++;
+            }                
+            app.changeHeroHomeImage();}
+        }, 1 * 5000 ); 
+          angular.element(window).bind("scroll",function(){
 
-            if(window.pageYOffset>0){
-                app.showNavShadow = true; 
+            if(window.pageYOffset>100){
+                 app.showTopHeader = false; 
             }else{
-                app.showNavShadow = false; 
+                 app.showTopHeader = true; 
             }
             scope.$apply();
         });
-        var i=0;
-        app.changeCompanyNumber =function(){            
+        // app.enableScrollEffect = false;
+        // app.scrolledToCompanyDetail = false;
+        // app.checkForScrollEffect = function(){
+        //      if(window.document.body.clientWidth<550){
+        //         app.enableScrollEffect = true;
+        //     }else if(window.document.body.clientWidth > 992){
+        //         app.enableScrollEffect = true;               
+        //     }else{
+        //         app.enableScrollEffect = false;
+        //     }
+        // }
+       
+        // app.homePageScrollObjectForDesktopView = [
+        //     {
+        //         currentDiv:'homepageScrollSection1',
+        //         nextDiv:'#whatWeDoSection',
+        //         prevDiv:"#landingPageSection",
+        //         enableScroll:true
+        //     },{
+        //         currentDiv:'homepageScrollSection2',
+        //         nextDiv:'#companyNumberDiv',
+        //         prevDiv:"#landingPageSection",
+        //         enableScroll:false
+        //     },{
+        //         currentDiv:'homepageScrollSection2',
+        //         nextDiv:'#OurClient',
+        //         prevDiv:"#whatWeDoSection",
+        //         enableScroll:false
+        //     },{
+        //         currentDiv:'homepageScrollSection3',
+        //         nextDiv:'#footerSection',
+        //         prevDiv:"#companyNumberDiv",
+        //         enableScroll:false
+        //     },{
+        //         currentDiv:'homepageScrollSection4',
+        //         nextDiv:'#OurClient',
+        //         prevDiv:"#OurClient",
+        //         enableScroll:false
+        //     }
+        // ];        
+        // app.homePageScrollObject = app.homePageScrollObjectForDesktopView;
+        // app.scrollSectionCounter = 0; 
+        // app.scrollArrayLength = app.homePageScrollObject.length -1 ;      
+        // app.nextScrollSection =  app.homePageScrollObject[app.scrollSectionCounter].nextDiv;
+        // app.prevScrollSection =  app.homePageScrollObject[app.scrollSectionCounter].prevDiv;
+        // $.fn.scrollEnd = function(callback, timeout) {    
             
-            setInterval(function() {  
-             if(app.scrolledToCompanyDetail){
-               if(i<15) i++;     
-                app.testNumber1 = i+"+";
-            }
-            else{
-                i=0;
-            }
-             scope.$apply();
-            }, 1 * 50 ); 
-        }
+        //         $(this).scroll(function(){
+        //         var $this = $(this);
+        //         app.checkForScrollEffect();
+        //         if(app.enableScrollEffect && !!$(app.nextScrollSection).offset()){
+        //             var scrollto;
+        //             if(app.previousyOffset - window.pageYOffset > 0){
+        //                 scrollto = app.prevScrollSection;                        
+        //             }else{
+        //                 scrollto = app.nextScrollSection;                        
+        //             }    
+        //             $('html, body').stop().animate({
+        //                 scrollTop: $(scrollto).offset().top - 70
+        //             }, 40);                
+        //         }                  
+        //         if ($this.data('scrollTimeout')) {
+        //         clearTimeout($this.data('scrollTimeout'));
+        //         }
+        //         $this.data('scrollTimeout', setTimeout(callback,timeout));
+        //     });
+           
+        //     };
 
-        app.navList=[
+        //     // how to call it (with a 1000ms timeout):
+        // $(window).scrollEnd(function(){
+        //         app.handleScrollEvents();
+        // }, 75);
+        // app.handleScrollEvents = function(){      
+        //      if(app.previousyOffset - window.pageYOffset>0){
+        //                 if(app.scrollSectionCounter > 0) app.scrollSectionCounter--;                     
+        //             }else{
+        //                 if(app.scrollSectionCounter < app.scrollArrayLength) app.scrollSectionCounter++;                    
+        //             } 
+        //     app.nextScrollSection =  app.homePageScrollObject[app.scrollSectionCounter].nextDiv;
+        //     app.prevScrollSection =  app.homePageScrollObject[app.scrollSectionCounter].prevDiv; 
+        //     if(app.nextScrollSection=="#OurClient"){
+        //         app.scrolledToCompanyDetail = true;
+        //     }else{
+        //         app.scrolledToCompanyDetail = false;
+        //     }
+        //     app.previousyOffset = window.pageYOffset;
+        //      scope.$apply();
+        // }
+        // angular.element(window).bind("scroll",function(){
+
+        //     if(window.pageYOffset>0){
+        //         app.showNavShadow = true; 
+        //     }else{
+        //         app.showNavShadow = false; 
+        //     }
+        //     scope.$apply();
+        // });
+        // var i=0;
+        // app.changeCompanyNumber =function(){            
+            
+        //     setInterval(function() {  
+        //      if(app.scrolledToCompanyDetail){
+        //        if(i<15) i++;     
+        //         app.testNumber1 = i+"+";
+        //     }
+        //     else{
+        //         i=0;
+        //     }
+        //      scope.$apply();
+        //     }, 1 * 50 ); 
+        // }
+        app.testimonialFrom="John Smith";
+        app.testimonialDesignation="Director";
+        app.testimonialDescription="You are all super talented with admirable work ethics - we greatly appreciate all the work you've done up-to-date.You are all super talented with admirable work ethics - we greatly appreciate all the work you've done up-to-date";
+        // angular.element(window).bind("scroll",function(){
+        //     window.document.getElementById("EmbedMap").style.height = "100%";
+        // })
+          
+         app.navList=[
             {Name:"Home",isSelected:true, url: "http://maqsoftware.in/"},
             {Name:"Expertise",isSelected:false, url: "http://maqsoftware.in/Expertise.html"},
             {Name:"Profile",isSelected:false, url:"http://maqsoftware.in/Profile.html?q=1"},
@@ -184,13 +225,13 @@
         }
        app.clients=[
             {logo: "img/microsoft.svg", name: "Microsoft"},
-            {logo: "img/t-mobile.svg", name: "TMobile"},
+            // {logo: "img/t-mobile.svg", name: "TMobile"},
             {logo: "img/Envision.svg", name: "envision"},
             {logo: "img/Antech.svg", name: "VCAAntech"},
-            {logo: "img/starbucks.svg", name: "Starbucks"},
+            // {logo: "img/starbucks.svg", name: "Starbucks"},
             {logo: "img/Amazon.svg", name: "Amazon"},
-            {logo: "img/amazon-web-services.svg", name: "Amazon Web Services"},
-            {logo: "img/Devon.svg", name: "devon"},
+            // {logo: "img/amazon-web-services.svg", name: "Amazon Web Services"},
+            // {logo: "img/Devon.svg", name: "devon"},
             {logo: "img/google.svg", name: "Google"}  
             // {logo: "img/Micro.png", name: "Microsoft"},
             // {logo: "img/T-mobile.png", name: "TMobile"},
@@ -206,7 +247,7 @@
             {
             Id:1,
             Name:"Artificial Intelligence",
-            Tagline:"Predict outcomes using your data",
+            Tagline:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt",
             Content:"Using Microsoft AI and Amazon AI, we translate your data to provide insights to you. Our clients use our expertise to identify new customers, cross the next logical product, upsell to increase profitability and analyze customer sentiment. With our custom intelligent bots, our clients have improved speed and accuracy of customer service. Using advance text and media analysis, we have helped our customers identify sentiment and key phrases.",
             alt:"Technology2",
             figCaption:["MACHINE","LEARNING"],
@@ -216,7 +257,7 @@
              {
              Id:2,
              Name:"Self Service BI",
-             Tagline:"Analyze data quickly using Power BI,",
+             Tagline:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt",
              Content:"Using Microsoft Power BI and Amazon QuickSight, analysts can quickly create near real time dashboards, great visuals without waiting for custom reports. As a Power BI Preferred Supplier, we implemented the largest enterprise Power BI solutions used by over 50,000 users today. Using our custom Power BI solutions to automate deployment, validation and monitoring, we accelerate transformations in large enterprises. As the largest publisher of custom visuals for Power BI on Microsoft Store, we have the expertise to design and implement your unique reporting needs quickly.",
              alt:"Technology4",
              figCaption:["POWER BI","VISUALIZATIONS"],
@@ -226,7 +267,7 @@
             {
             Id:3,
             Name:"Big Data",
-            Tagline:"Personalize your customer experience",
+            Tagline:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt",
             Content:"We expertise in using Big Data platform to handle your data management needs. Multiple architecture patterns defined for data ingress and egress for COSMOS. Handled huge amounts of data with our COSMOS development framework and tools",
             alt:"Technology3",
             figCaption:["","BIG DATA"],
@@ -235,7 +276,7 @@
              },            {
              Id:4,
              Name:"Data Management",
-             Tagline:"Consolidate data and minimize inconsistencies",
+             Tagline:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt",
              Content:"Develop common data service from data located across enterprise and broader ecosystem using our advanced tools and processes. As a Preferred Supplier for Data Management category, we consolidate 400TB data every day from over 30 data sources in the Data Warehouses. Across our project portfolio, we process over 1,000TB of data everyday to help business derive insights.",
              alt:"Technology1",
              figCaption:["DATA","MANAGEMENT"],
@@ -245,7 +286,7 @@
             {
             Id:5,
             Name:"Cloud Solutions",
-            Tagline:"Simplify access to information while cutting storage costs",
+            Tagline:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt",
             Content:"Using Microsoft Azure and Amazon Web Services, our clients benefit from fast implementations and scalability. By delivering infrastructure as code, we avoid waiting for provisioning of servers and hardware upgrades. Over the last three years, we migrated hundreds of servers to cloud to improve application performance and reduce data latency. Our experience of migrating several enterprise systems to the cloud, we have the expertise to efficiently migrate your applications to the cloud Intelligently.",
             alt:"Technology5",
             figCaption:["WEB DEVELOPMENT","CLOUD SERVICES"],

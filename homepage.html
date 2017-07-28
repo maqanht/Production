@@ -1,4 +1,4 @@
-<div id="landingPageSection" class="landingImage heroHome scroll-next section" scroll> 
+<!--<div id="landingPageSection" class="landingImage heroHome scroll-next section" scroll> 
     <div id="homepageScrollSection1"></div>
          <div class="heroContentWrapper">
             <div class="landingImageHeaderText">Empower data. Drive results.</div>  
@@ -9,8 +9,8 @@
              <img src="img/HeroimageNew.png">
          </div>
          <div class="jumbotron landingImageBottomHeader"></div>
-</div>
-<div id="whatWeDoSection" class="whatWeDo scroll-next section" scroll>
+</div>-->
+<!--<div id="whatWeDoSection" class="whatWeDo scroll-next section" scroll>
     <div id="homepageScrollSection2"></div>
          <div class="centerAlignHeader">
               <span class="expertiseHeading">From Source to Analytics</span><div class="underLine"></div>
@@ -28,7 +28,7 @@
                         <h3 class="centerAlign onlyMarginTop10">{{tech.Name}}</h3>
                         <div class="centerAlign textColorgrey techDescription">{{tech.Tagline}}</div>  
                     </div>
-                    <!--<div class="contentPadding content"><span class="centerAlign">{{tech.Content}}</span></div>   -->                                     
+                                                      
                  </div>
                  <div class="flex-center clickable seeMoreWrapper">
                             <div class="text-arrow">
@@ -38,12 +38,31 @@
                 </div> 
              </div>
          </div> 
+</div>-->
+<div id="whatWeDoSection" class="whatWeDo scroll-next section" scroll>
+    <div id="homepageScrollSection2"></div>
+         <div class="centerAlignHeader">
+              <span class="expertiseHeading">Capabilities</span>             
+         </div>
+        <div class="alignTechnology">
+             <div class="technologyStackMargin noPaddingLeftRight"  data-ng-repeat="tech in app.technologyList">
+                 <div class="technologyStack">                     
+                    <div class="" data-ng-click="app.changeTechnology(tech)">
+                            <a class="technologyLink" data-ng-class={{"technology.isSelected?'liftUp':''"}}><img src={{tech.img}} alt={{tech.alt}} /></a>
+                    </div> 
+                    <div class="technologyWrapper">
+                        <h3 class="centerAlign onlyMarginTop10">{{tech.Name}}</h3>
+                        <div class="centerAlign textColorgrey techDescription">{{tech.Tagline}}</div>  
+                    </div>                                                      
+                 </div>              
+             </div>
+         </div> 
 </div>
 <div id="companyNumberDiv" class="companyNumberDetails">
     <div id="homepageScrollSection3"></div>
     <div class="numberDetailWrapper">
         <div class="numberDetail">
-            <div class="numberValue" data-ng-if="app.scrolledToCompanyDetail" data-ng-init="app.changeCompanyNumber()">{{app.testNumber1}}</div>
+            <div class="numberValue">15+</div>
             <div class="numberDescription">Lorem Ipsum</div>
         </div>
         <div class="numberDetail">
@@ -60,31 +79,76 @@
         </div>
     </div>
 </div>
- <div id="OurClient" class="relative" scroll> 
+<div class="testimonialWrapper">
+    <div class="testimonialHeader">testimonials</div>
+    <div class="testimonialContainer">
+        <div class="testimonialSection">
+            <div class="testimonialFrom">{{app.testimonialFrom}}</div>
+            <div class="testimonialDesignation">{{app.testimonialDesignation}}</div>
+            <div class="testimonialDescription">{{app.testimonialDescription}}</div>
+        </div>
+         <div class="testimonialSection">
+            <div class="testimonialFrom">{{app.testimonialFrom}}</div>
+            <div class="testimonialDesignation">{{app.testimonialDesignation}}</div>
+            <div class="testimonialDescription">{{app.testimonialDescription}}</div>
+         </div>
+    </div>
+</div>
+ <div id="OurClient"> 
      <div id="homepageScrollSection4"></div>
-        <div class="centerAlignHeader" id="clientHeader"><h1>Developing unique solutions to fit customer needs</h1>
-            <div class="underLine"></div>
-        </div>
-        <div id="myCarousel" class="carousel" data-ride="carousel">
-                    <div class="carousel-inner">
-                            <div class="item row" data-ng-repeat="slide in app.slideList" data-ng-class={{"slide.isSelected?'active':''"}}>
-                                <div class="appreciation">
-                                    <span>{{slide.content}}</span>
-                                </div>
-                                <div id="clientDetails" class="clientDetailsBorder">
-                                    <div class="companyName centerAlign show"><img src="{{slide.companyImage}}" /></div>
-                                    <!--<div class="clientImage centerAlign"><img src="{{slide.clientImage}}" /></div>-->
-                                    <div class="clientName centerAlign">{{slide.clientName}},</div>
-                                    <div class="clientPosition centerAlign">{{slide.clientPosition}}</div>
-                                    <!--<div class="companyNameSmall hide centerAlign"><img src="{{slide.companyImage}}" /></div>-->
-                                </div>                                
-                            </div>
-                    </div>
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-ng-repeat="slides in app.slideList" data-slide-to="{{slides.id}}" data-ng-class={{"slides.isSelected?'active':''"}}></li>
-                    </ol>
-        </div>
         <div class="OurClients" id="clientLogos">
             <img class="clientLogo" data-ng-repeat="client in app.clients" data-ng-class={{"client.name==='Starbucks'?'starbucksImage':''"}} src="{{client.logo}}" alt="{{client.name}}"/>
         </div>        
 </div> 
+<div class="reEngineer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    Re-engineer your business model, expand the opportunities!
+</div>
+<div class="requestUs col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">       
+           <span class="requestUsHeader"> request a call back.</span>
+            <span class="requestUsDescription">Would you like to speak to one of our technology consultants  
+                over the phone? Just submit your details and we’ll be in touch shortly.
+                 You can also email us if you would prefer.</span>
+       
+    </div>
+    <div class="col-lg-9 col-md-8 col-sm-6 col-xs-12">
+        <div class="col-lg-12 discussText">
+            I would like to discuss:
+        </div>
+        <div class="col-lg-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 requestInput">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 requestInput">
+                    <input type="text" class="form-control" placeholder="Service Name">
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 requestInput">
+                    <input type="text" class="form-control" placeholder=" First name">
+                   
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 requestInput">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 requestInput">
+                    <input type="text" class="form-control" placeholder="Phone Number">
+                    
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 requestInput">
+                    <input type="text" class="form-control" placeholder="Email Address">                    
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+           <button type="button" class="btn submitButton">Submit</btn>
+        </div>
+    </div>
+</div>
+<div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+    <div id="map"></div>
+    <!--<div>
+     <iframe id="map" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=2400&cp=17.41730000000001~78.43809999999999&lvl=3&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+     </iframe>
+     <div style="white-space: nowrap; text-align: center; width: 100%; padding: 6px 0;">
+        <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=17.41730000000001~78.43809999999999&amp;sty=r&amp;lvl=3&amp;FORM=MBEDLD">View Larger Map</a>
+            &nbsp; | &nbsp;
+            <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=17.41730000000001~78.43809999999999&amp;sty=r&amp;lvl=3&amp;rtp=~pos.17.41730000000001_78.43809999999999____&amp;FORM=MBEDLD">Get Directions</a>
+    </div>
+</div>-->
+</div>

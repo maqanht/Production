@@ -1,0 +1,489 @@
+.jumbotron{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.topMostHeader{    
+    min-height: 50px;   
+    padding: 0 15% !important;
+    background: #333;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.8rem;
+    font-family: "Seoge UI",sans-serif;
+}
+.fa-2x{
+    font-size: 16px;
+}
+.paddingLeft15{
+    padding-left: 15px;
+}
+.companyLocationHeader{
+    height: 50px;
+    font-size: 15px;
+    line-height: 50px;
+    background: #0089D0;
+    min-width: 80px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.heroHome1{
+    background: url(../img/heroHome1.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    min-height: 90vh;
+    z-index: -4;
+}
+.heroHome2{
+    background: url(../img/heroHome2.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    min-height: 90vh;
+    z-index: -4;
+}
+.heroHome3{
+    background: url(../img/heroHome3.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    min-height: 90vh;
+    z-index: -4;
+}
+
+.topNavigation{
+    background: transparent;
+    z-index: -3;   
+    height: 12%;   
+    display: flex;
+    align-items: center;
+    width: 100%;    
+}
+.topNavigationFixed{
+    background: white;
+    z-index: 15;   
+    height: 12%;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;    
+    position: fixed; 
+    top:0;
+    left:0;
+}
+.maqLogo{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navOptionList{
+    list-style: none;   
+    padding: 0;
+    margin: 0;
+    height: 75px;
+    width: 100%;    
+    justify-content: space-around;
+    align-items: center;
+}
+.selectedNavOption{
+    font-family:  "Segoe UI", sans-serif;
+    font-size: 16px;
+    color: black;
+    font-weight: 900;
+}
+.nonSelectedNavOption{
+    font-family:  "Segoe UI",sans-serif;
+    font-size: 16px;
+    color: black; 
+    font-weight: 900;    
+}
+.jumbotronShadow{
+    -webkit-box-shadow: 0 7px 6px -6px #777;
+    -moz-box-shadow: 0 7px 6px -6px #777;
+    box-shadow: 0 7px 6px -6px #777;
+}
+.socialMediaIcon{
+    color: #0089D0;
+    font-size: 20px;
+}
+.heroHomeBottomBar{
+    background: #0089D0;
+    min-height: 75px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.getInTouchButton{
+    border: 2px solid;
+    padding: 7px;
+}
+.technologyStack{    
+    padding: 25px;    
+    border-radius: 15px;
+    width: 37rem;
+    min-width: 220px;
+    height: 360px;
+}
+.companyNumberDetails{
+    width: 100%;
+    min-height: 40rem;
+    background: url("../img/Backgroundnumbers.png") no-repeat center center scroll;
+    background-size: 100% 100%;
+    z-index: -2;
+    overflow: hidden;
+    margin: 29.5px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.numberDetailWrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.testimonialWrapper {
+    background: #eee;
+    min-height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+.testimonialHeader {
+    font-size: 36px;
+    font-weight: 600;
+}
+.testimonialContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 5% auto;
+}
+.testimonialSection{
+    width: 45%;
+}
+.testimonialFrom {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.testimonialDesignation {
+    font-size: 18px;
+    font-weight: 500;
+    color: #8f9295;
+}
+
+.testimonialDescription {
+    width: 60%;
+    margin-top: 15px;
+    font-size: 16px;
+}
+.OurClients{
+    width: 100%;
+    margin: 32px auto 0 auto;
+    padding: 0 10%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    
+}
+.OurClients > img {
+   width: 18%;
+   min-width: 200px;
+   height: 125px;
+}
+.reEngineer{
+    background: url(../img/Engineer-Background.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 600;
+    /* background: rgba(252, 183 , 17, 0.64); */
+    color: white;
+    z-index: -1;
+}
+.requestUs {
+    background: black;
+    min-height: 400px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 15% !important;
+    /* margin: 11px; */
+    z-index: -1;
+}
+.requestUsHeader{
+    font-size: 40px;
+    font-weight: 700;
+    display: inline-block;
+}
+.requestUsDescription{
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+}
+.bold16px{
+    font-size: 16px;
+    font-weight: 700;
+
+}
+.requestInput{
+    padding: 10px 10px 10px 0;
+}
+.form-control {
+    border-radius: 0;
+    min-height: 4.6rem;
+    width: 90%;
+}
+.submitButton{
+    background: #333;
+    border: 2px solid;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 0;
+}
+#map{
+    min-height: 400px;
+}
+iframe{
+    width: 100%;
+}
+#EmbedMap{
+    width: 100% !important;
+}
+.footer {
+   background: black;
+   color: white;   
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.companyLocationName {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.companyLocation {
+    border-right: 1px solid #a19494;
+    margin: 20px;
+}
+.companyLocationAddress {
+    font-size: 14px;
+    color: #a19494;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.companyLocationMail {
+    color: #25daf5;
+}
+.yellowColor{
+    color: yellow;
+    margin-right: 15px;
+}
+.companyLogoText{
+    width: 100%;
+    padding-top: 20px;
+}
+.flex-props{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 35px 5%;
+}
+.footerHeader{
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 1px solid #a19494;
+    padding-bottom: 20px;
+}
+.flex-between{
+    justify-content: space-between;
+    padding-left: 0;
+}
+.noLeftPadding{
+    padding-left: 0;
+}
+.noRightPadding{
+    padding-right: 0;
+}
+.full-width{
+    width:100%;
+}
+.textAlignRight{
+    text-align: right;
+}
+.topHeaderMenus{
+    text-align: center;
+    padding: 5px;
+}
+.font14{
+    font-size: 14px;
+}
+.traingle-down {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;  
+  border-top: 5px solid white;
+}
+.arrow-Down{
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin: 3px 3px;
+}
+.heroImageText{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 95vh;
+}
+.tagLine{
+    color: #0089D0;
+    font-size: 60px;
+    font-weight: 700;
+}
+.smallSquare{
+    border: 4px solid #959696;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+.smallSquare:hover{
+    border: 4px solid #3277ba;
+    background: #0089D0;    
+}
+.smallSquare:hover .arrow-Left,.smallSquare:hover .arrow-Right{
+    border: solid white;  
+    border-width: 0 5px 5px 0;    
+}
+.arrow-Left{
+    border: solid #959696;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin: 10px;
+}
+.arrow-Right{
+    border: solid #959696;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin: 10px;
+}
+.heroImageTextArea{
+    height: 88%;
+    display: flex;
+    align-items: center;
+}
+.navOptionList > li{
+        padding: 2.5rem;
+        position: relative;
+    }
+    .navOptionList > li:hover{
+        color: #228df5;
+    }
+        .navOptionList > li > a{            
+            text-decoration: none;
+        }
+.discussText{
+    font-weight: 700;
+    font-size: 16px;
+}
+.smallCircle{
+    height: 40px;
+    width: 40px;
+    position: relative;
+    border-radius: 50%;
+    background: white;
+    /* position: relative; */
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-facebook,.fa-twitter,.fa-linkedin{
+    color: #0089D0;
+    /* position: absolute; */
+    /* left: 0; */
+    font-size: 16px;
+}
+.smallCircle .fa-facebook,.smallCircle .fa-twitter,.smallCircle .fa-linkedin{
+     color: #071f79;
+    font-size: 24px;
+}
+.socialMediaIcons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btn-primary {
+    width: 120px;
+    height: 40px;
+    background: #0089D0;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: space-around;
+}
+.contactUs-Arrow{
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin: 5px;
+}
+pre{
+    word-break: break-all;
+    word-wrap: break-word;
+    padding: inherit;
+    margin: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: 1.5;
+    background-color: inherit;
+    border: inherit;
+    border-radius: inherit;
+    display: inherit;
+    font-family: inherit;
+    overflow: hidden;
+}
+#map{
+    z-index: -1;
+}
+#footer{
+    z-index: -1;
+}

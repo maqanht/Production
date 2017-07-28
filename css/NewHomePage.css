@@ -1,4 +1,4 @@
-@media screen and (max-width: 8000px) and (min-width: 1280px) {
+@media screen and (max-width: 8000px) and (min-width: 1599px) {
     html{
         font-size: 62.5%;
     }
@@ -17,13 +17,9 @@
     .navButton{
         display: none;
     }
-    .jumbotron {
-         padding-top: 35px !important;
-         padding-bottom: 35px !important;
-
-
-
-    }    
+    .footer{
+        padding: 50px 15% 0 15%; 
+    }
     .landingImage{
         height: 92.82vh;
     } 
@@ -111,10 +107,10 @@
     .paddingleftflex{
         padding-left: 4% !important;
     }
-    .jumbotron {
+    /*.jumbotron {
          padding-top: 30px !important;
          padding-bottom: 30px !important;
-    }
+    }*/
     .navOptionListExpand{
         display: none !important;
     }
@@ -402,11 +398,11 @@
     .tranparentBlackBackGround{
          display: block !important;
     }
-    .heroHome{
+    /*.heroHome{
         background: url("../img/background1.png") no-repeat center center scroll;   
         background-size: 100% 100%;
         pointer-events: none;
-    }
+    }*/
     .paddingrightflex{
         padding-right: 2% !important;
     } 
@@ -556,11 +552,7 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
-.jumbotronShadow{
-    -webkit-box-shadow: 0 10px 6px -6px #777;
-    -moz-box-shadow: 0 10px 6px -6px #777;
-    box-shadow: 0 10px 6px -6px #777;
-}
+
 .jumbotronAlignment{
     display: flex;
     align-items: center;
@@ -583,23 +575,14 @@ body {
     width: 32.8rem;
     height: 3.3rem;
 }
-.navOptionList{    
+/*.navOptionList{    
     list-style: none;
     float: right;
     padding: 0;
     margin: 0;
     max-height: 75px;
-}
-    .navOptionList > li{
-        padding: 2.5rem;
-        position: relative;
-    }
-    .navOptionList > li:hover{
-        background: #dadfe5;
-    }
-        .navOptionList > li > a{            
-            text-decoration: none;
-        }
+}*/
+    
 .tranparentBlackBackGround{
     display: none;    
     width: 100%;
@@ -636,13 +619,13 @@ body {
     position: relative;
     margin-top: 7.18vh;
 }
-.heroHome{
+/*.heroHome{
     background: url("../img/background1.png") no-repeat center center scroll;
     background-size: 100% 100%;
     z-index: -2;
     min-height: 55.6rem;
     overflow: hidden;
-}
+}*/
 .heroContentWrapper{
     height: 42.26%;
 }
@@ -721,22 +704,10 @@ body {
     width: 80%;
     margin: 0 auto;
 }
-.technologyStack{    
-    padding: 25px;
-    border: 1px solid #c1c1c1;
-    border-radius: 15px;
-    width: 37rem;
-    min-width: 220px;
-    height: 360px;
-}
-.technologyStack .content{
-    opacity: 0;
-    max-height: 0px;
-    padding: 0;
-}
-.technologyStack:hover{
+
+/*.technologyStack:hover{
      border: 1px solid #71b9e4;
-}
+}*/
 /*.technologyStack:hover .content{
     white-space: normal;
     display: flex;
@@ -811,7 +782,7 @@ body {
     padding: 0rem 2rem 2rem 2rem;
 }
 
-.OurClients{
+/*.OurClients{
     width: 100%;
     margin: 32px auto 0 auto;
     padding: 0 20%;
@@ -826,7 +797,7 @@ body {
    width: 18%;
    min-width: 200px;
    height: 125px;
-}
+}*/
 
 .clientLogo{
     padding: 0 20px;
@@ -1107,18 +1078,7 @@ div.vertical-line{
     transform: translateY(-5em); 
   }
 }
-.selectedNavOption{
-    font-family:  "Segoe UI", sans-serif;
-    font-size: 16px;
-    color: #515150 !important;
-    font-weight: 600;
-}
-.nonSelectedNavOption{
-    font-family:  "Segoe UI",sans-serif;
-    font-size: 16px;
-    color: #515150; 
-    font-weight: 600;    
-}
+
 .technologies{
     margin: 2%;
 }
@@ -1263,12 +1223,12 @@ enhance {
     margin: 0;
     border-top: 1px solid black;
 }
-.smallCircle{
+/*.smallCircle{
     border-radius: 50%;
     width: 0.5em;
     height: 0.5em; 
     border: 1px solid black;
-}
+}*/
 .flex{
     display: flex;
 }
@@ -1621,13 +1581,7 @@ iframe{
     background: none !important;
     cursor: default;
 }
-#footer {
-    background-color: #F5F5F5;
-}
-.footer {
-    width: 80%;
-    margin: auto;
-}
+
 .flexWrap{
     flex-wrap: wrap;
 }
@@ -1642,7 +1596,7 @@ iframe{
 .borderBottomRed1{
     border-bottom: 1px rgba(174, 40, 45, 1) solid;
 }
-iframe, object, embed {
+ object, embed {
     max-width: 80%;
 }
 .noPaddingLeftRight{
@@ -1670,16 +1624,16 @@ iframe, object, embed {
     margin: 10px 0 0 0;
 }
 .techDescription{
-    font-size: 18px;
+    font-size: 14px;
     margin: 5px 0 0 0;
 }
 .colorWhite{
     color: white;
 }
-.jumbotron {
+/*.jumbotron {
     padding-top: 30px;
     padding-bottom: 30px;
-}
+}*/
 .expertiseHeading{
     margin-top: 20px;
     font-size: 3.2rem;
@@ -1751,19 +1705,7 @@ iframe, object, embed {
 .noTopPadding{
     padding-top: 0;
 }
-.companyNumberDetails{
-    width: 100%;
-    min-height: 56rem;
-    background: url("../img/Backgroundnumbers.png") no-repeat center center scroll;
-    background-size: 100% 100%;
-    z-index: -2;
-    overflow: hidden;
-    margin: 29.5px 0 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
+
 .positionRelative{
     position: relative;
 }
@@ -1779,14 +1721,6 @@ iframe, object, embed {
     border: 2px solid;
     border-radius: 50%;
     margin-left: 5px;
-}
-.numberDetailWrapper {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 .numberDetail{
     margin: 45px;
