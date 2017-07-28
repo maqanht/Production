@@ -18,9 +18,9 @@
         app.previousyOffset = 0;
         app.showTopHeader = true;
         app.heroHomeList = [
-            {class:"heroHome1 animated fadeInLeft heroImageText",tagLine:"thought Leadership",tagDescription:"With over 10 years of experience helping \nbusinesses to find technology solutions"},
+            {class:"heroHome1 animated fadeInLeft heroImageText",tagLine:"thought leadership",tagDescription:"With over 10 years of experience helping \nbusinesses to find technology solutions"},
             {class:"heroHome2 animated slideInDown heroImageText",tagLine:"talented consultants",tagDescription:"Beyond consulting - a partner for \ntransformation and growth"},
-            {class:"heroHome3 animated fadeInLeft heroImageText",tagLine:"Helping companies \nnavigate changes.",tagDescription:"Enjoy working with us"}
+            {class:"heroHome3 animated fadeInLeft heroImageText",tagLine:"helping companies \nnavigate changes.",tagDescription:"Enjoy working with us"}
             ];
         app.heroHomeClass=app.heroHomeList[0].class;
         app.heroTagLine = app.heroHomeList[0].tagLine;
