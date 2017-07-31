@@ -306,11 +306,11 @@ h3 {
     line-height: 32px;
 }
 
-    h3:after {
+    /* h3:after {
         color: #e6ae49;
         content: ".";
         font-size: 34px;
-    }
+    } */
 
 h4 {
     font-size: 17px;
@@ -2458,6 +2458,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 .client-logo {
     height: 80px;
     text-align: center;
+    width: 160px;
 }
 
     .client-logo img {
