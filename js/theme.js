@@ -104,8 +104,10 @@ $(function () {
 
         if (scrolled > 1) {
             $('.header').addClass('header-fixed');
+             $('.topHeader').addClass('displayNone');
         } else {
             $('.header').removeClass('header-fixed');
+             $('.topHeader').removeClass('displayNone');
         }
     };
 

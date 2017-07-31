@@ -1112,6 +1112,10 @@ form label.error {
     -o-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
     -moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
     -webkit-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+    /*Added by MAQ team*/
+     box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
     .header.header-prepare, .header.header-light.header-prepare {
@@ -4486,4 +4490,60 @@ ul.project-detail-block, .project-detail-block ul {
         opacity: 0;
         visibility: hidden;
     }
+}
+.dataCountFormatPrcnt{
+    font-size: 30px;
+    line-height: 30px;
+    display: inline-table;
+    margin-bottom: 20px;
+}
+.dataCountFormatPlus{
+    font-size: 50px;
+    line-height: 50px;
+    display: inline-table;
+    margin-bottom: 20px;
+}
+.topHeader {
+    background: #333;
+    min-height: 50px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.topHeader > ul{
+    height: 100%;
+    margin: 0;
+    font-size: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 70%;    
+}
+.topHeader>ul>li {
+    margin: 5px 0;
+    color: white;   
+}
+.topHeader>ul>li::before {
+    margin-right: 15px;
+}
+.displayNone{
+    display: none;
+}
+.traingle-down {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;  
+  border-top: 5px solid white;
+}
+.companyLocation{
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    background: #0089d0;
+    min-height: 50px !important;
+    margin: 0 !important;
 }
