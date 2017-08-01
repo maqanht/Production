@@ -2483,6 +2483,10 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
     width: 100%;
     color: #323232;
 }
+    .page-icon-top img {
+        height: 100px;
+        width: 100px;
+    }
 
 .white .page-icon-top, .white .page-icon-left, .white .features-icon-left, .white .features-icon-right {
     color: #fff;
