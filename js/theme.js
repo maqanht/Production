@@ -676,7 +676,7 @@ $(function () {
                 countNum: countTo
             },
             {
-                duration: 8000,
+                duration: 4000,
                 easing: 'linear',
                 step: function () {
                     $this.text(Math.floor(this.countNum));
