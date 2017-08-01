@@ -4492,15 +4492,13 @@ ul.project-detail-block, .project-detail-block ul {
     }
 }
 .dataCountFormatPrcnt{
-    font-size: 30px;
-    line-height: 30px;
-    display: inline-table;
-    margin-bottom: 20px;
+    font-size: 25px;
 }
 .dataCountFormatPlus{
     font-size: 50px;
-    line-height: 50px;
-    display: inline-table;
-    margin-bottom: 20px;
 }
-
+.counterFormatter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
