@@ -3228,6 +3228,10 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
         max-width: 480px;
         width: 100%;
     }
+    .counterContainer {
+        margin: 0 auto;
+        width: 100%;
+    }
 
     .nf-col-padding {
         padding-left: 15px;
@@ -4501,8 +4505,9 @@ ul.project-detail-block, .project-detail-block ul {
 .dataCountFormatPrcnt{
     font-size: 25px;
 }
-.dataCountFormatPlus{
-    font-size: 50px;
+.dataCountFormatPlus {
+    font-size: 30px;
+    padding-left: 5px;
 }
 .counterFormatter {
     display: flex;
@@ -4511,4 +4516,12 @@ ul.project-detail-block, .project-detail-block ul {
 }
 .margin-top20{
     margin-top: 20px;
+}
+.counterContainer {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 100%;
 }
