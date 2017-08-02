@@ -2282,9 +2282,10 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 /*  Counter          ||---------------------------- */
 /*-------------------------------------------------------------------------------------------*/
 .counter {
-    font-size: 50px;
+    font-size: 30px;
     /* margin-bottom: 20px; */
     display: inline-table;
+    margin-bottom: 0;
 }
 /*-------------------------------------------------------------------------------------------*/
 /*  Service Box      ||---------------------------- */
@@ -4506,7 +4507,7 @@ ul.project-detail-block, .project-detail-block ul {
     font-size: 25px;
 }
 .dataCountFormatPlus {
-    font-size: 30px;
+    font-size: 25px;
     padding-left: 5px;
 }
 .counterFormatter {
