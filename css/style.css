@@ -4599,7 +4599,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .bowtieChart {
-    background-image: url("../img/PowerBI/Bowtie_Chart_PNG.png");
+    background-image: url("../img/PowerBI/Bowtie_Chart_GIF.gif");
 }
 
     .bowtieChart:hover {
@@ -4607,7 +4607,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .brickChart {
-    background-image: url("../img/PowerBI/Brick_Chart_PNG.png");
+    background-image: url("../img/PowerBI/Brick_Chart_GIF.gif");
 }
 
     .brickChart:hover {
@@ -4615,7 +4615,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .circularGaugeChart {
-    background-image: url("../img/PowerBI/Circular_Guage_PNG.png");
+    background-image: url("../img/PowerBI/Circular_Guage_GIF.gif");
 }
 
     .circularGaugeChart:hover {
@@ -4632,7 +4632,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .dotplotChart {
-    background-image: url("../img/PowerBI/Dot_Plot_PNG.jpg");
+    background-image: url("../img/PowerBI/Dot_Plot_GIF.gif");
 }
 
     .dotplotChart:hover {
@@ -4640,7 +4640,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .dynamicTooltipChart {
-    background-image: url("../img/PowerBI/Dynamic_Tooltip_PNG.png");
+    background-image: url("../img/PowerBI/Dynamic_Tooltip_GIF.gif");
 }
 
     .dynamicTooltipChart:hover {
@@ -4648,7 +4648,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .gridChart {
-    background-image: url("../img/PowerBI/Grid_PNG.png");
+    background-image: url("../img/PowerBI/Grid_GIF.gif");
 }
 
     .gridChart:hover {
@@ -4656,7 +4656,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .histogramWithPointsChart {
-    background-image: url("../img/PowerBI/Histogram_PNG.png");
+    background-image: url("../img/PowerBI/Histogram_GIF.gif");
 }
 
     .histogramWithPointsChart:hover {
@@ -4664,7 +4664,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .horizontalFunnelChart {
-    background-image: url("../img/PowerBI/Horizontal_Funnel_PNG.png");
+    background-image: url("../img/PowerBI/Horizontal_Funnel_GIF.gif");
 }
 
     .horizontalFunnelChart:hover {
@@ -4680,7 +4680,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .kpiColumnChart {
-    background-image: url("../img/PowerBI/KPI_Column_PNG.png");
+    background-image: url("../img/PowerBI/KPI_Column_GIF.gif");
 }
 
     .kpiColumnChart:hover {
@@ -4696,7 +4696,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .kpiTickerChart {
-    background-image: url("../img/PowerBI/KPI_Ticker_PNG.png");
+    background-image: url("../img/PowerBI/KPI_Ticker_GIF.gif");
 }
 
     .kpiTickerChart:hover {
@@ -4704,7 +4704,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .linearGaugeChart {
-    background-image: url("../img/PowerBI/Linear_Gauge_PNG.png");
+    background-image: url("../img/PowerBI/Linear_Gauge_GIF.gif");
 }
 
     .linearGaugeChart:hover {
@@ -4712,7 +4712,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .quadrantChart {
-    background-image: url("../img/PowerBI/Quadrant_Chart_PNG.png");
+    background-image: url("../img/PowerBI/Quadrant_Chart_GIF.gif");
 }
 
     .quadrantChart:hover {
@@ -4720,7 +4720,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .ringChart {
-    background-image: url("../img/PowerBI/Ring_Chart_PNG.png");
+    background-image: url("../img/PowerBI/Ring_Chart_GIF.gif");
 }
 
     .ringChart:hover {
@@ -4728,7 +4728,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .rotatingChart {
-    background-image: url("../img/PowerBI/Rotating_Chart_PNG.png");
+    background-image: url("../img/PowerBI/Rotating_Chart_GIF.gif");
 }
 
     .rotatingChart:hover {
@@ -4760,7 +4760,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .tradingChart {
-    background-image: url("../img/PowerBI/Tradind_Chart_PNG.png");
+    background-image: url("../img/PowerBI/Tradind_Chart_GIF.gif");
 }
 
     .tradingChart:hover {
