@@ -1293,7 +1293,7 @@ form label.error {
         }
 
         .nav-menu ul.nav-menu-inner > li > a {
-            color: #fff;
+            color: #000;
         }
 
 .header-light .nav-menu ul.nav-menu-inner > li > a {
@@ -4787,3 +4787,6 @@ display: block;
     padding-top:95px;    
 }
 
+.viLinks {
+color: #e6ae49;
+}
