@@ -754,6 +754,9 @@ form label.error {
     padding-top: 80px;
 }
 
+.pt-95 {
+    padding-top: 95px;
+}
 .pb-80 {
     padding-bottom: 80px;
 }
@@ -4525,4 +4528,252 @@ ul.project-detail-block, .project-detail-block ul {
     padding-right: 15px;
     padding-left: 15px;
     max-width: 100%;
-} 
+}
+
+/*Expertise section*/
+.ExpertiseImage {
+	margin-bottom: 10px;
+	width: 100%;
+}
+.m30 {
+    margin-top: 30px;
+}
+.BlockTag {
+    display: block;
+}
+.ProfileImage {
+    margin-top: 35px;
+}
+.ImageTitle {
+    margin-top: 5px;
+}
+#AngularLogo, #TypeScriptLogo {
+    height: 70px;
+}
+
+#PowerBILogo {
+    margin-top: 25px;
+}
+
+#TypeScriptLogo {
+    margin-left: 25px;
+}
+
+#AngularLogo, #BootstrapLogo, #NodeJSLogo, #TypeScriptLogo {
+    display: inline;
+    height: 48px;
+    width: auto;
+}
+
+#NodeJSLogo {
+    height: 70px;
+    display: block;
+}
+
+#BootstrapLogo {
+    height: 40px;
+}
+
+
+.customVisual {
+    Height: 300px;
+    Width: 300px;
+    padding: 0px;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px 2px lightgrey;
+    /*border: 1px solid lightgrey;*/
+    /*Float:right;*/
+    /*margin-left:10px;*/
+    background: no-repeat center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-size: 200px 200px;
+}
+
+    .customVisual:hover {
+        box-shadow: 2px 2px 2px 2px lightgrey;
+        -moz-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+
+.bowtieChart {
+    background-image: url("../img/PowerBI/Bowtie_Chart_PNG.png");
+}
+
+    .bowtieChart:hover {
+        background-image: url("../img/PowerBI/Bowtie_Chart_PNG.png");
+    }
+
+.brickChart {
+    background-image: url("../img/PowerBI/Brick_Chart_PNG.png");
+}
+
+    .brickChart:hover {
+        background-image: url("../img/PowerBI/Brick_Chart_PNG.png");
+    }
+
+.circularGaugeChart {
+    background-image: url("../img/PowerBI/Circular_Guage_PNG.png");
+}
+
+    .circularGaugeChart:hover {
+        background-image: url("../img/PowerBI/Circular_Guage_PNG.png");
+    }
+
+
+.cylindricalGaugeChart {
+    background-image: url("../img/PowerBI/Cylindrical_Gauge_PNG.png");
+}
+
+    .cylindricalGaugeChart:hover {
+        background-image: url("../img/PowerBI/Cylindrical_Gauge_PNG.png");
+    }
+
+.dotplotChart {
+    background-image: url("../img/PowerBI/Dot_Plot_PNG.jpg");
+}
+
+    .dotplotChart:hover {
+        background-image: url("../img/PowerBI/Dot_Plot_PNG.jpg");
+    }
+
+.dynamicTooltipChart {
+    background-image: url("../img/PowerBI/Dynamic_Tooltip_PNG.png");
+}
+
+    .dynamicTooltipChart:hover {
+        background-image: url("../img/PowerBI/Dynamic_Tooltip_PNG.png");
+    }
+
+.gridChart {
+    background-image: url("../img/PowerBI/Grid_PNG.png");
+}
+
+    .gridChart:hover {
+        background-image: url("../img/PowerBI/Grid_PNG.png");
+    }
+
+.histogramWithPointsChart {
+    background-image: url("../img/PowerBI/Histogram_PNG.png");
+}
+
+    .histogramWithPointsChart:hover {
+        background-image: url("../img/PowerBI/Histogram_PNG.png");
+    }
+
+.horizontalFunnelChart {
+    background-image: url("../img/PowerBI/Horizontal_Funnel_PNG.png");
+}
+
+    .horizontalFunnelChart:hover {
+        background-image: url("../img/PowerBI/Horizontal_Funnel_PNG.png");
+    }
+
+.journeyChart {
+    background-image: url("../img/PowerBI/Journey_Chart_PNG.png");
+}
+
+    .journeyChart:hover {
+        background-image: url("../img/PowerBI/Journey_Chart_PNG.png");
+    }
+
+.kpiColumnChart {
+    background-image: url("../img/PowerBI/KPI_Column_PNG.png");
+}
+
+    .kpiColumnChart:hover {
+        background-image: url("../img/PowerBI/KPI_Column_PNG.png");
+    }
+
+.kpiGridChart {
+    background-image: url("../img/PowerBI/KPI_Grid_PNG.png");
+}
+
+    .kpiGridChart:hover {
+        background-image: url("../img/PowerBI/KPI_Grid_PNG.png");
+    }
+
+.kpiTickerChart {
+    background-image: url("../img/PowerBI/KPI_Ticker_PNG.png");
+}
+
+    .kpiTickerChart:hover {
+        background-image: url("../img/PowerBI/KPI_Ticker_PNG.png");
+    }
+
+.linearGaugeChart {
+    background-image: url("../img/PowerBI/Linear_Gauge_PNG.png");
+}
+
+    .linearGaugeChart:hover {
+        background-image: url("../img/PowerBI/Linear_Gauge_PNG.png");
+    }
+
+.quadrantChart {
+    background-image: url("../img/PowerBI/Quadrant_Chart_PNG.png");
+}
+
+    .quadrantChart:hover {
+        background-image: url("../img/PowerBI/Quadrant_Chart_PNG.png");
+    }
+
+.ringChart {
+    background-image: url("../img/PowerBI/Ring_Chart_PNG.png");
+}
+
+    .ringChart:hover {
+        background-image: url("../img/PowerBI/Ring_Chart_PNG.png");
+    }
+
+.rotatingChart {
+    background-image: url("../img/PowerBI/Rotating_Chart_PNG.png");
+}
+
+    .rotatingChart:hover {
+        background-image: url("../img/PowerBI/Rotating_Chart_PNG.png");
+    }
+
+.rotatingTileChart {
+    background-image: url("../img/PowerBI/Rotating_Tile_PNG.png");
+}
+
+    .rotatingTileChart:hover {
+        background-image: url("../img/PowerBI/Rotating_Tile_PNG.png");
+    }
+
+.textWrapperChart {
+    background-image: url("../img/PowerBI/Text_Wrapper_PNG.png");
+}
+
+    .textWrapperChart:hover {
+        background-image: url("../img/PowerBI/Text_Wrapper_PNG.png");
+    }
+
+.thermometerChart {
+    background-image: url("../img/PowerBI/Thermometer_PNG.png");
+}
+
+    .thermometerChart:hover {
+        background-image: url("../img/PowerBI/Thermometer_PNG.png");
+    }
+
+.tradingChart {
+    background-image: url("../img/PowerBI/Tradind_Chart_PNG.png");
+}
+
+    .tradingChart:hover {
+        background-image: url("../img/PowerBI/Tradind_Chart_PNG.png");
+    }
+
+
+.noBullets {
+    list-style-type: none;
+}
+
+.decimal {
+    list-style-type: decimal;
+}
+
+/*End*/
