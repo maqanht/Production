@@ -1,9 +1,13 @@
 ﻿var app = angular.module('MAQSoftwareApp', ['ngRoute', 'ngResource']);
-app.config(function ($routeProvider,$locationProvider) {
-    $locationProvider.html5Mode(true)
+app.config(function ($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });
     $routeProvider
     .when("/", {
-        templateUrl: "/views/home.html"
+        templateUrl: "/views/home.html",
+        controller: "HomeController"
     })
     .when('/expertise/datamanagement', {
         templateUrl: '/views/datamanagement.html',
@@ -24,5 +28,10 @@ app.config(function ($routeProvider,$locationProvider) {
         templateUrl: '/views/collaborationcontent.html',
     })
     $routeProvider.otherwise({ redirectTo: "/" });
-   
+
+})
+.controller('HomeController', function ($scope) {
+    $scope.$on('$viewContentLoaded', function () {
+        loadPlugins();
+    });
 });
