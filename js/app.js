@@ -11,6 +11,18 @@ app.config(function ($routeProvider,$locationProvider) {
     .when('/expertise/artificialintelligence', {
         templateUrl: '/views/artificialintelligence.html',
     })
+    .when('/expertise/selfservicebi', {
+        templateUrl: '/views/selfservicebi.html',
+    })
+    .when('/expertise/appdevelopment', {
+        templateUrl: '/views/appdevelopment.html',
+    })
+    .when('/expertise/cloudtransformation', {
+        templateUrl: '/views/cloudtransformation.html',
+    })
+    .when('/expertise/collaborationcontent', {
+        templateUrl: '/views/collaborationcontent.html',
+    })
     $routeProvider.otherwise({ redirectTo: "/" });
    
 });
