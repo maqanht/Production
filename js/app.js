@@ -12,5 +12,5 @@ app.config(function ($routeProvider,$locationProvider) {
         templateUrl: '/views/artificialintelligence.html',
     })
     $routeProvider.otherwise({ redirectTo: "/" });
-
+   
 });
