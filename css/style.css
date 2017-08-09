@@ -4766,7 +4766,25 @@ ul.project-detail-block, .project-detail-block ul {
     .tradingChart:hover {
         background-image: url("../img/PowerBI/Tradind_Chart_PNG.png");
     }
+.ExpertiseBanner {
+    padding: 0px;
+    /*margin-top: 95px;*/ 
+}
+.selfservicebi {
+    background-image: url("../img/Expertise/website_banner_powerbi_2.jpg");
+}
 
+.collaborationcontent {
+    background-image: url("../img/Expertise/Expertise-Sharepoint.jpg");
+}
+
+.cloudtransformation {
+    background-image: url("../img/Expertise/Expertise-Cloud.jpg");
+}
+
+.appdevelopment {
+    background-image: url("../img/Expertise/Expertise-App-Dev.jpg");
+}
 
 .noBullets {
     list-style-type: none;
