@@ -4767,7 +4767,7 @@ ul.project-detail-block, .project-detail-block ul {
         background-image: url("../img/PowerBI/Tradind_Chart_PNG.png");
     }
 .ExpertiseBanner {
-    padding: 0px;
+    padding: 0;
     /*margin-top: 95px;*/ 
 }
 .selfservicebi {
@@ -4807,4 +4807,28 @@ display: block;
 
 .viLinks {
 color: #e6ae49;
+}
+.devopsSection {
+background-size: 50% 100%;
+background-repeat: no-repeat;
+}
+
+.devopsCIImg {
+background-image: url("../img/Continuous_Integration.png"); 
+background-position: -140px 0;
+}
+
+.devopsFasterImg {
+background-image: url("../img/TimeSaving.png"); 
+background-position: -142px 0;
+}
+
+.devopsCostImg {
+background-image: url("../img/CostEffective.png"); 
+background-position: -142px 0;
+}
+
+.devopsFeedbackImg {
+background-image: url("../img/ImmediateFeedback.png"); 
+background-position: -141px 0;
 }
