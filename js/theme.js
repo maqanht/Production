@@ -19,8 +19,7 @@ $(window).load(function () {
 // GENERAL SCRIPTS FOR ALL PAGES    ||----------- 
 // ---------------------------------------------------------------------------------------------------------------------------->
 
-$(document).ready(function () {
-    //function loadPlugins() {
+$(document).ready(function () {    
     fullScreenSlider();
     stickHeader();
     int_introHeight();
@@ -31,7 +30,7 @@ $(document).ready(function () {
     containerGridMasonry();
     scrollCallbackEle();
     shortcodeElements();
-    //}
+  
 });
 
 function loadPlugins() {
@@ -292,6 +291,8 @@ function sliderAll() {
         autoPlay: 2500,
         stopOnHover: true,
         items: 5,
+        loop: true,
+        rewindSpeed: 10,
         itemsDesktop: [1170, 4],
         itemsDesktopSmall: [1024, 3],
         itemsTabletSmall: [768, 2],
