@@ -732,6 +732,14 @@ form label.error {
     padding-bottom: 15px;
 }
 
+.pt-30 {
+    padding-top: 30px;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
 .ptb-60 {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -823,6 +831,10 @@ form label.error {
 }
 
 .mb-45 {
+    margin-bottom: 45px;
+}
+
+.mb-30 {
     margin-bottom: 45px;
 }
 
@@ -4786,6 +4798,110 @@ ul.project-detail-block, .project-detail-block ul {
     background-image: url("../img/Expertise/Expertise-App-Dev.jpg");
 }
 
+.about {
+    background-image: url("../img/Engagement/Profile-About.jpg");
+}
+
+.deliveryapproach{
+    background-image: url("../img/Engagement/deliveryapproach.jpg");
+}
+
+.recognitions{
+    background-image: url("../img/Engagement/recognition.jpg");
+}
+
+.clients{
+    background-image: url("../img/Engagement/clients.jpg");
+}
+
+#Client1 {
+    background: url(../img/Engagement/MS-Logo.png) no-repeat center center;
+}
+
+#Client2 {
+    background: url(../img/Engagement/Wunderman-Logo.png) no-repeat center center;
+}
+
+#Client3 {
+    background: url(../img/Engagement/Amazon-Logo.png) no-repeat center center;
+}
+
+#Client4 {
+    background: url(../img/Engagement/HTC-Logo.png) no-repeat center center;
+}
+
+#Client5 {
+    background: url(../img/Engagement/Tmobile-Logo.png) no-repeat center center;
+}
+
+#Client6 {
+    background: url(../img/Engagement/Aristos-Logo.png) no-repeat center center;
+}
+
+#Client7 {
+    background: url(../img/Engagement/Resmed-Logo.png) no-repeat center center;
+}
+
+#Client8 {
+    background: url(../img/Engagement/WashingtonYouthLogo.png) no-repeat center center;
+}
+
+#Client9 {
+    background: url(../img/Engagement/SwedishLogo.png) no-repeat center center;
+}
+
+#Client10 {
+    background: url(../img/Engagement/BharatPetroleum_Logo.png) no-repeat center center;
+}
+
+#Client11 {
+    background: url(../img/Engagement/Google-logo.png) no-repeat center center;
+}
+
+.ClientImage {
+    float: left;
+    width: 250px;
+    height: 150px;
+    cursor: pointer;
+    margin: 0 5px 5px 0;
+}
+
+.shadow, .RecognitionImage, .ClientImage {
+    box-shadow: 2px 2px 2px 2px lightgrey;
+    -moz-box-shadow: 2px 2px 2px 2px lightgrey;
+    -webkit-box-shadow: 2px 2px 2px 2px lightgrey;
+}
+.RecognitionImage {
+    width: 130px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.SemiBold {
+    font-family: "Segoe UI Semibold",Tahoma,Verdana,Arial,sans-serif;
+}
+
+.RecognitionContent {
+    width: 73%;
+}
+.FullWidth {
+    width: 100%;
+    clear: both;
+}
+
+.FloatLeft {
+    float: left;
+}
+
+.overflowhidden {
+    overflow: hidden;
+}
+
+.topBorder {
+    border-top: 1px solid #ddd;
+    padding-top: 13px;
+}
 .noBullets {
     list-style-type: none;
 }
@@ -4806,5 +4922,21 @@ display: block;
 }
 
 .viLinks {
-color: #e6ae49;
+    color: #e6ae49;
+}
+.corevaluesparent {
+    text-align: center;
+    width: 100%;
+   
+}
+.corevalues {
+    font-size: 17px;
+    height: 70px;
+    text-align: center;     
+}
+.pd-15 {
+    padding: 15px;
+}
+.pd-19 {
+    padding: 19px;
 }
