@@ -12,23 +12,39 @@ app.config(function ($routeProvider, $locationProvider) {
         templateUrl: "/views/home.html",
         controller: "HomeController"
     }).when('/expertise/datamanagement', {
-        templateUrl: '/views/datamanagement.html'
+        templateUrl: '/views/datamanagement.html',
+        controller: "ExpertiseController"
     }).when('/expertise/artificialintelligence', {
-        templateUrl: '/views/artificialintelligence.html'
+        templateUrl: '/views/artificialintelligence.html',
+        controller: "ExpertiseController"
     }).when('/expertise/selfservicebi', {
-        templateUrl: '/views/selfservicebi.html'
+        templateUrl: '/views/selfservicebi.html',
+        controller: "ExpertiseController"
     }).when('/expertise/appdevelopment', {
-        templateUrl: '/views/appdevelopment.html'
+        templateUrl: '/views/appdevelopment.html',
+        controller: "ExpertiseController"
     }).when('/expertise/cloudtransformation', {
-        templateUrl: '/views/cloudtransformation.html'
+        templateUrl: '/views/cloudtransformation.html',
+        controller: "ExpertiseController"
     }).when('/expertise/collaborationcontent', {
-        templateUrl: '/views/collaborationcontent.html'
+        templateUrl: '/views/collaborationcontent.html',
+        controller: "ExpertiseController"
     });
     $routeProvider.otherwise({ redirectTo: "/" });
 
 })
 .controller('HomeController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
-        loadPlugins();
+        loadPlugins();       
+    });
+})
+.controller('ExpertiseController', function ($scope) {
+    $scope.$on('$viewContentLoaded', function () {        
+        if ('objectFit' in document.documentElement.style === false) {
+            console.log("false");
+            //objectFitVideos();
+        } else {
+            console.log("true");
+        }
     });
 });
