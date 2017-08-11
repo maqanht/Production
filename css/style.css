@@ -5198,3 +5198,8 @@ font-weight:600;
 .adp-legal {
     display: none;
 }
+
+#privacystatement a {
+text-transform: none!important;
+color:#e6ae49;
+}
