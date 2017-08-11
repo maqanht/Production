@@ -5006,9 +5006,10 @@ ul.project-detail-block, .project-detail-block ul {
     padding: 19px;
 }
 
-#news, #careers {
+#news, #careersinUS, #careersinInd, .pdt-95 {
     padding-top: 95px;
 }
+
 
 
 #LoadPageNews {
@@ -5127,4 +5128,11 @@ a img {
     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     z-index:9999;
+}
+.disableEvents {
+    pointer-events:none;
+}
+
+.adp-legal {
+    display: none;
 }

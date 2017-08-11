@@ -74,6 +74,7 @@ function loadNews(sNewsData) {
     }
 }
 function loadPanel() {
+    debugger;
     if (!sID || sID === "Redmond") {
         sID = "Redmond";
         setTimeout(function () {
@@ -101,6 +102,7 @@ function loadPanel() {
     $("#CareerLinks > a[data-link=" + sID + "]").addClass("tabActive");
 }
 function careersConstructor() {
+    debugger;
     var sCurrentDate = new Date().format();
     $("#RedMail").attr("href", "mailto:RedmondJobs@MAQSoftware.com?Subject=Application%20for%20job%20posted%20on%20MAQSoftware.com%20(" + sCurrentDate + ")").html("RedmondJobs@MAQSoftware.com");
     $("#IndMail").attr("href", "mailto:IndiaJobs@MAQSoftware.com?Subject=Application%20for%20job%20posted%20on%20MAQSoftware.com%20(" + sCurrentDate + ")").html("IndiaJobs@MAQSoftware.com");
@@ -121,10 +123,10 @@ function showJobPage(sJobLocation, iJobID, sjobPost) {
     sJobLocation = sJobLocation.toLowerCase();
     switch (sJobLocation) {
         case "redmond":
-            window.location.href = "#CareerinUS?q=" + iJobID + "&pn=" + sjobPost;
+            window.location.href = "/#careersinus#?q=" + iJobID + "&pn=" + sjobPost;
             break;
         case "india":
-            window.location.href = "#CareersinInd?q=" + iJobID + "&pn=" + sjobPost;
+            window.location.href = "/#careersinind#?q=" + iJobID + "&pn=" + sjobPost;
             break;
     }
 }
@@ -135,15 +137,15 @@ function checkScroll() {
     if (!isCareersPage()) {
         return;
     }
-
+    var videoID = "player";
     var videos = $("#player"), fraction = 0.8;
     for (var i = 0; i < videos.length; i++) {
         var video = videos[i];
 
         var x = 0,
             y = 0,
-            w = video.width,
-            h = video.height,
+            w = document.getElementById(videoID).clientWidth,
+            h = document.getElementById(videoID).clientHeight,
             r, //right
             b, //bottom 
             visibleX, visibleY, visible,
