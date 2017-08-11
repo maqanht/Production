@@ -47,12 +47,21 @@ app.config(function ($routeProvider, $locationProvider) {
     })
     .when('/engagement/clients', {
         templateUrl: '/views/clients.html'
+    })
+    .when('/contact', {
+        templateUrl: '/views/contact.html',
+        controller: "ContactController"
+
     });
     $routeProvider.otherwise({ redirectTo: "/" });
 
 })
 .controller('HomeController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
-        loadPlugins();       
+        loadPlugins();        
+    });
+}).controller('ContactController', function ($scope) {
+    $scope.$on('$viewContentLoaded', function () {        
+        initializeMap();
     });
 });
