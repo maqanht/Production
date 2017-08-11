@@ -47,12 +47,36 @@ app.config(function ($routeProvider, $locationProvider) {
     })
     .when('/engagement/clients', {
         templateUrl: '/views/clients.html'
+    })
+    .when('/news', {
+        templateUrl: '/views/news.html',
+        controller: "NewsController"
+    })
+    .when('/careers', {
+        templateUrl: '/views/careers.html',
+        controller: "CareersController"
+    })
+    .when('/contact', {
+        templateUrl: '/views/contact.html',
+        controller: "ContactController"
     });
     $routeProvider.otherwise({ redirectTo: "/" });
-
 })
 .controller('HomeController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
-        loadPlugins();       
+        loadPlugins();        
+    });
+}).controller('ContactController', function ($scope) {
+    $scope.$on('$viewContentLoaded', function () {        
+        initializeMap();
+    });
+}).controller('NewsController', function ($scope) {
+    $scope.$on('$viewContentLoaded', function () {
+        newsConstructor();
+    });
+}).controller('CareersController', function ($scope) {
+    $scope.$on('$viewContentLoaded', function () {
+        onYouTubeIframeAPIReady();
+        careersConstructor();
     });
 });
