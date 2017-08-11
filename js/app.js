@@ -59,6 +59,21 @@ app.config(function ($routeProvider, $locationProvider) {
     .when('/contact', {
         templateUrl: '/views/contact.html',
         controller: "ContactController"
+    })
+    .when('/careersinus', {
+        templateUrl: '/views/careersinUS.html',
+        controller: "CareersinUSController"
+    })
+    .when('/careersinind', {
+        templateUrl: '/views/careersinInd.html',
+        controller: "CareersinIndController"
+    })
+    .when('/powerbisupport', {
+        templateUrl: '/views/powerbisupport.html',
+        controller: "PowerBISupportController"
+    })
+    .when('/privacystatement', {
+        templateUrl: '/views/privacystatement.html'
     });
     $routeProvider.otherwise({ redirectTo: "/" });
 })
@@ -78,5 +93,19 @@ app.config(function ($routeProvider, $locationProvider) {
     $scope.$on('$viewContentLoaded', function () {
         onYouTubeIframeAPIReady();
         careersConstructor();
+    });
+}).controller('CareersinUSController', function ($scope) {
+    $scope.$on('$viewContentLoaded', function () {
+        onYouTubeIframeAPIReady();
+        careersInUS();
+    });
+}).controller('CareersinIndController', function ($scope) {
+    $scope.$on('$viewContentLoaded', function () {
+        onYouTubeIframeAPIReady();
+        careersInInd();
+    });
+}).controller('PowerBISupportController', function ($scope) {
+    $scope.$on('$viewContentLoaded', function () {
+        redirectPowerBI();
     });
 });

@@ -5007,9 +5007,10 @@ ul.project-detail-block, .project-detail-block ul {
     padding: 19px;
 }
 
-#news, #careers {
+#news, #careersinUS, #careersinInd, .pdt-95 {
     padding-top: 95px;
 }
+
 
 
 #LoadPageNews {
@@ -5189,4 +5190,11 @@ a img {
 
 .datamanagementsidebar {
 font-weight:600;
+}
+.disableEvents {
+    pointer-events:none;
+}
+
+.adp-legal {
+    display: none;
 }
