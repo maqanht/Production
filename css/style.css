@@ -81,8 +81,8 @@ body {
 }
 
 img {
-    height: auto;
-    max-width: 100%;
+    /*height: auto;*/
+    /*max-width: 100%;*/
     border: none;
     outline: none;
     transition: all 0.2s ease 0s;
@@ -241,7 +241,7 @@ p {
 
 /*Headings Style   ||-----------*/
 
-.separator {
+/*.separator {
     height: 1px;
     width: 32px;
     background: #888;
@@ -265,7 +265,7 @@ p {
 
     .separator.white {
         background: #fff;
-    }
+    }*/
 
 h1, h2, h3, h4, h5, h6 {
     color: #323232;
@@ -1134,6 +1134,7 @@ form label.error {
     box-shadow: 0 1px 3px rgba(0,0,0,0.15);
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    background-color: rgba(255,255,255,0.75);
 }
 
     .header.header-prepare, .header.header-light.header-prepare {
@@ -4369,6 +4370,10 @@ ul.project-detail-block, .project-detail-block ul {
             display: block;
         }
 
+.Loading {
+    background: url(../img/loading.GIF) no-repeat center center;
+}
+
 
 /*===========================================================================================*/
 /* Additional */
@@ -4609,7 +4614,7 @@ ul.project-detail-block, .project-detail-block ul {
     Width: 300px;
     padding: 0px;
     overflow: hidden;
-    box-shadow: 2px 2px 2px 2px lightgrey;
+    /*box-shadow: 2px 2px 2px 2px lightgrey;*/
     /*border: 1px solid lightgrey;*/
     /*Float:right;*/
     /*margin-left:10px;*/
@@ -4617,14 +4622,14 @@ ul.project-detail-block, .project-detail-block ul {
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-size: 200px 200px;
+    background-size: 300px 300px;
 }
 
     .customVisual:hover {
         box-shadow: 2px 2px 2px 2px lightgrey;
-        -moz-transform: scale(1.05);
+        /*-moz-transform: scale(1.05);
         -webkit-transform: scale(1.05);
-        transform: scale(1.05);
+        transform: scale(1.05);*/
     }
 
 .bowtieChart {
@@ -4632,7 +4637,7 @@ ul.project-detail-block, .project-detail-block ul {
 }
 
     .bowtieChart:hover {
-        background-image: url("../img/PowerBI/Bowtie_Chart_PNG.png");
+        background-image: url("../img/PowerBI/Bowtie_Chart_PNG.jpg");
     }
 
 .brickChart {
@@ -4640,7 +4645,7 @@ ul.project-detail-block, .project-detail-block ul {
 }
 
     .brickChart:hover {
-        background-image: url("../img/PowerBI/Brick_Chart_PNG.png");
+        background-image: url("../img/PowerBI/Brick_Chart_PNG.jpg");
     }
 
 .circularGaugeChart {
@@ -4648,16 +4653,16 @@ ul.project-detail-block, .project-detail-block ul {
 }
 
     .circularGaugeChart:hover {
-        background-image: url("../img/PowerBI/Circular_Guage_PNG.png");
+        background-image: url("../img/PowerBI/Circular_Guage_PNG.jpg");
     }
 
 
 .cylindricalGaugeChart {
-    background-image: url("../img/PowerBI/Cylindrical_Gauge_PNG.png");
+    background-image: url("../img/PowerBI/Cylindrical_Gauge_GIF.gif");
 }
 
     .cylindricalGaugeChart:hover {
-        background-image: url("../img/PowerBI/Cylindrical_Gauge_PNG.png");
+        background-image: url("../img/PowerBI/Cylindrical_Gauge_PNG.jpg");
     }
 
 .dotplotChart {
@@ -4681,7 +4686,7 @@ ul.project-detail-block, .project-detail-block ul {
 }
 
     .gridChart:hover {
-        background-image: url("../img/PowerBI/Grid_PNG.png");
+        background-image: url("../img/PowerBI/Grid_PNG.jpg");
     }
 
 .histogramWithPointsChart {
@@ -4689,7 +4694,7 @@ ul.project-detail-block, .project-detail-block ul {
 }
 
     .histogramWithPointsChart:hover {
-        background-image: url("../img/PowerBI/Histogram_PNG.png");
+        background-image: url("../img/PowerBI/Histogram_PNG.jpg");
     }
 
 .horizontalFunnelChart {
@@ -4697,7 +4702,7 @@ ul.project-detail-block, .project-detail-block ul {
 }
 
     .horizontalFunnelChart:hover {
-        background-image: url("../img/PowerBI/Horizontal_Funnel_PNG.png");
+        background-image: url("../img/PowerBI/Horizontal_Funnel_PNG.jpg");
     }
 
 .journeyChart {
@@ -4713,11 +4718,11 @@ ul.project-detail-block, .project-detail-block ul {
 }
 
     .kpiColumnChart:hover {
-        background-image: url("../img/PowerBI/KPI_Column_PNG.png");
+        background-image: url("../img/PowerBI/KPI_Column_PNG.jpg");
     }
 
 .kpiGridChart {
-    background-image: url("../img/PowerBI/KPI_Grid_PNG.png");
+    background-image: url("../img/PowerBI/KPI_Grid_GIF.gif");
 }
 
     .kpiGridChart:hover {
@@ -4729,7 +4734,7 @@ ul.project-detail-block, .project-detail-block ul {
 }
 
     .kpiTickerChart:hover {
-        background-image: url("../img/PowerBI/KPI_Ticker_PNG.png");
+        background-image: url("../img/PowerBI/KPI_Ticker_PNG.jpg");
     }
 
 .linearGaugeChart {
@@ -4745,7 +4750,7 @@ ul.project-detail-block, .project-detail-block ul {
 }
 
     .quadrantChart:hover {
-        background-image: url("../img/PowerBI/Quadrant_Chart_PNG.png");
+        background-image: url("../img/PowerBI/Quadrant_Chart_PNG.jpg");
     }
 
 .ringChart {
@@ -4753,7 +4758,7 @@ ul.project-detail-block, .project-detail-block ul {
 }
 
     .ringChart:hover {
-        background-image: url("../img/PowerBI/Ring_Chart_PNG.png");
+        background-image: url("../img/PowerBI/Ring_Chart_PNG.jpg");
     }
 
 .rotatingChart {
@@ -4765,7 +4770,7 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .rotatingTileChart {
-    background-image: url("../img/PowerBI/Rotating_Tile_PNG.png");
+    background-image: url("../img/PowerBI/Rotating_Tile_GIF.gif");
 }
 
     .rotatingTileChart:hover {
@@ -4773,19 +4778,19 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
 .textWrapperChart {
-    background-image: url("../img/PowerBI/Text_Wrapper_PNG.png");
+    background-image: url("../img/PowerBI/Text_Wrapper_GIF.gif");
 }
 
     .textWrapperChart:hover {
-        background-image: url("../img/PowerBI/Text_Wrapper_PNG.png");
+        background-image: url("../img/PowerBI/Text_Wrapper_PNG.jpg");
     }
 
 .thermometerChart {
-    background-image: url("../img/PowerBI/Thermometer_PNG.png");
+    background-image: url("../img/PowerBI/Thermometer_GIF.gif");
 }
 
     .thermometerChart:hover {
-        background-image: url("../img/PowerBI/Thermometer_PNG.png");
+        background-image: url("../img/PowerBI/Thermometer_PNG.jpg");
     }
 
 .tradingChart {
@@ -4793,7 +4798,7 @@ ul.project-detail-block, .project-detail-block ul {
 }
 
     .tradingChart:hover {
-        background-image: url("../img/PowerBI/Tradind_Chart_PNG.png");
+        background-image: url("../img/PowerBI/Tradind_Chart_PNG.jpg");
     }
 
 .ExpertiseBanner {
@@ -4821,15 +4826,15 @@ ul.project-detail-block, .project-detail-block ul {
     background-image: url("../img/Engagement/Profile-About.jpg");
 }
 
-.deliveryapproach{
+.deliveryapproach {
     background-image: url("../img/Engagement/deliveryapproach.jpg");
 }
 
-.recognitions{
+.recognitions {
     background-image: url("../img/Engagement/recognition.jpg");
 }
 
-.clients{
+.clients {
     background-image: url("../img/Engagement/clients.jpg");
 }
 
@@ -4890,6 +4895,7 @@ ul.project-detail-block, .project-detail-block ul {
     -moz-box-shadow: 2px 2px 2px 2px lightgrey;
     -webkit-box-shadow: 2px 2px 2px 2px lightgrey;
 }
+
 .RecognitionImage {
     width: 130px;
     margin-top: 5px;
@@ -4904,6 +4910,7 @@ ul.project-detail-block, .project-detail-block ul {
 .RecognitionContent {
     width: 73%;
 }
+
 .FullWidth {
     width: 100%;
     clear: both;
@@ -4921,6 +4928,7 @@ ul.project-detail-block, .project-detail-block ul {
     border-top: 1px solid #ddd;
     padding-top: 13px;
 }
+
 .noBullets {
     list-style-type: none;
 }
@@ -4972,26 +4980,138 @@ ul.project-detail-block, .project-detail-block ul {
 
 
 #homeNews img {
-height:250px;
+    height: 250px;
 }
 
 #homeNews h3 {
-padding-left:15px;
+    padding-left: 15px;
 }
- 
+
 .corevaluesparent {
     text-align: center;
     width: 100%;
-   
 }
+
 .corevalues {
     font-size: 17px;
     height: 70px;
-    text-align: center;     
+    text-align: center;
 }
+
 .pd-15 {
     padding: 15px;
 }
+
 .pd-19 {
     padding: 19px;
+}
+
+#news, #careers {
+    padding-top: 95px;
+}
+
+
+#LoadPageNews {
+    min-height: 500px;
+    height: auto !important;
+    height: 500px;
+}
+
+.Datatagline {
+    font-size: 24px;
+    line-height: 30px;
+    color: #3f3f3f;
+}
+
+.PubDate {
+    font-size: 13px;
+    color: #222;
+    margin: 10px 0;
+}
+
+.Font16 {
+    font-size: 16px;
+    color: #595959;
+    line-height: 23px;
+}
+
+a img {
+    cursor: pointer;
+}
+
+#LoadPageNews img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: "wf_SegoeUI","Segoe UI","Segoe","Segoe WP","Tahoma","Verdana","Arial","sans-serif";
+    cursor: default;
+}
+.DisabledColor {
+    color: #ccc !important;
+    cursor: default !important;
+}
+.Segoe20 {
+    font-size: 20px;
+    color: #bb141a;
+    cursor: pointer;
+}
+
+.LoadingHeight {
+    min-height: 300px;
+    height: auto !important;
+    height: 300px;
+    overflow: visible;
+    padding-top: 5px;
+}
+
+#CareerLinks {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.CarrersTabs {
+    margin-right: 10%;
+    font-size: 21px;
+    color: #0072c6;
+}
+
+.tabActive {
+    color: #bb141a;
+    cursor: pointer;
+}
+.BorderBottom {
+    border-bottom: 1px dotted #595959;
+    width: 100%;
+    clear: both;
+    padding-bottom: 10px;
+}
+
+#CareerLinkHolder .pTagLine {
+    font-size: 18px;
+    height: auto;
+    min-height: 40px;
+}
+.FloatRight{
+    float: right;
+}
+.pTagLine {
+    font-size: 21px;
+    /*color: #3f3f3f;*/
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.Pointer{
+    cursor: pointer;
+}
+.MarginUp {
+    margin-top: -38px;
+    font-size: 16px;
+}
+.height-50 {
+    height: 50px;
+
 }
