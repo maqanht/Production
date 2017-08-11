@@ -62,7 +62,6 @@ function careersInUS() {
 
 function careersInInd() {
     "use strict";
-    debugger;
     var oBreadCrumb, sBreadCrumbtext, oJobTitle, queryParam,
         sJobPost = getParameterByName("pn");
     $("#IndMail").attr("href", "mailto:IndiaJobs@MAQSoftware.com?Subject=Application%20for%20the%20post%20of%20" + sJobPost).html("IndiaJobs@MAQSoftware.com");
