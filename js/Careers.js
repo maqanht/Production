@@ -135,7 +135,6 @@ function checkScroll() {
     if (!isCareersPage()) {
         return;
     }
-    debugger;
 
     var videos = $("#player"), fraction = 0.8;
     for (var i = 0; i < videos.length; i++) {
@@ -180,7 +179,6 @@ function checkScroll() {
 var player;
 // attaching youtube frame to DOM
 function onYouTubeIframeAPIReady() {
-    debugger;
     if (!isCareersPage())
         return;
     player = new YT.Player('player', {

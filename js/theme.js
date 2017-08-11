@@ -1,5 +1,10 @@
 var pageSection;
-
+Date.prototype.format = function () {
+    "use strict";
+    var arrMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        sValue = arrMonths[this.getMonth()] + ' ' + this.getDate() + ', ' + this.getFullYear();
+    return sValue;
+};
 //$(function () {
 //    "use strict";
 $(window).load(function () {
@@ -19,7 +24,7 @@ $(window).load(function () {
 // GENERAL SCRIPTS FOR ALL PAGES    ||----------- 
 // ---------------------------------------------------------------------------------------------------------------------------->
 
-$(document).ready(function () {    
+$(document).ready(function () {
     fullScreenSlider();
     stickHeader();
     int_introHeight();
@@ -30,7 +35,16 @@ $(document).ready(function () {
     containerGridMasonry();
     scrollCallbackEle();
     shortcodeElements();
-  
+    //scroll Animate Element
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0,
+        mobile: false,
+        live: true
+    })
+    wow.init();
+
 });
 
 function loadPlugins() {
@@ -558,18 +572,20 @@ function scrollCallbackEle() {
         }
     });
 
-    $(function () {
+    //$(function () {
+    //function initializeWoW() {
+    //    //scroll Animate Element
+    //    var wow = new WOW({
+    //        boxClass: 'wow',
+    //        animateClass: 'animated',
+    //        offset: 0,
+    //        mobile: false,
+    //        live: true
+    //    })
+    //    wow.init();
+    //}
 
-        //scroll Animate Element
-        var wow = new WOW({
-            boxClass: 'wow',
-            animateClass: 'animated',
-            offset: 0,
-            mobile: false,
-            live: true
-        })
-        wow.init();
-    });
+    //});
 };
 
 

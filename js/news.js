@@ -53,7 +53,7 @@
             $('#LoadPageNews *').removeAttr('style');
         }
     }
-    function loadNews(sNewsData) {
+    function loadAllNews(sNewsData) {
         try {
             var parser = new DOMParser();
             oNewsData = parser.parseFromString(sNewsData, "text/xml");
@@ -73,7 +73,7 @@
             type: 'GET',
             dataType: 'jsonp',
             success: function (sResponse) {
-                loadNews(sResponse);
+                loadAllNews(sResponse);
             },
             complete: function () {
                 oNewsContainer.removeClass(sLoadingClass);
