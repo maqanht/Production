@@ -74,7 +74,7 @@ function loadNews(sNewsData) {
     }
 }
 function loadPanel() {
-    debugger;
+    
     if (!sID || sID === "Redmond") {
         sID = "Redmond";
         setTimeout(function () {
@@ -102,7 +102,7 @@ function loadPanel() {
     $("#CareerLinks > a[data-link=" + sID + "]").addClass("tabActive");
 }
 function careersConstructor() {
-    debugger;
+    
     var sCurrentDate = new Date().format();
     $("#RedMail").attr("href", "mailto:RedmondJobs@MAQSoftware.com?Subject=Application%20for%20job%20posted%20on%20MAQSoftware.com%20(" + sCurrentDate + ")").html("RedmondJobs@MAQSoftware.com");
     $("#IndMail").attr("href", "mailto:IndiaJobs@MAQSoftware.com?Subject=Application%20for%20job%20posted%20on%20MAQSoftware.com%20(" + sCurrentDate + ")").html("IndiaJobs@MAQSoftware.com");
