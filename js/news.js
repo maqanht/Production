@@ -1,5 +1,5 @@
-﻿/*jslint plusplus: true */
-
+/*jslint plusplus: true */
+(function () {
     "use strict";
     var oNewsPager = {
         template: '<div><p class="Datatagline SemiBold m30 Color58585a">@title</p><p class="PubDate">@date</p><div class="Font16">@content</div></div>',
@@ -53,7 +53,7 @@
             $('#LoadPageNews *').removeAttr('style');
         }
     }
-    function loadAllNews(sNewsData) {
+    function loadNews(sNewsData) {
         try {
             var parser = new DOMParser();
             oNewsData = parser.parseFromString(sNewsData, "text/xml");
@@ -66,14 +66,14 @@
         } catch (ignore) {
         }
     }
-    function newsConstructor() {
+    $("document").ready(function () {
         oNewsContainer = $("#LoadPageNews");
         $.ajax({
             url: 'https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News',
             type: 'GET',
             dataType: 'jsonp',
             success: function (sResponse) {
-                loadAllNews(sResponse);
+                loadNews(sResponse);
             },
             complete: function () {
                 oNewsContainer.removeClass(sLoadingClass);
@@ -105,4 +105,5 @@
                 });
             }
         });
-    };
+    });
+}());
