@@ -1,12 +1,6 @@
 ﻿var app = angular.module('MAQSoftwareApp', ['ngRoute', 'ngResource']);
 app.config(function ($routeProvider, $locationProvider) {
-    //check browser support
-    if (window.history && window.history.pushState) {
-        $locationProvider.html5Mode({
-            enabled: true,
-            requireBase: false
-        });
-    }
+    
     $routeProvider
     .when("/", {
         templateUrl: "/views/home.html",
@@ -85,8 +79,8 @@ app.config(function ($routeProvider, $locationProvider) {
     .when('/privacystatement', {
         templateUrl: '/views/privacystatement.html',
         controller: "PrivacyStatementController"
-    });
-    $routeProvider.otherwise({ redirectTo: "/" });
+    }).otherwise({ redirectTo: "/" });
+    $locationProvider.html5Mode(true);
 })
 .controller('HomeController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
