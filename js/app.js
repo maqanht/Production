@@ -13,25 +13,32 @@ app.config(function ($routeProvider, $locationProvider) {
         controller: "HomeController"
     })
     .when('/expertise', {
-        templateUrl: '/views/datamanagement.html'
+        templateUrl: '/views/datamanagement.html',
+        controller: "HomeController"
     })
     .when('/expertise/datamanagement', {
-        templateUrl: '/views/datamanagement.html'
+        templateUrl: '/views/datamanagement.html',
+        controller: "HomeController"
     })
     .when('/expertise/artificialintelligence', {
-        templateUrl: '/views/artificialintelligence.html'
+        templateUrl: '/views/artificialintelligence.html',
+        controller: "HomeController"
     })
     .when('/expertise/selfservicebi', {
-        templateUrl: '/views/selfservicebi.html'
+        templateUrl: '/views/selfservicebi.html',
+        controller: "HomeController"
     })
     .when('/expertise/appdevelopment', {
-        templateUrl: '/views/appdevelopment.html'
+        templateUrl: '/views/appdevelopment.html',
+        controller: "HomeController"
     })
     .when('/expertise/cloudtransformation', {
-        templateUrl: '/views/cloudtransformation.html'
+        templateUrl: '/views/cloudtransformation.html',
+        controller: "HomeController"
     })
     .when('/expertise/collaborationcontent', {
-        templateUrl: '/views/collaborationcontent.html'
+        templateUrl: '/views/collaborationcontent.html',
+        controller: "HomeController"
     })
     .when('/engagement', {
         templateUrl: '/views/about.html'
@@ -91,21 +98,31 @@ app.config(function ($routeProvider, $locationProvider) {
     });
 }).controller('CareersController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
-        onYouTubeIframeAPIReady();
-        careersConstructor();
+        accordion();
+        //onYouTubeIframeAPIReady();
+        //careersConstructor();
     });
 }).controller('CareersinUSController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
-        onYouTubeIframeAPIReady();
-        careersInUS();
+        //onYouTubeIframeAPIReady();
+        //careersInUS();
     });
 }).controller('CareersinIndController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
-        onYouTubeIframeAPIReady();
-        careersInInd();
+        //onYouTubeIframeAPIReady();
+        //careersInInd();
     });
 }).controller('PowerBISupportController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         redirectPowerBI();
     });
+}).directive('careerTabs', function () {
+    return {
+        restrict: 'A',
+        link: function (scope, elm, attrs) {            
+            setTimeout(function () {
+                $(elm).tabs();
+            }, 0);
+        }
+    };
 });
