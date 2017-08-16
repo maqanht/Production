@@ -80,7 +80,8 @@ app.config(function ($routeProvider, $locationProvider) {
         controller: "PowerBISupportController"
     })
     .when('/privacystatement', {
-        templateUrl: '/views/privacystatement.html'
+        templateUrl: '/views/privacystatement.html',
+        controller: "PrivacyStatementController"
     });
     $routeProvider.otherwise({ redirectTo: "/" });
 })
@@ -89,32 +90,40 @@ app.config(function ($routeProvider, $locationProvider) {
         loadPlugins();        
     });
 }).controller('ContactController', function ($scope) {
-    $scope.$on('$viewContentLoaded', function () {        
+    $scope.$on('$viewContentLoaded', function () {
+        loadPlugins();
         contactConstructor();
     });
 }).controller('NewsController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
+        loadPlugins();
         newsConstructor();
     });
 }).controller('CareersController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
+        loadPlugins();
         accordion();
         //onYouTubeIframeAPIReady();
         //careersConstructor();
     });
-}).controller('CareersinUSController', function ($scope) {
-    $scope.$on('$viewContentLoaded', function () {
-        //onYouTubeIframeAPIReady();
-        //careersInUS();
-    });
-}).controller('CareersinIndController', function ($scope) {
-    $scope.$on('$viewContentLoaded', function () {
-        //onYouTubeIframeAPIReady();
-        //careersInInd();
-    });
+//}).controller('CareersinUSController', function ($scope) {
+//    $scope.$on('$viewContentLoaded', function () {
+//        //onYouTubeIframeAPIReady();
+//        //careersInUS();
+//    });
+//}).controller('CareersinIndController', function ($scope) {
+//    $scope.$on('$viewContentLoaded', function () {
+//        //onYouTubeIframeAPIReady();
+//        //careersInInd();
+//    });
 }).controller('PowerBISupportController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         redirectPowerBI();
+    });
+}).controller('PrivacyStatementController', function ($scope) {
+    $scope.$on('$viewContentLoaded', function () {
+        loadPlugins();
+        setHeader();
     });
 }).directive('careerTabs', function () {
     return {
