@@ -41,20 +41,23 @@ app.config(function ($routeProvider, $locationProvider) {
         controller: "HomeController"
     })
     .when('/engagement', {
-        templateUrl: '/views/about.html'
+        templateUrl: '/views/about.html',
+        controller: "HomeController"
     })
     .when('/engagement/about', {
-        templateUrl: '/views/about.html'
+        templateUrl: '/views/about.html',
+        controller: "HomeController"
     })
-    .when('/engagement/deliveryapproach', {
-        templateUrl: '/views/deliveryapproach.html'
-    })
+    //.when('/engagement/deliveryapproach', {
+    //    templateUrl: '/views/deliveryapproach.html'
+    //})
     .when('/engagement/recognitions', {
-        templateUrl: '/views/recognitions.html'
+        templateUrl: '/views/recognitions.html',
+        controller: "HomeController"
     })
-    .when('/engagement/clients', {
-        templateUrl: '/views/clients.html'
-    })
+    //.when('/engagement/clients', {
+    //    templateUrl: '/views/clients.html'
+    //})
     .when('/news', {
         templateUrl: '/views/news.html',
         controller: "NewsController"
@@ -67,14 +70,14 @@ app.config(function ($routeProvider, $locationProvider) {
         templateUrl: '/views/contact.html',
         controller: "ContactController"
     })
-    .when('/careersinus', {
-        templateUrl: '/views/careersinUS.html',
-        controller: "CareersinUSController"
-    })
-    .when('/careersinind', {
-        templateUrl: '/views/careersinInd.html',
-        controller: "CareersinIndController"
-    })
+    //.when('/careersinus', {
+    //    templateUrl: '/views/careersinUS.html',
+    //    controller: "CareersinUSController"
+    //})
+    //.when('/careersinind', {
+    //    templateUrl: '/views/careersinInd.html',
+    //    controller: "CareersinIndController"
+    //})
     .when('/powerbisupport', {
         templateUrl: '/views/powerbisupport.html',
         controller: "PowerBISupportController"
@@ -118,6 +121,7 @@ app.config(function ($routeProvider, $locationProvider) {
 //    });
 }).controller('PowerBISupportController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
+        loadPlugins();
         redirectPowerBI();
     });
 }).controller('PrivacyStatementController', function ($scope) {
