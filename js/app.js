@@ -90,7 +90,8 @@ app.config(function ($routeProvider, $locationProvider) {
 })
 .controller('HomeController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
-        loadPlugins();        
+        loadPlugins();
+        loadNewsMainPage();
     });
 }).controller('ContactController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {

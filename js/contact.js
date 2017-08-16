@@ -25,6 +25,7 @@ function contactConstructor() {
         $('#map').attr('src', sLocation);
         var iAddressSectionTopPosition, sScrollElement = "body,html";
         iAddressSectionTopPosition = $(".map").offset().top;
+        iAddressSectionTopPosition -= 65; // -65px for header/padding
         $(sScrollElement).animate({ scrollTop: iAddressSectionTopPosition }, 500);
     });
 }
