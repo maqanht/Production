@@ -1,6 +1,6 @@
 ﻿var app = angular.module('MAQSoftwareApp', ['ngRoute', 'ngResource']);
 app.config(function ($routeProvider, $locationProvider) {
-    
+
     $routeProvider
     .when("/", {
         templateUrl: "/views/home.html",
@@ -42,16 +42,10 @@ app.config(function ($routeProvider, $locationProvider) {
         templateUrl: '/views/about.html',
         controller: "HomeController"
     })
-    //.when('/engagement/deliveryapproach', {
-    //    templateUrl: '/views/deliveryapproach.html'
-    //})
     .when('/engagement/recognitions', {
         templateUrl: '/views/recognitions.html',
         controller: "HomeController"
-    })
-    //.when('/engagement/clients', {
-    //    templateUrl: '/views/clients.html'
-    //})
+    })    
     .when('/news', {
         templateUrl: '/views/news.html',
         controller: "NewsController"
@@ -63,15 +57,7 @@ app.config(function ($routeProvider, $locationProvider) {
     .when('/contact', {
         templateUrl: '/views/contact.html',
         controller: "ContactController"
-    })
-    //.when('/careersinus', {
-    //    templateUrl: '/views/careersinUS.html',
-    //    controller: "CareersinUSController"
-    //})
-    //.when('/careersinind', {
-    //    templateUrl: '/views/careersinInd.html',
-    //    controller: "CareersinIndController"
-    //})
+    })    
     .when('/powerbisupport', {
         templateUrl: '/views/powerbisupport.html',
         controller: "PowerBISupportController"
@@ -84,7 +70,7 @@ app.config(function ($routeProvider, $locationProvider) {
 })
 .controller('HomeController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
-        loadPlugins();        
+        loadPlugins();
     });
 }).controller('ContactController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
@@ -98,21 +84,9 @@ app.config(function ($routeProvider, $locationProvider) {
     });
 }).controller('CareersController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
-        loadPlugins();        
-        accordion();
-        //onYouTubeIframeAPIReady();
-        //careersConstructor();
+        loadPlugins();
+        accordion();        
     });
-//}).controller('CareersinUSController', function ($scope) {
-//    $scope.$on('$viewContentLoaded', function () {
-//        //onYouTubeIframeAPIReady();
-//        //careersInUS();
-//    });
-//}).controller('CareersinIndController', function ($scope) {
-//    $scope.$on('$viewContentLoaded', function () {
-//        //onYouTubeIframeAPIReady();
-//        //careersInInd();
-//    });
 }).controller('PowerBISupportController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
@@ -126,9 +100,9 @@ app.config(function ($routeProvider, $locationProvider) {
 }).directive('careerTabs', function () {
     return {
         restrict: 'A',
-        link: function (scope, elm, attrs) {            
+        link: function (scope, elm, attrs) {
             setTimeout(function () {
-                $(elm).tabs();
+               //$(elm).tabs();
             }, 0);
         }
     };
