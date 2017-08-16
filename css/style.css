@@ -646,6 +646,10 @@ form label.error {
     width: 100%;
     height: 45px;
 }
+.spacer-55 {
+    width: 100%;
+    height: 55px;
+}
 
 .spacer-60 {
     width: 100%;
@@ -763,6 +767,18 @@ form label.error {
     padding-bottom: 60px;
 }
 
+.ptb-65 {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+.pb-65 {
+    padding-bottom: 65px;
+}
+
+.pt-65 {
+    padding-top: 65px;
+}
+
 .ptb-80 {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -774,6 +790,18 @@ form label.error {
 
 .pb-80 {
     padding-bottom: 80px;
+}
+.ptb-110 {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.pt-110 {
+    padding-top: 110px;
+}
+
+.pb-110 {
+    padding-bottom: 110px;
 }
 
 .mtb-0 {
@@ -4533,4 +4561,10 @@ ul.project-detail-block, .project-detail-block ul {
 .topBorder {
     border-top: 1px solid #dddddd;
     padding-top: 13px;
+}
+
+
+
+.h-120{
+    height:120px;
 }
