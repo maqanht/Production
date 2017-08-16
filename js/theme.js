@@ -65,7 +65,7 @@ function loadPlugins() {
     containerGridMasonry();
     scrollCallbackEle();
     shortcodeElements();
-
+    $(".ytp-player").YTPlayer();
 }
 
 $(window).resize(function () {

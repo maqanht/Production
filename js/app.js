@@ -98,6 +98,7 @@ app.config(function ($routeProvider, $locationProvider) {
     });
 }).controller('CareersController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
+        loadPlugins();        
         accordion();
         //onYouTubeIframeAPIReady();
         //careersConstructor();
