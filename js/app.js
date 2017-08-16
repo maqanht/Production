@@ -41,20 +41,23 @@ app.config(function ($routeProvider, $locationProvider) {
         controller: "HomeController"
     })
     .when('/engagement', {
-        templateUrl: '/views/about.html'
+        templateUrl: '/views/about.html',
+        controller: "HomeController"
     })
     .when('/engagement/about', {
-        templateUrl: '/views/about.html'
+        templateUrl: '/views/about.html',
+        controller: "HomeController"
     })
-    .when('/engagement/deliveryapproach', {
-        templateUrl: '/views/deliveryapproach.html'
-    })
+    //.when('/engagement/deliveryapproach', {
+    //    templateUrl: '/views/deliveryapproach.html'
+    //})
     .when('/engagement/recognitions', {
-        templateUrl: '/views/recognitions.html'
+        templateUrl: '/views/recognitions.html',
+        controller: "HomeController"
     })
-    .when('/engagement/clients', {
-        templateUrl: '/views/clients.html'
-    })
+    //.when('/engagement/clients', {
+    //    templateUrl: '/views/clients.html'
+    //})
     .when('/news', {
         templateUrl: '/views/news.html',
         controller: "NewsController"
@@ -67,20 +70,21 @@ app.config(function ($routeProvider, $locationProvider) {
         templateUrl: '/views/contact.html',
         controller: "ContactController"
     })
-    .when('/careersinus', {
-        templateUrl: '/views/careersinUS.html',
-        controller: "CareersinUSController"
-    })
-    .when('/careersinind', {
-        templateUrl: '/views/careersinInd.html',
-        controller: "CareersinIndController"
-    })
+    //.when('/careersinus', {
+    //    templateUrl: '/views/careersinUS.html',
+    //    controller: "CareersinUSController"
+    //})
+    //.when('/careersinind', {
+    //    templateUrl: '/views/careersinInd.html',
+    //    controller: "CareersinIndController"
+    //})
     .when('/powerbisupport', {
         templateUrl: '/views/powerbisupport.html',
         controller: "PowerBISupportController"
     })
     .when('/privacystatement', {
-        templateUrl: '/views/privacystatement.html'
+        templateUrl: '/views/privacystatement.html',
+        controller: "PrivacyStatementController"
     });
     $routeProvider.otherwise({ redirectTo: "/" });
 })
@@ -89,11 +93,13 @@ app.config(function ($routeProvider, $locationProvider) {
         loadPlugins();        
     });
 }).controller('ContactController', function ($scope) {
-    $scope.$on('$viewContentLoaded', function () {        
+    $scope.$on('$viewContentLoaded', function () {
+        loadPlugins();
         contactConstructor();
     });
 }).controller('NewsController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
+        loadPlugins();
         newsConstructor();
     });
 }).controller('CareersController', function ($scope) {
@@ -103,19 +109,25 @@ app.config(function ($routeProvider, $locationProvider) {
         //onYouTubeIframeAPIReady();
         //careersConstructor();
     });
-}).controller('CareersinUSController', function ($scope) {
-    $scope.$on('$viewContentLoaded', function () {
-        //onYouTubeIframeAPIReady();
-        //careersInUS();
-    });
-}).controller('CareersinIndController', function ($scope) {
-    $scope.$on('$viewContentLoaded', function () {
-        //onYouTubeIframeAPIReady();
-        //careersInInd();
-    });
+//}).controller('CareersinUSController', function ($scope) {
+//    $scope.$on('$viewContentLoaded', function () {
+//        //onYouTubeIframeAPIReady();
+//        //careersInUS();
+//    });
+//}).controller('CareersinIndController', function ($scope) {
+//    $scope.$on('$viewContentLoaded', function () {
+//        //onYouTubeIframeAPIReady();
+//        //careersInInd();
+//    });
 }).controller('PowerBISupportController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
+        loadPlugins();
         redirectPowerBI();
+    });
+}).controller('PrivacyStatementController', function ($scope) {
+    $scope.$on('$viewContentLoaded', function () {
+        loadPlugins();
+        setHeader();
     });
 }).directive('careerTabs', function () {
     return {

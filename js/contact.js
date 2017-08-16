@@ -23,5 +23,8 @@ function contactConstructor() {
         }
         sLocation = sGoogleMapScript + "&q=" + oMapAddress[iIndex];
         $('#map').attr('src', sLocation);
+        var iAddressSectionTopPosition, sScrollElement = "body,html";
+        iAddressSectionTopPosition = $(".map").offset().top;
+        $(sScrollElement).animate({ scrollTop: iAddressSectionTopPosition }, 500);
     });
 }
