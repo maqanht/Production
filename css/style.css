@@ -4604,3 +4604,34 @@ ul.project-detail-block, .project-detail-block ul {
     width: auto;
     background: none;
 }
+
+.DisabledColor {
+    color: #ccc !important;
+    cursor: default !important;
+}
+#LoadPageNews img {
+    margin: auto;
+}
+.Loading {
+    background: url(../img/loading.GIF) no-repeat center center;
+}
+
+#LoadPageNews {
+    min-height: 500px;
+    height: auto !important;
+    height: 500px;
+}
+.LoadingHeight {
+    min-height: 300px;
+    height: auto !important;
+    height: 300px;
+    overflow: visible;
+    padding-top: 5px;
+}
+
+#LoadPageNews .post-header h1, #LoadPageNews .post-header h2, #LoadPageNews .post-header h3, #LoadPageNews .post-header h4, #LoadPageNews .post-header h5, #LoadPageNews .post-header h6 {
+    text-transform: none;
+}
+    #Addresses h6 {
+        margin-bottom: 3px;
+    }
