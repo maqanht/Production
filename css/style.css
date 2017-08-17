@@ -355,6 +355,7 @@ h1.large {
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     -o-border-radius: 2px;
+    margin-top: 15px;
 }
 
     .btn i, button i, i.left {
@@ -1994,6 +1995,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 .inner-intro {
     position: relative;
     padding: 200px 0;
+    background-position: left 0px;
 }
 
     .inner-intro h1 {
@@ -3948,6 +3950,7 @@ ul.project-detail-block, .project-detail-block ul {
 
         .shop-item .item-mask .item-mask-detail .item-mask-detail-ele {
             margin: auto auto;
+            padding: 15px;
         }
 
 .item-img {
@@ -4609,9 +4612,11 @@ ul.project-detail-block, .project-detail-block ul {
     color: #ccc !important;
     cursor: default !important;
 }
+
 #LoadPageNews img {
     margin: auto;
 }
+
 .Loading {
     background: url(../img/loading.GIF) no-repeat center center;
 }
@@ -4621,6 +4626,7 @@ ul.project-detail-block, .project-detail-block ul {
     height: auto !important;
     height: 500px;
 }
+
 .LoadingHeight {
     min-height: 300px;
     height: auto !important;
@@ -4632,17 +4638,82 @@ ul.project-detail-block, .project-detail-block ul {
 #LoadPageNews .post-header h1, #LoadPageNews .post-header h2, #LoadPageNews .post-header h3, #LoadPageNews .post-header h4, #LoadPageNews .post-header h5, #LoadPageNews .post-header h6 {
     text-transform: none;
 }
-    #Addresses h6 {
-        margin-bottom: 3px;
-    }
+
+#Addresses h6 {
+    margin-bottom: 3px;
+}
+
 #tabs .nav-link {
     border-radius: 0;
 }
+
 #tabs .nav-tabs {
     margin-bottom: 10px;
     border-bottom: 1px solid #f1f1f1;
 }
+
 #map {
-        height: 400px;
-        width: 100%;
-       }
+    height: 400px;
+    width: 100%;
+}
+
+.modal .modal-header {
+    -webkit-box-pack: normal;
+    -webkit-justify-content: normal;
+    -ms-flex-pack: normal;
+    justify-content: normal;
+    display: inline;
+}
+
+.product_view .modal-dialog {
+    max-width: 800px;
+    width: 100%;
+}
+
+.pre-cost {
+    text-decoration: line-through;
+    color: #a5a5a5;
+}
+
+.space-ten {
+    padding: 10px 0;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-remove:before {
+    content: "\e014";
+}
+
+.vertical-alignment-helper {
+    display: table;
+    height: 100%;
+    width: 100%;
+    pointer-events: none; /* This makes sure that we can still click outside of the modal to close it */
+}
+
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events: none;
+}
+
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width: inherit;
+    height: inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events: all;
+}
