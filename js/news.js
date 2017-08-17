@@ -2,7 +2,7 @@
 
 "use strict";
 var oNewsPager = {
-    template: '<div><div class="post-meta"><span>@date</span></div><div class="post-header"><h2>@title</h2></div><div class="post-entry">@content</div></div>',
+    template: '<div><div class="post-meta"><span>@date</span></div><div class="post-header"><h2>@title</h2></div><div class="post-media"><img alt="" src="@newsimagesrc"></div><div class="post-entry">@content</div></div>',
     pageIndex: 0,
     pagesize: 1
 },
@@ -19,10 +19,25 @@ var oNewsPager = {
                         , "What I Did Not Learn at IIT - Transitioning from Campus to Workplace"
         ], iCount, iTotal = oItalicBookName.length;
 function renderNews() {
-    var iStart, iEnd, entry1, sDate, oDatePart, oDate;
+    var iStart, iEnd, entry1, sDate, oDatePart, oDate, sTitle, sContent;
     oNewsContainer.removeClass(sLoadingClass);
     if (iTotalNews) {
         iStart = oNewsPager.pageIndex * oNewsPager.pagesize;
+        if (iStart >= iTotalNews) {
+            iStart = iTotalNews - 1;
+            oNewsPager.pageIndex = iStart;
+            if (iTotalNews > 1) {
+                $("#Previous").removeClass("DisabledColor");
+                $("#Next").addClass("DisabledColor");
+            }
+        } else if (iStart <= 0) {
+            iStart = 0;
+            oNewsPager.pageIndex = iStart;
+            if (iTotalNews > 1) {
+                $("#Next").removeClass("DisabledColor");
+                $("#Previous").addClass("DisabledColor");
+            }
+        }
         iEnd = iStart + oNewsPager.pagesize;
         if (iEnd > iTotalNews) {
             iEnd = iTotalNews;
@@ -42,20 +57,33 @@ function renderNews() {
                     oDate = new Date(sDate[0]);
                 }
                 oDate = oDate.format();
-
+                sTitle = entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue;
+                sContent = entry1.getElementsByTagName('content')[0].childNodes[0].nodeValue;
                 for (iCount = 0; iCount < iTotal; iCount++) {
-                    entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue = entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue.replace(oItalicBookName[iCount], "<i class='SemiBold'>" + oItalicBookName[iCount] + "</i>");
+                    sTitle = sTitle.replace(oItalicBookName[iCount], "<i class='SemiBold'>" + oItalicBookName[iCount] + "</i>");
                 }
-                oNewsContainer.html(oNewsPager.template.replace("@title", entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue).replace("@date", oDate).replace("@content", entry1.getElementsByTagName('content')[0].childNodes[0].nodeValue));
+
+                $("#bloggerContent").html(sContent);
+                var bloggerContent = document.getElementById("bloggerContent");
+                var imgs = bloggerContent.getElementsByTagName('img');
+                var img, src = "";
+
+                if (typeof imgs !== "undefined" && imgs.length > 0) {
+                    img = imgs[0];
+                    src = img.src;
+                    img.parentNode.removeChild(img);
+                }
+                sContent = $("#bloggerContent").html();
+                oNewsContainer.html(oNewsPager.template.replace("@title", sTitle).replace("@date", oDate).replace("@content", sContent).replace("@newsimagesrc", src));
             }
         }
         oNewsContainer.find("a").attr("target", "_blank");
         oNewsContainer.find("img").addClass("post - media");
-        
+
         $('#LoadPageNews *').removeAttr('style');
     }
 }
-function loadNews(sNewsData, id) {
+function loadNews(sNewsData) {
     try {
         var parser = new DOMParser();
         oNewsData = parser.parseFromString(sNewsData, "text/xml");
@@ -70,17 +98,17 @@ function loadNews(sNewsData, id) {
 }
 function newsConstructor() {
     oNewsContainer = $("#LoadPageNews");
-    var id = getParameterByName("id");
-    //if (typeof id !== "undefined") {
-
-    //}
+    var id = getParameterByName("id"), iTop = 0;
+    if (typeof id !== "undefined") {
+        $(sScrollElement).animate({ scrollTop: iTop }, 500);
+        oNewsPager.pageIndex = id - 1;
+    }
     $.ajax({
         url: 'https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News',
         type: 'GET',
         dataType: 'jsonp',
         success: function (sResponse) {
-            //debugger;
-            loadNews(sResponse, id);
+            loadNews(sResponse);
         },
         complete: function () {
             oNewsContainer.removeClass(sLoadingClass);
@@ -100,14 +128,17 @@ function newsConstructor() {
                 }
             } else {
                 oNewsPager.pageIndex++;
-                $("#Previous").removeClass("DisabledColor");
                 if (oNewsPager.pageIndex >= iMaxPageIndex) {
                     oNewsPager.pageIndex = iMaxPageIndex;
                     $("#Next").addClass("DisabledColor");
+                    return;
+                } else {
+                    $("#Previous").removeClass("DisabledColor");
                 }
             }
             oNewsContainer.html("").addClass(sLoadingClass);
-            $(sScrollElement).animate({ scrollTop: "0px" }, 500, function () {
+            iTop = oNewsContainer.offset().top - 65; // -65 for header/padding
+            $(sScrollElement).animate({ scrollTop: iTop }, 500, function () {
                 renderNews();
             });
         }

@@ -4604,3 +4604,20 @@ ul.project-detail-block, .project-detail-block ul {
     width: auto;
     background: none;
 }
+
+.DisabledColor {
+    color: #ccc !important;
+    cursor: default !important;
+}
+#LoadPageNews img {
+    margin: auto;
+}
+.Loading {
+    background: url(../img/loading.GIF) no-repeat center center;
+}
+
+#LoadPageNews {
+    min-height: 500px;
+    height: auto !important;
+    height: 500px;
+}
