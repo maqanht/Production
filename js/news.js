@@ -98,11 +98,7 @@ function loadNews(sNewsData) {
 }
 function newsConstructor() {
     oNewsContainer = $("#LoadPageNews");
-    var id = getParameterByName("id"), iTop = 0;
-    if (typeof id !== "undefined") {
-        $(sScrollElement).animate({ scrollTop: iTop }, 500);
-        oNewsPager.pageIndex = id - 1;
-    }
+
     $.ajax({
         url: 'https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News',
         type: 'GET',
