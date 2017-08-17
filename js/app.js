@@ -106,9 +106,9 @@ app.config(function ($routeProvider, $locationProvider) {
 }).controller('CareersController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
-        accordion();
+        //accordion();
         //onYouTubeIframeAPIReady();
-        //careersConstructor();
+        careersConstructor();
     });
 //}).controller('CareersinUSController', function ($scope) {
 //    $scope.$on('$viewContentLoaded', function () {

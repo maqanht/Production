@@ -4621,3 +4621,10 @@ ul.project-detail-block, .project-detail-block ul {
     height: auto !important;
     height: 500px;
 }
+.LoadingHeight {
+    min-height: 300px;
+    height: auto !important;
+    height: 300px;
+    overflow: visible;
+    padding-top: 5px;
+}
