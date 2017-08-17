@@ -45,7 +45,7 @@ app.config(function ($routeProvider, $locationProvider) {
     .when('/engagement/recognitions', {
         templateUrl: '/views/recognitions.html',
         controller: "HomeController"
-    })    
+    })
     .when('/news', {
         templateUrl: '/views/news.html',
         controller: "NewsController"
@@ -57,7 +57,7 @@ app.config(function ($routeProvider, $locationProvider) {
     .when('/contact', {
         templateUrl: '/views/contact.html',
         controller: "ContactController"
-    })    
+    })
     .when('/powerbisupport', {
         templateUrl: '/views/powerbisupport.html',
         controller: "PowerBISupportController"
@@ -85,7 +85,10 @@ app.config(function ($routeProvider, $locationProvider) {
 }).controller('CareersController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
-        accordion();        
+        accordion();
+        $("#tabs .nav-link").click(function () {           
+            $("#tabs .nav-link").removeClass('active');                      
+        });
     });
 }).controller('PowerBISupportController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
@@ -97,13 +100,4 @@ app.config(function ($routeProvider, $locationProvider) {
         loadPlugins();
         setHeader();
     });
-}).directive('careerTabs', function () {
-    return {
-        restrict: 'A',
-        link: function (scope, elm, attrs) {
-            setTimeout(function () {
-               //$(elm).tabs();
-            }, 0);
-        }
-    };
 });
