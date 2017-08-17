@@ -71,6 +71,7 @@ app.config(function ($routeProvider, $locationProvider) {
 .controller('HomeController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
+        loadNewsMainPage();
     });
 }).controller('ContactController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
@@ -92,7 +93,7 @@ app.config(function ($routeProvider, $locationProvider) {
 }).controller('CareersController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
-        accordion();
+        careersConstructor();
         $("#tabs .nav-link").click(function () {           
             $("#tabs .nav-link").removeClass('active');                      
         });

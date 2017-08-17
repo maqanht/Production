@@ -1,3 +1,10 @@
+var sLoadingClass = "Loading",
+            oItalicBookName = [
+                            "What I Did Not Learn in B-School: Insights for New Managers"
+                            , "What I Did Not Learn at IIT: Transition from Campus to Workplace"
+                            , "What I Did Not Learn at IIT - Transitioning from Campus to Workplace"
+            ], iCount, iTotal = oItalicBookName.length;
+
 function loadNewsMainPage() {
     $.ajax({
         url: 'https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News',
@@ -19,32 +26,49 @@ function loadNewsMain(sNewsData) {
 }
 function renderNewsMain() {
 
-    var iStart, iEnd, entry1, sDate, oDatePart, oDate, iTotalNews = 0;
-    entry1 = oNewsData.getElementsByTagName('entry').item(0);
-    if (entry1) {
-        sDate = entry1.getElementsByTagName('published')[0].childNodes[0].nodeValue.toLowerCase().split("t");
-        oDatePart = [];
-        if (sDate[0]) {
-            oDatePart = sDate[0].split("-");
-        }
-        oDate = null;
-        if (oDatePart.length === 3) {
-            oDate = new Date(oDatePart[0], (oDatePart[1] - 1), oDatePart[2]);
-        } else {
-            oDate = new Date(sDate[0]);
-        }
-        oDate = oDate.format();
-        $("#dvContent2 .pSubContent:first").text(oDate);
+    var iStart, iEnd, entry1, sDate, oDatePart, oDate, iTotalNews = 0, iNumber;
+    //debugger;
+    if (typeof oNewsData !== "undefined") {
+        iEnd = oNewsData.getElementsByTagName('entry').length;
+        for (iStart = 0; iStart < 3 && iStart < iEnd; iStart++) {
+            iNumber = iStart + 1;
+            entry1 = oNewsData.getElementsByTagName('entry').item(iStart);
+            sDate = entry1.getElementsByTagName('published')[0].childNodes[0].nodeValue.toLowerCase().split("t");
+            oDatePart = [];
+            if (sDate[0]) {
+                oDatePart = sDate[0].split("-");
+            }
+            oDate = null;
+            if (oDatePart.length === 3) {
+                oDate = new Date(oDatePart[0], (oDatePart[1] - 1), oDatePart[2]);
+            } else {
+                oDate = new Date(sDate[0]);
+            }
+            oDate = oDate.format();
+            $("#newsdate" + iNumber).html(oDate);
+            var content = entry1.getElementsByTagName('content')[0].childNodes[0].nodeValue;
+            $("#bloggerContent").html(content);
+            var bloggerContent = document.getElementById("bloggerContent");
+            var imgs = bloggerContent.getElementsByTagName('img');
+            var img, src = "";
 
-        for (iCount = 0; iCount < iTotal; iCount++) {
-            entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue = entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue.replace(oItalicBookName[iCount], "<i class = 'SemiBold'>" + oItalicBookName[iCount] + "</i>");
-        }
+            if (typeof imgs !== "undefined" && imgs.length > 0) {
+                img = imgs[0];
+                src = img.src;
+            }
 
-        $("#dvContent2 .pContent .SemiBold").html(entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue);
-        $("#dvContent2 .pContent .subData").html(entry1.getElementsByTagName('content')[0].childNodes[0].nodeValue);
+            var title = entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue;
+
+            for (iCount = 0; iCount < iTotal; iCount++) {
+                title = title.replace(oItalicBookName[iCount], "<i class = 'SemiBold'>" + oItalicBookName[iCount] + "</i>");
+            }
+
+            $("#newstitle" + iNumber).html(title);
+            $("#newsimg" + iNumber).attr('src', src);
+        }
     }
-    $('.subData *').removeAttr('style');
-    $('.subData').dotdotdot();
+    //$('.subData *').removeAttr('style');
+    //$('.subData').dotdotdot();
 }
 
 function setHeader() {
