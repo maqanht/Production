@@ -4,7 +4,7 @@
 var oNewsPager = {
     template: '<div><div class="post-meta"><span>@date</span></div><div class="post-header"><h2>@title</h2></div><div class="post-media"><img alt="" src="@newsimagesrc"></div><div class="post-entry">@content</div></div>',
     pageIndex: 0,
-    pagesize: 1
+    pagesize: 3
 },
     iTotalNews = 0,
     iIterator = 0,
@@ -27,15 +27,15 @@ function renderNews() {
             iStart = iTotalNews - 1;
             oNewsPager.pageIndex = iStart;
             if (iTotalNews > 1) {
-                $("#Previous").removeClass("DisabledColor");
-                $("#Next").addClass("DisabledColor");
+                $("#Previous").removeClass("hidden");
+                $("#Next").addClass("hidden");
             }
         } else if (iStart <= 0) {
             iStart = 0;
             oNewsPager.pageIndex = iStart;
             if (iTotalNews > 1) {
-                $("#Next").removeClass("DisabledColor");
-                $("#Previous").addClass("DisabledColor");
+                $("#Next").removeClass("hidden");
+                $("#Previous").addClass("hidden");
             }
         }
         iEnd = iStart + oNewsPager.pagesize;
@@ -74,7 +74,7 @@ function renderNews() {
                     img.parentNode.removeChild(img);
                 }
                 sContent = $("#bloggerContent").html();
-                oNewsContainer.html(oNewsPager.template.replace("@title", sTitle).replace("@date", oDate).replace("@content", sContent).replace("@newsimagesrc", src));
+                oNewsContainer.append(oNewsPager.template.replace("@title", sTitle).replace("@date", oDate).replace("@content", sContent).replace("@newsimagesrc", src));
             }
         }
         oNewsContainer.find("a").attr("target", "_blank");
@@ -118,29 +118,27 @@ function newsConstructor() {
     $("#Pagination p").click(function () {
         var oCurrentElement = $(this),
             iClicked = oCurrentElement.attr("data-clicked");
-        if (!oCurrentElement.hasClass("DisabledColor")) {
+        if (!oCurrentElement.hasClass("hidden")) {
             if (iClicked === "0") {
                 oNewsPager.pageIndex--;
-                $("#Next").removeClass("DisabledColor");
+                $("#Next").removeClass("hidden");
                 if (oNewsPager.pageIndex <= 0) {
                     oNewsPager.pageIndex = 0;
-                    $("#Previous").addClass("DisabledColor");
+                    $("#Previous").addClass("hidden");
                 }
             } else {
                 oNewsPager.pageIndex++;
                 if (oNewsPager.pageIndex >= iMaxPageIndex) {
                     oNewsPager.pageIndex = iMaxPageIndex;
-                    $("#Next").addClass("DisabledColor");
-                    return;
+                    $("#Next").addClass("hidden");
                 } else {
-                    $("#Previous").removeClass("DisabledColor");
+                    $("#Previous").removeClass("hidden");
                 }
             }
             oNewsContainer.html("").addClass(sLoadingClass);
             iTop = oNewsContainer.offset().top - 65; // -65 for header/padding
-            $(sScrollElement).animate({ scrollTop: iTop }, 500, function () {
-                renderNews();
-            });
+            $(sScrollElement).animate({ scrollTop: iTop }, 500);
+            renderNews();
         }
     });
 };

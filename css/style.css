@@ -4628,3 +4628,10 @@ ul.project-detail-block, .project-detail-block ul {
     overflow: visible;
     padding-top: 5px;
 }
+
+#LoadPageNews .post-header h1, #LoadPageNews .post-header h2, #LoadPageNews .post-header h3, #LoadPageNews .post-header h4, #LoadPageNews .post-header h5, #LoadPageNews .post-header h6 {
+    text-transform: none;
+}
+    #Addresses h6 {
+        margin-bottom: 3px;
+    }
