@@ -4635,3 +4635,14 @@ ul.project-detail-block, .project-detail-block ul {
     #Addresses h6 {
         margin-bottom: 3px;
     }
+#tabs .nav-link {
+    border-radius: 0;
+}
+#tabs .nav-tabs {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+}
+#map {
+        height: 400px;
+        width: 100%;
+       }
