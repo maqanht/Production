@@ -22,6 +22,10 @@ app.config(function ($routeProvider, $locationProvider) {
         templateUrl: '/views/selfservicebi.html',
         controller: "HomeController"
     })
+    .when('/expertise/selfservicebiviewall', {
+        templateUrl: '/views/selfservicebiviewall.html',
+        controller: "HomeController"
+    })
     .when('/expertise/appdevelopment', {
         templateUrl: '/views/appdevelopment.html',
         controller: "HomeController"
