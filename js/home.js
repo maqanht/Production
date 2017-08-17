@@ -30,7 +30,7 @@ function renderNewsMain() {
     //debugger;
     if (typeof oNewsData !== "undefined") {
         iEnd = oNewsData.getElementsByTagName('entry').length;
-        for (iStart = 0; iStart < 3 && iStart < iEnd; iStart++) {
+        for (iStart = 0; iStart < 6 && iStart < iEnd; iStart++) {
             iNumber = iStart + 1;
             entry1 = oNewsData.getElementsByTagName('entry').item(iStart);
             sDate = entry1.getElementsByTagName('published')[0].childNodes[0].nodeValue.toLowerCase().split("t");
