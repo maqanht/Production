@@ -4702,6 +4702,13 @@ ul.project-detail-block, .project-detail-block ul {
     pointer-events: all;
 }
 
+
+/*Youtube video*/
+#video-player {
+width:912px;
+height: 513px;
+}
+
 /*.glyphicon {
     position: relative;
     top: 1px;
