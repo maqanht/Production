@@ -82,12 +82,12 @@ app.config(function ($routeProvider, $locationProvider) {
         loadPlugins();
         contactConstructor();
     });
-    $scope.$on('$routeChangeSuccess', function () {        
+    $scope.$on('$routeChangeSuccess', function () {
         // load script dynamically using any method
         var googlemaps = document.createElement('script');
         googlemaps.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?v=3&sensor=true&key=AIzaSyBHkJlVTrAkgcD9jJxo_CyHx0YZZtX65iY&callback=initMap');
         document.head.appendChild(googlemaps);
-        
+
     });
 }).controller('NewsController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
@@ -96,12 +96,19 @@ app.config(function ($routeProvider, $locationProvider) {
     });
 }).controller('CareersController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
-        loadPlugins();
-        careersConstructor();
-        $("#tabs .nav-link").click(function () {           
-            $("#tabs .nav-link").removeClass('active');                      
+        loadPlugins();        
+        $("#tabs .nav-link").click(function () {
+            $("#tabs .nav-link").removeClass('active');
         });
+        
     });
+    $scope.$on('$routeChangeSuccess', function () {
+        // load script dynamically using any method
+        var careerjs = document.createElement('script');
+        careerjs.setAttribute('src', 'js/careers.js');
+        document.head.appendChild(careerjs);        
+    });
+
 }).controller('PowerBISupportController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
@@ -113,3 +120,5 @@ app.config(function ($routeProvider, $locationProvider) {
         setHeader();
     });
 });
+
+
