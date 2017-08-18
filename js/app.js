@@ -36,7 +36,7 @@ app.config(function ($routeProvider, $locationProvider) {
     })
     .when('/expertise/collaborationcontent', {
         templateUrl: '/views/collaborationcontent.html',
-        controller: "HomeController"
+        controller: "CollaborationContentController"
     })
     .when('/engagement', {
         templateUrl: '/views/about.html',
@@ -83,6 +83,11 @@ app.config(function ($routeProvider, $locationProvider) {
         setTabNavLinkBehavior();
     });
 }).controller('SelfServiceBIController', function ($scope) {
+    $scope.$on('$viewContentLoaded', function () {
+        loadPlugins();
+        setTabNavLinkBehavior();
+    });
+}).controller('CollaborationContentController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
