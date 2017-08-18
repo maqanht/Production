@@ -2,7 +2,7 @@
 
 "use strict";
 var oNewsPager = {
-    template: '<div><div class="post-meta"><span>@date</span></div><div class="post-header"><h2>@title</h2></div><div class="post-media"><img alt="" src="@newsimagesrc"></div><div class="post-entry">@content</div></div>',
+    template: '<div><div class="post-meta"><span>@date</span></div><div class="post-header"><h2>@title</h2></div><div class="post-media"><img alt="News" src="@newsimagesrc"></div><div class="post-entry">@content</div></div>',
     pageIndex: 0,
     pagesize: 3
 }, id,
