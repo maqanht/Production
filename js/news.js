@@ -97,6 +97,7 @@ function loadNews(sNewsData) {
     }
 }
 function newsConstructor() {
+    var iTop = 0;
     oNewsContainer = $("#LoadPageNews");
 
     $.ajax({
