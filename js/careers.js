@@ -2,7 +2,7 @@
     oNewsData = null,
 sTemplate = '<div class="accordion-section"><h6 class="accordion-title">@title</h6><div class="accordion-content">@content</div></div>'
     , sNoJobMessage = '<p class="DataSubContent Color595959">No job openings available at this location.<br />Please come back and check again soon.</p>'
-    ,sJobServiceIssue = '<p class="DataSubContent Color595959">Issue in connecting to job-post service.<br />Try loading the section again.</p>';
+    , sJobServiceIssue = '<p class="DataSubContent Color595959">Issue in connecting to job-post service.<br />Try loading the section again.</p>';
 
 function careersConstructor() {
     oJobPostSection = $("#tabs-2 .accordion");
@@ -52,63 +52,26 @@ function renderTitle(oData) {
 }
 
 //play when video is visible
-var videos = document.getElementsByTagName("iframe"), fraction = 0.8;
+var video = $("#video-player"), fraction = 0.8;
 
 function checkScroll() {
-  for (var i = 0; i < videos.length; i++) {
-        var video = videos[i];
-
-        var x = 0,
-            y = 0,
-            w = video.width,
-            h = video.height,
-            r, //right
-            b, //bottom 
-            visibleX, visibleY, visible,
-            parent;
-
-
-        parent = video;
-        while (parent && parent !== document.body) {
-            x += parent.offsetLeft;
-            y += parent.offsetTop;
-            parent = parent.offsetParent;
-        }
-
-        r = x + parseInt(w);
-        b = y + parseInt(h);
-
-
-        visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
-        visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
-
-
-        visible = visibleX * visibleY / (w * h);
-
-
-        if (visible > fraction) {
-            playVideo();
-        } else {
-            pauseVideo();
-
-        }
+    var elementPosTop = video.offset().top;
+    var viewportHeight = $(window).height();
+    var scrollPos = $(window).scrollTop();
+    var elementFromTop = elementPosTop - scrollPos;
+    if (elementFromTop > 0 && elementFromTop < elementPosTop + viewportHeight) {
+        playVideo(); //the player is visible.
+    } else {
+        pauseVideo();  //player is invisible
     }
-
 };
+
+
 // call Career Constructor
 careersConstructor();
 
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
 var player;
-
 onYouTubeIframeAPIReady = function onYouTubeIframeAPIReady() {
-    console.log("done");
     player = new YT.Player('video-player', {
         events: {
             'onReady': onPlayerReady,
@@ -122,7 +85,6 @@ onYouTubeIframeAPIReady = function onYouTubeIframeAPIReady() {
 function onPlayerReady(event) {
     window.addEventListener('scroll', checkScroll, false);
     window.addEventListener('resize', checkScroll, false);
-
     //check at least once so you don't have to wait for scrolling for the    video to start
     window.addEventListener('load', checkScroll, false);
 };

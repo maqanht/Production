@@ -4717,3 +4717,10 @@ ul.project-detail-block, .project-detail-block ul {
     margin: 0 auto;
     pointer-events: all;
 }
+
+
+/*Youtube video*/
+#video-player {
+width:912px;
+height: 513px;
+}
