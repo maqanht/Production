@@ -126,8 +126,7 @@ app.config(function ($routeProvider, $locationProvider) {
     });
 }).controller('PrivacyStatementController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
-        loadPlugins();
-        setHeader();
+        loadPlugins();        
     });
 });
 
