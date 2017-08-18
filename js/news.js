@@ -73,7 +73,15 @@ function renderNews() {
                     src = img.src;
                     img.parentNode.removeChild(img);
                 }
+                var newsTag= "newsItem";
+                newsTag=newsTag+(iIterator+1);
+                var newsID = document.createElement("DIV");
+                newsID.id = newsTag;
+                
+
+
                 sContent = $("#bloggerContent").html();
+                oNewsContainer.append(newsID);
                 oNewsContainer.append(oNewsPager.template.replace("@title", sTitle).replace("@date", oDate).replace("@content", sContent).replace("@newsimagesrc", src));
             }
         }
