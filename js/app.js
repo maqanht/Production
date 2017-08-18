@@ -8,11 +8,11 @@ app.config(function ($routeProvider, $locationProvider) {
     })
     .when('/expertise', {
         templateUrl: '/views/datamanagement.html',
-        controller: "HomeController"
+        controller: "DataManagementController"
     })
     .when('/expertise/datamanagement', {
         templateUrl: '/views/datamanagement.html',
-        controller: "HomeController"
+        controller: "DataManagementController"
     })
     .when('/expertise/artificialintelligence', {
         templateUrl: '/views/artificialintelligence.html',
@@ -20,7 +20,7 @@ app.config(function ($routeProvider, $locationProvider) {
     })
     .when('/expertise/selfservicebi', {
         templateUrl: '/views/selfservicebi.html',
-        controller: "HomeController"
+        controller: "SelfServiceBIController"
     })
     .when('/expertise/selfservicebiviewall', {
         templateUrl: '/views/selfservicebiviewall.html',
@@ -77,6 +77,16 @@ app.config(function ($routeProvider, $locationProvider) {
         loadPlugins();
         loadNewsMainPage();
     });
+}).controller('DataManagementController', function ($scope) {
+    $scope.$on('$viewContentLoaded', function () {
+        loadPlugins();
+        setTabNavLinkBehavior();
+    });
+}).controller('SelfServiceBIController', function ($scope) {
+    $scope.$on('$viewContentLoaded', function () {
+        loadPlugins();
+        setTabNavLinkBehavior();
+    });
 }).controller('ContactController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
@@ -98,9 +108,7 @@ app.config(function ($routeProvider, $locationProvider) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         careersConstructor();
-        $("#tabs .nav-link").click(function () {           
-            $("#tabs .nav-link").removeClass('active');                      
-        });
+        setTabNavLinkBehavior();
     });
 }).controller('PowerBISupportController', function ($scope) {
     $scope.$on('$viewContentLoaded', function () {

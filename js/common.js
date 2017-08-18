@@ -96,3 +96,8 @@ function careersInInd() {
 function redirectPowerBI() {
     window.location.href = "/#expertise/selfservicebi"; // Redirecting to Power BI Expertise
 }
+function setTabNavLinkBehavior() {
+    $("#tabs .nav-link").click(function () {
+        $("#tabs .nav-link").removeClass('active');
+    });
+}
