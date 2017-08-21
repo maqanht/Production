@@ -78,11 +78,9 @@ app.config(function ($routeProvider, $locationProvider) {
         loadNewsMainPage();
     });
     $scope.$on('$routeChangeSuccess', function () {
-        console.log('Route Change: ' + $location.url());
-        $window.ga('send', {
-            'hitType': 'screenview',
-            'appName': 'MAQ Software',
-            'screenName': $location.url(),
+        console.log('Route Change: ' + $location.url());        
+        $window.ga('set', 'page', $location.url());        
+        $window.ga('send', 'pageview', {
             'hitCallback': function () {
                 console.log('GA hitCallback sent!');
             }
@@ -95,14 +93,20 @@ app.config(function ($routeProvider, $locationProvider) {
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
-        $window.ga('send', {
-            'hitType': 'screenview',
-            'appName': 'MAQ Software',
-            'screenName': $location.url(),
+        $window.ga('set', 'page', $location.url());
+        $window.ga('send', 'pageview', {
             'hitCallback': function () {
                 console.log('GA hitCallback sent!');
             }
         });
+        //$window.ga('send', {
+        //    'hitType': 'screenview',
+        //    'appName': 'MAQ Software',
+        //    'screenName': $location.url(),
+        //    'hitCallback': function () {
+        //        console.log('GA hitCallback sent!');
+        //    }
+        //});
     });
 }).controller('SelfServiceBIController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
@@ -111,10 +115,8 @@ app.config(function ($routeProvider, $locationProvider) {
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
-        $window.ga('send', {
-            'hitType': 'screenview',
-            'appName': 'MAQ Software',
-            'screenName': $location.url(),
+        $window.ga('set', 'page', $location.url());
+        $window.ga('send', 'pageview', {
             'hitCallback': function () {
                 console.log('GA hitCallback sent!');
             }
@@ -137,10 +139,8 @@ app.config(function ($routeProvider, $locationProvider) {
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
-        $window.ga('send', {
-            'hitType': 'screenview',
-            'appName': 'MAQ Software',
-            'screenName': $location.url(),
+        $window.ga('set', 'page', $location.url());
+        $window.ga('send', 'pageview', {
             'hitCallback': function () {
                 console.log('GA hitCallback sent!');
             }
@@ -157,10 +157,8 @@ app.config(function ($routeProvider, $locationProvider) {
         googlemaps.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?v=3&sensor=true&key=AIzaSyBHkJlVTrAkgcD9jJxo_CyHx0YZZtX65iY&callback=initMap');
         document.head.appendChild(googlemaps);
         console.log('Route Change: ' + $location.url());
-        $window.ga('send', {
-            'hitType': 'screenview',
-            'appName': 'MAQ Software',
-            'screenName': $location.url(),
+        $window.ga('set', 'page', $location.url());
+        $window.ga('send', 'pageview', {
             'hitCallback': function () {
                 console.log('GA hitCallback sent!');
             }
@@ -173,10 +171,8 @@ app.config(function ($routeProvider, $locationProvider) {
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
-        $window.ga('send', {
-            'hitType': 'screenview',
-            'appName': 'MAQ Software',
-            'screenName': $location.url(),
+        $window.ga('set', 'page', $location.url());
+        $window.ga('send', 'pageview', {
             'hitCallback': function () {
                 console.log('GA hitCallback sent!');
             }
@@ -197,10 +193,8 @@ app.config(function ($routeProvider, $locationProvider) {
         careerjs.setAttribute('src', 'js/careers.js');
         document.head.appendChild(careerjs);
         console.log('Route Change: ' + $location.url());
-        $window.ga('send', {
-            'hitType': 'screenview',
-            'appName': 'MAQ Software',
-            'screenName': $location.url(),
+        $window.ga('set', 'page', $location.url());
+        $window.ga('send', 'pageview', {
             'hitCallback': function () {
                 console.log('GA hitCallback sent!');
             }
@@ -213,10 +207,8 @@ app.config(function ($routeProvider, $locationProvider) {
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
-        $window.ga('send', {
-            'hitType': 'screenview',
-            'appName': 'MAQ Software',
-            'screenName': $location.url(),
+        $window.ga('set', 'page', $location.url());
+        $window.ga('send', 'pageview', {
             'hitCallback': function () {
                 console.log('GA hitCallback sent!');
             }
@@ -228,10 +220,8 @@ app.config(function ($routeProvider, $locationProvider) {
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
-        $window.ga('send', {
-            'hitType': 'screenview',
-            'appName': 'MAQ Software',
-            'screenName': $location.url(),
+        $window.ga('set', 'page', $location.url());
+        $window.ga('send', 'pageview', {
             'hitCallback': function () {
                 console.log('GA hitCallback sent!');
             }
