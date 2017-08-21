@@ -1,6 +1,6 @@
 ﻿var app = angular.module('MAQSoftwareApp', ['ngRoute', 'ngResource']);
 app.config(function ($routeProvider, $locationProvider) {
-    closeMenuIfOpen();
+    
     $routeProvider
     .when("/", {
         templateUrl: "/views/home.html",
@@ -122,17 +122,35 @@ app.config(function ($routeProvider, $locationProvider) {
             }
         });
     });
-}).controller('AppDevelopmentController', function ($scope) {
+}).controller('AppDevelopmentController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
     });
-}).controller('CloudTransformationController', function ($scope) {
+    $scope.$on('$routeChangeSuccess', function () {
+        console.log('Route Change: ' + $location.url());
+        $window.ga('set', 'page', $location.url());
+        $window.ga('send', 'pageview', {
+            'hitCallback': function () {
+                console.log('GA hitCallback sent!');
+            }
+        });
+    });
+}).controller('CloudTransformationController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
     });
-}).controller('CollaborationContentController', function ($scope) {
+    $scope.$on('$routeChangeSuccess', function () {
+        console.log('Route Change: ' + $location.url());
+        $window.ga('set', 'page', $location.url());
+        $window.ga('send', 'pageview', {
+            'hitCallback': function () {
+                console.log('GA hitCallback sent!');
+            }
+        });
+    });
+}).controller('CollaborationContentController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();

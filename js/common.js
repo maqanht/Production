@@ -52,3 +52,5 @@ function isCareersPage() {
     }
     return false;
 }
+// Close menu if open
+closeMenuIfOpen();
