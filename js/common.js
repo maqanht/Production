@@ -22,3 +22,9 @@ function setTabNavLinkBehavior() {
         $("#tabs .nav-link").removeClass('active');
     });
 }
+function isCareersPage() {
+    if ($('#careers').length) {
+        return true;
+    }
+    return false;
+}

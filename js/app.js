@@ -172,16 +172,20 @@ app.config(function ($routeProvider, $locationProvider) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        onYouTubeIframeAPIReady();
+        // call Career Constructor
+        careersConstructor();
+        //var tag = document.createElement('script');
+        //tag.src = "https://www.youtube.com/iframe_api";
+        //var firstScriptTag = document.getElementsByTagName('script')[0];
+        //firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
     });
     $scope.$on('$routeChangeSuccess', function () {
         // load script dynamically using any method
-        var careerjs = document.createElement('script');
-        careerjs.setAttribute('src', 'js/careers.js');
-        document.head.appendChild(careerjs);
+        //var careerjs = document.createElement('script');
+        //careerjs.setAttribute('src', 'js/careers.js');
+        //document.head.appendChild(careerjs);
         console.log('Route Change: ' + $location.url());
         $window.ga('set', 'page', $location.url());
         $window.ga('send', 'pageview', {
