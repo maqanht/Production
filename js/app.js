@@ -72,27 +72,71 @@ app.config(function ($routeProvider, $locationProvider) {
     }).otherwise({ redirectTo: "/" });
     $locationProvider.html5Mode(true);
 })
-.controller('HomeController', function ($scope) {
+.controller('HomeController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         loadNewsMainPage();
     });
-}).controller('DataManagementController', function ($scope) {
+    $scope.$on('$routeChangeSuccess', function () {
+        console.log('Route Change: ' + $location.url());
+        $window.ga('send', {
+            'hitType': 'screenview',
+            'appName': 'MAQ Software',
+            'screenName': $location.url(),
+            'hitCallback': function () {
+                console.log('GA hitCallback sent!');
+            }
+        });
+    });
+}).controller('DataManagementController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
     });
-}).controller('SelfServiceBIController', function ($scope) {
+    $scope.$on('$routeChangeSuccess', function () {
+        console.log('Route Change: ' + $location.url());
+        $window.ga('send', {
+            'hitType': 'screenview',
+            'appName': 'MAQ Software',
+            'screenName': $location.url(),
+            'hitCallback': function () {
+                console.log('GA hitCallback sent!');
+            }
+        });
+    });
+}).controller('SelfServiceBIController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
     });
-}).controller('CollaborationContentController', function ($scope) {
+    $scope.$on('$routeChangeSuccess', function () {
+        console.log('Route Change: ' + $location.url());
+        $window.ga('send', {
+            'hitType': 'screenview',
+            'appName': 'MAQ Software',
+            'screenName': $location.url(),
+            'hitCallback': function () {
+                console.log('GA hitCallback sent!');
+            }
+        });
+    });
+}).controller('CollaborationContentController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
     });
-}).controller('ContactController', function ($scope) {
+    $scope.$on('$routeChangeSuccess', function () {
+        console.log('Route Change: ' + $location.url());
+        $window.ga('send', {
+            'hitType': 'screenview',
+            'appName': 'MAQ Software',
+            'screenName': $location.url(),
+            'hitCallback': function () {
+                console.log('GA hitCallback sent!');
+            }
+        });
+    });
+}).controller('ContactController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         contactConstructor();
@@ -102,14 +146,33 @@ app.config(function ($routeProvider, $locationProvider) {
         var googlemaps = document.createElement('script');
         googlemaps.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?v=3&sensor=true&key=AIzaSyBHkJlVTrAkgcD9jJxo_CyHx0YZZtX65iY&callback=initMap');
         document.head.appendChild(googlemaps);
-
+        console.log('Route Change: ' + $location.url());
+        $window.ga('send', {
+            'hitType': 'screenview',
+            'appName': 'MAQ Software',
+            'screenName': $location.url(),
+            'hitCallback': function () {
+                console.log('GA hitCallback sent!');
+            }
+        });
     });
-}).controller('NewsController', function ($scope) {
+}).controller('NewsController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         newsConstructor();
     });
-}).controller('CareersController', function ($scope) {
+    $scope.$on('$routeChangeSuccess', function () {
+        console.log('Route Change: ' + $location.url());
+        $window.ga('send', {
+            'hitType': 'screenview',
+            'appName': 'MAQ Software',
+            'screenName': $location.url(),
+            'hitCallback': function () {
+                console.log('GA hitCallback sent!');
+            }
+        });
+    });
+}).controller('CareersController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
@@ -123,15 +186,46 @@ app.config(function ($routeProvider, $locationProvider) {
         var careerjs = document.createElement('script');
         careerjs.setAttribute('src', 'js/careers.js');
         document.head.appendChild(careerjs);
+        console.log('Route Change: ' + $location.url());
+        $window.ga('send', {
+            'hitType': 'screenview',
+            'appName': 'MAQ Software',
+            'screenName': $location.url(),
+            'hitCallback': function () {
+                console.log('GA hitCallback sent!');
+            }
+        });
     });
-}).controller('PowerBISupportController', function ($scope) {
+}).controller('PowerBISupportController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         redirectPowerBI();
     });
-}).controller('PrivacyStatementController', function ($scope) {
+    $scope.$on('$routeChangeSuccess', function () {
+        console.log('Route Change: ' + $location.url());
+        $window.ga('send', {
+            'hitType': 'screenview',
+            'appName': 'MAQ Software',
+            'screenName': $location.url(),
+            'hitCallback': function () {
+                console.log('GA hitCallback sent!');
+            }
+        });
+    });
+}).controller('PrivacyStatementController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();        
+    });
+    $scope.$on('$routeChangeSuccess', function () {
+        console.log('Route Change: ' + $location.url());
+        $window.ga('send', {
+            'hitType': 'screenview',
+            'appName': 'MAQ Software',
+            'screenName': $location.url(),
+            'hitCallback': function () {
+                console.log('GA hitCallback sent!');
+            }
+        });
     });
 });
 
