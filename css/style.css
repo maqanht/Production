@@ -4741,6 +4741,7 @@ ul.project-detail-block, .project-detail-block ul {
 #video-player {
     width: 912px;
     height: 513px;
+	max-width: 100%;
 }
 
 @font-face {
