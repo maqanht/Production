@@ -46,3 +46,11 @@ function closeMenuIfOpen() {
         }
     });
 }
+function isCareersPage() {
+    if ($('#careers').length) {
+        return true;
+    }
+    return false;
+}
+// Close menu if open
+closeMenuIfOpen();

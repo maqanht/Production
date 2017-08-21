@@ -1,6 +1,6 @@
 ﻿var app = angular.module('MAQSoftwareApp', ['ngRoute', 'ngResource']);
 app.config(function ($routeProvider, $locationProvider) {
-    closeMenuIfOpen();
+    
     $routeProvider
     .when("/", {
         templateUrl: "/views/home.html",
@@ -122,17 +122,35 @@ app.config(function ($routeProvider, $locationProvider) {
             }
         });
     });
-}).controller('AppDevelopmentController', function ($scope) {
+}).controller('AppDevelopmentController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
     });
-}).controller('CloudTransformationController', function ($scope) {
+    $scope.$on('$routeChangeSuccess', function () {
+        console.log('Route Change: ' + $location.url());
+        $window.ga('set', 'page', $location.url());
+        $window.ga('send', 'pageview', {
+            'hitCallback': function () {
+                console.log('GA hitCallback sent!');
+            }
+        });
+    });
+}).controller('CloudTransformationController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
     });
-}).controller('CollaborationContentController', function ($scope) {
+    $scope.$on('$routeChangeSuccess', function () {
+        console.log('Route Change: ' + $location.url());
+        $window.ga('set', 'page', $location.url());
+        $window.ga('send', 'pageview', {
+            'hitCallback': function () {
+                console.log('GA hitCallback sent!');
+            }
+        });
+    });
+}).controller('CollaborationContentController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
@@ -182,16 +200,20 @@ app.config(function ($routeProvider, $locationProvider) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        onYouTubeIframeAPIReady();
+        // call Career Constructor
+        careersConstructor();
+        //var tag = document.createElement('script');
+        //tag.src = "https://www.youtube.com/iframe_api";
+        //var firstScriptTag = document.getElementsByTagName('script')[0];
+        //firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
     });
     $scope.$on('$routeChangeSuccess', function () {
         // load script dynamically using any method
-        var careerjs = document.createElement('script');
-        careerjs.setAttribute('src', 'js/careers.js');
-        document.head.appendChild(careerjs);
+        //var careerjs = document.createElement('script');
+        //careerjs.setAttribute('src', 'js/careers.js');
+        //document.head.appendChild(careerjs);
         console.log('Route Change: ' + $location.url());
         $window.ga('set', 'page', $location.url());
         $window.ga('send', 'pageview', {
