@@ -78,7 +78,7 @@ app.config(function ($routeProvider, $locationProvider) {
         loadNewsMainPage();
     });
     $scope.$on('$routeChangeSuccess', function () {
-        console.log('Route Change: ' + $location.url());
+        console.log('Route Change: ' + $location.url());        
         $window.ga('send', {
             'hitType': 'screenview',
             'appName': 'MAQ Software',
@@ -95,14 +95,16 @@ app.config(function ($routeProvider, $locationProvider) {
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
-        $window.ga('send', {
-            'hitType': 'screenview',
-            'appName': 'MAQ Software',
-            'screenName': $location.url(),
-            'hitCallback': function () {
-                console.log('GA hitCallback sent!');
-            }
-        });
+        $window.ga('set', 'page', $location.url());
+        $window.ga('send', 'pageview');
+        //$window.ga('send', {
+        //    'hitType': 'screenview',
+        //    'appName': 'MAQ Software',
+        //    'screenName': $location.url(),
+        //    'hitCallback': function () {
+        //        console.log('GA hitCallback sent!');
+        //    }
+        //});
     });
 }).controller('SelfServiceBIController', function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
