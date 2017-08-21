@@ -1,6 +1,6 @@
 ﻿var app = angular.module('MAQSoftwareApp', ['ngRoute', 'ngResource']);
 app.config(function ($routeProvider, $locationProvider) {
-
+    closeMenuIfOpen();
     $routeProvider
     .when("/", {
         templateUrl: "/views/home.html",
