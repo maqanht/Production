@@ -22,8 +22,9 @@ function setTabNavLinkBehavior() {
         $("#tabs .nav-link").removeClass('active');
     });
 }
+
 function closeMenuIfOpen() {
-    $(".nav-menu .nav-menu-inner a").click(function () {
+    $("a, a *, #body, #body *").click(function () {
         if ($(this).hasClass("menu-has-sub")) {
             return; // return in case of sub menu header click
         }
@@ -36,12 +37,16 @@ function closeMenuIfOpen() {
                 $(".nav-menu .nav-menu-inner .menu-opened").removeClass("menu-opened");
             }
             if ($(".nav-menu .nav-menu-inner .fa-angle-up").length) {
-                $(".nav-menu .nav-menu-inner .fa-angle-up").removeClass("fa-angle-up").addClass("fa-angle-down");
+                $(".nav-menu .nav-menu-inner .fa-angle-up").each(function () {
+                    $(this).removeClass("fa-angle-up").addClass("fa-angle-down");
+                })
             }
             if ($(".nav-menu .nav-menu-inner .sub-dropdown").length) {
-                if ($('.nav-menu .nav-menu-inner .sub-dropdown').css('display') == 'block') {
-                    $('.nav-menu .nav-menu-inner .sub-dropdown').css('display', 'none');
-                }
+                $(".nav-menu .nav-menu-inner .sub-dropdown").each(function () {
+                    if ($(this).css('display') == 'block') {
+                        $(this).css('display', 'none');
+                    }
+                })
             }
         }
     });
