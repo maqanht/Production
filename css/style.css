@@ -1252,7 +1252,7 @@ form label.error {
 /*header Logo style*/
 .header.header-prepare .logo a img.logo-light,
 .header .logo a img.logo-dark {
-    opacity: 0;
+    opacity: 1;
 }
 
 .header .logo a img.logo-light,
@@ -1307,7 +1307,7 @@ form label.error {
     }
 
     .header .logo a {
-        margin-top: 16px;
+        margin-top: 23px;
         margin-bottom: 16px;
         width: 96px;
         transition: all 0.3s ease 0s;
@@ -1328,7 +1328,7 @@ form label.error {
 }
 
     .logo a {
-        width: 132px;
+        width: 115px;
         display: block;
         margin-top: 23px;
         /*margin-bottom: 28px;*/
@@ -1505,7 +1505,7 @@ header.header-dark .nav-bar-icon > span::after,
 header.header-dark.header-prepare .nav-bar-icon > span,
 header.header-dark.header-prepare .nav-bar-icon > span:before,
 header.header-dark.header-prepare .nav-bar-icon > span::after {
-    background-color: #fff;
+    ;
 }
 
 header.header-light .nav-bar-icon > span,
@@ -2074,6 +2074,15 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
     .intro-title {
         letter-spacing: 0;
         font-size: 46px;
+    }
+    .dot{
+        display:none;
+    }
+    .RecognitionImage{
+        width:auto;
+    }
+    .RecognitionContent{
+        text-align: center !important;
     }
 }
 
@@ -4794,7 +4803,7 @@ ul.project-detail-block, .project-detail-block ul {
 .CircleBullets {
     list-style-type: disc;
     padding-left: 35px;
-    color: #595959;
+    color: Black;
 }
 
 .contact {
@@ -4824,6 +4833,9 @@ ul.project-detail-block, .project-detail-block ul {
 .dotNextBox {
     padding-left: 5px !important;
     padding-right: 5px !important;
+}
+.dotRow{
+    margin:0px !important;
 }
 
 .blurb {
