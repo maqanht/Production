@@ -14,7 +14,7 @@ function getParameterByName(name) {
 }
 
 function redirectPowerBI() {
-    window.location.href = "/#expertise/selfservicebi"; // Redirecting to Power BI Expertise
+    window.location.href = "/#expertise/powerbi"; // Redirecting to Power BI Expertise
 }
 
 function setTabNavLinkBehavior() {
@@ -59,3 +59,30 @@ function isCareersPage() {
 }
 // Close menu if open
 closeMenuIfOpen();
+
+function updateTitle(viewName) {
+    var sTitle = "Data Management, Power BI, Artificial Intelligence | MAQ Software";
+    if (typeof viewName !== "undefined") {
+        switch (viewName.toLowerCase()) {
+            case "expertise":
+                sTitle = "Expertise | MAQ Software";
+                break;
+            case "engagement":
+                sTitle = "Engagement | MAQ Software";
+                break;
+            case "news":
+                sTitle = "News | MAQ Software";
+                break;
+            case "careers":
+                sTitle = "Careers | MAQ Software";
+                break;
+            case "contact":
+                sTitle = "Contact | MAQ Software";
+                break;
+            case "privacystatement":
+                sTitle = "Privacy Statement | MAQ Software";
+                break;
+        }
+    }
+    $("title").text(sTitle);
+}
