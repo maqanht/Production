@@ -240,15 +240,15 @@
     ]
   },
   {
-    "outputFileName": "views/selfservicebi.min.html",
+    "outputFileName": "views/powerbi.min.html",
     "inputFiles": [
-      "views/selfservicebi.html"
+      "views/powerbi.html"
     ]
   },
   {
-    "outputFileName": "views/selfservicebiviewall.min.html",
+    "outputFileName": "views/powerbiviewall.min.html",
     "inputFiles": [
-      "views/selfservicebiviewall.html"
+      "views/powerbiviewall.html"
     ]
   },
   {
