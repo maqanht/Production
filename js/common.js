@@ -14,7 +14,7 @@ function getParameterByName(name) {
 }
 
 function redirectPowerBI() {
-    window.location.href = "/#expertise/selfservicebi"; // Redirecting to Power BI Expertise
+    window.location.href = "/#expertise/powerbi"; // Redirecting to Power BI Expertise
 }
 
 function setTabNavLinkBehavior() {
