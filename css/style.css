@@ -1388,7 +1388,9 @@ form label.error {
 .header-light .nav-menu ul.nav-menu-inner > li > a {
     color: #323232;
 }
-
+.header .nav-menu ul.nav-menu-inner > li > a {
+    color: #323232;
+}
 
 
 
