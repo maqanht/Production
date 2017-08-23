@@ -162,31 +162,9 @@ function renderNewsHighlight() {
     }
 }
 
-function newsConstructor() {
-    //debugger;
-    try {
-        loadNewsHighlightSection();
-    } catch (ex) {
-        // ignore
-    }
-
-    oNewsPager.pageIndex = 0;
-    oNewsContainer = $("#LoadPageNews");
-    var iTop = 0;
-    id = getParameterByName("id");
-    highlightid = getParameterByName("highlightid");
-    if (typeof id !== "undefined" && id !== "") {
-        $(sScrollElement).animate({ scrollTop: iTop }, 500);
-        oNewsPager.pageIndex = id > oNewsPager.pagesize ? 1 : 0;
-        
-    } else if (typeof highlightid !== "undefined" && highlightid !== "") {
-        //$(sScrollElement).animate({ scrollTop: iTop }, 500);
-        sClickedHighlightTitle = oNewsHighlightTitle[highlightid - 1];
-        iClickedHighlightID = oHighlightNewsID[highlightid - 1];
-        oNewsPager.pageIndex = parseInt((iClickedHighlightID + 1) / oNewsPager.pagesize);
-        
-    }
-
+function loadNewsGrid() {
+    var iTop;
+    oNewsContainer.html("").addClass(sLoadingClass);
     $.ajax({
         url: 'https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News',
         type: 'GET',
@@ -207,6 +185,28 @@ function newsConstructor() {
             oNewsContainer.removeClass(sLoadingClass);
         }
     });
+}
+
+function newsConstructor() {
+    //debugger;
+    try {
+        loadNewsHighlightSection();
+    } catch (ex) {
+        // ignore
+    }
+
+    oNewsPager.pageIndex = 0;
+    oNewsContainer = $("#LoadPageNews");
+    var iTop = 0;
+    id = getParameterByName("id");
+    
+    if (typeof id !== "undefined" && id !== "") {
+        $(sScrollElement).animate({ scrollTop: iTop }, 500);
+        oNewsPager.pageIndex = id > oNewsPager.pagesize ? 1 : 0;
+        
+    }
+
+    loadNewsGrid();
 
     $("#Pagination p").click(function () {
         var oCurrentElement = $(this),
@@ -232,6 +232,18 @@ function newsConstructor() {
             iTop = oNewsContainer.offset().top - 65; // -65 for header/padding
             $(sScrollElement).animate({ scrollTop: iTop }, 500);
             renderNews();
+        }
+    });
+
+    $(".news-highlight").unbind("click");
+    $(".news-highlight").click(function () {
+        highlightid = $(this).attr("data-clicked");
+        if (typeof highlightid !== "undefined" && highlightid !== "") {
+            //$(sScrollElement).animate({ scrollTop: iTop }, 500);
+            sClickedHighlightTitle = oNewsHighlightTitle[highlightid - 1];
+            iClickedHighlightID = oHighlightNewsID[highlightid - 1];
+            oNewsPager.pageIndex = parseInt((iClickedHighlightID + 1) / oNewsPager.pagesize);
+            loadNewsGrid();
         }
     });
 };
