@@ -196,6 +196,7 @@ function newsConstructor() {
     }
 
     oNewsPager.pageIndex = 0;
+    highlightid = "";
     oNewsContainer = $("#LoadPageNews");
     var iTop = 0;
     id = getParameterByName("id");
