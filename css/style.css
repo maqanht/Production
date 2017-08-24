@@ -141,7 +141,7 @@ hr {
     }
 
 b, strong {
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 small, small a {
@@ -283,7 +283,7 @@ h1 {
 }
 
     h1.h1, h2.h2 {
-        letter-spacing: 15px;
+        letter-spacing: 10px;
     }
 
 @media (max-width: 767px) {
@@ -639,10 +639,18 @@ form label.error {
     width: 100%;
     height: 15px;
 }
+.spacer-25 {
+    width: 100%;
+    height: 25px;
+}
 
 .spacer-30 {
     width: 100%;
     height: 30px;
+}
+.spacer-40 {
+    width: 100%;
+    height: 40px;
 }
 
 .spacer-45 {
@@ -721,6 +729,20 @@ form label.error {
     padding-bottom: 110px;
 }
 
+.ptb-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+
 .ptb-15 {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -765,6 +787,21 @@ form label.error {
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
+.pt-45 {
+    padding-top: 45px;
+}
+
+.pb-45 {
+    padding-bottom: 45px;
+}
+
+.ptb-45 {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+
 .pt-50 {
     padding-top: 50px;
 }
@@ -904,6 +941,59 @@ form label.error {
 .mr-0 {
     margin-right: 0px !important;
 }
+
+.mtb-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mlr-10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+.ml-10 {
+    margin-left: 10px !important;
+}
+
+.mr-10 {
+    margin-right: 10px !important;
+}
+
+.mtb-13 {
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.mlr-13 {
+    margin-left: 13px;
+    margin-right: 13px;
+}
+
+.mt-13 {
+    margin-top: 13px !important;
+}
+
+.mb-13 {
+    margin-bottom: 13px !important;
+}
+
+.ml-13 {
+    margin-left: 13px !important;
+}
+
+.mr-13 {
+    margin-right: 13px !important;
+}
+
 
 .mtb-80 {
     margin-top: 80px;
@@ -1409,7 +1499,7 @@ form label.error {
         }
 
 .header-light .nav-menu ul.nav-menu-inner > li > a, .header .nav-menu ul.nav-menu-inner > li > a {
-    color: #323232;
+    color: #323232 
 }
 
 .nav-menu ul.nav-menu-inner li a {
@@ -2418,12 +2508,12 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 }
 
 .features-box-left {
-    padding-left: 75px;
+    padding-left: 40px;
     text-align: left;
 }
 
 .features-box-right {
-    padding-right: 75px;
+    padding-right: 40px;
     text-align: right;
 }
 
@@ -3447,7 +3537,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
         }
 
 .sidebar-widget hr {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .sidebar-widget ul {
@@ -3846,7 +3936,11 @@ ul.project-detail-block, .project-detail-block ul {
         }
 
         .blog-post .post-entry ul {
-            color: #888;
+            color: black;
+        }
+
+        .blog-post .post-entry a {
+            text-decoration: underline;
         }
 
     .blog-post .post-tag {
@@ -3885,7 +3979,7 @@ ul.project-detail-block, .project-detail-block ul {
         font-weight: 400;
         padding: 25px 25px;
         margin: 0px;
-        color: #888;
+        color: black;
         font-weight: 300;
     }
 
@@ -4642,7 +4736,7 @@ ul.project-detail-block, .project-detail-block ul {
 }
 
 .SemiBold {
-    font-family: "Segoe UI Semibold",Tahoma,Verdana,Arial,sans-serif;
+    font-weight: 500 !important;
 }
 
 .topBorder {
@@ -4665,8 +4759,8 @@ ul.project-detail-block, .project-detail-block ul {
 }
 
 .news-image {
-    height: 197px;
-    width: 350px;
+    max-height: 197px;
+    max-width: 350px;
     object-fit: cover;
     background-color: gainsboro;
     /*transform: scale(0.5, 0.5);
@@ -4829,6 +4923,9 @@ ul.project-detail-block, .project-detail-block ul {
     padding-left: 35px;
     color: Black;
 }
+    .CircleBullets a{
+        text-decoration:underline !important;
+    }
 
 .contact {
     margin: 0px !important;
@@ -4842,31 +4939,35 @@ ul.project-detail-block, .project-detail-block ul {
     padding-left: 0px;
     padding-right: 0px;
     margin-bottom: 3px;
-    height: 16px !important;
-    width: 16px !important;
+    height: 20px !important;
+    width: 20px !important;
 }
 
 .dotBox {
     padding-left: 0px !important;
     padding-right: 0px !important;
-    width: 16px !important;
-    min-width: 16px !important;
-    max-width: 16px !important;
+    width: 20px !important;
+    min-width: 20px !important;
+    max-width: 20px !important;
 }
 
 .dotNextBox {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
 }
 .dotRow{
     margin:0px !important;
+    height:125px;
 }
 
 .blurb {
-    font-weight: 600;
+    font-size:13px;
     color: black !important;
 }
-
+.blurbH{
+    font-weight:700;
+    line-height:normal !important;
+}
 ul.nav-tabs {
     display: inline-block;
 }
