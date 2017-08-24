@@ -3501,11 +3501,42 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
     }
 
     .fullwidth-slider .item {
-        max-height: 325px !important;
+        height: 325px !important;
     }
 
     .owl-buttons {
         display: none;
+    }
+}
+
+/*@media (max-width: 360px) {
+
+    .fullwidth-slider .item {
+        height: 265px !important;
+    }
+}*/
+
+@media (max-width: 320px) {
+
+    .fullwidth-slider .item {
+        height: 275px !important;
+    }
+}
+
+@media (orientation:landscape) and (max-width: 515px){
+
+    .fullwidth-slider .item {
+        height: 186px !important;
+    }
+
+    .owl-buttons {
+        display: none;
+    }
+}
+
+@media (orientation:landscape) and (max-width: 480px) {
+    .fullwidth-slider .item {
+        height: 186px !important;
     }
 }
 /* ----------------------------------------------------------------------*/
