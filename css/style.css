@@ -5010,6 +5010,8 @@ ul.nav-tabs {
 
 .news-highlight {
     cursor: pointer;
-    max-width: 235px;
-    max-height: 132.19px;
+}
+
+.black{
+    color:black !important;
 }
