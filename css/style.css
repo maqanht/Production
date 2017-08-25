@@ -93,6 +93,7 @@ img {
 
 a, a:focus, a:active, a:link, img {
     outline: none;
+    
 }
 
 a {
@@ -4491,7 +4492,7 @@ ul.project-detail-block, .project-detail-block ul {
         background: rgba(245,245,245,0.8);
         color: #252525;
         display: block;
-        top: 50%;
+        top: 25%;
         transition: all 0.25s ease 0s;
         -o-transition: all 0.25s ease 0s;
         -moz-transition: all 0.25s ease 0s;
@@ -4500,6 +4501,62 @@ ul.project-detail-block, .project-detail-block ul {
         position: absolute;
         text-align: center;
     }
+    @media(max-width:1199px){
+
+
+        .content-carousel .owl-controls .owl-buttons .owl-prev,
+        .content-carousel .owl-controls .owl-buttons .owl-next,
+        .image-slider .owl-controls .owl-buttons .owl-prev,
+        .image-slider .owl-controls .owl-buttons .owl-next,
+        .fullwidth-slider .owl-controls .owl-buttons .owl-prev,
+        .fullwidth-slider .owl-controls .owl-buttons .owl-next,
+        .nf-carousel-theme .owl-controls .owl-buttons .owl-prev,
+        .nf-carousel-theme .owl-controls .owl-buttons .owl-next {
+            top: 21%;
+        }
+    }   
+    @media(max-width:1170px){
+        
+        
+        .content-carousel .owl-controls .owl-buttons .owl-prev,
+        .content-carousel .owl-controls .owl-buttons .owl-next,
+        .image-slider .owl-controls .owl-buttons .owl-prev,
+        .image-slider .owl-controls .owl-buttons .owl-next,
+        .fullwidth-slider .owl-controls .owl-buttons .owl-prev,
+        .fullwidth-slider .owl-controls .owl-buttons .owl-next,
+        .nf-carousel-theme .owl-controls .owl-buttons .owl-prev,
+        .nf-carousel-theme .owl-controls .owl-buttons .owl-next {
+            top: 28%;
+        }
+    } 
+    @media(max-width:991px){
+        
+        
+        .content-carousel .owl-controls .owl-buttons .owl-prev,
+        .content-carousel .owl-controls .owl-buttons .owl-next,
+        .image-slider .owl-controls .owl-buttons .owl-prev,
+        .image-slider .owl-controls .owl-buttons .owl-next,
+        .fullwidth-slider .owl-controls .owl-buttons .owl-prev,
+        .fullwidth-slider .owl-controls .owl-buttons .owl-next,
+        .nf-carousel-theme .owl-controls .owl-buttons .owl-prev,
+        .nf-carousel-theme .owl-controls .owl-buttons .owl-next {
+            top: 33%;
+        }
+    }   
+    @media(max-width:768px){
+        
+        
+        .content-carousel .owl-controls .owl-buttons .owl-prev,
+        .content-carousel .owl-controls .owl-buttons .owl-next,
+        .image-slider .owl-controls .owl-buttons .owl-prev,
+        .image-slider .owl-controls .owl-buttons .owl-next,
+        .fullwidth-slider .owl-controls .owl-buttons .owl-prev,
+        .fullwidth-slider .owl-controls .owl-buttons .owl-next,
+        .nf-carousel-theme .owl-controls .owl-buttons .owl-prev,
+        .nf-carousel-theme .owl-controls .owl-buttons .owl-next {
+            top: 40%;
+        }
+    }   
 
         .content-carousel .owl-controls .owl-buttons .owl-prev:hover,
         .content-carousel .owl-controls .owl-buttons .owl-next:hover,
@@ -4782,10 +4839,13 @@ ul.project-detail-block, .project-detail-block ul {
 
 /*Recognition Controls*/
 .RecognitionImage img {
-    width:100%;
+    
     max-width: 250px;
+    max-height: 140px;
 }
-
+.RecognitionImage{
+    padding-bottom:15px;
+}
 .RecognitionContent {
     
 }
@@ -4874,11 +4934,25 @@ ul.project-detail-block, .project-detail-block ul {
 
 #tabs .nav-link {
     border-radius: 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+.nav-link.active{
+    border-bottom: 1px solid white !important;
 }
 
 #tabs .nav-tabs {
     margin-bottom: 10px;
-    border-bottom: 1px solid #f1f1f1;
+    
+}
+@media(max-width:767px){
+    #tabs .nav-tabs{
+        border-bottom: 1px solid #f1f1f1 !important;
+    }
+    #tabs .nav-link {
+        border-radius: 0;
+        border-bottom: 1px solid white !important;
+    }
+
 }
 
 #map {
@@ -4980,7 +5054,7 @@ ul.project-detail-block, .project-detail-block ul {
 /*Custom Changes*/
 
 .nav-menu .sub-dropdown > li > a:hover {
-    color: #323232 !important;
+    color:#E6AE49 !important;
 }
 
 .CircleBullets {
@@ -5073,6 +5147,11 @@ ul.nav-tabs {
 .tabContent-216{
     height:216px !important;
 }
+.serviceTitle{
+    color:inherit;
+}
+    .serviceTitle:hover{
+    }
 
 
 @media (max-width: 1199px) {
