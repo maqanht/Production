@@ -76,5 +76,5 @@ function setSliderNavigationButton() {
     var iPrevHeight = 51;
     var iTop = (iHeight - iPrevHeight) / 2;
     iTop -= 8;
-    $(".owl-prev, .owl-next").css({ 'top': iTop + 'px' });
+    $(".fullwidth-slider .owl-controls .owl-buttons .owl-prev, .fullwidth-slider .owl-controls .owl-buttons .owl-next").css({ 'top': iTop + 'px' });
 }
