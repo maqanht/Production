@@ -70,3 +70,11 @@ function renderNewsMain() {
     //$('.subData *').removeAttr('style');
     //$('.subData').dotdotdot();
 }
+
+function setSliderNavigationButton() {
+    var iHeight = $(".home-slider").height() + $("#header").height();
+    var iPrevHeight = 51;
+    var iTop = (iHeight - iPrevHeight) / 2;
+    iTop -= 8;
+    $(".owl-prev, .owl-next").css({ 'top': iTop + 'px' });
+}

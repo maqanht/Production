@@ -4492,7 +4492,7 @@ ul.project-detail-block, .project-detail-block ul {
         background: rgba(245,245,245,0.8);
         color: #252525;
         display: block;
-        top: 25%;
+        /*top: 30%;*/
         transition: all 0.25s ease 0s;
         -o-transition: all 0.25s ease 0s;
         -moz-transition: all 0.25s ease 0s;
