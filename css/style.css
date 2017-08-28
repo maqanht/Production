@@ -4501,6 +4501,11 @@ ul.project-detail-block, .project-detail-block ul {
         position: absolute;
         text-align: center;
     }
+
+    #highlights.owl-next,#highlights.owl-prev{
+        top: 25%;
+    }
+
     @media(max-width:1199px){
 
 
