@@ -2485,7 +2485,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
     }
 
     .accordion-title:before {
-        content: "\f105";
+        content: "\f107";
         display: block;
         font-family: "FontAwesome",sans-serif;
         position: absolute;
@@ -2494,7 +2494,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
     }
 
     .accordion-title.active:before {
-        content: "\f107";
+        content: "\f106";
     }
 
 .accordion-content.defualt-hidden {
