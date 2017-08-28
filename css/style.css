@@ -5210,3 +5210,25 @@ ul.nav-tabs {
 @media (max-width: 388px) {
     
 }
+
+
+.fa-facebook {
+color:#3b5998;
+}
+.fa-linkedin {
+color: #0077B5;
+}
+.ion-social-youtube {
+color: #bb0000;
+}
+
+.fa-twitter {
+color: #0084b4;
+}
+.fa-google-plus {
+color: #dd4b39;
+}
+
+.ion-social-instagram, .ion-social-github {
+color: black;
+}
