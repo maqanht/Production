@@ -313,7 +313,7 @@ function sliderAll() {
         stopOnHover: true,
         items: 5,
         loop: true,
-        rewindSpeed: 10,
+        rewindSpeed: 2500,
         itemsDesktop: [1170, 4],
         itemsDesktopSmall: [1024, 3],
         itemsTabletSmall: [768, 2],
