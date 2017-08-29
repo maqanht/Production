@@ -5391,11 +5391,14 @@ color: black !important;
 }
 
 #client-logos .owl-carousel .owl-item, #tech-logos .owl-carousel .owl-item{
-    max-width: 222px !important;
+    max-width: 216px !important;
 }
-
+#client-logos .owl-carousel .owl-stage-outer {
+    padding-left: 31px;
+    padding-right: 31px;
+}
 .news-carousel .owl-item {
-    max-width: 228px;
+    max-width: 285px;
 }
 
 
