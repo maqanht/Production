@@ -390,24 +390,24 @@ function sliderAll() {
         navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         dots: false,
         //center: true,
-         responsive: {
+        responsive: {
             0: {
                 items: 1,
                 loop: true,
                 center: true
             }
-            ,
+           ,
             444: {
                 items: 2
             }
-            ,
+           ,
             768: {
                 items: 3
             }
-            , 992: {
-                items: 4
-            }
-            ,
+           , 992: {
+               items: 4
+           }
+           ,
             1200: {
                 items: 5,
                 loop: false
@@ -454,7 +454,7 @@ function sliderAll() {
         stopOnHover: true,
         items: 4,
         rewind: true,
-        //loop: true,
+        loop: true,
         itemsDesktop: [1170, 3],
         itemsDesktopSmall: [1024, 2],
         itemsTabletSmall: [768, 1],
@@ -464,7 +464,23 @@ function sliderAll() {
         nav: true,  // Show next and prev buttons
         navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        dots: false
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            }
+            ,
+            456: {
+                items: 2
+            }
+            ,
+            684: {
+                items: 3
+            }
+            , 912: {
+                items: 4
+            }
+        }
     });
     $('.power-bi-carousel').owlCarousel({
         autoPlay: 2500,
@@ -588,13 +604,13 @@ function sliderHero() {
 
     }
 
-    $(window).height(function () {
+    $(window).height(function() {
         heroResize();
         function heroResize() {
             var windowHeight = $(window).innerHeight();
             $('.slider-hero, .full-screen-intro').css('height', windowHeight);
         };
-        $(window).resize(function () {
+        $(window).resize(function() {
             heroResize();
         });
     });
@@ -658,7 +674,7 @@ function containerGridMasonry() {
 
     // ISOTOPE MASONRY ELEMENT  ||--------------
     var $container = $('.container-masonry');
-    $container.imagesLoaded(function () {
+    $container.imagesLoaded(function() {
         $container.isotope({
             itemSelector: '.nf-item',
             layoutMode: 'masonry',
@@ -677,7 +693,7 @@ function containerGridMasonry() {
 
     // ISOTOPE GRID ELEMENT  ||--------------
     var $container2 = $('.container-grid');
-    $container2.imagesLoaded(function () {
+    $container2.imagesLoaded(function() {
         $container2.isotope({
             itemSelector: '.nf-item',
             layoutMode: 'fitRows'
@@ -691,7 +707,7 @@ function containerGridMasonry() {
     });
 
     // change active class on categories
-    $('.categories-filter').each(function (i, buttonGroup) {
+    $('.categories-filter').each(function(i, buttonGroup) {
         var $buttonGroup = $(buttonGroup);
         $buttonGroup.on('click', '.categories', function () {
             $buttonGroup.find('.active').removeClass('active');
@@ -704,9 +720,9 @@ function containerGridMasonry() {
     // Masonry Element
     var container = $('.masonry');
     container.masonry({
-        // columnWidth: 0,
-        itemSelector: '.nf-item'
-    });
+            // columnWidth: 0,
+                itemSelector: '.nf-item'
+            });
 
 };
 
@@ -745,9 +761,9 @@ function scrollCallbackEle() {
 
 // Parallax Function element
 function initParallax() {
-    $('.parallax').each(function () {
+    $('.parallax').each(function() {
         var $el = $(this);
-        $(window).scroll(function () {
+        $(window).scroll(function() {
             parallax($el);
         });
         parallax($el);
@@ -758,7 +774,7 @@ function parallax($el) {
     var diff_s = $(window).scrollTop();
     var parallax_height = $('.parallax').height();
     var yPos_p = (diff_s * 0.5);
-    var yPos_m = -(diff_s * 0.5);
+    var yPos_m = - (diff_s * 0.5);
     var diff_h = diff_s / parallax_height;
 
     if ($('.parallax').hasClass('parallax-section1')) {
@@ -778,7 +794,7 @@ function parallax($el) {
         $el.css("background-position", 'left' + " " + yPos_p + "px");
     }
     if ($('.parallax').hasClass('parallax-background2')) {
-        $el.css("background-position", 'left' + " " + -yPos_p + "px");
+        $el.css("background-position", 'left' + " " + - yPos_p + "px");
 
     }
 };
@@ -807,7 +823,7 @@ function initStellar() {
 
 function numberWithCommas(x) {
     var parts = x.toString().split(".");
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    parts[0]= parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return parts.join(".");
 }
 
@@ -825,7 +841,7 @@ function shortcodeElements() {
 
     });
     $('.search-overlay-menu, .search-overlay-menu .search-overlay-close').on('click keyup', function (eventSearch) {
-        if (eventSearch.target == this || eventSearch.target.className == 'search-overlay-close' || eventSearch.keyCode == 27) {
+        if(eventSearch.target == this || eventSearch.target.className == 'search-overlay-close' || eventSearch.keyCode == 27) {
             $(this).removeClass('open');
         }
     });
@@ -853,7 +869,7 @@ function shortcodeElements() {
     // Skills Progressbar Elements
     skillsProgressBar();
     function skillsProgressBar() {
-        $('.skillbar').each(function () {
+        $('.skillbar').each(function() {
             $(this).find('.skillbar-bar').animate({
                 width: $(this).attr('data-percent')
             }, 2000);
@@ -866,7 +882,7 @@ function shortcodeElements() {
 
 //Counter
 function startCounter() {
-    $('.counter').each(function () {
+    $('.counter').each(function() {
         var $this = $(this),
             countTo = $this.attr('data-count');
         $({ countNum: $this.text() }).animate({
@@ -891,7 +907,7 @@ function startCounter() {
 accordion();
 function accordion() {
 
-    $('.accordion-title').click(function (e) {
+    $('.accordion-title').click(function(e) {
 
         $(this).next().slideToggle('easeOut');
         $(this).toggleClass('active');
@@ -909,12 +925,12 @@ jqueryUi();
 function jqueryUi() {
 
     // Tab Function
-    $(function () {
+    $(function() {
         $(".tabs").tabs();
     });
 
     // Price Filter Slider
-    $(function () {
+    $(function() {
         $("#range-slider").slider({
             range: true,
             min: 0,
