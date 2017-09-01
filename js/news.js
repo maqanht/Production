@@ -2,7 +2,7 @@
 
 "use strict";
 var oNewsPager = {
-    template: '<div><div class="post-meta"><span>@date</span></div><div class="post-header"><h2>@title</h2></div><div class="post-media"><img alt="News" src="@newsimagesrc"></div><div class="post-entry">@content</div></div>',
+    template: '<div><div class="post-meta"><span>@date</span></div><div class="post-header"><h2>@title</h2></div><div class="post-media"><img alt="News" title="@tooltip" src="@newsimagesrc"></div><div class="post-entry">@content</div></div>',
     pageIndex: 0,
     pagesize: 6
 }, id, highlightid, sClickedHighlightTitle, iClickedHighlightID,
@@ -75,7 +75,7 @@ function renderNews() {
                     img.parentNode.removeChild(img);
                 }
                 sContent = $("#bloggerContent").html();
-                oNewsContainer.append(oNewsPager.template.replace("@title", sTitle).replace("@date", oDate).replace("@content", sContent).replace("@newsimagesrc", src));
+                oNewsContainer.append(oNewsPager.template.replace("@title", sTitle).replace("@date", oDate).replace("@content", sContent).replace("@newsimagesrc", src).replace("@tooltip", getFirstNWordsWithEllipses(sTitle, 4)));
             }
         }
         oNewsContainer.find("a").attr("target", "_blank");
@@ -158,6 +158,7 @@ function renderNewsHighlight() {
 
             $("#newshighlighttitle" + iNumber).html(title);
             $("#newshighlightimg" + iNumber).attr('src', src);
+            $("#newshighlightimg" + iNumber).attr('title',getFirstNWordsWithEllipses(title,4));
         }
     }
 }

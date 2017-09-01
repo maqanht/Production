@@ -86,3 +86,14 @@ function updateTitle(viewName) {
     }
     $("title").text(sTitle);
 }
+
+function getFirstNWordsWithEllipses(data, n) {
+    var result = data.split(' ').slice(0, n).join(' ');
+    if (data.length > result.length) {
+        result = result + "...";
+    }
+    if (typeof result === "undefined") {
+        result = "";
+    }
+    return result;
+}
