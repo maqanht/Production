@@ -5394,8 +5394,8 @@ ul.nav-tabs {
 }
 
 #client-logos .owl-carousel .owl-stage-outer {
-    padding-left: 31px;
-    padding-right: 31px;
+    margin-left: 35px;
+    margin-right: 35px;
 }
 
 .news-carousel .owl-item {
