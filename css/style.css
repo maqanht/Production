@@ -182,14 +182,19 @@ p {
     font-weight: 400;
     margin: 0px 0 10px 0;
     color: Black;
-    /*letter-spacing: 1px;*/
+    letter-spacing: 1px;
 }
 
     p.lead, .lead {
         font-size: 16px;
-        font-weight: 400;
         line-height: 24px;
+        padding: 4px 0 2.36px;
+        font-weight: 400;
+        max-height: 56px;
     }
+        .home-slider p.lead, .home-slider .lead {
+            font-size: 24px;
+        }
 
     p.dark, .dark, a.dark, h1.dark, h2.dark, h3.dark, h4.dark, h5.dark, h6.dark {
         color: #323232 !important;
@@ -268,9 +273,9 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     color: #323232;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-family: 'Raleway', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 0px;
     margin-bottom: 10px;
 }
@@ -282,7 +287,7 @@ h1 {
 }
 
     h1.h1, h2.h2 {
-        letter-spacing: 10px;
+        letter-spacing: 4px;
     }
 
 @media (max-width: 767px) {
@@ -299,11 +304,15 @@ h2 {
     padding-top: 10px;
 }
 
+
 h3 {
     font-size: 21px;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     line-height: 32px;
 }
+    h3.h4{
+        font-weight:600;
+    }
 
 h4 {
     font-size: 17px;
@@ -332,7 +341,9 @@ h6 {
 h1.large {
     font-size: 50px;
 }
-
+.ls-point01em {
+    letter-spacing: -.01em !important;
+}
 /*Button Style   ||-----------*/
 .btn:focus {
     outline: none;
@@ -2295,7 +2306,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 .footer .link a {
     font-size: 12px;
     font-weight: 600;
-    letter-spacing: 2px;
+    /*letter-spacing: 2px;*/
 }
 
 .privacy {
@@ -3974,7 +3985,7 @@ ul.project-detail-block, .project-detail-block ul {
         }
 
     .blog-post .post-meta, .comment-list .post-meta, .sidebar-widget .post-meta {
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
         color: #999;
         font-size: 13px;
     }
@@ -5126,6 +5137,10 @@ ul.project-detail-block, .project-detail-block ul {
     display: inline-block;
     text-align: left;
     vertical-align: middle;
+}
+
+.modal-dialog .btn-black-line, .pbi-vall-container-filter li a, .viLinks  {
+    text-transform: none !important;
 }
 
 /*Youtube video*/
