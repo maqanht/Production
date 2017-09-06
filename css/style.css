@@ -5404,7 +5404,7 @@ ul.nav-tabs {
 }
 
 #client-logos .owl-carousel .owl-item, #tech-logos .owl-carousel .owl-item {
-    max-width: 216px !important;
+    max-width: 90vw !important;
 }
 
 #client-logos .owl-carousel .owl-stage-outer {
@@ -5412,9 +5412,6 @@ ul.nav-tabs {
     margin-right: 35px;
 }
 
-.news-carousel .owl-item {
-    max-width: 285px;
-}
 
 
 .map-marker-label {
