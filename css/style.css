@@ -1458,7 +1458,7 @@ form label.error {
 .logo {
     float: left;
     text-align: left;
-    /*display: inline-block;*/
+    display: inline-block;
 }
 
     .logo a {
@@ -1577,7 +1577,7 @@ form label.error {
 }
 
 .nav-bar-icon {
-    /*display: inline-block;*/
+    display: inline-block;
     float: right;
     position: relative;
     height: 16px;
@@ -1764,7 +1764,7 @@ header.header-prepare .nav-bar-icon > span::after {
     }
 
     .nav-bar-icon, .nav-mobile.nav-bar-icon, .header-fixed .nav-bar-icon {
-        /*display: inline-block;*/
+        display: inline-block;
         float: right;
         padding-top: 32px;
         padding-bottom: 32px;
@@ -1829,7 +1829,7 @@ header.header-prepare .nav-bar-icon > span::after {
     }
 
         .side-menu-btn ul li {
-            /*display: inline-block;*/
+            display: inline-block;
             float: left;
             position: relative;
         }
@@ -2468,7 +2468,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 
 .skill-bar-percent {
     float: right;
-    /*display: inline-block;*/
+    display: inline-block;
 }
 
 
@@ -3595,7 +3595,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
         border: 0 none;
         color: #8d8d8d;
         cursor: pointer;
-        /*display: inline-block;*/
+        display: inline-block;
         float: right;
         font-family: "FontAwesome",sans-serif;
         margin: 0;
