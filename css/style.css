@@ -5441,3 +5441,19 @@ ul.nav-tabs {
     #nav-menu .sub-dropdown {
         display: none;
     }
+
+
+.twitter-share-button[style] { 
+    vertical-align: bottom !important; 
+    margin-bottom:2px;
+}
+.fb-share-button { 
+    vertical-align: bottom !important; 
+    margin-bottom:2px;
+}
+.linkedin-share-button[style] {
+    vertical-align: bottom !important; 
+}
+.linkedin-share-button >span,.linkedin-share-button >span>span  {
+    vertical-align: bottom !important; 
+}
