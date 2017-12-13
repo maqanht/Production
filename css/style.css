@@ -742,7 +742,18 @@ form label.error {
 .pb {
     padding-bottom: 110px;
 }
+.ptb-5px {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 
+.pt-5px {
+    padding-top: 5px;
+}
+
+.pb-5px {
+    padding-bottom: 5px;
+}
 .ptb-10 {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1009,6 +1020,18 @@ form label.error {
 
 .mr-13 {
     margin-right: 13px !important;
+}
+.mtb-25 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}
+
+.mb-25 {
+    margin-bottom: 25px;
 }
 
 
@@ -3791,7 +3814,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
         }
 
     .item-box:hover .item-container {
-        transform: scale(1.1);
+        transform: scale(1.0);
         transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
         width: 100%;
     }
@@ -5456,4 +5479,20 @@ ul.nav-tabs {
 }
 .linkedin-share-button >span,.linkedin-share-button >span>span  {
     vertical-align: bottom !important; 
+}
+.caseImage{
+    width:80%;
+    margin:auto;
+    margin-top:25px;
+    display:block;
+    box-shadow: 1px 1px 1px lightgray,-1px -1px 1px lightgray;
+}
+
+.figureTitle{
+    text-align:right; 
+    margin-right:10%;
+}
+
+.vTop{
+    vertical-align:top;
 }
