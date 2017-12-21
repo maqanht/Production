@@ -3860,7 +3860,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
     }
 
     .item-mask .item-caption {
-        position: absolute;
+        margin:auto;
         bottom: -60px;
         left: 0px;
         padding-left: 30px;
