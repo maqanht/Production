@@ -23,7 +23,7 @@
     <meta name="twitter:title" content="Promotion Tracking | Data Management | MAQ Software" />
     <meta name="twitter:description" content="MAQ Software implements a state of the art Azure and Power BI solution to report sales."
     />
-    <meta name="twitter:image" content="https://maqsoftware.com/img/case-study/black-friday-banner.jpg" />
+    <meta name="twitter:image" content="/img/case-study/black-friday-banner.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <meta name="fragment" content="!">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -165,8 +165,15 @@
         <section id="about" class="wow fadeIn pt-90 pb-25">
             <div class="container">
                 <div class="row text-left">
+                    <!--
+            <div class="col-md-2 mt-10">
+                <img src="../img/case-study/return-themes.jpg" alt = "Case Study">
+            </div>
+            -->
                     <div class="col-md-8 offset-md-2">
                         <h3 class="h4">Leading Retailer Tracks Promotion Results in Real-time to Maximize Sales </h3>
+
+
                         <p class="lead">MAQ Software implements a state of the art Azure and Power BI solution to report sales.</p>
 
                         <!-- Social Media -->
@@ -178,11 +185,10 @@
                         <!-- End Facebook Share -->
 
                         <!-- Twitter Share -->
-                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Promotion Tracking | Data Management | MAQ Software"
+                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-url="https://maqsoftware.com/case-studies/black-friday.html"
                             data-show-count="false">Tweet</a>
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         <!-- End Twitter Share -->
-
                         <!-- LinkedIn Share -->
                         <span class="linkedin-share-button">
                             <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
@@ -190,6 +196,7 @@
                         </span>
                         <!-- End LinkedIn Share -->
                         <!-- End Social Media -->
+
                     </div>
                 </div>
             </div>
@@ -202,19 +209,18 @@
                     </div>
                     <div class="col-md-10 col-sm-8">
                         <p class="pt-5px">
-                            Thanksgiving weekend is the busiest shopping time of the year for retailers. Purchases during Black Friday weekend can account
-                            for more than 20% of quarterly sales.
+                            Thanksgiving weekend is the busiest shopping time of the year for retailers. 
+                            Purchases during Black Friday weekend can account for more than 20% of quarterly sales. 
                         </p>
                         <p class="pt-10">
-                            Retailers attempt to maximize Black Friday sales by offering enticing promotions and discounts. The retailers’ sales goals
-                            rely on each promotion meeting a certain number of purchases. To evaluate the effectiveness of
-                            promotions, our client wanted to track store sales in real-time. Based on sales, the retailer
-                            could adjust promotions to maximize revenue and profitability.
+                            Retailers attempt to maximize Black Friday sales by offering enticing promotions and discounts. 
+                            The retailers’ sales goals rely on each promotion meeting a certain number of purchases. 
+                            To evaluate the effectiveness of promotions, our client wanted to track store sales in real-time. 
+                            Based on sales, the retailer could adjust promotions to maximize revenue and profitability.
                         </p>
                         <p class="pt-10">
-                            To track sales and promotions, our client relied on multiple data sources stored on various platforms, which was cumbersome
-                            and time consuming. Using Azure Services and Power BI, MAQ Software built a real time promotion
-                            tracking solution for the retail store managers and marketing managers.
+                            To track sales and promotions, our client relied on multiple data sources stored on various platforms, which was cumbersome and time consuming. 
+                            Using Azure Services and Power BI, MAQ Software built a real time promotion tracking solution for the retail store managers and marketing managers.
                         </p>
                         <h5>Key Challenges:</h5>
                         <ul class="CircleBullets pb10">
@@ -231,14 +237,12 @@
                     </div>
                     <div class="col-md-10 col-sm-8">
                         <p class="pt-5px">
-                            MAQ Software created a real-time reporting solution using Azure Data Factory, Azure Data Lake Storage, Azure Data Analytics,
-                            and Power BI.
+                            MAQ Software created a real-time reporting solution using Azure Data Factory, Azure Data Lake Storage, Azure Data Analytics, and Power BI.
                         </p>
                         <h5>Key Highlights:</h5>
                         <ul class="CircleBullets pb10">
                             <li>Created a data pipeline that updates twice per hour using Azure Data Factory.</li>
-                            <li>Consolidated static files and stage data, pulled data from sources, and stored the processed
-                                data using Azure Data Lake.</li>
+                            <li>Consolidated static files and stage data, pulled data from sources, and stored the processed data using Azure Data Lake.</li>
                             <li>Created visuals to report data as soon as it’s refreshed using Power BI.</li>
                         </ul>
 
@@ -251,15 +255,14 @@
                             <h6 class="figureTitle">Figure 1: Azure Solution Architecture</h6>
                         </b>
                         <p class="pt-10">
-                            MAQ Software developed a solution using an array of Azure services. Azure Data Factory pulls real-time data from on-premise
-                            servers, blob storage, and static Excel worksheets and stores it on Azure Data Lake Storage (ADLS).
-                            ADLS data is processed through Azure Data Warehouse to create external tables for processing
-                            the tabular model.
+                            MAQ Software developed a solution using an array of Azure services. 
+                            Azure Data Factory pulls real-time data from on-premise servers, blob storage, and static Excel worksheets and stores it on Azure Data Lake Storage (ADLS). 
+                            ADLS data is processed through Azure Data Warehouse to create external tables for processing the tabular model.
                         </p>
                         <p class="pt-10">
-                            We then process the external tables in Analysis Services Tabular Model. The Power BI report has a live connection to the
-                            tabular model and displays data visualizations that are refreshed twice an hour. Along with the
-                            Power BI dashboard, the software sends a secure email every hour.
+                            We then process the external tables in Analysis Services Tabular Model. 
+                            The Power BI report has a live connection to the tabular model and displays data visualizations that are refreshed twice an hour. 
+                            Along with the Power BI dashboard, the software sends a secure email every hour.
                         </p>
                     </div>
                 </div>
@@ -270,14 +273,12 @@
                     </div>
                     <div class="col-md-10 col-sm-8">
                         <p class="pt-5px">
-                            The Azure-based solution enables the retailer to track up to the minute data regarding the performance of its Black Friday
-                            promotions. The retailer no longer relies on traditional databases that would take days to process
-                            for the needed information.
+                            The Azure-based solution enables the retailer to track up to the minute data regarding the performance of its Black Friday promotions. 
+                            The retailer no longer relies on traditional databases that would take days to process for the needed information.
                         </p>
                         <h5>Outcome Highlights:</h5>
                         <ul class="CircleBullets pb10">
-                            <li>Increased revenue by tracking promotion utilization in real-time and adjusting promotions based
-                                on buyer response.</li>
+                            <li>Increased revenue by tracking promotion utilization in real-time and adjusting promotions based on buyer response.</li>
                             <li>Saved time by reducing the need to search through various sales databases on different platforms.</li>
                             <li>Enabled quick adjustments by creating Azure alerts that pinpoint errors in promotion redemption.</li>
                         </ul>
