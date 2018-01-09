@@ -5481,11 +5481,12 @@ ul.nav-tabs {
     vertical-align: bottom !important; 
 }
 .caseImage{
-    width:80%;
+    max-width:80%;
+    width: fit-content;
     margin:auto;
     margin-top:25px;
     display:block;
-    box-shadow: 1px 1px 1px lightgray,-1px -1px 1px lightgray;
+    box-shadow: 2px 2px 2px lightgray,-1px -1px 1px lightgray;
 }
 
 .figureTitle{
@@ -5495,4 +5496,7 @@ ul.nav-tabs {
 
 .vTop{
     vertical-align:top;
+}
+.item-mask>.item-caption{
+    padding-top:20%;
 }
